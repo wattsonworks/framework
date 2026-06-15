@@ -44,8 +44,8 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="eyebrow"><span class="dot"></span> PROPRIETARY QUANT TRADING FRAMEWORK</div>
-    <h1 class="hero-title">One framework.<br><span class="grad">Four engines.</span><br>Every market.</h1>
-    <p class="hero-sub">A complete trading ecosystem — institutional liquidity detection, real-time market scanning, cross-sectional risk scoring and a multi-asset validation layer. <strong>5,000+ lines of Pine Script&nbsp;v6</strong>, backtested across crypto and global equities.</p>
+    <h1 class="hero-title">One framework.<br><span class="grad">Four engines.</span><br>One verdict.</h1>
+    <p class="hero-sub">One signal engine — <strong>LIQUIDEX-S</strong> — fed by a crypto sector radar and surge scanner, gated by a risk engine, proven by a multi-asset backtester. Four tools, one GO / NO-GO. <strong>5,000+ lines of Pine Script&nbsp;v6</strong> — crypto end-to-end, equities via the strategy + risk + validation core.</p>
     <div class="hero-cta">
       <a href="#engines" class="btn btn-primary">Explore the ecosystem</a>
       <a href="#access" class="btn btn-ghost">Request access →</a>
@@ -56,10 +56,11 @@
   <div class="terminal" aria-hidden="true">
     <div class="terminal-bar"><span class="t-dot r"></span><span class="t-dot a"></span><span class="t-dot g"></span><span class="t-title">framework://status</span></div>
     <div class="terminal-body">
-      <div class="t-row"><span class="t-k">MARKET&nbsp;SCANNER</span><span class="t-v ok">● ONLINE</span></div>
+      <div class="t-row"><span class="t-k">SCANNER&nbsp;· CRYPTO</span><span class="t-v ok">● ONLINE</span></div>
       <div class="t-row"><span class="t-k">LIQUIDITY&nbsp;ENGINE</span><span class="t-v ok">● ARMED</span></div>
       <div class="t-row"><span class="t-k">RISK&nbsp;ENGINE</span><span class="t-v"><span id="risk-val">0.41</span> <span class="muted">composite</span></span></div>
       <div class="t-row"><span class="t-k">VALIDATION</span><span class="t-v ok">● PASS</span></div>
+      <div class="t-verdict"><span class="vk">VERDICT</span><span><span class="vv">GO</span> <span class="vsub">4/4 reads aligned</span></span></div>
       <div class="t-sep"></div>
       <div class="t-row"><span class="t-k">SIGNAL</span><span class="t-v hl" id="t-signal">CASCADE-FADE · LONG</span></div>
       <div class="t-row"><span class="t-k">ASSET</span><span class="t-v" id="t-asset">BINANCE:ICPUSDT · 1H</span></div>
@@ -129,6 +130,25 @@
     <p>The engines aren't a catalog — they're a sequence. This is the actual crypto workflow, from a rotating sector to a managed position. Each tool hands the trade to the next.</p>
   </div>
 
+  <div class="hub-wrap reveal">
+    <div class="hub-side feeders">
+      <div class="hub-chip sre"><span>WEB3 SRE</span><em>which sector is hot</em></div>
+      <div class="hub-chip sg"><span>SURGE GURU</span><em>which token is firing</em></div>
+      <div class="hub-feed-note">feed candidates →</div>
+    </div>
+    <div class="hub-core">
+      <div class="hub-core-tag">THE SIGNAL ENGINE</div>
+      <div class="hub-core-name">LIQUIDEX-S</div>
+      <div class="hub-core-sub">where to enter · stop · target</div>
+    </div>
+    <div class="hub-side gates">
+      <div class="hub-feed-note">→ gate &amp; prove</div>
+      <div class="hub-chip risk"><span>RISK ENGINE</span><em>go / no-go verdict</em></div>
+      <div class="hub-chip val"><span>VALIDATION</span><em>where the edge lives</em></div>
+    </div>
+  </div>
+  <div class="hub-verdict reveal">Four independent reads — sector, momentum, liquidity, risk — all pointing the same way. When they agree, you have a setup; when they don't, the Risk Engine returns <span class="go">NO-GO</span>. You act on <strong>ONE VERDICT</strong>, not ten indicators.</div>
+
   <ol class="flow">
     <li class="flow-step reveal">
       <div class="flow-rail"><span class="flow-num">1</span></div>
@@ -182,6 +202,17 @@
   </ol>
 
   <div class="flow-note reveal">⌁ &nbsp;<strong>Equities</strong> run the same loop without step 2 — LIQUIDEX-S detects the setup, the Risk Engine gates it, and the backtesting layer validates the timeframe. The surge scanner &amp; sector radar are <strong>crypto-only for now</strong>; the equities scanner is on the roadmap.</div>
+
+  <div class="conviction reveal">
+    <div class="conv-item full"><b>4 / 4</b><span>reads aligned → full conviction</span></div>
+    <div class="conv-item red"><b>3 / 4</b><span>partial agreement → reduced size</span></div>
+    <div class="conv-item no"><b>VETO</b><span>risk too high → stand aside</span></div>
+  </div>
+
+  <div class="ba reveal">
+    <div class="ba-card before"><h4>WITHOUT THE FRAMEWORK</h4><ul><li>A dozen tabs and indicators to reconcile</li><li>Chasing the pump, in too late</li><li>Guessing the stop, sizing on emotion</li></ul></div>
+    <div class="ba-card after"><h4>WITH THE FRAMEWORK</h4><ul><li>One ranked candidate</li><li>One plotted trade — entry, stop, target</li><li>One risk verdict before you commit</li></ul></div>
+  </div>
 </section>
 
 <!-- ENGINES -->
@@ -293,7 +324,7 @@
       </tbody>
     </table>
   </div>
-  <p class="disclaimer-inline">Figures are historical, hypothetical backtest results measured in the validation layer. Past performance is not indicative of future results.</p>
+  <p class="disclaimer-inline">Figures are historical, hypothetical backtest results from the validation layer — entries confirmed on bar close (non-repainting). Backtests don't model every fee/slippage scenario and won't match live results exactly. Past performance is not indicative of future results; nothing here is financial advice.</p>
 </section>
 
 <!-- TECH -->
