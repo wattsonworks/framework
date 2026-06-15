@@ -1,0 +1,157 @@
+/* ============ SurgeGuru Framework — app.js ============ */
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* year */
+  var yr = document.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* nav toggle */
+  var toggle = document.getElementById('nav-toggle'), links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  /* nav shadow on scroll */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (nav) nav.style.boxShadow = window.scrollY > 8 ? '0 8px 30px rgba(0,0,0,.4)' : 'none';
+  }, { passive: true });
+
+  /* reveal on scroll */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* animated counters */
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var dur = 1400, start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      el.textContent = (decimals ? val.toFixed(decimals) : Math.round(val).toLocaleString('en-US')) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = (decimals ? target.toFixed(decimals) : Math.round(target).toLocaleString('en-US')) + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  var nums = document.querySelectorAll('.stat-num');
+  if ('IntersectionObserver' in window && !reduce) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { animateCount(en.target); co.unobserve(en.target); } });
+    }, { threshold: 0.6 });
+    nums.forEach(function (el) { co.observe(el); });
+  } else {
+    nums.forEach(function (el) {
+      var d = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      el.textContent = parseFloat(el.getAttribute('data-count')).toFixed(d) + (el.getAttribute('data-suffix') || '');
+    });
+  }
+
+  /* ticker */
+  var ticker = document.getElementById('ticker');
+  if (ticker) {
+    var feed = [
+      ['ICPUSDT', '+4.2%', 'up'], ['WLDUSDT', '+6.1%', 'up'], ['TSEM', '+4.9%', 'up'],
+      ['ETHUSD', '-0.3%', 'dn'], ['ESLT', '+1.8%', 'up'], ['NVMI', '+4.2%', 'up'],
+      ['CHKP', '+0.8%', 'up'], ['SURGE', 'ARMED', 'up'], ['RISK', '0.41', 'dn'], ['TEVA', '+0.2%', 'up']
+    ];
+    var html = '';
+    for (var rep = 0; rep < 2; rep++) {
+      feed.forEach(function (f) { html += '<span>' + f[0] + ' <b class="' + f[2] + '">' + f[1] + '</b></span>'; });
+    }
+    ticker.innerHTML = html;
+  }
+
+  /* risk value flicker + signal rotation (subtle, decorative) */
+  if (!reduce) {
+    var riskEl = document.getElementById('risk-val');
+    if (riskEl) setInterval(function () {
+      var v = (0.30 + Math.random() * 0.30).toFixed(2);
+      riskEl.textContent = v;
+      riskEl.style.color = v > 0.55 ? '#ff3b5c' : (v < 0.40 ? '#00e5a0' : '#e8edf5');
+    }, 2600);
+
+    var sig = document.getElementById('t-signal'), asset = document.getElementById('t-asset'), pf = document.getElementById('t-pf');
+    var setups = [
+      ['CASCADE-FADE · LONG', 'BINANCE:ICPUSDT · 1H', '2.50'],
+      ['FULL-ENGINE · LONG', 'NASDAQ:TSEM · 1H', '2.64'],
+      ['CASCADE-FADE · LONG', 'BINANCE:WLDUSDT · 1H', '2.23'],
+      ['FULL-ENGINE · LONG', 'NASDAQ:ESLT · 1D', '1.93']
+    ];
+    var si = 0;
+    if (sig && asset && pf) setInterval(function () {
+      si = (si + 1) % setups.length;
+      sig.style.opacity = '0'; asset.style.opacity = '0'; pf.style.opacity = '0';
+      setTimeout(function () {
+        sig.textContent = setups[si][0]; asset.textContent = setups[si][1]; pf.textContent = setups[si][2];
+        sig.style.opacity = asset.style.opacity = pf.style.opacity = '1';
+      }, 320);
+    }, 3800);
+    [sig, asset, pf].forEach(function (el) { if (el) el.style.transition = 'opacity .3s'; });
+  }
+
+  /* canvas background — drifting node grid with surge pulses */
+  var canvas = document.getElementById('bg-canvas');
+  if (canvas && !reduce) {
+    var ctx = canvas.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var nodes = [];
+    function resize() {
+      W = canvas.width = innerWidth * dpr; H = canvas.height = innerHeight * dpr;
+      canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px';
+      var count = Math.min(70, Math.floor(innerWidth / 26));
+      nodes = [];
+      for (var i = 0; i < count; i++) {
+        nodes.push({
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.18 * dpr, vy: (Math.random() - 0.5) * 0.18 * dpr,
+          r: (Math.random() * 1.4 + 0.6) * dpr, pulse: Math.random()
+        });
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      var maxd = 130 * dpr;
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        n.x += n.vx; n.y += n.vy; n.pulse += 0.01;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+        for (var j = i + 1; j < nodes.length; j++) {
+          var m = nodes[j], dx = n.x - m.x, dy = n.y - m.y, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < maxd) {
+            var a = (1 - d / maxd) * 0.22;
+            ctx.strokeStyle = 'rgba(34,211,238,' + a + ')';
+            ctx.lineWidth = 0.6 * dpr;
+            ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(m.x, m.y); ctx.stroke();
+          }
+        }
+        var glow = (Math.sin(n.pulse) * 0.5 + 0.5);
+        ctx.fillStyle = 'rgba(0,229,160,' + (0.35 + glow * 0.4) + ')';
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + glow * 0.6 * dpr, 0, Math.PI * 2); ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    resize(); draw();
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 200); });
+  }
+})();
