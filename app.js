@@ -93,10 +93,10 @@
 
     var sig = document.getElementById('t-signal'), asset = document.getElementById('t-asset'), pf = document.getElementById('t-pf');
     var setups = [
-      ['AMAT · 1H', 'FULL-ENGINE · LONG', '1.79'],
-      ['NVDA · 4H', 'FULL-ENGINE · LONG', '1.99'],
-      ['LRCX · 10M', 'CASCADE-FADE · LONG', '1.89'],
-      ['TSEM · 1H', 'FULL-ENGINE · LONG', '1.68']
+      ['AMAT · 1H', 'SEMICONDUCTORS', '1.79'],
+      ['NVDA · 4H', 'SEMICONDUCTORS', '1.99'],
+      ['LRCX · 10M', 'SEMICONDUCTORS', '1.89'],
+      ['TSEM · 1H', 'SEMICONDUCTORS', '1.68']
     ];
     var si = 0;
     if (sig && asset && pf) setInterval(function () {

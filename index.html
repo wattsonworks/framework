@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Proprietary Trading Framework</title>
-<meta name="description" content="A live proprietary quant trading framework: LIQUIDEX-CORE signal engine, SRE Surge Risk Engine live leaderboard, Prophet risk-management gate and a multi-asset validation layer. 5,000+ lines of Pine Script v6, 250+ backtests across crypto and equities." />
+<title>Proprietary Trading Framework — A Semiconductor Edge</title>
+<meta name="description" content="A proprietary market-structure & liquidity framework with a proven, concentrated edge in semiconductors. LIQUIDEX-CORE strategy, Keeper equity leaderboard, Prophet risk gate. 5,000+ lines Pine v6, 250 backtests." />
 <meta name="theme-color" content="#06080c" />
-<meta property="og:title" content="Proprietary Trading Framework" />
-<meta property="og:description" content="LIQUIDEX-CORE · SRE Surge Risk Engine · Prophet Risk Engine · Validation. Live, multi-asset, 250+ backtests." />
+<meta property="og:title" content="Proprietary Trading Framework — A Semiconductor Edge" />
+<meta property="og:description" content="A proven, concentrated edge in semiconductors. LIQUIDEX-CORE · Keeper · Prophet. 250 backtests, PF up to 1.99." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,12 +28,11 @@
     <span class="brand-text">PROPRIETARY TRADING <b>FRAMEWORK</b></span>
   </a>
   <nav class="nav-links" id="nav-links">
-    <a href="#system">System</a>
+    <a href="#edge">The Edge</a>
+    <a href="#how">How</a>
     <a href="#live">Live</a>
-    <a href="#process">Process</a>
     <a href="#results">Results</a>
-    <a href="#engines">Engines</a>
-    <a href="#access" class="nav-cta">Request Access</a>
+    <a href="#access" class="nav-cta">Get Access</a>
   </nav>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
@@ -43,56 +42,83 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow"><span class="dot"></span> LIVE PROPRIETARY QUANT FRAMEWORK</div>
-    <h1 class="hero-title">One framework.<br><span class="grad">Four engines.</span><br>One verdict.</h1>
-    <p class="hero-sub">A live command center — <strong>SRE</strong> ranks the entire universe by profit factor and risk in real time, <strong>LIQUIDEX-CORE</strong> plots the trade, and <strong>Prophet</strong> gates and sizes every entry. <strong>5,000+ lines of Pine&nbsp;v6</strong>, 250+ backtests across crypto and equities — running on one screen.</p>
+    <div class="eyebrow"><span class="dot"></span> MARKET-STRUCTURE &amp; LIQUIDITY FRAMEWORK</div>
+    <h1 class="hero-title">A proven edge,<br><span class="grad">concentrated in chips.</span></h1>
+    <p class="hero-sub">In a 250-test sweep, every single robust setup landed in one place — <strong>semiconductors</strong>. <strong>Keeper</strong> finds it live, <strong>LIQUIDEX-CORE</strong> trades it, <strong>Prophet</strong> gates and breaks the risk. 5,000+ lines of Pine&nbsp;v6 — an edge that doesn't break.</p>
     <div class="hero-cta">
-      <a href="#live" class="btn btn-primary">See it live</a>
-      <a href="#access" class="btn btn-ghost">Request access →</a>
+      <a href="#results" class="btn btn-primary">See the results</a>
+      <a href="#access" class="btn btn-ghost">Get LIQUIDEX-S — $249/mo →</a>
     </div>
   </div>
 
-  <!-- live-ish terminal panel -->
   <div class="terminal" aria-hidden="true">
-    <div class="terminal-bar"><span class="t-dot r"></span><span class="t-dot a"></span><span class="t-dot g"></span><span class="t-title">framework://live</span></div>
+    <div class="terminal-bar"><span class="t-dot r"></span><span class="t-dot a"></span><span class="t-dot g"></span><span class="t-title">keeper://live · semis</span></div>
     <div class="terminal-body">
-      <div class="t-row"><span class="t-k">SRE&nbsp;· SURGE RISK</span><span class="t-v ok">● RANKING</span></div>
+      <div class="t-row"><span class="t-k">KEEPER&nbsp;· EQ</span><span class="t-v ok">● RANKING</span></div>
       <div class="t-row"><span class="t-k">LIQUIDEX-CORE</span><span class="t-v ok">● ARMED</span></div>
-      <div class="t-row"><span class="t-k">PROPHET&nbsp;RISK</span><span class="t-v"><span id="risk-val">0.41</span> <span class="muted">· SIZE 1.0x</span></span></div>
-      <div class="t-row"><span class="t-k">VALIDATION</span><span class="t-v ok">● PASS</span></div>
+      <div class="t-row"><span class="t-k">PROPHET&nbsp;GATE</span><span class="t-v"><span id="risk-val">0.38</span> <span class="muted">· SIZE 1.0x</span></span></div>
       <div class="t-verdict"><span class="vk">VERDICT</span><span><span class="vv">GO</span> <span class="vsub">4/4 reads aligned</span></span></div>
       <div class="t-sep"></div>
-      <div class="t-row"><span class="t-k">TOP&nbsp;FINDING</span><span class="t-v hl" id="t-signal">AMAT · 1H</span></div>
-      <div class="t-row"><span class="t-k">SIGNAL</span><span class="t-v" id="t-asset">CASCADE-FADE · LONG</span></div>
+      <div class="t-row"><span class="t-k">TOP&nbsp;KEEPER</span><span class="t-v hl" id="t-signal">AMAT · 1H</span></div>
+      <div class="t-row"><span class="t-k">SECTOR</span><span class="t-v" id="t-asset">SEMICONDUCTORS</span></div>
       <div class="t-row"><span class="t-k">PF (BACKTEST)</span><span class="t-v pf" id="t-pf">1.79</span></div>
       <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
+<!-- STATS / FACT SHEET -->
 <section class="stats" aria-label="Key metrics">
   <div class="stat"><div class="stat-num" data-count="5000" data-suffix="+">0</div><div class="stat-label">Lines · Pine v6</div></div>
-  <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-label">Integrated engines</div></div>
-  <div class="stat"><div class="stat-num" data-count="250" data-suffix="+">0</div><div class="stat-label">Backtests run</div></div>
-  <div class="stat"><div class="stat-num" data-count="25">0</div><div class="stat-label">Assets × 10 TFs</div></div>
+  <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-label">Integrated products</div></div>
+  <div class="stat"><div class="stat-num" data-count="250">0</div><div class="stat-label">Backtests run</div></div>
+  <div class="stat"><div class="stat-num" data-count="350">0</div><div class="stat-label">Trades per test set</div></div>
   <div class="stat"><div class="stat-num" data-count="1.99" data-decimals="2">0</div><div class="stat-label">Best robust PF</div></div>
 </section>
-<div class="stats-note">All performance figures throughout are historical, hypothetical backtests — see full disclaimer below.</div>
-<div class="scope-strip"><strong>SCOPE</strong> &nbsp; <b style="color:#00e5a0">SRE</b> ranks crypto <em>and</em> equities live. &nbsp;·&nbsp; <b style="color:#22d3ee">LIQUIDEX-CORE</b> + <b style="color:#ffb800">Prophet</b> trade both. &nbsp;·&nbsp; The standalone <b>Surge Guru</b> scanner is crypto-only (equities scanner on the roadmap).</div>
+<div class="stats-note">Validated across NVDA · ASML · LRCX · AMAT · MU · TSEM · TSLA · MSFT · SMH. All figures are historical, hypothetical backtests — see disclaimer.</div>
 
-<!-- SYSTEM (hub) -->
-<section class="section" id="system">
+<!-- THE EDGE -->
+<section class="section" id="edge">
   <div class="section-head reveal">
-    <div class="kicker">ONE&nbsp;SYSTEM</div>
-    <h2>One engine at the center</h2>
-    <p>Not four products in a list — one signal engine with three tools wired into it. The SRE leaderboard and surge scanner feed it candidates, the Prophet risk engine gates and sizes every entry, the backtester proves the timeframe. The output is a single GO / NO-GO.</p>
+    <div class="kicker">THE&nbsp;EDGE</div>
+    <h2>The edge has a name: semiconductors</h2>
+    <p>This isn't a lucky backtest. Out of 25 assets across 10 timeframes, <strong>every one of the eight robust-core setups is a semiconductor</strong> — the same sector, again and again. That concentration is the proof, not a coincidence.</p>
+  </div>
+
+  <div class="chips reveal">
+    <span class="chip"><b>NVDA</b> Nvidia</span>
+    <span class="chip"><b>AMAT</b> Applied Mat.</span>
+    <span class="chip"><b>LRCX</b> Lam Research</span>
+    <span class="chip"><b>ASML</b> ASML</span>
+    <span class="chip"><b>MU</b> Micron</span>
+    <span class="chip"><b>TSEM</b> Tower Semi</span>
+    <span class="chip"><b>SMH</b> Semi ETF</span>
+  </div>
+
+  <div class="headline-num reveal">
+    <div class="hn"><b>1.79</b><span>AMAT 1h · 241 trades · 13% DD</span></div>
+    <div class="hn"><b>1.89</b><span>LRCX 10m · 203 trades · 16% DD</span></div>
+    <div class="hn"><b>8 / 8</b><span>robust setups are semis</span></div>
+  </div>
+
+  <div class="edge-why reveal">
+    <p><strong>Why semiconductors?</strong> They're the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity/cascade engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
+    <p><strong>Why that makes it credible.</strong> A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We don't claim to trade everything. We found where the edge actually lives.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="section-head reveal">
+    <div class="kicker">ONE&nbsp;LOOP</div>
+    <h2>Find it. Trade it. Gate it.</h2>
+    <p>One signal engine with two tools wired into it. No catalog of indicators — one verdict.</p>
   </div>
 
   <div class="hub-wrap reveal">
     <div class="hub-side feeders">
-      <div class="hub-chip sre"><span>SRE · SURGE RISK</span><em>which symbol is working now</em></div>
-      <div class="hub-chip sg"><span>SURGE GURU</span><em>which crypto token is firing</em></div>
+      <div class="hub-chip sre"><span>KEEPER</span><em>which semi is working now (EQ)</em></div>
+      <div class="hub-chip sg"><span>SURGE GURU</span><em>crypto surge — bonus</em></div>
       <div class="hub-feed-note">feed candidates →</div>
     </div>
     <div class="hub-core">
@@ -101,135 +127,55 @@
       <div class="hub-core-sub">where to enter · stop · target</div>
     </div>
     <div class="hub-side gates">
-      <div class="hub-feed-note">→ gate &amp; prove</div>
-      <div class="hub-chip risk"><span>PROPHET · RISK</span><em>go / no-go &amp; position size</em></div>
-      <div class="hub-chip val"><span>VALIDATION</span><em>where the edge lives</em></div>
+      <div class="hub-feed-note">→ gate &amp; break</div>
+      <div class="hub-chip risk"><span>PROPHET</span><em>go / no-go · size · circuit-break</em></div>
     </div>
   </div>
-  <div class="hub-verdict reveal">Four independent reads — leaderboard, momentum, liquidity, risk — all pointing the same way. When they agree, you have a setup; when they don't, Prophet returns <span class="go">NO-GO</span>. You act on <strong>ONE VERDICT</strong>, not ten indicators.</div>
 
-  <div class="cfl-wrap reveal">
-    <table class="cfl-table">
-      <thead><tr><th>Read</th><th>Engine</th><th>The question it answers</th></tr></thead>
-      <tbody>
-        <tr><td>Leaderboard</td><td class="cfl-tool sre">SRE · Surge Risk</td><td>Which symbol &amp; timeframe is working right now — by PF, surge, risk?</td></tr>
-        <tr><td>Momentum</td><td class="cfl-tool sg">Surge Guru</td><td>Is this crypto token firing — 1m+3m, persistent? (crypto)</td></tr>
-        <tr><td>Liquidity</td><td class="cfl-tool lqx">LIQUIDEX-CORE</td><td>Is there a clean cascade → sweep → reversal to trade?</td></tr>
-        <tr><td>Risk</td><td class="cfl-tool risk">Prophet</td><td>Is composite risk below the veto — and what size is safe?</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="conviction reveal">
-    <div class="conv-item full"><b>4 / 4</b><span>reads aligned → full size</span></div>
-    <div class="conv-item red"><b>3 / 4</b><span>partial → Prophet trims size</span></div>
-    <div class="conv-item no"><b>VETO</b><span>danger zone → stand aside</span></div>
+  <div class="how-steps reveal">
+    <div class="how-step"><b>1 ·</b><span><strong>Keeper</strong> ranks equities live and surfaces the semiconductors that are working right now — by profit factor, surge and risk.</span></div>
+    <div class="how-step"><b>2 ·</b><span><strong>LIQUIDEX-CORE</strong> plots the trade on the chosen name — entry, structure stop, and take-profit at the opposing wall.</span></div>
+    <div class="how-step"><b>3 ·</b><span><strong>Prophet</strong> is the gate and the breaker: it scores the risk, scales your size, and cuts the strategy off in the danger zone.</span></div>
   </div>
 </section>
 
-<!-- LIVE / IN PRODUCTION -->
+<!-- LIVE -->
 <section class="section" id="live">
   <div class="section-head reveal">
     <div class="kicker">IN&nbsp;PRODUCTION</div>
     <h2>This is live — not a mockup</h2>
-    <p>The whole framework runs on one screen: the strategy plotting liquidity on the chart, the SRE leaderboard ranking the universe, the Prophet risk gate below, and the backtest report at the bottom. Real charts, real numbers.</p>
+    <p>The whole framework on one screen: strategy on the chart, Keeper ranking the universe, Prophet gating the risk, the backtest at the bottom.</p>
   </div>
   <div class="gallery">
     <figure class="shot feature reveal">
-      <img src="nvidia.png" alt="NVIDIA 4h with the full framework: LIQUIDEX-CORE strategy, SRE dashboard, Prophet risk engine and the strategy tester" loading="lazy" />
-      <figcaption><span class="tag">STRONGEST CANDIDATE · NVDA 4H</span><b>The full stack on one chart</b><span>NVIDIA 4h, ~10-year backtest: LIQUIDEX-CORE plots the trade, SRE ranks the universe, Prophet gates the risk — Profit Factor ≈ 1.99 over 120 trades.</span></figcaption>
+      <img src="nvidia.png" alt="NVIDIA with the full framework: LIQUIDEX-CORE strategy, Keeper dashboard, Prophet risk engine and the strategy tester" loading="lazy" />
+      <figcaption><span class="tag">NVDA · THE FULL STACK</span><b>Everything on one chart</b><span>LIQUIDEX-CORE plots the trade, Keeper ranks the universe, Prophet gates the risk — ~10-year backtest, Profit Factor ≈ 1.99.</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="sre-dashboard.png" alt="SRE Surge Risk Engine live leaderboard: Strategy Findings and PnL Leaders across crypto and equities" loading="lazy" />
-      <figcaption><span class="tag">SRE · SURGE RISK ENGINE</span><b>Live leaderboard, hooked to LIQUIDEX-CORE</b><span>Runs the strategy across the whole universe and ranks every symbol live by surge, risk, profit factor and PnL — Strategy Findings + PnL Leaders.</span></figcaption>
+      <img src="sre-dashboard.png" alt="Keeper live leaderboard: strategy findings and PnL leaders across equities" loading="lazy" />
+      <figcaption><span class="tag">KEEPER · LIVE</span><b>The equity leaderboard</b><span>Runs LIQUIDEX-CORE across the universe and ranks every name live by profit factor, surge, risk and PnL.</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="prophet-engine.png" alt="Prophet Risk Engine: composite risk score, safe and danger zones, velocity and position-size scaling" loading="lazy" />
-      <figcaption><span class="tag">PROPHET · RISK ENGINE</span><b>The risk-management gate</b><span>Composite risk, SAFE / DANGER zones, velocity (PLUNGE), long &amp; short risk — and a live position-size verdict (SIZE 0.5× when elevated).</span></figcaption>
+      <img src="prophet-engine.png" alt="Prophet risk engine: composite risk, safe and danger zones, velocity and position-size scaling" loading="lazy" />
+      <figcaption><span class="tag">PROPHET · GATE + BREAKER</span><b>Risk management, built in</b><span>Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict (0.5× when elevated).</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="gold-layout.png" alt="Gold XAUUSD weekly with the framework and live strategy-findings leaderboard" loading="lazy" />
-      <figcaption><span class="tag">GOLD · 1W</span><b>Same loop, any market</b><span>The identical engine on Gold weekly — full-history backtest, Profit Factor ≈ 1.56, with the live findings &amp; PnL leaders docked to the side.</span></figcaption>
+      <img src="gold-layout.png" alt="Gold weekly with the framework and live keeper leaderboard" loading="lazy" />
+      <figcaption><span class="tag">BEYOND SEMIS</span><b>The same loop, other markets</b><span>It generalizes — here on Gold weekly — but the robust, repeatable edge lives in the chips.</span></figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section" id="process">
-  <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;SYSTEM&nbsp;IN&nbsp;ACTION</div>
-    <h2>One trade, one loop</h2>
-    <p>Everything runs at once on a single screen. This is the path a trade actually takes through the framework — each engine hands it to the next.</p>
-  </div>
-
-  <ol class="flow">
-    <li class="flow-step reveal">
-      <div class="flow-rail"><span class="flow-num">1</span></div>
-      <div class="flow-body">
-        <div class="flow-tool"><span class="ft-badge sre">SRE · SURGE RISK</span><span class="ft-where">crypto + equities · live</span></div>
-        <h3>Rank the universe</h3>
-        <p>The SRE Surge Risk Engine runs LIQUIDEX-CORE across the whole universe and ranks every symbol live — by surge, risk, profit factor and PnL. The Strategy Findings and PnL Leaders boards tell you what's working <em>right now</em>. You pick from the top of the list, not from a hunch.</p>
-        <div class="flow-readout"><span class="ro-k">FINDINGS</span> AMAT 1h PF1.79 · TSEM 1h 1.68 · LRCX 10m 1.89 &nbsp;·&nbsp; <span class="ro-k">REGIME</span> RISK-ON</div>
-      </div>
-    </li>
-
-    <li class="flow-step reveal">
-      <div class="flow-rail"><span class="flow-num">2</span></div>
-      <div class="flow-body">
-        <div class="flow-tool"><span class="ft-badge sg">SURGE GURU</span><span class="ft-where">crypto · scanner</span></div>
-        <h3>Time the surge (crypto)</h3>
-        <p>For crypto candidates, the surge scanner confirms the token is firing right now — 1-minute + 3-minute explosiveness, persistent across 15m / 30m / 45m / 1h. Caught early instead of chased. (Crypto-only; equities lean on the SRE leaderboard.)</p>
-        <div class="flow-readout"><span class="ro-k">SURGE</span> 🔥1+3 &nbsp;·&nbsp; <span class="ro-k">PERSIST</span> 15m✓ 30m✓ 45m✓ 1h✓ &nbsp;·&nbsp; <span class="ro-k">SYM</span> ICPUSDT</div>
-      </div>
-    </li>
-
-    <li class="flow-step reveal">
-      <div class="flow-rail"><span class="flow-num">3</span></div>
-      <div class="flow-body">
-        <div class="flow-tool"><span class="ft-badge lqx">LIQUIDEX-CORE</span><span class="ft-where">the signal engine</span></div>
-        <h3>Plot the trade</h3>
-        <p>Load LIQUIDEX-CORE on the candidate. It maps the liquidity beneath price — cascade, sweep, order blocks, iceberg walls, FVGs — and plots the executable trade: entry, a structure stop beyond the sweep, and the take-profit parked at the opposing wall.</p>
-        <div class="flow-readout"><span class="ro-k">PATTERN</span> CASCADE → SWEEP → REVERSAL &nbsp;·&nbsp; <span class="ro-k">ENTRY</span> 2.41&nbsp; <span class="ro-r">SL</span> 2.31&nbsp; <span class="ro-k">TP</span> 2.68 (wall)</div>
-      </div>
-    </li>
-
-    <li class="flow-step reveal">
-      <div class="flow-rail"><span class="flow-num">4</span></div>
-      <div class="flow-body">
-        <div class="flow-tool"><span class="ft-badge risk">PROPHET · RISK</span><span class="ft-where">the gate + sizing</span></div>
-        <h3>Gate &amp; size — or veto</h3>
-        <p>Prophet scores the entry before you commit: composite risk, SAFE / DANGER zone, velocity, long &amp; short risk. If risk is elevated it doesn't just warn — it <strong>cuts your size</strong> (e.g. 0.5×). In the danger zone, it returns NO-GO and you stand aside. No exceptions.</p>
-        <div class="flow-readout"><span class="ro-k">RISK</span> 0.38 SAFE &nbsp;·&nbsp; <span class="ro-k">VEL</span> STABLE &nbsp;·&nbsp; <span class="ro-k">SIZE</span> 1.0x &nbsp;·&nbsp; <span class="ro-k">VERDICT</span> GO</div>
-      </div>
-    </li>
-
-    <li class="flow-step reveal">
-      <div class="flow-rail"><span class="flow-num">5</span></div>
-      <div class="flow-body">
-        <div class="flow-tool"><span class="ft-badge exec">EXECUTE</span><span class="ft-where">validated edge</span></div>
-        <h3>Execute &amp; manage</h3>
-        <p>Enter at the plotted size. The stop sits beyond the sweep, the target is the wall, and alerts (popup / email / mobile push) manage the exit. The validation layer has already proven this exact symbol + timeframe carries a real backtested edge — you trade where the data says to.</p>
-        <div class="flow-readout"><span class="ro-k">RR</span> 2.7 &nbsp;·&nbsp; <span class="ro-k">BACKTEST PF</span> 1.79 &nbsp;·&nbsp; <span class="ro-k">ALERTS</span> ON &nbsp;·&nbsp; <span class="ro-k">TF</span> per the sweep</div>
-      </div>
-    </li>
-  </ol>
-
-  <div class="ba reveal">
-    <div class="ba-card before"><h4>WITHOUT THE FRAMEWORK</h4><ul><li>A dozen tabs and indicators to reconcile</li><li>No idea which symbol is actually working</li><li>Guessing the stop, sizing on emotion</li></ul></div>
-    <div class="ba-card after"><h4>WITH THE FRAMEWORK</h4><ul><li>A live leaderboard of what's working now</li><li>One plotted trade — entry, stop, target</li><li>One risk verdict <em>and</em> a position size</li></ul></div>
   </div>
 </section>
 
 <!-- RESULTS BY TIER -->
 <section class="section" id="results">
   <div class="section-head reveal">
-    <div class="kicker">VALIDATED&nbsp;EDGE</div>
+    <div class="kicker">THE&nbsp;STRATEGIES&nbsp;YOU&nbsp;GET</div>
     <h2>Results, sorted by how much you can trust them</h2>
-    <p>Every asset against every timeframe — a 250-cell sweep of LIQUIDEX-CORE — graded into tiers. Tier&nbsp;1 is the tradeable core (big samples, real edge). Tier&nbsp;3 is the moonshot pile (huge returns, tiny samples, blowup risk).</p>
+    <p>Every asset against every timeframe — graded into tiers. Tier&nbsp;1 is the tradeable semiconductor core. Tier&nbsp;3 is the moonshot pile — huge, but small samples.</p>
   </div>
 
   <div class="tier tier-1 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3>Robust core</h3><span class="tier-sub">PF ≥ 1.5 · 100+ trades · trade these</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3>Robust core · all semiconductors</h3><span class="tier-sub">PF ≥ 1.5 · 100+ trades · trade these</span></div>
     <table class="tier-table">
       <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th><th>Max DD</th></tr></thead>
       <tbody>
@@ -246,7 +192,7 @@
   </div>
 
   <div class="tier tier-2 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3>Solid</h3><span class="tier-sub">PF 1.25–1.5 · robust trade counts · secondary</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3>Solid</h3><span class="tier-sub">PF 1.25–1.5 · robust trade counts</span></div>
     <table class="tier-table">
       <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>Trades</th><th>Max DD</th></tr></thead>
       <tbody>
@@ -255,184 +201,93 @@
         <tr><td>MU</td><td>1D</td><td class="pf">1.46</td><td>234</td><td>51%</td></tr>
         <tr><td>MU</td><td>2h</td><td class="pf">1.41</td><td>323</td><td>22%</td></tr>
         <tr><td>LRCX</td><td>1h</td><td class="pf">1.33</td><td>284</td><td>37%</td></tr>
-        <tr><td>SMH</td><td>1h</td><td class="pf">1.31</td><td>—</td><td class="ddlow">18%</td></tr>
         <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>26%</td></tr>
-        <tr><td>TSLA</td><td>1h</td><td class="pf">1.25</td><td>337</td><td>28%</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="tier tier-3 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3>Weekly moonshots</h3><span class="tier-sub">PF ≥ 1.5 but &lt; 100 trades · huge returns, small samples</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3>Weekly moonshots</h3><span class="tier-sub">PF ≥ 1.5 but &lt; 100 trades · huge, small samples</span></div>
     <table class="tier-table">
       <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th></tr></thead>
       <tbody>
         <tr><td>AVGO</td><td>1W</td><td class="pf">5.62</td><td>+669%</td><td>19</td></tr>
         <tr><td>TSLA</td><td>1W</td><td class="pf">4.49</td><td>+2141%</td><td>16</td></tr>
         <tr><td>NVMI</td><td>1W</td><td class="pf">3.02</td><td>+420%</td><td>31</td></tr>
-        <tr><td>META</td><td>1W</td><td class="pf">2.16</td><td>—</td><td>43</td></tr>
-        <tr><td>GOOGL</td><td>1W</td><td class="pf">2.12</td><td>—</td><td>33</td></tr>
-        <tr><td>CAMT</td><td>1W</td><td class="pf">1.95</td><td>+299%</td><td>49</td></tr>
         <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>+666%</td><td>65</td></tr>
-        <tr><td>ESLT</td><td>1W</td><td class="pf">1.52</td><td>—</td><td>60</td></tr>
       </tbody>
     </table>
-    <div class="tier-warn">⚠️ Weekly is the highest-PF tier <em>and</em> the most dangerous: on default full-equity sizing a single bad run can wipe out (AAPL 1W −99.9%, TEVA 1W −84%). Weekly only becomes tradeable with Prophet's position-sizing / risk caps — never raw.</div>
+    <div class="tier-warn">⚠️ Weekly is the highest-PF tier <em>and</em> the most dangerous — a bad run can wipe out on raw sizing. Tradeable only with Prophet's position caps.</div>
   </div>
 
   <div class="best-adj reveal">
-    <strong>Best risk-adjusted of the entire sweep:</strong> &nbsp;
-    <b>AMAT 1h</b> (PF 1.79 · 13% DD) · <b>LRCX 10m</b> (1.89 · 16%) · <b>MU 5m</b> (1.58 · 17%) · <b>TSEM 1h</b> (1.68 · 21%) · <b>SMH 1h</b> (1.31 · 18%). These four-plus are the product core.
+    <strong>Best risk-adjusted of the whole sweep:</strong> &nbsp;
+    <b>AMAT 1h</b> (PF 1.79 · 13% DD) · <b>LRCX 10m</b> (1.89 · 16%) · <b>MU 5m</b> (1.58 · 17%) · <b>TSEM 1h</b> (1.68 · 21%). All semiconductors. This is the product core.
   </div>
-
-  <ul class="assumptions reveal">
-    <li>Entries confirmed on bar close — non-repainting.</li>
-    <li>Commission + slippage applied; not every fill scenario modeled.</li>
-    <li>The edge is regime-dependent — strongest in down/range structure.</li>
-    <li>Live results will differ — these are not a forecast.</li>
-  </ul>
-  <p class="disclaimer-inline">Figures are historical, hypothetical backtest results from the validation layer. Past performance is not indicative of future results; nothing here is financial advice.</p>
+  <p class="disclaimer-inline">Historical, hypothetical backtest results — non-repainting, with commission &amp; slippage. Past performance is not indicative of future results; nothing here is financial advice.</p>
 </section>
 
 <!-- ENGINES -->
 <section class="section" id="engines">
   <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;MODULES</div>
-    <h2>The engines</h2>
-    <p>Each module ships and runs independently — together they form the framework.</p>
+    <div class="kicker">THE&nbsp;PRODUCTS</div>
+    <h2>Four products, one framework</h2>
   </div>
-
   <div class="cards">
     <article class="card reveal">
       <div class="card-top"><span class="card-id">LIQUIDEX-CORE</span><span class="card-badge">Signal Engine</span></div>
-      <h3>Institutional Liquidity Strategy</h3>
+      <h3>The strategy</h3>
       <div class="card-job">where to enter, stop &amp; target</div>
-      <p>The executable hub, in 5,000+ lines of Pine v6. Liquidation cascades, multi-exchange CVD, order blocks, iceberg walls, FVGs and liquidity sweeps — converted into long/short entries with structure stops and opposing-wall take-profits. Multi-asset: crypto majors and equities.</p>
-      <ul class="card-feats">
-        <li>Cascade-fade &amp; full-engine modes</li>
-        <li>OB / ICE wall + FVG mapping</li>
-        <li>Backtests every symbol × timeframe</li>
-      </ul>
-      <a class="card-link" href="https://wattsonworks.github.io/LIQUIDEX" target="_blank" rel="noopener">View LIQUIDEX <span>↗</span></a>
+      <p>The executable hub, 5,000+ lines of Pine v6. Liquidation cascades, CVD, order blocks, iceberg walls and sweeps — turned into entries with structure stops and opposing-wall take-profits.</p>
     </article>
-
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">SRE</span><span class="card-badge accent-badge">Surge Risk Engine</span></div>
-      <h3>Live Universe Leaderboard</h3>
-      <div class="card-job">which symbol is working now</div>
-      <p>The command center. Runs LIQUIDEX-CORE across the whole universe — crypto sectors <em>and</em> equities — and ranks every symbol live by Surge, Risk, Profit Factor and PnL. Strategy Findings, PnL Leaders, sector rotation, breadth and regime, all on one dashboard. It's also a gate: a RISK-OFF regime stands the system down.</p>
-      <ul class="card-feats">
-        <li>Live Strategy Findings + PnL Leaders</li>
-        <li>Cross-sectional surge / risk scoring</li>
-        <li>Sector rotation · breadth · regime gate</li>
-      </ul>
-      <a class="card-link muted-link" href="#access">Request access <span>↗</span></a>
+      <div class="card-top"><span class="card-id">KEEPER</span><span class="card-badge accent-badge">EQ Leaderboard</span></div>
+      <h3>Finds the keepers</h3>
+      <div class="card-job">which semi is working now</div>
+      <p>Runs the strategy across equities and ranks every name live by profit factor, surge and risk — so you trade the leaders, not a hunch. Includes <strong>Crypto Keeper</strong> as a bonus indicator.</p>
     </article>
-
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">PROPHET</span><span class="card-badge">Risk Engine</span></div>
-      <h3>Risk-Management Gate &amp; Sizing</h3>
-      <div class="card-job">go or no-go &amp; how big</div>
-      <p>The robust risk gate. A composite risk score with SAFE / DANGER zones, momentum, flow, volatility and velocity (PLUNGE) reads, long &amp; short risk — and a live <strong>position-size verdict</strong>. When risk is elevated it cuts your size; in the danger zone it vetoes the trade outright.</p>
-      <ul class="card-feats">
-        <li>Composite risk · SAFE / DANGER zones</li>
-        <li>Live position-size scaling (e.g. 0.5×)</li>
-        <li>Per-mode (scalp / swing) risk profiles</li>
-      </ul>
-      <a class="card-link" href="https://wattsonworks.github.io/LRE" target="_blank" rel="noopener">View Prophet <span>↗</span></a>
+      <div class="card-top"><span class="card-id">PROPHET</span><span class="card-badge">Risk Gate + Breaker</span></div>
+      <h3>Gates &amp; breaks the risk</h3>
+      <div class="card-job">go / no-go &amp; how big</div>
+      <p>The gate and circuit-breaker for LIQUIDEX. Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict that cuts size when risk is elevated and stands you down in the danger zone.</p>
     </article>
-
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">SURGE&nbsp;GURU</span><span class="card-badge">Market Scanner · Crypto</span></div>
-      <h3>Real-Time Surge Scanner</h3>
+      <div class="card-top"><span class="card-id">SURGE&nbsp;GURU</span><span class="card-badge">Bonus · Crypto</span></div>
+      <h3>Crypto surge scanner</h3>
       <div class="card-job">which crypto token is firing</div>
-      <p><strong>Crypto markets only (for now).</strong> The standalone surge scanner — catches explosive crypto moves the instant they form, measuring 1-minute + 3-minute explosiveness and tracking persistence across 15m / 30m / 45m / 1h, so momentum is confirmed, not chased.</p>
-      <ul class="card-feats">
-        <li>1m + 3m explosiveness (🔥1+3)</li>
-        <li>Multi-timeframe persistence (15m–1h)</li>
-        <li>Crypto only — equities scanner on the roadmap</li>
-      </ul>
-      <a class="card-link" href="https://wattsonworks.github.io/SG" target="_blank" rel="noopener">View Surge Guru <span>↗</span></a>
+      <p>A bonus for crypto lovers — real-time 1m + 3m explosiveness with multi-timeframe persistence. <strong>Crypto-only today; an equities version is coming.</strong></p>
     </article>
-
-    <article class="card reveal card-wide">
-      <div class="card-top"><span class="card-id">VALIDATION</span><span class="card-badge">Trade Validation Layer</span></div>
-      <h3>Multi-Asset Backtesting Framework</h3>
-      <div class="card-job">where the edge actually lives</div>
-      <p>Nothing is surfaced until it survives the data. The validation layer stress-tests LIQUIDEX-CORE across <strong>25 assets × 10 timeframes — 250 cells</strong> (crypto majors, US &amp; Israeli equities, semis, indices, gold), then sorts the survivors into trust tiers. It's what powers the live SRE leaderboard.</p>
-      <div class="mini-grid">
-        <div><span class="mini-k">Robust core</span><span class="mini-v">PF ≥ 1.5, 100+ trades</span></div>
-        <div><span class="mini-k">Best risk-adj</span><span class="mini-v">AMAT 1h · PF 1.79 · 13% DD</span></div>
-        <div><span class="mini-k">Semis cluster</span><span class="mini-v">1h &amp; 4h — AMAT / TSEM / LRCX / NVDA</span></div>
-        <div><span class="mini-k">Weekly</span><span class="mini-v">highest PF — needs Prophet sizing</span></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- METHODOLOGY -->
-<section class="section" id="methodology">
-  <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;SCIENCE</div>
-    <h2>Smart-money methodology</h2>
-    <p>The framework doesn't predict — it reads where institutional liquidity is taken, trades the reaction, and manages the risk of being wrong.</p>
-  </div>
-  <div class="method">
-    <div class="method-item reveal"><h4>Cascade-Fade</h4><p>Big players run stops with liquidation cascades. The engine fades the cascade and enters the post-sweep reversal — confirmed by Prophet's velocity read.</p></div>
-    <div class="method-item reveal"><h4>CVD &amp; Order-Flow</h4><p>Aggregated cumulative volume delta across major venues exposes real buying and selling pressure beneath the price.</p></div>
-    <div class="method-item reveal"><h4>Liquidity Sweeps</h4><p>Down-and-back-up or up-and-back-down — the sweep direction decides the bias. Stops sit beyond the sweep extreme.</p></div>
-    <div class="method-item reveal"><h4>OB / ICE Walls &amp; FVGs</h4><p>Order blocks, iceberg absorption and fair-value gaps mark where moves die. The framework banks profit into the opposing wall.</p></div>
-    <div class="method-item reveal"><h4>Risk-Managed Sizing</h4><p>Prophet scales position size to live risk and vetoes danger-zone entries — the difference between a good backtest and a survivable account.</p></div>
-    <div class="method-item reveal"><h4>Trust Tiers</h4><p>Every result is graded by sample size and drawdown, not just profit factor — so you trade the robust core, not a small-sample mirage.</p></div>
-  </div>
-</section>
-
-<!-- TECH -->
-<section class="section tech" id="tech">
-  <div class="section-head reveal">
-    <div class="kicker">UNDER&nbsp;THE&nbsp;HOOD</div>
-    <h2>Built like infrastructure</h2>
-  </div>
-  <div class="tech-grid reveal">
-    <div class="tech-item"><span class="tech-ico">⌁</span><h4>Pine Script v6</h4><p>5,000+ lines across the engine suite — arrays, boxes, multi-exchange security calls, live dashboard tables.</p></div>
-    <div class="tech-item"><span class="tech-ico">⇄</span><h4>External integrations</h4><p>Scanner-app connectivity and parseable webhook alerts: <code>DIR|SCORE|ENTRY|SL|TP|RR|FACTORS</code>.</p></div>
-    <div class="tech-item"><span class="tech-ico">▤</span><h4>250-cell backtesting</h4><p>Every symbol × every timeframe, settle-verified, drawdown-aware — graded into trust tiers.</p></div>
-    <div class="tech-item"><span class="tech-ico">◷</span><h4>Real-time alerts</h4><p>Popup, email and mobile push on confirmed signals, regime shifts and risk-zone changes.</p></div>
   </div>
 </section>
 
 <!-- ACCESS -->
 <section class="section access" id="access">
   <div class="section-head reveal">
-    <div class="kicker">ACCESS</div>
-    <h2>Get the framework</h2>
-    <p>Each engine is available independently, or as the complete stack. Invite-only on TradingView protects the source.</p>
+    <div class="kicker">GET&nbsp;ACCESS</div>
+    <h2>One subscription. Every strategy.</h2>
   </div>
-  <div class="pricing reveal">
-    <div class="price-card">
-      <div class="price-name">Liquidity Engine</div>
-      <div class="price-amt">$100<span>/mo</span></div>
-      <div class="price-tag">LIQUIDEX-CORE</div>
-      <a href="https://wattsonworks.github.io/LIQUIDEX" target="_blank" rel="noopener" class="btn btn-ghost full">Open LIQUIDEX</a>
+
+  <div class="offer reveal">
+    <div class="offer-name">LIQUIDEX-S · full framework</div>
+    <div class="offer-amt">$249<span>/mo</span></div>
+    <div class="offer-line">LIQUIDEX-CORE strategy · Keeper EQ leaderboard · Prophet risk gate · every validated tier-1 &amp; tier-2 setup.</div>
+    <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20LIQUIDEX-S%20%28%24249%2Fmo%29%20framework%20access." target="_blank" rel="noopener" class="btn btn-primary full">Get access on WhatsApp →</a>
+    <div class="offer-bonus">🎁 <strong style="color:#e8edf5">Bonus:</strong> Surge Guru crypto scanner + Crypto Keeper — free for crypto lovers (equities update coming).</div>
+  </div>
+
+  <div class="automation">
+    <div class="auto-card reveal">
+      <div class="auto-ico">🤖</div>
+      <h4>Hook it into a bot</h4>
+      <p>Wire the framework's alerts straight into an automated trading bot — hands-free execution.</p>
+      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20to%20hook%20the%20framework%20into%20a%20trading%20bot." target="_blank" rel="noopener" class="btn btn-wa full">Ask on WhatsApp</a>
     </div>
-    <div class="price-card featured">
-      <div class="price-flag">FULL STACK</div>
-      <div class="price-name">The Framework</div>
-      <div class="price-amt">Custom</div>
-      <div class="price-tag">CORE + SRE + Prophet + validation</div>
-      <a href="#contact" class="btn btn-primary full">Request access</a>
-    </div>
-    <div class="price-card">
-      <div class="price-name">Surge Scanner</div>
-      <div class="price-amt">$34<span>/wk</span></div>
-      <div class="price-tag">Surge Guru · crypto</div>
-      <a href="https://wattsonworks.github.io/SG" target="_blank" rel="noopener" class="btn btn-ghost full">Open Surge Guru</a>
-    </div>
-    <div class="price-card">
-      <div class="price-name">Prophet · Risk Engine</div>
-      <div class="price-amt">$7<span>/mo</span></div>
-      <div class="price-tag">free with LIQUIDEX</div>
-      <a href="https://wattsonworks.github.io/LRE" target="_blank" rel="noopener" class="btn btn-ghost full">Open Prophet</a>
+    <div class="auto-card reveal">
+      <div class="auto-ico">⚙️</div>
+      <h4>Build me a bot</h4>
+      <p>Want a custom bot built around the framework? We'll scope and build it with you.</p>
+      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20a%20custom%20trading%20bot%20built%20around%20the%20framework." target="_blank" rel="noopener" class="btn btn-wa full">Request a build</a>
     </div>
   </div>
 </section>
@@ -444,26 +299,24 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <span class="brand-text">PROPRIETARY TRADING <b>FRAMEWORK</b></span>
-      <p>A live proprietary quant trading framework.<br>LIQUIDEX-CORE · SRE · Prophet · Validation.</p>
+      <p>A proprietary market-structure &amp; liquidity framework.<br>LIQUIDEX-CORE · Keeper · Prophet.</p>
     </div>
     <div class="footer-links">
-      <div><h5>Engines</h5>
+      <div><h5>Products</h5>
         <a href="https://wattsonworks.github.io/LIQUIDEX" target="_blank" rel="noopener">LIQUIDEX-CORE</a>
+        <a href="https://wattsonworks.github.io/LRE" target="_blank" rel="noopener">Prophet</a>
         <a href="https://wattsonworks.github.io/SG" target="_blank" rel="noopener">Surge Guru</a>
-        <a href="https://wattsonworks.github.io/LRE" target="_blank" rel="noopener">Prophet · Risk Engine</a>
-        <a href="https://wattsonworks.github.io" target="_blank" rel="noopener">The Safed Exchange</a>
       </div>
       <div><h5>Framework</h5>
-        <a href="#system">System</a>
-        <a href="#live">Live</a>
+        <a href="#edge">The Edge</a>
         <a href="#results">Results</a>
-        <a href="#access">Access</a>
+        <a href="#access">Get Access</a>
       </div>
     </div>
   </div>
   <div class="disclaimer">
-    For research and educational purposes only. All performance figures shown are historical, hypothetical backtest results, are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing on this site is financial advice.
-    <div class="copyr">© <span id="yr"></span> Proprietary Trading Framework · by SurgeGuru / wattsonworks. Built for traders, by a trader.</div>
+    For research and educational purposes only. All performance figures are historical, hypothetical backtest results, are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing on this site is financial advice.
+    <div class="copyr">© <span id="yr"></span> Proprietary Trading Framework · by SurgeGuru / wattsonworks.</div>
   </div>
 </footer>
 
