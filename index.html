@@ -152,7 +152,7 @@
       <figcaption><span class="tag">NVDA · THE FULL STACK</span><b>Everything on one chart</b><span>LIQUIDEX-CORE plots the trade, Keeper ranks the universe, Prophet gates the risk — ~10-year backtest, Profit Factor ≈ 1.99.</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="sre-dashboard.png" alt="Keeper live leaderboard: strategy findings and PnL leaders across equities" loading="lazy" />
+      <img src="keeper-dashboard.png" alt="Keeper live leaderboard: strategy findings and PnL leaders across equities" loading="lazy" />
       <figcaption><span class="tag">KEEPER · LIVE</span><b>The equity leaderboard</b><span>Runs LIQUIDEX-CORE across the universe and ranks every name live by profit factor, surge, risk and PnL.</span></figcaption>
     </figure>
     <figure class="shot reveal">
@@ -170,12 +170,12 @@
 <section class="section" id="results">
   <div class="section-head reveal">
     <div class="kicker">THE&nbsp;STRATEGIES&nbsp;YOU&nbsp;GET</div>
-    <h2>Results, sorted by how much you can trust them</h2>
-    <p>Every asset against every timeframe — graded into tiers. Tier&nbsp;1 is the tradeable semiconductor core. Tier&nbsp;3 is the moonshot pile — huge, but small samples.</p>
+    <h2>Three fields where the edge lives</h2>
+    <p>The sweep surfaced not one edge but three, ranked. <strong>Semiconductors</strong> dominate — Tier&nbsp;1, robust, the proof. <strong>Big tech &amp; software</strong> follow in Tier&nbsp;2; <strong>high-beta momentum</strong> brings the biggest returns in Tier&nbsp;3.</p>
   </div>
 
   <div class="tier tier-1 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3>Robust core · all semiconductors</h3><span class="tier-sub">PF ≥ 1.5 · 100+ trades · trade these</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3>Semiconductors — the core edge</h3><span class="tier-sub">PF ≥ 1.5 · 100+ trades · the proven, robust field</span></div>
     <table class="tier-table">
       <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th><th>Max DD</th></tr></thead>
       <tbody>
@@ -192,32 +192,32 @@
   </div>
 
   <div class="tier tier-2 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3>Solid</h3><span class="tier-sub">PF 1.25–1.5 · robust trade counts</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3>Big Tech &amp; Software — the second edge</h3><span class="tier-sub">strongest on the higher timeframes</span></div>
     <table class="tier-table">
-      <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>Trades</th><th>Max DD</th></tr></thead>
+      <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>Trades</th><th>Note</th></tr></thead>
       <tbody>
-        <tr><td>AMAT</td><td>1D</td><td class="pf">1.50</td><td>241</td><td>44%</td></tr>
-        <tr><td>TSLA</td><td>2h</td><td class="pf">1.47</td><td>352</td><td>61%</td></tr>
-        <tr><td>MU</td><td>1D</td><td class="pf">1.46</td><td>234</td><td>51%</td></tr>
-        <tr><td>MU</td><td>2h</td><td class="pf">1.41</td><td>323</td><td>22%</td></tr>
-        <tr><td>LRCX</td><td>1h</td><td class="pf">1.33</td><td>284</td><td>37%</td></tr>
-        <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>26%</td></tr>
+        <tr><td>META</td><td>1W</td><td class="pf">2.16</td><td>43</td><td>mega-cap</td></tr>
+        <tr><td>GOOGL</td><td>1W</td><td class="pf">2.12</td><td>33</td><td>also robust on 1h (1.46)</td></tr>
+        <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>65</td><td>+666% · software</td></tr>
+        <tr><td>CHKP</td><td>1W</td><td class="pf">1.46</td><td>—</td><td>cybersecurity</td></tr>
+        <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>the robust anchor · also 1W 1.60</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="tier tier-3 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3>Weekly moonshots</h3><span class="tier-sub">PF ≥ 1.5 but &lt; 100 trades · huge, small samples</span></div>
+    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3>High-Beta &amp; Momentum — the third edge</h3><span class="tier-sub">the biggest returns · mostly small, explosive samples</span></div>
     <table class="tier-table">
       <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th></tr></thead>
       <tbody>
         <tr><td>AVGO</td><td>1W</td><td class="pf">5.62</td><td>+669%</td><td>19</td></tr>
         <tr><td>TSLA</td><td>1W</td><td class="pf">4.49</td><td>+2141%</td><td>16</td></tr>
         <tr><td>NVMI</td><td>1W</td><td class="pf">3.02</td><td>+420%</td><td>31</td></tr>
-        <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>+666%</td><td>65</td></tr>
+        <tr><td>ESLT</td><td>1W</td><td class="pf">1.52</td><td>—</td><td>60</td></tr>
+        <tr><td>TSLA</td><td>2h</td><td class="pf">1.47</td><td>+324%</td><td>352</td></tr>
       </tbody>
     </table>
-    <div class="tier-warn">⚠️ Weekly is the highest-PF tier <em>and</em> the most dangerous — a bad run can wipe out on raw sizing. Tradeable only with Prophet's position caps.</div>
+    <div class="tier-warn">⚠️ The headline weekly numbers ride on tiny samples — tradeable only with Prophet's position caps. The robust exception: TSLA 2h, 352 trades.</div>
   </div>
 
   <div class="best-adj reveal">
