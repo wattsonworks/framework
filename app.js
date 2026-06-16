@@ -116,9 +116,10 @@
     var ctx = canvas.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio || 1, 2);
     var nodes = [];
     function resize() {
-      W = canvas.width = innerWidth * dpr; H = canvas.height = innerHeight * dpr;
-      canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px';
-      var count = Math.min(70, Math.floor(innerWidth / 26));
+      var cw = document.documentElement.clientWidth, chh = window.innerHeight;
+      W = canvas.width = cw * dpr; H = canvas.height = chh * dpr;
+      canvas.style.width = cw + 'px'; canvas.style.height = chh + 'px';
+      var count = Math.min(70, Math.floor(cw / 26));
       nodes = [];
       for (var i = 0; i < count; i++) {
         nodes.push({

@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -25,15 +25,16 @@
       <circle cx="23" cy="6" r="2.6" fill="#00e5a0"/>
       <defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#00e5a0"/></linearGradient></defs>
     </svg>
-    <span class="brand-text">PROPRIETARY TRADING <b>FRAMEWORK</b></span>
+    <span class="brand-text"><span class="bt-long">PROPRIETARY TRADING </span><b>FRAMEWORK</b></span>
   </a>
   <nav class="nav-links" id="nav-links">
-    <a href="#edge">The Edge</a>
-    <a href="#how">How</a>
-    <a href="#live">Live</a>
-    <a href="#results">Results</a>
-    <a href="#access" class="nav-cta">Get Access</a>
+    <a href="#edge" data-i18n="nav_edge">The Edge</a>
+    <a href="#how" data-i18n="nav_how">How</a>
+    <a href="#live" data-i18n="nav_live">Live</a>
+    <a href="#results" data-i18n="nav_results">Results</a>
+    <a href="#access" class="nav-cta" data-i18n="nav_access">Get Access</a>
   </nav>
+  <button class="lang-btn" id="lang-toggle" aria-label="Switch language">עברית</button>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 
@@ -42,12 +43,12 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow"><span class="dot"></span> MARKET-STRUCTURE &amp; LIQUIDITY FRAMEWORK</div>
-    <h1 class="hero-title">A proven edge,<br><span class="grad">concentrated in chips.</span></h1>
-    <p class="hero-sub">In a 250-test sweep, every single robust setup landed in one place — <strong>semiconductors</strong>. <strong>Keeper</strong> finds it live, <strong>LIQUIDEX-CORE</strong> trades it, <strong>Prophet</strong> gates and breaks the risk. 5,000+ lines of Pine&nbsp;v6 — an edge that doesn't break.</p>
+    <div class="eyebrow"><span class="dot"></span> <span data-i18n="hero_eyebrow">MARKET-STRUCTURE &amp; LIQUIDITY FRAMEWORK</span></div>
+    <h1 class="hero-title" data-i18n="hero_h1">A proven edge,<br><span class="grad">concentrated in chips.</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">In a 250-test sweep, every single robust setup landed in one place — <strong>semiconductors</strong>. <strong>Keeper</strong> finds it live, <strong>LIQUIDEX-CORE</strong> trades it, <strong>Prophet</strong> gates and breaks the risk. 5,000+ lines of Pine&nbsp;v6 — an edge that doesn't break.</p>
     <div class="hero-cta">
-      <a href="#results" class="btn btn-primary">See the results</a>
-      <a href="#access" class="btn btn-ghost">Get LIQUIDEX-S — $249/mo →</a>
+      <a href="#results" class="btn btn-primary" data-i18n="hero_cta1">See the results</a>
+      <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Get LIQUIDEX-S — $249/mo →</a>
     </div>
   </div>
 
@@ -67,22 +68,22 @@
   </div>
 </section>
 
-<!-- STATS / FACT SHEET -->
+<!-- STATS -->
 <section class="stats" aria-label="Key metrics">
-  <div class="stat"><div class="stat-num" data-count="5000" data-suffix="+">0</div><div class="stat-label">Lines · Pine v6</div></div>
-  <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-label">Integrated products</div></div>
-  <div class="stat"><div class="stat-num" data-count="250">0</div><div class="stat-label">Backtests run</div></div>
-  <div class="stat"><div class="stat-num" data-count="350">0</div><div class="stat-label">Trades per test set</div></div>
-  <div class="stat"><div class="stat-num" data-count="1.99" data-decimals="2">0</div><div class="stat-label">Best robust PF</div></div>
+  <div class="stat"><div class="stat-num" data-count="5000" data-suffix="+">0</div><div class="stat-label" data-i18n="stat1">Lines · Pine v6</div></div>
+  <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-label" data-i18n="stat2">Integrated products</div></div>
+  <div class="stat"><div class="stat-num" data-count="250">0</div><div class="stat-label" data-i18n="stat3">Backtests run</div></div>
+  <div class="stat"><div class="stat-num" data-count="350">0</div><div class="stat-label" data-i18n="stat4">Trades per test set</div></div>
+  <div class="stat"><div class="stat-num" data-count="1.99" data-decimals="2">0</div><div class="stat-label" data-i18n="stat5">Best robust PF</div></div>
 </section>
-<div class="stats-note">Validated across NVDA · ASML · LRCX · AMAT · MU · TSEM · TSLA · MSFT · SMH. All figures are historical, hypothetical backtests — see disclaimer.</div>
+<div class="stats-note" data-i18n="statnote">Validated across NVDA · ASML · LRCX · AMAT · MU · TSEM · TSLA · MSFT · SMH. All figures are historical, hypothetical backtests — see disclaimer.</div>
 
 <!-- THE EDGE -->
 <section class="section" id="edge">
   <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;EDGE</div>
-    <h2>The edge has a name: semiconductors</h2>
-    <p>This isn't a lucky backtest. Out of 25 assets across 10 timeframes, <strong>every one of the eight robust-core setups is a semiconductor</strong> — the same sector, again and again. That concentration is the proof, not a coincidence.</p>
+    <div class="kicker" data-i18n="edge_kick">THE&nbsp;EDGE</div>
+    <h2 data-i18n="edge_h2">The edge has a name: semiconductors</h2>
+    <p data-i18n="edge_p">This isn't a lucky backtest. Out of 25 assets across 10 timeframes, <strong>every one of the eight robust-core setups is a semiconductor</strong> — the same sector, again and again. That concentration is the proof, not a coincidence.</p>
   </div>
 
   <div class="chips reveal">
@@ -96,72 +97,72 @@
   </div>
 
   <div class="headline-num reveal">
-    <div class="hn"><b>1.79</b><span>AMAT 1h · 241 trades · 13% DD</span></div>
-    <div class="hn"><b>1.89</b><span>LRCX 10m · 203 trades · 16% DD</span></div>
-    <div class="hn"><b>8 / 8</b><span>robust setups are semis</span></div>
+    <div class="hn"><b>1.79</b><span data-i18n="hn1">AMAT 1h · 241 trades · 13% DD</span></div>
+    <div class="hn"><b>1.89</b><span data-i18n="hn2">LRCX 10m · 203 trades · 16% DD</span></div>
+    <div class="hn"><b>8 / 8</b><span data-i18n="hn3">robust setups are semis</span></div>
   </div>
 
   <div class="edge-why reveal">
-    <p><strong>Why semiconductors?</strong> They're the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity/cascade engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
-    <p><strong>Why that makes it credible.</strong> A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We don't claim to trade everything. We found where the edge actually lives.</p>
+    <p data-i18n="edge_why1"><strong>Why semiconductors?</strong> They're the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity/cascade engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
+    <p data-i18n="edge_why2"><strong>Why that makes it credible.</strong> A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We don't claim to trade everything. We found where the edge actually lives.</p>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="section" id="how">
   <div class="section-head reveal">
-    <div class="kicker">ONE&nbsp;LOOP</div>
-    <h2>Find it. Trade it. Gate it.</h2>
-    <p>One signal engine with two tools wired into it. No catalog of indicators — one verdict.</p>
+    <div class="kicker" data-i18n="how_kick">ONE&nbsp;LOOP</div>
+    <h2 data-i18n="how_h2">Find it. Trade it. Gate it.</h2>
+    <p data-i18n="how_p">One signal engine with two tools wired into it. No catalog of indicators — one verdict.</p>
   </div>
 
   <div class="hub-wrap reveal">
     <div class="hub-side feeders">
-      <div class="hub-chip sre"><span>KEEPER</span><em>which semi is working now (EQ)</em></div>
-      <div class="hub-chip sg"><span>SURGE GURU</span><em>crypto surge — bonus</em></div>
-      <div class="hub-feed-note">feed candidates →</div>
+      <div class="hub-chip sre"><span>KEEPER</span><em data-i18n="hub_keeper">which semi is working now (EQ)</em></div>
+      <div class="hub-chip sg"><span>SURGE GURU</span><em data-i18n="hub_sg">crypto surge — bonus</em></div>
+      <div class="hub-feed-note" data-i18n="hub_feed1">feed candidates →</div>
     </div>
     <div class="hub-core">
-      <div class="hub-core-tag">THE SIGNAL ENGINE</div>
+      <div class="hub-core-tag" data-i18n="hub_core_tag">THE SIGNAL ENGINE</div>
       <div class="hub-core-name">LIQUIDEX-CORE</div>
-      <div class="hub-core-sub">where to enter · stop · target</div>
+      <div class="hub-core-sub" data-i18n="hub_core_sub">where to enter · stop · target</div>
     </div>
     <div class="hub-side gates">
-      <div class="hub-feed-note">→ gate &amp; break</div>
-      <div class="hub-chip risk"><span>PROPHET</span><em>go / no-go · size · circuit-break</em></div>
+      <div class="hub-feed-note" data-i18n="hub_feed2">→ gate &amp; break</div>
+      <div class="hub-chip risk"><span>PROPHET</span><em data-i18n="hub_risk">go / no-go · size · circuit-break</em></div>
     </div>
   </div>
 
   <div class="how-steps reveal">
-    <div class="how-step"><b>1 ·</b><span><strong>Keeper</strong> ranks equities live and surfaces the semiconductors that are working right now — by profit factor, surge and risk.</span></div>
-    <div class="how-step"><b>2 ·</b><span><strong>LIQUIDEX-CORE</strong> plots the trade on the chosen name — entry, structure stop, and take-profit at the opposing wall.</span></div>
-    <div class="how-step"><b>3 ·</b><span><strong>Prophet</strong> is the gate and the breaker: it scores the risk, scales your size, and cuts the strategy off in the danger zone.</span></div>
+    <div class="how-step"><b>1 ·</b><span data-i18n="how1"><strong>Keeper</strong> ranks equities live and surfaces the semiconductors that are working right now — by profit factor, surge and risk.</span></div>
+    <div class="how-step"><b>2 ·</b><span data-i18n="how2"><strong>LIQUIDEX-CORE</strong> plots the trade on the chosen name — entry, structure stop, and take-profit at the opposing wall.</span></div>
+    <div class="how-step"><b>3 ·</b><span data-i18n="how3"><strong>Prophet</strong> is the gate and the breaker: it scores the risk, scales your size, and cuts the strategy off in the danger zone.</span></div>
   </div>
 </section>
 
 <!-- LIVE -->
 <section class="section" id="live">
   <div class="section-head reveal">
-    <div class="kicker">IN&nbsp;PRODUCTION</div>
-    <h2>This is live — not a mockup</h2>
-    <p>The whole framework on one screen: strategy on the chart, Keeper ranking the universe, Prophet gating the risk, the backtest at the bottom.</p>
+    <div class="kicker" data-i18n="live_kick">IN&nbsp;PRODUCTION</div>
+    <h2 data-i18n="live_h2">This is live — not a mockup</h2>
+    <p data-i18n="live_p">The whole framework on one screen: strategy on the chart, Keeper ranking the universe, Prophet gating the risk, the backtest at the bottom.</p>
   </div>
   <div class="gallery">
     <figure class="shot feature reveal">
-      <img src="nvidia.png" alt="NVIDIA with the full framework: LIQUIDEX-CORE strategy, Keeper dashboard, Prophet risk engine and the strategy tester" loading="lazy" />
-      <figcaption><span class="tag">NVDA · THE FULL STACK</span><b>Everything on one chart</b><span>LIQUIDEX-CORE plots the trade, Keeper ranks the universe, Prophet gates the risk — ~10-year backtest, Profit Factor ≈ 1.99.</span></figcaption>
+      <img src="nvidia.png" alt="NVIDIA with the full framework" loading="lazy" />
+      <figcaption><span class="tag">NVDA · THE FULL STACK</span><b data-i18n="shot1_t">Everything on one chart</b><span data-i18n="shot1_d">LIQUIDEX-CORE plots the trade, Keeper ranks the universe, Prophet gates the risk — ~10-year backtest, Profit Factor ≈ 1.99.</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="keeper-dashboard.png" alt="Keeper live leaderboard: strategy findings and PnL leaders across equities" loading="lazy" />
-      <figcaption><span class="tag">KEEPER · LIVE</span><b>The equity leaderboard</b><span>Runs LIQUIDEX-CORE across the universe and ranks every name live by profit factor, surge, risk and PnL.</span></figcaption>
+      <img src="keeper-dashboard.png" alt="Keeper live leaderboard" loading="lazy" />
+      <figcaption><span class="tag">KEEPER · LIVE</span><b data-i18n="shot2_t">The equity leaderboard</b><span data-i18n="shot2_d">Runs LIQUIDEX-CORE across the universe and ranks every name live by profit factor, surge, risk and PnL.</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="prophet-engine.png" alt="Prophet risk engine: composite risk, safe and danger zones, velocity and position-size scaling" loading="lazy" />
-      <figcaption><span class="tag">PROPHET · GATE + BREAKER</span><b>Risk management, built in</b><span>Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict (0.5× when elevated).</span></figcaption>
+      <img src="prophet-engine.png" alt="Prophet risk engine" loading="lazy" />
+      <figcaption><span class="tag">PROPHET · GATE + BREAKER</span><b data-i18n="shot3_t">Risk management, built in</b><span data-i18n="shot3_d">Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict (0.5× when elevated).</span></figcaption>
     </figure>
     <figure class="shot reveal">
-      <img src="gold-layout.png" alt="Gold weekly with the framework and live keeper leaderboard" loading="lazy" />
-      <figcaption><span class="tag">BEYOND SEMIS</span><b>The same loop, other markets</b><span>It generalizes — here on Gold weekly — but the robust, repeatable edge lives in the chips.</span></figcaption>
+      <img src="gold-layout.png" alt="Gold weekly with the framework" loading="lazy" />
+      <figcaption><span class="tag">BEYOND SEMIS</span><b data-i18n="shot4_t">The same loop, other markets</b><span data-i18n="shot4_d">It generalizes — here on Gold weekly — but the robust, repeatable edge lives in the chips.</span></figcaption>
     </figure>
   </div>
 </section>
@@ -169,15 +170,15 @@
 <!-- RESULTS BY TIER -->
 <section class="section" id="results">
   <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;STRATEGIES&nbsp;YOU&nbsp;GET</div>
-    <h2>Three fields where the edge lives</h2>
-    <p>The sweep surfaced not one edge but three, ranked. <strong>Semiconductors</strong> dominate — Tier&nbsp;1, robust, the proof. <strong>Big tech &amp; software</strong> follow in Tier&nbsp;2; <strong>high-beta momentum</strong> brings the biggest returns in Tier&nbsp;3.</p>
+    <div class="kicker" data-i18n="results_kick">THE&nbsp;STRATEGIES&nbsp;YOU&nbsp;GET</div>
+    <h2 data-i18n="results_h2">Three fields where the edge lives</h2>
+    <p data-i18n="results_p">The sweep surfaced not one edge but three, ranked. <strong>Semiconductors</strong> dominate — Tier&nbsp;1, robust, the proof. <strong>Big tech &amp; software</strong> follow in Tier&nbsp;2; <strong>high-beta momentum</strong> brings the biggest returns in Tier&nbsp;3.</p>
   </div>
 
   <div class="tier tier-1 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3>Semiconductors — the core edge</h3><span class="tier-sub">PF ≥ 1.5 · 100+ trades · the proven, robust field</span></div>
-    <table class="tier-table">
-      <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th><th>Max DD</th></tr></thead>
+    <div class="tier-head"><span class="tier-badge">TIER 1</span><h3 data-i18n="tier1_h">Semiconductors — the core edge</h3><span class="tier-sub" data-i18n="tier1_sub">PF ≥ 1.5 · 100+ trades · the proven, robust field</span></div>
+    <div class="table-scroll"><table class="tier-table">
+      <thead><tr><th data-i18n="th_sym">Symbol</th><th>TF</th><th>PF</th><th data-i18n="th_pnl">PnL%</th><th data-i18n="th_tr">Trades</th><th data-i18n="th_dd">Max DD</th></tr></thead>
       <tbody>
         <tr><td>NVDA</td><td>4h</td><td class="pf">1.99</td><td>+552%</td><td>120</td><td>41%</td></tr>
         <tr><td>LRCX</td><td>10m</td><td class="pf">1.89</td><td>+141%</td><td>203</td><td class="ddlow">16%</td></tr>
@@ -188,27 +189,27 @@
         <tr><td>SMH</td><td>1D</td><td class="pf">1.53</td><td>+158%</td><td>189</td><td>54%</td></tr>
         <tr><td>ASML</td><td>1h</td><td class="pf">1.53</td><td>+128%</td><td>214</td><td>40%</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
 
   <div class="tier tier-2 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3>Big Tech &amp; Software — the second edge</h3><span class="tier-sub">strongest on the higher timeframes</span></div>
-    <table class="tier-table">
-      <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>Trades</th><th>Note</th></tr></thead>
+    <div class="tier-head"><span class="tier-badge">TIER 2</span><h3 data-i18n="tier2_h">Big Tech &amp; Software — the second edge</h3><span class="tier-sub" data-i18n="tier2_sub">strongest on the higher timeframes</span></div>
+    <div class="table-scroll"><table class="tier-table">
+      <thead><tr><th data-i18n="th_sym">Symbol</th><th>TF</th><th>PF</th><th data-i18n="th_tr">Trades</th><th data-i18n="th_note">Note</th></tr></thead>
       <tbody>
-        <tr><td>META</td><td>1W</td><td class="pf">2.16</td><td>43</td><td>mega-cap</td></tr>
-        <tr><td>GOOGL</td><td>1W</td><td class="pf">2.12</td><td>33</td><td>also robust on 1h (1.46)</td></tr>
-        <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>65</td><td>+666% · software</td></tr>
-        <tr><td>CHKP</td><td>1W</td><td class="pf">1.46</td><td>—</td><td>cybersecurity</td></tr>
-        <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>the robust anchor · also 1W 1.60</td></tr>
+        <tr><td>META</td><td>1W</td><td class="pf">2.16</td><td>43</td><td data-i18n="n_megacap">mega-cap</td></tr>
+        <tr><td>GOOGL</td><td>1W</td><td class="pf">2.12</td><td>33</td><td data-i18n="n_googl">also robust on 1h (1.46)</td></tr>
+        <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>65</td><td data-i18n="n_nice">+666% · software</td></tr>
+        <tr><td>CHKP</td><td>1W</td><td class="pf">1.46</td><td>—</td><td data-i18n="n_cyber">cybersecurity</td></tr>
+        <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td data-i18n="n_msft">robust anchor · also 1W 1.60</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
 
   <div class="tier tier-3 reveal">
-    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3>High-Beta &amp; Momentum — the third edge</h3><span class="tier-sub">the biggest returns · mostly small, explosive samples</span></div>
-    <table class="tier-table">
-      <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th></tr></thead>
+    <div class="tier-head"><span class="tier-badge">TIER 3</span><h3 data-i18n="tier3_h">High-Beta &amp; Momentum — the third edge</h3><span class="tier-sub" data-i18n="tier3_sub">the biggest returns · mostly small, explosive samples</span></div>
+    <div class="table-scroll"><table class="tier-table">
+      <thead><tr><th data-i18n="th_sym">Symbol</th><th>TF</th><th>PF</th><th data-i18n="th_pnl">PnL%</th><th data-i18n="th_tr">Trades</th></tr></thead>
       <tbody>
         <tr><td>AVGO</td><td>1W</td><td class="pf">5.62</td><td>+669%</td><td>19</td></tr>
         <tr><td>TSLA</td><td>1W</td><td class="pf">4.49</td><td>+2141%</td><td>16</td></tr>
@@ -216,47 +217,44 @@
         <tr><td>ESLT</td><td>1W</td><td class="pf">1.52</td><td>—</td><td>60</td></tr>
         <tr><td>TSLA</td><td>2h</td><td class="pf">1.47</td><td>+324%</td><td>352</td></tr>
       </tbody>
-    </table>
-    <div class="tier-warn">⚠️ The headline weekly numbers ride on tiny samples — tradeable only with Prophet's position caps. The robust exception: TSLA 2h, 352 trades.</div>
+    </table></div>
+    <div class="tier-warn" data-i18n="tier3_warn">⚠️ The headline weekly numbers ride on tiny samples — tradeable only with Prophet's position caps. The robust exception: TSLA 2h, 352 trades.</div>
   </div>
 
-  <div class="best-adj reveal">
-    <strong>Best risk-adjusted of the whole sweep:</strong> &nbsp;
-    <b>AMAT 1h</b> (PF 1.79 · 13% DD) · <b>LRCX 10m</b> (1.89 · 16%) · <b>MU 5m</b> (1.58 · 17%) · <b>TSEM 1h</b> (1.68 · 21%). All semiconductors. This is the product core.
-  </div>
-  <p class="disclaimer-inline">Historical, hypothetical backtest results — non-repainting, with commission &amp; slippage. Past performance is not indicative of future results; nothing here is financial advice.</p>
+  <div class="best-adj reveal" data-i18n="bestadj"><strong>Best risk-adjusted of the whole sweep:</strong> &nbsp;<b>AMAT 1h</b> (PF 1.79 · 13% DD) · <b>LRCX 10m</b> (1.89 · 16%) · <b>MU 5m</b> (1.58 · 17%) · <b>TSEM 1h</b> (1.68 · 21%). All semiconductors. This is the product core.</div>
+  <p class="disclaimer-inline" data-i18n="disc_inline">Historical, hypothetical backtest results — non-repainting, with commission &amp; slippage. Past performance is not indicative of future results; nothing here is financial advice.</p>
 </section>
 
 <!-- ENGINES -->
 <section class="section" id="engines">
   <div class="section-head reveal">
-    <div class="kicker">THE&nbsp;PRODUCTS</div>
-    <h2>Four products, one framework</h2>
+    <div class="kicker" data-i18n="eng_kick">THE&nbsp;PRODUCTS</div>
+    <h2 data-i18n="eng_h2">Four products, one framework</h2>
   </div>
   <div class="cards">
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">LIQUIDEX-CORE</span><span class="card-badge">Signal Engine</span></div>
-      <h3>The strategy</h3>
-      <div class="card-job">where to enter, stop &amp; target</div>
-      <p>The executable hub, 5,000+ lines of Pine v6. Liquidation cascades, CVD, order blocks, iceberg walls and sweeps — turned into entries with structure stops and opposing-wall take-profits.</p>
+      <div class="card-top"><span class="card-id">LIQUIDEX-CORE</span><span class="card-badge" data-i18n="b_signal">Signal Engine</span></div>
+      <h3 data-i18n="c1_h">The strategy</h3>
+      <div class="card-job" data-i18n="c1_job">where to enter, stop &amp; target</div>
+      <p data-i18n="c1_p">The executable hub, 5,000+ lines of Pine v6. Liquidation cascades, CVD, order blocks, iceberg walls and sweeps — turned into entries with structure stops and opposing-wall take-profits.</p>
     </article>
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">KEEPER</span><span class="card-badge accent-badge">EQ Leaderboard</span></div>
-      <h3>Finds the keepers</h3>
-      <div class="card-job">which semi is working now</div>
-      <p>Runs the strategy across equities and ranks every name live by profit factor, surge and risk — so you trade the leaders, not a hunch. Includes <strong>Crypto Keeper</strong> as a bonus indicator.</p>
+      <div class="card-top"><span class="card-id">KEEPER</span><span class="card-badge accent-badge" data-i18n="b_keeper">EQ Leaderboard</span></div>
+      <h3 data-i18n="c2_h">Finds the keepers</h3>
+      <div class="card-job" data-i18n="c2_job">which semi is working now</div>
+      <p data-i18n="c2_p">Runs the strategy across equities and ranks every name live by profit factor, surge and risk — so you trade the leaders, not a hunch. Includes <strong>Crypto Keeper</strong> as a bonus indicator.</p>
     </article>
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">PROPHET</span><span class="card-badge">Risk Gate + Breaker</span></div>
-      <h3>Gates &amp; breaks the risk</h3>
-      <div class="card-job">go / no-go &amp; how big</div>
-      <p>The gate and circuit-breaker for LIQUIDEX. Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict that cuts size when risk is elevated and stands you down in the danger zone.</p>
+      <div class="card-top"><span class="card-id">PROPHET</span><span class="card-badge" data-i18n="b_prophet">Risk Gate + Breaker</span></div>
+      <h3 data-i18n="c3_h">Gates &amp; breaks the risk</h3>
+      <div class="card-job" data-i18n="c3_job">go / no-go &amp; how big</div>
+      <p data-i18n="c3_p">The gate and circuit-breaker for LIQUIDEX. Composite risk, SAFE / DANGER zones, velocity — and a live position-size verdict that cuts size when risk is elevated and stands you down in the danger zone.</p>
     </article>
     <article class="card reveal">
-      <div class="card-top"><span class="card-id">SURGE&nbsp;GURU</span><span class="card-badge">Bonus · Crypto</span></div>
-      <h3>Crypto surge scanner</h3>
-      <div class="card-job">which crypto token is firing</div>
-      <p>A bonus for crypto lovers — real-time 1m + 3m explosiveness with multi-timeframe persistence. <strong>Crypto-only today; an equities version is coming.</strong></p>
+      <div class="card-top"><span class="card-id">SURGE&nbsp;GURU</span><span class="card-badge" data-i18n="b_sg">Bonus · Crypto</span></div>
+      <h3 data-i18n="c4_h">Crypto surge scanner</h3>
+      <div class="card-job" data-i18n="c4_job">which crypto token is firing</div>
+      <p data-i18n="c4_p">A bonus for crypto lovers — real-time 1m + 3m explosiveness with multi-timeframe persistence. <strong>Crypto-only today; an equities version is coming.</strong></p>
     </article>
   </div>
 </section>
@@ -264,32 +262,32 @@
 <!-- ACCESS -->
 <section class="section access" id="access">
   <div class="section-head reveal">
-    <div class="kicker">GET&nbsp;ACCESS</div>
-    <h2>One subscription. Every strategy.</h2>
+    <div class="kicker" data-i18n="acc_kick">GET&nbsp;ACCESS</div>
+    <h2 data-i18n="acc_h2">One subscription. Every strategy.</h2>
   </div>
 
   <div class="offer reveal">
-    <div class="offer-name">LIQUIDEX-S · full framework</div>
+    <div class="offer-name" data-i18n="offer_name">LIQUIDEX-S · full framework</div>
     <div class="offer-amt">$249<span>/mo</span></div>
-    <div class="offer-line">LIQUIDEX-CORE strategy · Keeper EQ leaderboard · Prophet risk gate · every validated tier-1 &amp; tier-2 setup.</div>
-    <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20LIQUIDEX-S%20%28%24249%2Fmo%29%20framework%20access." target="_blank" rel="noopener" class="btn btn-primary full">Get access on WhatsApp →</a>
-    <div class="offer-bonus">🎁 <strong style="color:#e8edf5">Bonus:</strong> Surge Guru crypto scanner + Crypto Keeper — free for crypto lovers (equities update coming).</div>
+    <div class="offer-line" data-i18n="offer_line">LIQUIDEX-CORE strategy · Keeper EQ leaderboard · Prophet risk gate · every validated tier-1 &amp; tier-2 setup.</div>
+    <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20LIQUIDEX-S%20%28%24249%2Fmo%29%20framework%20access." target="_blank" rel="noopener" class="btn btn-primary full" data-i18n="offer_btn">Get access on WhatsApp →</a>
+    <div class="offer-bonus" data-i18n="offer_bonus">🎁 <strong style="color:#e8edf5">Bonus:</strong> Surge Guru crypto scanner + Crypto Keeper — free for crypto lovers (equities update coming).</div>
   </div>
 
-  <p style="text-align:center;margin:0 auto 6px"><a href="framework-deck.pdf" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#22d3ee">📄 Download the full product brief (PDF) ↗</a></p>
+  <p style="text-align:center;margin:0 auto 6px"><a href="framework-deck.pdf" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link">📄 Download the full product brief (PDF) ↗</a></p>
 
   <div class="automation">
     <div class="auto-card reveal">
       <div class="auto-ico">🤖</div>
-      <h4>Hook it into a bot</h4>
-      <p>Wire the framework's alerts straight into an automated trading bot — hands-free execution.</p>
-      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20to%20hook%20the%20framework%20into%20a%20trading%20bot." target="_blank" rel="noopener" class="btn btn-wa full">Ask on WhatsApp</a>
+      <h4 data-i18n="bot1_h">Hook it into a bot</h4>
+      <p data-i18n="bot1_p">Wire the framework's alerts straight into an automated trading bot — hands-free execution.</p>
+      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20to%20hook%20the%20framework%20into%20a%20trading%20bot." target="_blank" rel="noopener" class="btn btn-wa full" data-i18n="bot1_btn">Ask on WhatsApp</a>
     </div>
     <div class="auto-card reveal">
       <div class="auto-ico">⚙️</div>
-      <h4>Build me a bot</h4>
-      <p>Want a custom bot built around the framework? We'll scope and build it with you.</p>
-      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20a%20custom%20trading%20bot%20built%20around%20the%20framework." target="_blank" rel="noopener" class="btn btn-wa full">Request a build</a>
+      <h4 data-i18n="bot2_h">Build me a bot</h4>
+      <p data-i18n="bot2_p">Want a custom bot built around the framework? We'll scope and build it with you.</p>
+      <a href="https://wa.me/972506787586?text=Hi%21%20I%20want%20a%20custom%20trading%20bot%20built%20around%20the%20framework." target="_blank" rel="noopener" class="btn btn-wa full" data-i18n="bot2_btn">Request a build</a>
     </div>
   </div>
 </section>
@@ -300,28 +298,29 @@
 <footer class="footer" id="contact">
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="brand-text">PROPRIETARY TRADING <b>FRAMEWORK</b></span>
-      <p>A proprietary market-structure &amp; liquidity framework.<br>LIQUIDEX-CORE · Keeper · Prophet.</p>
+      <span class="brand-text"><span class="bt-long">PROPRIETARY TRADING </span><b>FRAMEWORK</b></span>
+      <p data-i18n="foot_tag">A proprietary market-structure &amp; liquidity framework.<br>LIQUIDEX-CORE · Keeper · Prophet.</p>
     </div>
     <div class="footer-links">
-      <div><h5>Products</h5>
+      <div><h5 data-i18n="foot_products">Products</h5>
         <a href="https://wattsonworks.github.io/LIQUIDEX" target="_blank" rel="noopener">LIQUIDEX-CORE</a>
         <a href="https://wattsonworks.github.io/LRE" target="_blank" rel="noopener">Prophet</a>
         <a href="https://wattsonworks.github.io/SG" target="_blank" rel="noopener">Surge Guru</a>
       </div>
-      <div><h5>Framework</h5>
-        <a href="#edge">The Edge</a>
-        <a href="#results">Results</a>
-        <a href="#access">Get Access</a>
+      <div><h5 data-i18n="foot_framework">Framework</h5>
+        <a href="#edge" data-i18n="nav_edge">The Edge</a>
+        <a href="#results" data-i18n="nav_results">Results</a>
+        <a href="#access" data-i18n="nav_access">Get Access</a>
       </div>
     </div>
   </div>
   <div class="disclaimer">
-    For research and educational purposes only. All performance figures are historical, hypothetical backtest results, are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing on this site is financial advice.
+    <span data-i18n="disc_full">For research and educational purposes only. All performance figures are historical, hypothetical backtest results, are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing on this site is financial advice.</span>
     <div class="copyr">© <span id="yr"></span> Proprietary Trading Framework · by SurgeGuru / wattsonworks.</div>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
