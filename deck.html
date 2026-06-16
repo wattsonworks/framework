@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<title>LIQUIDEX Framework — Product Brief</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
   *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; box-sizing:border-box; margin:0; padding:0; }
@@ -33,7 +34,7 @@
   .cover .top{ position:absolute; top:16mm; left:15mm; right:15mm; display:flex; justify-content:space-between; align-items:center; }
   .cover .mid{ position:absolute; top:50%; left:15mm; right:15mm; transform:translateY(-50%); }
   .cover h1{ font-size:40pt; }
-  .cover .sub{ font-size:13pt; color:var(--muted); margin-top:6mm; max-width:150mm; line-height:1.5; }
+  .cover .sub{ font-size:13pt; color:var(--muted); margin-top:6mm; max-width:155mm; line-height:1.5; }
   .statrow{ display:flex; gap:6mm; margin-top:12mm; }
   .stat{ border:1px solid var(--line2); border-radius:10px; padding:5mm 6mm; flex:1; }
   .stat b{ display:block; font-family:var(--mono); font-size:18pt; }
@@ -49,12 +50,12 @@
   .hn span{ font-size:8pt; color:var(--muted); }
 
   /* product cards */
-  .prod{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-top:4mm; }
-  .pcard{ border:1px solid var(--line); border-radius:10px; padding:5mm 6mm; background:linear-gradient(180deg,var(--panel),#080c12); }
+  .prod{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm; margin-top:4mm; }
+  .pcard{ border:1px solid var(--line); border-radius:10px; padding:5mm; background:linear-gradient(180deg,var(--panel),#080c12); }
   .pcard .pid{ font-family:var(--mono); font-size:9pt; color:var(--mint); letter-spacing:.5px; }
-  .pcard h3{ font-size:12pt; margin:1.5mm 0; }
-  .pcard .job{ font-family:var(--mono); font-size:8pt; color:var(--cyan); margin-bottom:2mm; }
-  .pcard p{ font-size:8.7pt; }
+  .pcard .role{ font-family:var(--mono); font-size:7.5pt; color:var(--cyan); margin-top:1mm; }
+  .pcard h3{ font-size:11.5pt; margin:2mm 0 1mm; }
+  .pcard p{ font-size:8.5pt; }
   .loop{ display:flex; gap:4mm; margin-top:7mm; }
   .lstep{ flex:1; border-left:2px solid var(--mint); padding-left:4mm; }
   .lstep b{ font-family:var(--mono); color:var(--mint); font-size:10pt; }
@@ -74,6 +75,13 @@
   .bestadj{ margin-top:5mm; background:rgba(0,229,160,.06); border:1px solid rgba(0,229,160,.28); border-radius:8px; padding:4mm 5mm; font-size:9.5pt; color:var(--muted); }
   .bestadj b{ font-family:var(--mono); color:var(--mint); }
 
+  /* steps */
+  .steps{ display:flex; flex-direction:column; gap:3mm; margin:4mm 0; }
+  .step{ display:flex; gap:4mm; align-items:flex-start; border:1px solid var(--line); border-radius:9px; padding:4mm 5mm; }
+  .step .n{ font-family:var(--mono); color:var(--mint); font-size:12pt; font-weight:700; min-width:8mm; }
+  .step p{ font-size:9.5pt; color:var(--ink); }
+  .step p span{ color:var(--muted); }
+
   /* live shots */
   .shot{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#05070b; margin-bottom:4mm; }
   .shot img{ display:block; width:100%; }
@@ -85,17 +93,15 @@
   .cap .t{ font-family:var(--mono); font-size:7.5pt; color:var(--mint); letter-spacing:.5px; }
   .cap b{ font-size:10pt; display:block; margin-top:.5mm; }
 
-  /* access */
-  .offer{ border:1px solid rgba(0,229,160,.35); border-radius:12px; padding:8mm; text-align:center; background:linear-gradient(180deg,var(--panel),#080c12); margin-bottom:6mm; }
-  .offer .amt{ font-family:var(--mono); font-size:38pt; font-weight:700; line-height:1; }
-  .offer .amt span{ font-size:14pt; color:var(--dim); }
-  .offer .ln{ font-size:11pt; color:var(--ink); margin-top:3mm; }
-  .offer .bn{ font-size:9pt; color:var(--muted); margin-top:4mm; border-top:1px solid var(--line); padding-top:4mm; }
-  .botrow{ display:flex; gap:5mm; }
-  .bot{ flex:1; border:1px solid var(--line); border-radius:10px; padding:5mm; text-align:center; }
-  .bot h3{ font-size:11pt; } .bot p{ font-size:8.5pt; margin-top:1mm; }
-  .wa{ display:inline-block; margin-top:3mm; font-family:var(--mono); font-size:9pt; color:#25D366; }
-  .contact{ margin-top:7mm; text-align:center; font-family:var(--mono); font-size:11pt; color:var(--mint); }
+  /* access / asset */
+  .offer{ border:1px solid rgba(0,229,160,.35); border-radius:12px; padding:7mm; text-align:center; background:linear-gradient(180deg,var(--panel),#080c12); margin-bottom:5mm; }
+  .offer .amt{ font-family:var(--mono); font-size:34pt; font-weight:700; line-height:1; }
+  .offer .amt span{ font-size:13pt; color:var(--dim); }
+  .offer .ln{ font-size:10.5pt; color:var(--ink); margin-top:3mm; }
+  .offer .bn{ font-size:8.7pt; color:var(--muted); margin-top:4mm; border-top:1px solid var(--line); padding-top:4mm; }
+  .asset{ border:1px solid var(--line2); border-radius:10px; padding:5mm 6mm; font-size:9.5pt; color:var(--muted); line-height:1.6; }
+  .asset b{ color:var(--ink); }
+  .contact{ margin-top:6mm; text-align:center; font-family:var(--mono); font-size:11pt; color:var(--mint); }
   .disc{ position:absolute; bottom:9mm; left:15mm; right:15mm; font-size:7pt; color:var(--dim); line-height:1.5; border-top:1px solid var(--line); padding-top:3mm; }
   svg.markdef{ position:absolute; width:0; height:0; }
 </style>
@@ -108,72 +114,71 @@
   <div class="top">
     <div class="brand">
       <svg class="mark" viewBox="0 0 32 32"><path d="M2 22 L9 13 L15 18 L23 6 L30 11" fill="none" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="6" r="2.6" fill="#00e5a0"/></svg>
-      PROPRIETARY TRADING <b>FRAMEWORK</b>
+      <b>LIQUIDEX</b> FRAMEWORK
     </div>
     <div class="ptag">PRODUCT BRIEF · 2026</div>
   </div>
   <div class="mid">
-    <div class="kick">MARKET-STRUCTURE &amp; LIQUIDITY FRAMEWORK</div>
-    <h1>A proven edge,<br><span class="grad">concentrated in chips.</span></h1>
-    <div class="sub">A proprietary quant framework whose entire robust edge — across 25 assets and 10 timeframes — lands in a single sector: semiconductors. Found live by <b style="color:#00e5a0">Keeper</b>, traded by <b style="color:#22d3ee">LIQUIDEX-CORE</b>, gated &amp; circuit-broken by <b style="color:#ffb800">Prophet</b>.</div>
+    <div class="kick">PROPRIETARY LIQUIDITY &amp; MARKET-STRUCTURE SYSTEM</div>
+    <h1>It reads the liquidity.<br><span class="grad">You receive the signal.</span></h1>
+    <div class="sub">A proprietary trading system whose entire robust edge — across 25 assets and 10 timeframes — lands in a single sector: semiconductors. <b style="color:#22d3ee">LIQUIDEX</b> is the engine that decides the trade; <b style="color:#00e5a0">Keeper</b> and <b style="color:#ffb800">Prophet</b> make its reasoning and its risk visible. Invite-only on TradingView, delivered as alerts.</div>
     <div class="statrow">
       <div class="stat"><b class="grad">5,000+</b><span>LINES · PINE v6</span></div>
       <div class="stat"><b class="grad">250</b><span>BACKTESTS</span></div>
-      <div class="stat"><b class="grad">1.99</b><span>BEST ROBUST PF</span></div>
+      <div class="stat"><b class="grad">2.78</b><span>BEST ROBUST PF</span></div>
       <div class="stat"><b class="grad">100–350</b><span>TRADES / TEST</span></div>
     </div>
   </div>
-  <div class="foot">wattsonworks · by SurgeGuru</div>
+  <div class="foot">wattsonworks</div>
   <div class="pnum">01</div>
 </section>
 
-<!-- PAGE 2 — THE THESIS -->
+<!-- PAGE 2 — THE SYSTEM -->
 <section class="page">
-  <div class="kick">THE THESIS</div>
+  <div class="kick">THE SYSTEM</div>
+  <h2>One brain. Two eyes.</h2>
+  <p>One engine that decides — with two companions that make its reasoning visible. Not a catalog of indicators; one verdict.</p>
+  <div class="prod">
+    <div class="pcard"><div class="pid">LIQUIDEX</div><div class="role">THE BRAIN · decides the trade</div><h3>The strategy</h3><p>5,000+ lines of Pine v6. Reads liquidation cascades, order flow, order blocks, iceberg walls and liquidity sweeps → one trade: entry, structural stop, take-profit at the opposing wall. The risk logic and the sector intelligence are built in.</p></div>
+    <div class="pcard"><div class="pid">KEEPER</div><div class="role">THE EYES · market</div><h3>Shows what's working</h3><p>A companion indicator that runs the strategy across the equity universe and ranks every name live — by profit factor, momentum and risk. You see the leader the brain favours, not a hunch.</p></div>
+    <div class="pcard"><div class="pid">PROPHET</div><div class="role">THE EYES · risk</div><h3>Shows the risk</h3><p>A companion indicator that makes the risk visible — a composite gauge, safe and danger zones, and a live position-size verdict that trims size when risk is elevated and stands you down in the danger zone.</p></div>
+  </div>
+  <div class="hr"></div>
+  <h3>How the loop works</h3>
+  <div class="loop">
+    <div class="lstep"><b>1 · FIND</b><p>Keeper surfaces the semiconductor that is working right now.</p></div>
+    <div class="lstep"><b>2 · DECIDE</b><p>LIQUIDEX sets entry, stop and target on that name.</p></div>
+    <div class="lstep"><b>3 · GATE</b><p>Prophet sizes the trade and breaks it in the danger zone.</p></div>
+  </div>
+  <div class="foot">LIQUIDEX FRAMEWORK</div><div class="pnum">02</div>
+</section>
+
+<!-- PAGE 3 — THE EDGE -->
+<section class="page">
+  <div class="kick">THE EDGE</div>
   <h2>The edge has a name: <span class="grad">semiconductors</span></h2>
   <p>This is not a lucky backtest. Out of 25 assets across 10 timeframes, <strong style="color:#e8edf5">every one of the eight robust-core setups is a semiconductor</strong> — the same sector, again and again. The concentration is the proof, not a coincidence.</p>
   <div class="chips">
     <span class="chip"><b>NVDA</b> Nvidia</span><span class="chip"><b>AMAT</b> Applied Materials</span><span class="chip"><b>LRCX</b> Lam Research</span><span class="chip"><b>ASML</b> ASML</span><span class="chip"><b>MU</b> Micron</span><span class="chip"><b>TSEM</b> Tower Semi</span><span class="chip"><b>SMH</b> Semiconductor ETF</span>
   </div>
   <div class="hn-row">
-    <div class="hn"><b>2.78</b><span>TSEM 1h · 251 trades · Breaker-OFF</span></div>
+    <div class="hn"><b>2.78</b><span>TSEM 1h · 251 trades</span></div>
     <div class="hn"><b>1.79</b><span>AMAT 1h · 241 trades · 13% DD</span></div>
     <div class="hn"><b>50+</b><span>profitable symbol/TF setups</span></div>
   </div>
   <div class="hr"></div>
   <h3 style="color:#22d3ee">Why semiconductors</h3>
-  <p style="margin-top:2mm">They are the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity / cascade engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
+  <p style="margin-top:2mm">They are the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
   <h3 style="color:#22d3ee; margin-top:5mm">Why that makes it credible</h3>
-  <p style="margin-top:2mm">A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We don't claim to trade everything. We found where the edge actually lives.</p>
-  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">02</div>
-</section>
-
-<!-- PAGE 3 — THE SYSTEM -->
-<section class="page">
-  <div class="kick">THE SYSTEM</div>
-  <h2>Four products, one framework</h2>
-  <p>One signal engine with tools wired into it. No catalog of indicators — one verdict.</p>
-  <div class="prod">
-    <div class="pcard"><div class="pid">LIQUIDEX-CORE</div><h3>The signal engine</h3><div class="job">where to enter, stop &amp; target</div><p>5,000+ lines of Pine v6. Liquidation cascades, CVD, order blocks, iceberg walls and sweeps → entries with structure stops and opposing-wall take-profits.</p></div>
-    <div class="pcard"><div class="pid">KEEPER</div><h3>The EQ leaderboard</h3><div class="job">which semi is working now</div><p>Runs the strategy across equities and ranks every name live by profit factor, surge and risk. Includes Crypto Keeper as a bonus.</p></div>
-    <div class="pcard"><div class="pid">PROPHET</div><h3>Risk gate + breaker</h3><div class="job">go / no-go &amp; how big</div><p>Composite risk, SAFE / DANGER zones and velocity — with a live position-size verdict that trims size when risk is elevated and stands you down in the danger zone.</p></div>
-    <div class="pcard"><div class="pid">SURGE GURU</div><h3>Crypto surge scanner</h3><div class="job">which crypto token is firing</div><p>A bonus for crypto lovers — real-time 1m + 3m explosiveness with multi-timeframe persistence. Crypto-only today; equities coming.</p></div>
-  </div>
-  <div class="hr"></div>
-  <h3>How the loop works</h3>
-  <div class="loop">
-    <div class="lstep"><b>1 · FIND</b><p>Keeper surfaces the semiconductor that's working right now.</p></div>
-    <div class="lstep"><b>2 · TRADE</b><p>LIQUIDEX-CORE plots entry, stop and target on that name.</p></div>
-    <div class="lstep"><b>3 · GATE</b><p>Prophet scores risk, sizes the trade, and breaks it in the danger zone.</p></div>
-  </div>
-  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">03</div>
+  <p style="margin-top:2mm">A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We do not claim to trade everything. We found where the edge actually lives.</p>
+  <div class="foot">LIQUIDEX FRAMEWORK</div><div class="pnum">03</div>
 </section>
 
 <!-- PAGE 4 — TIER 1 -->
 <section class="page">
   <div class="kick">VALIDATED RESULTS</div>
   <h2><span class="tbadge b1">TIER 1</span> &nbsp;Semiconductors — the core edge</h2>
-  <p>The proven, robust core — PF 1.5–2.8 with 100–350 trades. Every cell a semiconductor. <span style="color:#22d3ee">↑</span> marks setups improved by the Breaker-OFF re-test.</p>
+  <p>The robust, proven core — PF 1.5–2.8 with 100–350 trades. Every cell a semiconductor. <span style="color:#22d3ee">↑</span> marks setups improved by the Breaker-OFF re-test.</p>
   <table>
     <thead><tr><th>Symbol</th><th>TF</th><th>Profit Factor</th><th>Trades</th><th>Max DD</th></tr></thead>
     <tbody>
@@ -187,8 +192,8 @@
       <tr><td>SMH</td><td>1D</td><td class="pf">1.53</td><td>189</td><td>54%</td></tr>
     </tbody>
   </table>
-  <div class="bestadj"><strong style="color:#22d3ee">📈 The numbers are likely conservative.</strong> A Breaker-OFF re-test improved <b>100% of setups re-run</b> — TSEM 1.68→2.78 · MU 1.58→2.07 · AVGO 0.89→1.47 · TSLA 1.25→1.63 · GOOGL 1.46→1.60 · AMAT 1.50→1.70. Best risk-adjusted core: <b>AMAT 1h</b> (1.79 · 13% DD), <b>LRCX 10m</b> (1.89 · 16% DD).</div>
-  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">04</div>
+  <div class="bestadj"><strong style="color:#22d3ee">The numbers are likely conservative.</strong> A Breaker-OFF re-test improved <b>every setup re-run</b> — TSEM 1.68→2.78 · MU 1.58→2.07 · AVGO 0.89→1.47 · TSLA 1.25→1.63 · GOOGL 1.46→1.60 · AMAT 1.50→1.70. Best risk-adjusted core: <b>AMAT 1h</b> (1.79 · 13% DD), <b>LRCX 10m</b> (1.89 · 16% DD).</div>
+  <div class="foot">LIQUIDEX FRAMEWORK</div><div class="pnum">04</div>
 </section>
 
 <!-- PAGE 5 — TIER 2 + 3 -->
@@ -206,7 +211,7 @@
       <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>robust anchor · also 1W 1.60</td></tr>
     </tbody>
   </table>
-  <p style="margin:6mm 0 2mm">Tier 3 — the third edge: high-beta momentum. The biggest returns, mostly small samples.</p>
+  <p style="margin:6mm 0 2mm">Tier 3 — the third edge: high-beta momentum. The largest returns, mostly small samples.</p>
   <table>
     <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th></tr></thead>
     <tbody>
@@ -216,8 +221,8 @@
       <tr><td>TSLA</td><td>1h</td><td class="pf">1.63</td><td>+324%</td><td>337</td></tr>
     </tbody>
   </table>
-  <div class="warn">⚠️ The headline weekly numbers ride on tiny samples — tradeable only with Prophet's position caps. The robust exception is TSLA 1h (337 trades).</div>
-  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">05</div>
+  <div class="warn">The headline weekly numbers rest on small samples — tradeable only with Prophet's position caps. The robust exception is TSLA 1h (337 trades).</div>
+  <div class="foot">LIQUIDEX FRAMEWORK</div><div class="pnum">05</div>
 </section>
 
 <!-- PAGE 6 — LIVE -->
@@ -227,27 +232,29 @@
   <div class="shot feat"><img src="nvidia.png" /><div class="cap"><span class="t">NVDA · THE FULL STACK</span><b>Everything on one chart — strategy, leaderboard, risk gate, backtest. PF ≈ 1.99.</b></div></div>
   <div class="shotrow">
     <div class="shot small"><img src="keeper-dashboard.png" /><div class="cap"><span class="t">KEEPER · LIVE</span><b>The equity leaderboard</b></div></div>
-    <div class="shot small"><img src="prophet-engine.png" /><div class="cap"><span class="t">PROPHET · GATE + BREAKER</span><b>Risk &amp; position sizing</b></div></div>
+    <div class="shot small"><img src="prophet-engine.png" /><div class="cap"><span class="t">PROPHET · RISK</span><b>The risk, made visible</b></div></div>
   </div>
-  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">06</div>
+  <div class="foot">LIQUIDEX FRAMEWORK</div><div class="pnum">06</div>
 </section>
 
-<!-- PAGE 7 — ACCESS -->
+<!-- PAGE 7 — ACCESS & THE ASSET -->
 <section class="page">
-  <div class="kick">GET ACCESS</div>
-  <h2>One subscription. Every strategy.</h2>
+  <div class="kick">ACCESS</div>
+  <h2>From your username to live alerts — in minutes</h2>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><p><b>Send your TradingView username</b> <span>on WhatsApp.</span></p></div>
+    <div class="step"><span class="n">2</span><p><b>Invite-only access is granted</b> <span>— LIQUIDEX, Keeper and Prophet appear in your TradingView, ready for any chart. No install, no API keys.</span></p></div>
+    <div class="step"><span class="n">3</span><p><b>The signals reach you as alerts</b> <span>— on your phone, your desktop, or wired into a trading bot.</span></p></div>
+  </div>
   <div class="offer">
-    <div style="font-family:var(--mono);font-size:9pt;letter-spacing:1px;color:var(--muted)">LIQUIDEX-S · FULL FRAMEWORK</div>
+    <div style="font-family:var(--mono);font-size:9pt;letter-spacing:1px;color:var(--muted)">LIQUIDEX FRAMEWORK · FULL ACCESS</div>
     <div class="amt grad">$249<span>/mo</span></div>
-    <div class="ln">LIQUIDEX-CORE strategy · Keeper EQ leaderboard · Prophet risk gate · every validated Tier-1 &amp; Tier-2 setup.</div>
-    <div class="bn">🎁 Bonus: Surge Guru crypto scanner + Crypto Keeper — free for crypto lovers (equities update coming).</div>
+    <div class="ln">The LIQUIDEX strategy · the Keeper leaderboard · the Prophet risk gate · every validated Tier-1 &amp; Tier-2 setup and its per-symbol settings.</div>
+    <div class="bn">Included for crypto: the Surge Guru scanner and Crypto Keeper, with the validated crypto names (ICP · WLD · ETH).</div>
   </div>
-  <div class="botrow">
-    <div class="bot"><h3>🤖 Hook it into a bot</h3><p>Wire the framework's alerts into an automated trading bot — hands-free execution.</p><div class="wa">WhatsApp · +972 50 678 7586</div></div>
-    <div class="bot"><h3>⚙️ Build me a bot</h3><p>Want a custom bot built around the framework? We'll scope and build it with you.</p><div class="wa">WhatsApp · +972 50 678 7586</div></div>
-  </div>
-  <div style="border:1px solid var(--line);border-radius:10px;padding:5mm;margin-bottom:5mm;font-size:9.5pt;color:var(--muted);line-height:1.6;text-align:center">Not just an indicator — a complete trading <strong style="color:#e8edf5">ecosystem</strong> (Liquidity Engine · Market-Structure Engine · Scanner · Risk Framework · Ranking &amp; Confluence), built over thousands of dev hours with 50+ verified profitable setups. <strong style="color:#e8edf5">Available for licensing, strategic partnership, or full acquisition.</strong></div>
-  <div class="contact">Get access → wa.me/972506787586 &nbsp;·&nbsp; wattsonworks.github.io/framework</div>
+  <div class="kick" style="margin-top:6mm">BEYOND A SUBSCRIPTION</div>
+  <div class="asset">LIQUIDEX is not a single indicator. It is a complete trading system — a liquidity engine, a market-structure engine, a live scanner, a risk-management framework, and a ranking &amp; confluence layer — built over thousands of development hours, with more than fifty independently verified profitable setups across semiconductors, technology, cyber, defense and pharma. The intellectual property is significant, and the work is ongoing. <b>The system is available for licensing, strategic partnership, or full acquisition.</b></div>
+  <div class="contact">wa.me/972506787586 &nbsp;·&nbsp; wattsonworks.github.io/framework</div>
   <div class="disc">For research and educational purposes only. All performance figures shown are historical, hypothetical backtest results (non-repainting, with commission &amp; slippage), are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing in this document is financial advice.</div>
   <div class="pnum">07</div>
 </section>
