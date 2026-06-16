@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; box-sizing:border-box; margin:0; padding:0; }
+  @page{ size:A4; margin:0; }
+  :root{
+    --bg:#06080c; --panel:#0d121b; --panel2:#111825; --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.18);
+    --ink:#e8edf5; --muted:#9aa4b6; --dim:#6b7588; --mint:#00e5a0; --cyan:#22d3ee; --amber:#ffb800; --red:#ff3b5c;
+    --grad:linear-gradient(100deg,#22d3ee,#00e5a0);
+    --mono:'JetBrains Mono',monospace; --sans:'Space Grotesk',system-ui,sans-serif;
+  }
+  html,body{ background:var(--bg); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  .page{ width:210mm; height:297mm; padding:16mm 15mm; position:relative; page-break-after:always; overflow:hidden; background:radial-gradient(120% 80% at 80% 0%, #0b1018 0%, #06080c 60%); }
+  .page:last-child{ page-break-after:auto; }
+  .grad{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .brand{ display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11pt; letter-spacing:1px; }
+  .brand b{ color:var(--mint); }
+  .mark{ width:20px; height:20px; }
+  .ptag{ font-family:var(--mono); font-size:8.5pt; letter-spacing:2px; color:var(--cyan); }
+  .pnum{ position:absolute; bottom:11mm; right:15mm; font-family:var(--mono); font-size:8pt; color:var(--dim); }
+  .foot{ position:absolute; bottom:11mm; left:15mm; font-family:var(--mono); font-size:8pt; color:var(--dim); }
+  h1{ font-size:33pt; line-height:1.05; letter-spacing:-.5px; font-weight:700; }
+  h2{ font-size:21pt; letter-spacing:-.3px; margin-bottom:5mm; }
+  h3{ font-size:13pt; }
+  p{ font-size:10.5pt; color:var(--muted); line-height:1.5; }
+  .kick{ font-family:var(--mono); font-size:9pt; letter-spacing:2px; color:var(--cyan); margin-bottom:3mm; }
+  .hr{ height:1px; background:var(--line); margin:6mm 0; }
+
+  /* COVER */
+  .cover .top{ position:absolute; top:16mm; left:15mm; right:15mm; display:flex; justify-content:space-between; align-items:center; }
+  .cover .mid{ position:absolute; top:50%; left:15mm; right:15mm; transform:translateY(-50%); }
+  .cover h1{ font-size:40pt; }
+  .cover .sub{ font-size:13pt; color:var(--muted); margin-top:6mm; max-width:150mm; line-height:1.5; }
+  .statrow{ display:flex; gap:6mm; margin-top:12mm; }
+  .stat{ border:1px solid var(--line2); border-radius:10px; padding:5mm 6mm; flex:1; }
+  .stat b{ display:block; font-family:var(--mono); font-size:18pt; }
+  .stat span{ font-size:8.5pt; color:var(--dim); }
+
+  /* chips */
+  .chips{ display:flex; flex-wrap:wrap; gap:3mm; margin:5mm 0 7mm; }
+  .chip{ font-family:var(--mono); font-size:9.5pt; border:1px solid rgba(0,229,160,.35); background:rgba(0,229,160,.07); color:var(--mint); border-radius:40px; padding:2.5mm 4mm; }
+  .chip b{ color:var(--ink); font-weight:500; }
+  .hn-row{ display:flex; gap:5mm; margin-bottom:7mm; }
+  .hn{ flex:1; background:linear-gradient(180deg,var(--panel),#080c12); border:1px solid rgba(0,229,160,.25); border-radius:10px; padding:5mm; text-align:center; }
+  .hn b{ display:block; font-family:var(--mono); font-size:20pt; color:var(--mint); }
+  .hn span{ font-size:8pt; color:var(--muted); }
+
+  /* product cards */
+  .prod{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-top:4mm; }
+  .pcard{ border:1px solid var(--line); border-radius:10px; padding:5mm 6mm; background:linear-gradient(180deg,var(--panel),#080c12); }
+  .pcard .pid{ font-family:var(--mono); font-size:9pt; color:var(--mint); letter-spacing:.5px; }
+  .pcard h3{ font-size:12pt; margin:1.5mm 0; }
+  .pcard .job{ font-family:var(--mono); font-size:8pt; color:var(--cyan); margin-bottom:2mm; }
+  .pcard p{ font-size:8.7pt; }
+  .loop{ display:flex; gap:4mm; margin-top:7mm; }
+  .lstep{ flex:1; border-left:2px solid var(--mint); padding-left:4mm; }
+  .lstep b{ font-family:var(--mono); color:var(--mint); font-size:10pt; }
+  .lstep p{ font-size:8.7pt; margin-top:1mm; }
+
+  /* tables */
+  table{ width:100%; border-collapse:collapse; font-size:10pt; margin-top:3mm; }
+  th{ text-align:left; padding:3mm 4mm; font-family:var(--mono); font-size:8pt; letter-spacing:.5px; color:var(--dim); border-bottom:1px solid var(--line2); background:rgba(255,255,255,.02); }
+  td{ padding:2.7mm 4mm; border-bottom:1px solid var(--line); }
+  tr:last-child td{ border-bottom:0; }
+  .pf{ font-family:var(--mono); font-weight:700; color:var(--mint); }
+  .ddlow{ color:var(--mint); font-weight:600; }
+  .star{ color:var(--amber); }
+  .tbadge{ display:inline-block; font-family:var(--mono); font-size:8.5pt; font-weight:700; letter-spacing:1px; color:var(--bg); padding:1.5mm 3mm; border-radius:5px; }
+  .b1{ background:var(--grad); } .b2{ background:var(--cyan); } .b3{ background:var(--amber); }
+  .warn{ margin-top:4mm; font-size:9pt; color:var(--amber); background:rgba(255,184,0,.07); border:1px solid rgba(255,184,0,.25); border-radius:8px; padding:3.5mm 4mm; }
+  .bestadj{ margin-top:5mm; background:rgba(0,229,160,.06); border:1px solid rgba(0,229,160,.28); border-radius:8px; padding:4mm 5mm; font-size:9.5pt; color:var(--muted); }
+  .bestadj b{ font-family:var(--mono); color:var(--mint); }
+
+  /* live shots */
+  .shot{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#05070b; margin-bottom:4mm; }
+  .shot img{ display:block; width:100%; }
+  .shot.feat img{ height:95mm; object-fit:cover; object-position:top center; }
+  .shot.small img{ height:52mm; object-fit:cover; object-position:top left; }
+  .shotrow{ display:flex; gap:4mm; }
+  .shotrow .shot{ flex:1; }
+  .cap{ padding:3mm 4mm; }
+  .cap .t{ font-family:var(--mono); font-size:7.5pt; color:var(--mint); letter-spacing:.5px; }
+  .cap b{ font-size:10pt; display:block; margin-top:.5mm; }
+
+  /* access */
+  .offer{ border:1px solid rgba(0,229,160,.35); border-radius:12px; padding:8mm; text-align:center; background:linear-gradient(180deg,var(--panel),#080c12); margin-bottom:6mm; }
+  .offer .amt{ font-family:var(--mono); font-size:38pt; font-weight:700; line-height:1; }
+  .offer .amt span{ font-size:14pt; color:var(--dim); }
+  .offer .ln{ font-size:11pt; color:var(--ink); margin-top:3mm; }
+  .offer .bn{ font-size:9pt; color:var(--muted); margin-top:4mm; border-top:1px solid var(--line); padding-top:4mm; }
+  .botrow{ display:flex; gap:5mm; }
+  .bot{ flex:1; border:1px solid var(--line); border-radius:10px; padding:5mm; text-align:center; }
+  .bot h3{ font-size:11pt; } .bot p{ font-size:8.5pt; margin-top:1mm; }
+  .wa{ display:inline-block; margin-top:3mm; font-family:var(--mono); font-size:9pt; color:#25D366; }
+  .contact{ margin-top:7mm; text-align:center; font-family:var(--mono); font-size:11pt; color:var(--mint); }
+  .disc{ position:absolute; bottom:9mm; left:15mm; right:15mm; font-size:7pt; color:var(--dim); line-height:1.5; border-top:1px solid var(--line); padding-top:3mm; }
+  svg.markdef{ position:absolute; width:0; height:0; }
+</style>
+</head>
+<body>
+<svg class="markdef"><defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#00e5a0"/></linearGradient></defs></svg>
+
+<!-- PAGE 1 — COVER -->
+<section class="page cover">
+  <div class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32"><path d="M2 22 L9 13 L15 18 L23 6 L30 11" fill="none" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="6" r="2.6" fill="#00e5a0"/></svg>
+      PROPRIETARY TRADING <b>FRAMEWORK</b>
+    </div>
+    <div class="ptag">PRODUCT BRIEF · 2026</div>
+  </div>
+  <div class="mid">
+    <div class="kick">MARKET-STRUCTURE &amp; LIQUIDITY FRAMEWORK</div>
+    <h1>A proven edge,<br><span class="grad">concentrated in chips.</span></h1>
+    <div class="sub">A proprietary quant framework whose entire robust edge — across 25 assets and 10 timeframes — lands in a single sector: semiconductors. Found live by <b style="color:#00e5a0">Keeper</b>, traded by <b style="color:#22d3ee">LIQUIDEX-CORE</b>, gated &amp; circuit-broken by <b style="color:#ffb800">Prophet</b>.</div>
+    <div class="statrow">
+      <div class="stat"><b class="grad">5,000+</b><span>LINES · PINE v6</span></div>
+      <div class="stat"><b class="grad">250</b><span>BACKTESTS</span></div>
+      <div class="stat"><b class="grad">1.99</b><span>BEST ROBUST PF</span></div>
+      <div class="stat"><b class="grad">100–350</b><span>TRADES / TEST</span></div>
+    </div>
+  </div>
+  <div class="foot">wattsonworks · by SurgeGuru</div>
+  <div class="pnum">01</div>
+</section>
+
+<!-- PAGE 2 — THE THESIS -->
+<section class="page">
+  <div class="kick">THE THESIS</div>
+  <h2>The edge has a name: <span class="grad">semiconductors</span></h2>
+  <p>This is not a lucky backtest. Out of 25 assets across 10 timeframes, <strong style="color:#e8edf5">every one of the eight robust-core setups is a semiconductor</strong> — the same sector, again and again. The concentration is the proof, not a coincidence.</p>
+  <div class="chips">
+    <span class="chip"><b>NVDA</b> Nvidia</span><span class="chip"><b>AMAT</b> Applied Materials</span><span class="chip"><b>LRCX</b> Lam Research</span><span class="chip"><b>ASML</b> ASML</span><span class="chip"><b>MU</b> Micron</span><span class="chip"><b>TSEM</b> Tower Semi</span><span class="chip"><b>SMH</b> Semiconductor ETF</span>
+  </div>
+  <div class="hn-row">
+    <div class="hn"><b>1.79</b><span>AMAT 1h · 241 trades · 13% DD</span></div>
+    <div class="hn"><b>1.89</b><span>LRCX 10m · 203 trades · 16% DD</span></div>
+    <div class="hn"><b>8 / 8</b><span>robust setups are semis</span></div>
+  </div>
+  <div class="hr"></div>
+  <h3 style="color:#22d3ee">Why semiconductors</h3>
+  <p style="margin-top:2mm">They are the most liquid, most institutionally-traded, most momentum- and cycle-driven group in the market — and they move as a cohesive sector. Those are exactly the conditions the liquidity / cascade engine is built to read: clean sweeps, real order flow, structure that repeats.</p>
+  <h3 style="color:#22d3ee; margin-top:5mm">Why that makes it credible</h3>
+  <p style="margin-top:2mm">A system that "works on everything" is usually overfit. A system that works on a coherent, explainable sector — with 100–350 trades per test and drawdowns as low as 13% — is a real, repeatable edge. We don't claim to trade everything. We found where the edge actually lives.</p>
+  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">02</div>
+</section>
+
+<!-- PAGE 3 — THE SYSTEM -->
+<section class="page">
+  <div class="kick">THE SYSTEM</div>
+  <h2>Four products, one framework</h2>
+  <p>One signal engine with tools wired into it. No catalog of indicators — one verdict.</p>
+  <div class="prod">
+    <div class="pcard"><div class="pid">LIQUIDEX-CORE</div><h3>The signal engine</h3><div class="job">where to enter, stop &amp; target</div><p>5,000+ lines of Pine v6. Liquidation cascades, CVD, order blocks, iceberg walls and sweeps → entries with structure stops and opposing-wall take-profits.</p></div>
+    <div class="pcard"><div class="pid">KEEPER</div><h3>The EQ leaderboard</h3><div class="job">which semi is working now</div><p>Runs the strategy across equities and ranks every name live by profit factor, surge and risk. Includes Crypto Keeper as a bonus.</p></div>
+    <div class="pcard"><div class="pid">PROPHET</div><h3>Risk gate + breaker</h3><div class="job">go / no-go &amp; how big</div><p>Composite risk, SAFE / DANGER zones and velocity — with a live position-size verdict that trims size when risk is elevated and stands you down in the danger zone.</p></div>
+    <div class="pcard"><div class="pid">SURGE GURU</div><h3>Crypto surge scanner</h3><div class="job">which crypto token is firing</div><p>A bonus for crypto lovers — real-time 1m + 3m explosiveness with multi-timeframe persistence. Crypto-only today; equities coming.</p></div>
+  </div>
+  <div class="hr"></div>
+  <h3>How the loop works</h3>
+  <div class="loop">
+    <div class="lstep"><b>1 · FIND</b><p>Keeper surfaces the semiconductor that's working right now.</p></div>
+    <div class="lstep"><b>2 · TRADE</b><p>LIQUIDEX-CORE plots entry, stop and target on that name.</p></div>
+    <div class="lstep"><b>3 · GATE</b><p>Prophet scores risk, sizes the trade, and breaks it in the danger zone.</p></div>
+  </div>
+  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">03</div>
+</section>
+
+<!-- PAGE 4 — TIER 1 -->
+<section class="page">
+  <div class="kick">VALIDATED RESULTS</div>
+  <h2><span class="tbadge b1">TIER 1</span> &nbsp;Robust core — all semiconductors</h2>
+  <p>PF ≥ 1.5 with 100+ trades — the tradeable core. Big samples, real edge.</p>
+  <table>
+    <thead><tr><th>Symbol</th><th>TF</th><th>Profit Factor</th><th>PnL%</th><th>Trades</th><th>Max DD</th></tr></thead>
+    <tbody>
+      <tr><td>NVDA</td><td>4h</td><td class="pf">1.99</td><td>+552%</td><td>120</td><td>41%</td></tr>
+      <tr><td>LRCX</td><td>10m</td><td class="pf">1.89</td><td>+141%</td><td>203</td><td class="ddlow">16%</td></tr>
+      <tr><td>AMAT <span class="star">★</span></td><td>1h</td><td class="pf">1.79</td><td>+231%</td><td>241</td><td class="ddlow">13%</td></tr>
+      <tr><td>TSEM</td><td>1h</td><td class="pf">1.68</td><td>+199%</td><td>251</td><td>21%</td></tr>
+      <tr><td>MU</td><td>5m</td><td class="pf">1.58</td><td>+83%</td><td>183</td><td class="ddlow">17%</td></tr>
+      <tr><td>LRCX</td><td>4h</td><td class="pf">1.55</td><td>+384%</td><td>240</td><td>37%</td></tr>
+      <tr><td>SMH</td><td>1D</td><td class="pf">1.53</td><td>+158%</td><td>189</td><td>54%</td></tr>
+      <tr><td>ASML</td><td>1h</td><td class="pf">1.53</td><td>+128%</td><td>214</td><td>40%</td></tr>
+    </tbody>
+  </table>
+  <div class="bestadj"><strong style="color:#e8edf5">Best risk-adjusted of the entire sweep:</strong> &nbsp;<b>AMAT 1h</b> (PF 1.79 · 13% DD) · <b>LRCX 10m</b> (1.89 · 16%) · <b>MU 5m</b> (1.58 · 17%) · <b>TSEM 1h</b> (1.68 · 21%). All semiconductors. This is the product core.</div>
+  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">04</div>
+</section>
+
+<!-- PAGE 5 — TIER 2 + 3 -->
+<section class="page">
+  <div class="kick">VALIDATED RESULTS</div>
+  <h2><span class="tbadge b2">TIER 2</span> Solid &nbsp; <span class="tbadge b3">TIER 3</span> Weekly moonshots</h2>
+  <p style="margin-bottom:2mm">Tier 2 — PF 1.25–1.5, robust trade counts.</p>
+  <table>
+    <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>Trades</th><th>Max DD</th></tr></thead>
+    <tbody>
+      <tr><td>AMAT</td><td>1D</td><td class="pf">1.50</td><td>241</td><td>44%</td></tr>
+      <tr><td>TSLA</td><td>2h</td><td class="pf">1.47</td><td>352</td><td>61%</td></tr>
+      <tr><td>MU</td><td>1D</td><td class="pf">1.46</td><td>234</td><td>51%</td></tr>
+      <tr><td>MU</td><td>2h</td><td class="pf">1.41</td><td>323</td><td>22%</td></tr>
+      <tr><td>LRCX</td><td>1h</td><td class="pf">1.33</td><td>284</td><td>37%</td></tr>
+      <tr><td>MSFT</td><td>4h</td><td class="pf">1.30</td><td>228</td><td>26%</td></tr>
+    </tbody>
+  </table>
+  <p style="margin:6mm 0 2mm">Tier 3 — PF ≥ 1.5 but &lt; 100 trades. Huge returns, small samples.</p>
+  <table>
+    <thead><tr><th>Symbol</th><th>TF</th><th>PF</th><th>PnL%</th><th>Trades</th></tr></thead>
+    <tbody>
+      <tr><td>AVGO</td><td>1W</td><td class="pf">5.62</td><td>+669%</td><td>19</td></tr>
+      <tr><td>TSLA</td><td>1W</td><td class="pf">4.49</td><td>+2141%</td><td>16</td></tr>
+      <tr><td>NVMI</td><td>1W</td><td class="pf">3.02</td><td>+420%</td><td>31</td></tr>
+      <tr><td>NICE</td><td>1W</td><td class="pf">1.80</td><td>+666%</td><td>65</td></tr>
+    </tbody>
+  </table>
+  <div class="warn">⚠️ Weekly is the highest-PF tier and the most dangerous — on raw full-equity sizing a single bad run can wipe out. Tradeable only with Prophet's position caps.</div>
+  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">05</div>
+</section>
+
+<!-- PAGE 6 — LIVE -->
+<section class="page">
+  <div class="kick">IN PRODUCTION</div>
+  <h2>This is live — not a mockup</h2>
+  <div class="shot feat"><img src="nvidia.png" /><div class="cap"><span class="t">NVDA · THE FULL STACK</span><b>Everything on one chart — strategy, leaderboard, risk gate, backtest. PF ≈ 1.99.</b></div></div>
+  <div class="shotrow">
+    <div class="shot small"><img src="sre-dashboard.png" /><div class="cap"><span class="t">KEEPER · LIVE</span><b>The equity leaderboard</b></div></div>
+    <div class="shot small"><img src="prophet-engine.png" /><div class="cap"><span class="t">PROPHET · GATE + BREAKER</span><b>Risk &amp; position sizing</b></div></div>
+  </div>
+  <div class="foot">PROPRIETARY TRADING FRAMEWORK</div><div class="pnum">06</div>
+</section>
+
+<!-- PAGE 7 — ACCESS -->
+<section class="page">
+  <div class="kick">GET ACCESS</div>
+  <h2>One subscription. Every strategy.</h2>
+  <div class="offer">
+    <div style="font-family:var(--mono);font-size:9pt;letter-spacing:1px;color:var(--muted)">LIQUIDEX-S · FULL FRAMEWORK</div>
+    <div class="amt grad">$249<span>/mo</span></div>
+    <div class="ln">LIQUIDEX-CORE strategy · Keeper EQ leaderboard · Prophet risk gate · every validated Tier-1 &amp; Tier-2 setup.</div>
+    <div class="bn">🎁 Bonus: Surge Guru crypto scanner + Crypto Keeper — free for crypto lovers (equities update coming).</div>
+  </div>
+  <div class="botrow">
+    <div class="bot"><h3>🤖 Hook it into a bot</h3><p>Wire the framework's alerts into an automated trading bot — hands-free execution.</p><div class="wa">WhatsApp · +972 50 678 7586</div></div>
+    <div class="bot"><h3>⚙️ Build me a bot</h3><p>Want a custom bot built around the framework? We'll scope and build it with you.</p><div class="wa">WhatsApp · +972 50 678 7586</div></div>
+  </div>
+  <div class="contact">Get access → wa.me/972506787586 &nbsp;·&nbsp; wattsonworks.github.io/framework</div>
+  <div class="disc">For research and educational purposes only. All performance figures shown are historical, hypothetical backtest results (non-repainting, with commission &amp; slippage), are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing in this document is financial advice.</div>
+  <div class="pnum">07</div>
+</section>
+
+</body>
+</html>
