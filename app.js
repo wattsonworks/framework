@@ -71,9 +71,9 @@
   var ticker = document.getElementById('ticker');
   if (ticker) {
     var feed = [
-      ['AMAT', 'PF 1.79', 'up'], ['NVDA', 'PF 1.99', 'up'], ['LRCX', 'PF 1.89', 'up'],
-      ['TSEM', 'PF 1.68', 'up'], ['MU', 'PF 1.58', 'up'], ['SMH', 'PF 1.53', 'up'],
-      ['ICPUSDT', '+4.2%', 'up'], ['AVGO', '1W 5.62', 'up'], ['RISK', '0.41', 'dn'], ['SRE', 'RANKING', 'up']
+      ['TSEM', 'PF 2.78', 'up'], ['MU', 'PF 2.07', 'up'], ['NVDA', 'PF 1.99', 'up'],
+      ['LRCX', 'PF 1.95', 'up'], ['AMAT', 'PF 1.79', 'up'], ['SMH', 'PF 1.53', 'up'],
+      ['ICPUSDT', '+4.2%', 'up'], ['AVGO', '1W 5.62', 'up'], ['RISK', '0.41', 'dn'], ['KEEPER', 'RANKING', 'up']
     ];
     var html = '';
     for (var rep = 0; rep < 2; rep++) {
@@ -93,10 +93,10 @@
 
     var sig = document.getElementById('t-signal'), asset = document.getElementById('t-asset'), pf = document.getElementById('t-pf');
     var setups = [
-      ['AMAT · 1H', 'SEMICONDUCTORS', '1.79'],
+      ['TSEM · 1H', 'SEMICONDUCTORS', '2.78'],
+      ['MU · 5M', 'SEMICONDUCTORS', '2.07'],
       ['NVDA · 4H', 'SEMICONDUCTORS', '1.99'],
-      ['LRCX · 10M', 'SEMICONDUCTORS', '1.89'],
-      ['TSEM · 1H', 'SEMICONDUCTORS', '1.68']
+      ['LRCX · 4H', 'SEMICONDUCTORS', '1.95']
     ];
     var si = 0;
     if (sig && asset && pf) setInterval(function () {
