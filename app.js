@@ -71,9 +71,9 @@
   var ticker = document.getElementById('ticker');
   if (ticker) {
     var feed = [
-      ['ICPUSDT', '+4.2%', 'up'], ['WLDUSDT', '+6.1%', 'up'], ['TSEM', '+4.9%', 'up'],
-      ['ETHUSD', '-0.3%', 'dn'], ['ESLT', '+1.8%', 'up'], ['NVMI', '+4.2%', 'up'],
-      ['CHKP', '+0.8%', 'up'], ['SURGE', 'ARMED', 'up'], ['RISK', '0.41', 'dn'], ['TEVA', '+0.2%', 'up']
+      ['AMAT', 'PF 1.79', 'up'], ['NVDA', 'PF 1.99', 'up'], ['LRCX', 'PF 1.89', 'up'],
+      ['TSEM', 'PF 1.68', 'up'], ['MU', 'PF 1.58', 'up'], ['SMH', 'PF 1.53', 'up'],
+      ['ICPUSDT', '+4.2%', 'up'], ['AVGO', '1W 5.62', 'up'], ['RISK', '0.41', 'dn'], ['SRE', 'RANKING', 'up']
     ];
     var html = '';
     for (var rep = 0; rep < 2; rep++) {
@@ -93,10 +93,10 @@
 
     var sig = document.getElementById('t-signal'), asset = document.getElementById('t-asset'), pf = document.getElementById('t-pf');
     var setups = [
-      ['CASCADE-FADE · LONG', 'BINANCE:ICPUSDT · 1H', '2.50'],
-      ['FULL-ENGINE · LONG', 'NASDAQ:TSEM · 1H', '2.64'],
-      ['CASCADE-FADE · LONG', 'BINANCE:WLDUSDT · 1H', '2.23'],
-      ['FULL-ENGINE · LONG', 'NASDAQ:ESLT · 1D', '1.93']
+      ['AMAT · 1H', 'FULL-ENGINE · LONG', '1.79'],
+      ['NVDA · 4H', 'FULL-ENGINE · LONG', '1.99'],
+      ['LRCX · 10M', 'CASCADE-FADE · LONG', '1.89'],
+      ['TSEM · 1H', 'FULL-ENGINE · LONG', '1.68']
     ];
     var si = 0;
     if (sig && asset && pf) setInterval(function () {
