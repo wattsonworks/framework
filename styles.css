@@ -317,10 +317,8 @@ a{color:inherit;text-decoration:none}
 /* TIER results */
 .tier{margin-bottom:30px}
 .tier-head{display:flex;align-items:baseline;gap:12px;margin-bottom:13px;flex-wrap:wrap}
-.tier-badge{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 13px;border-radius:7px;color:var(--bg)}
-.tier-1 .tier-badge{background:var(--grad)}
-.tier-2 .tier-badge{background:#22d3ee}
-.tier-3 .tier-badge{background:#ffb800}
+.tier-badge{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 13px;border-radius:7px;color:var(--bg);background:#3a4356;white-space:nowrap}
+.tier-badge.star-badge{background:var(--grad);box-shadow:0 4px 16px rgba(0,229,160,.25)}
 .tier-head h3{font-size:18px}
 .tier-head .tier-sub{font-size:13px;color:var(--muted)}
 .tier-table{width:100%;border-collapse:collapse;font-size:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -342,11 +340,64 @@ a{color:inherit;text-decoration:none}
 .asset-note{margin:30px auto 0;max-width:760px;text-align:center;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--line);padding-top:24px}
 .asset-note strong{color:var(--ink)}
 .asset-note a{color:var(--mint);border-bottom:1px solid rgba(0,229,160,.4)}
+.tier-note{margin-top:12px;font-size:13.5px;color:var(--muted);line-height:1.6;padding:2px 2px}
+.tier-note strong{color:var(--ink)}
+
+/* ROBUST-3 cards (the edge) */
+.robust-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+.r3-card{position:relative;background:linear-gradient(180deg,rgba(0,229,160,.06),rgba(13,18,27,.6));border:1px solid rgba(0,229,160,.28);border-radius:14px;padding:22px 20px 20px;text-align:center}
+.r3-star{color:var(--mint);font-size:18px;line-height:1;margin-bottom:8px}
+.r3-sym{font-family:var(--mono);font-size:24px;font-weight:700;color:var(--ink);letter-spacing:.5px}
+.r3-sym span{color:var(--dim);font-size:15px;font-weight:500}
+.r3-sec{font-size:12.5px;color:var(--cyan);font-family:var(--mono);margin:4px 0 12px}
+.r3-stats{font-size:13.5px;color:var(--muted);font-family:var(--mono)}
+.r3-stats b{color:var(--mint);font-weight:700}
+.r3-tag{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.45}
+
+/* TRAVEL (works/fails) */
+.travel{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;margin:24px auto 0}
+.travel-col{border-radius:13px;padding:18px 20px;border:1px solid var(--line);background:var(--panel)}
+.travel-col.ok{border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.04)}
+.travel-col.no{border-color:rgba(255,59,92,.3);background:rgba(255,59,92,.04)}
+.travel-h{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.5px;margin-bottom:9px}
+.travel-col.ok .travel-h{color:var(--mint)}
+.travel-col.no .travel-h{color:var(--red)}
+.travel-col p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.travel-col b{color:var(--ink);font-weight:600}
+
+/* FIT (who it's for) */
+.fit-grid,.run-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px;margin:0 auto}
+.fit-col{border-radius:14px;padding:24px 24px 12px;border:1px solid var(--line);background:var(--panel)}
+.fit-col.yes{border-color:rgba(0,229,160,.3)}
+.fit-col.no{border-color:rgba(255,59,92,.28)}
+.fit-h{font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:.4px;margin-bottom:14px}
+.fit-col.yes .fit-h{color:var(--mint)}
+.fit-col.no .fit-h{color:var(--red)}
+.fit-col ul{list-style:none}
+.fit-col li{position:relative;padding:0 0 14px 0;font-size:14px;color:var(--muted);line-height:1.55}
+.fit-col li strong{color:var(--ink);font-weight:600}
+
+/* RUN (two tiers) */
+.run-card{border-radius:14px;padding:24px;border:1px solid var(--line);background:var(--panel)}
+.run-card:first-child{border-color:rgba(0,229,160,.3)}
+.run-tag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:7px;background:rgba(0,229,160,.14);color:var(--mint);margin-bottom:13px}
+.run-tag.amber{background:rgba(255,184,0,.14);color:var(--amber)}
+.run-card h3{font-size:20px;margin-bottom:14px}
+.run-line{font-size:14px;color:var(--muted);line-height:1.5;padding:7px 0;border-top:1px solid var(--line)}
+.run-line strong{color:var(--ink);font-weight:600}
+
+/* HONEST positioning */
+.honest-box{max-width:880px;margin:0 auto;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line2);border-radius:16px;padding:30px clamp(22px,4vw,40px)}
+.honest-h{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:1px;color:var(--cyan);margin-bottom:14px;text-transform:uppercase}
+.honest-box p{font-size:15.5px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.honest-box p:last-child{margin-bottom:0}
+.honest-box strong{color:var(--ink);font-weight:600}
 
 @media(max-width:760px){
   .gallery{grid-template-columns:1fr}
   .tier-table{font-size:12.5px}
   .tier-table th,.tier-table td{padding:9px 10px}
+  .robust-3,.travel,.fit-grid,.run-grid{grid-template-columns:1fr}
 }
 
 /* SEMICONDUCTOR EDGE */
@@ -394,8 +445,9 @@ a{color:inherit;text-decoration:none}
 /* RTL / HEBREW */
 body.rtl{direction:rtl;font-family:'Heebo','Space Grotesk',sans-serif}
 body.rtl h1,body.rtl h2,body.rtl h3,body.rtl h4{font-family:'Heebo',sans-serif}
-body.rtl .section-head,body.rtl .hero-inner,body.rtl .edge-why p,body.rtl .how-step,body.rtl .card,body.rtl .card p,body.rtl .hub-chip{text-align:right}
-body.rtl .stats-note,body.rtl .best-adj,body.rtl .offer,body.rtl .auto-card,body.rtl .headline-num,body.rtl .chips{text-align:center}
+body.rtl .section-head,body.rtl .hero-inner,body.rtl .edge-why p,body.rtl .how-step,body.rtl .card,body.rtl .card p,body.rtl .hub-chip,body.rtl .travel-col,body.rtl .fit-col,body.rtl .run-card,body.rtl .honest-box,body.rtl .tier-note{text-align:right}
+body.rtl .stats-note,body.rtl .best-adj,body.rtl .offer,body.rtl .auto-card,body.rtl .headline-num,body.rtl .chips,body.rtl .r3-card{text-align:center}
+body.rtl .fit-col li{padding-right:0}
 body.rtl .hub-chip{border-left-width:1px;border-right-width:3px}
 /* English / numeric / code islands stay LTR */
 body.rtl .brand,body.rtl .terminal,body.rtl .ticker,body.rtl .flow-readout,body.rtl .table-scroll,body.rtl code,body.rtl .stat-num,body.rtl .offer-amt,body.rtl .price-amt,body.rtl .hn b,body.rtl .chip,body.rtl .card-id{direction:ltr}
