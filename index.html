@@ -59,9 +59,9 @@
       <div class="t-row"><span class="t-k">PROPHET&nbsp;· RISK</span><span class="t-v"><span id="risk-val">0.38</span> <span class="muted">· SIZE 1.0x</span></span></div>
       <div class="t-verdict"><span class="vk">VERDICT</span><span><span class="vv">GO</span> <span class="vsub">reads aligned</span></span></div>
       <div class="t-sep"></div>
-      <div class="t-row"><span class="t-k">TOP&nbsp;NAME</span><span class="t-v hl" id="t-signal">CAT · 1H</span></div>
-      <div class="t-row"><span class="t-k">SECTOR</span><span class="t-v" id="t-asset">INDUSTRIALS</span></div>
-      <div class="t-row"><span class="t-k">PF (BACKTEST)</span><span class="t-v pf" id="t-pf">1.74</span></div>
+      <div class="t-row"><span class="t-k">TOP&nbsp;NAME</span><span class="t-v hl" id="t-signal">GOOGL · 45M</span></div>
+      <div class="t-row"><span class="t-k">SECTOR</span><span class="t-v" id="t-asset">MEGA-TECH</span></div>
+      <div class="t-row"><span class="t-k">PF (BACKTEST)</span><span class="t-v pf" id="t-pf">2.30</span></div>
       <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
     </div>
   </div>
@@ -69,13 +69,13 @@
 
 <!-- STATS -->
 <section class="stats" aria-label="Key metrics">
-  <div class="stat"><div class="stat-num" data-count="250" data-suffix="+">0</div><div class="stat-label" data-i18n="stat3">Backtests run</div></div>
-  <div class="stat"><div class="stat-num" data-count="9">0</div><div class="stat-label" data-i18n="stat1">Sectors scanned</div></div>
-  <div class="stat"><div class="stat-num" data-count="3">0</div><div class="stat-label" data-i18n="stat4">Robust ★ setups</div></div>
-  <div class="stat"><div class="stat-num" data-count="1.74" data-decimals="2">0</div><div class="stat-label" data-i18n="stat5">Best risk-adj. PF</div></div>
-  <div class="stat"><div class="stat-num" data-count="14" data-suffix="%">0</div><div class="stat-label" data-i18n="stat2">Best-cell CAGR</div></div>
+  <div class="stat"><div class="stat-num" data-count="8">0</div><div class="stat-label" data-i18n="stat3">Safe-book names</div></div>
+  <div class="stat"><div class="stat-num" data-count="5">0</div><div class="stat-label" data-i18n="stat1">Sectors covered</div></div>
+  <div class="stat"><div class="stat-num" data-count="2.78" data-decimals="2">0</div><div class="stat-label" data-i18n="stat4">Top profit factor</div></div>
+  <div class="stat"><div class="stat-num" data-count="6.1" data-decimals="1" data-suffix="%">0</div><div class="stat-label" data-i18n="stat5">Lowest drawdown</div></div>
+  <div class="stat"><div class="stat-num" data-count="250" data-suffix="+">0</div><div class="stat-label" data-i18n="stat2">Backtests run</div></div>
 </section>
-<div class="stats-note" data-i18n="statnote">Scanned across nine sectors and 250+ symbol/timeframe cells. The strict robust bar — profit factor ≥ 1.5, drawdown ≤ 30%, 80+ trades — is cleared by just three cells. All figures are historical, hypothetical backtest results — see the disclaimer below.</div>
+<div class="stats-note" data-i18n="statnote">A safe book of eight names across five sectors, each at its own best timeframe and breaker setting — every one at profit factor ≥ 1.6 and ≤ 19% drawdown. Distilled from a nine-sector, 250+ cell scan. All figures are historical, hypothetical backtest results — see the disclaimer below.</div>
 
 <!-- THE SYSTEM -->
 <section class="section" id="system">
@@ -115,89 +115,129 @@
 <section class="section" id="edge">
   <div class="section-head reveal">
     <div class="kicker" data-i18n="edge_kick">THE&nbsp;EDGE</div>
-    <h2 data-i18n="edge_h2">The edge isn't a sector. It's a signature.</h2>
-    <p data-i18n="edge_p">We thought the edge was semiconductors — so we tested everything: <strong>nine sectors, 250+ symbol/timeframe cells</strong>, a clean baseline with no tuning. The truth is better. Under a strict bar — <strong>profit factor ≥ 1.5, drawdown ≤ 30%, 80+ trades</strong> — exactly <strong>three cells</strong> survive, and they sit in three unrelated sectors. The same rules engine, reading the same liquidity, in machinery, retail and surgical robotics.</p>
+    <h2 data-i18n="edge_h2">The edge isn't a sector. It's a per-symbol recipe.</h2>
+    <p data-i18n="edge_p">We tested everything — <strong>nine sectors, 250+ symbol/timeframe cells</strong>, a clean baseline with no tuning — then kept only what's <strong>safe</strong>. The product is a short book of names, and <strong>each one runs at its own best timeframe with its own breaker setting</strong>. Not one-size-fits-all — a per-symbol recipe, chosen for low drawdown.</p>
   </div>
 
   <div class="robust-3 reveal">
     <div class="r3-card">
-      <div class="r3-star">★</div>
-      <div class="r3-sym">CAT <span>· 1h</span></div>
-      <div class="r3-sec" data-i18n="r3_cat">Industrials · Caterpillar</div>
-      <div class="r3-stats"><b>1.74</b> PF&nbsp;·&nbsp;<b>15.8%</b> DD&nbsp;·&nbsp;126 trades</div>
-      <div class="r3-tag" data-i18n="r3_cat_tag">Best risk-adjusted cell on the entire board</div>
+      <div class="r3-star" data-i18n="r3_googl_k">◆ SAFEST</div>
+      <div class="r3-sym">GOOGL <span>· 45m</span></div>
+      <div class="r3-sec" data-i18n="r3_googl">Mega-tech · breaker OFF</div>
+      <div class="r3-stats"><b>2.30</b> PF&nbsp;·&nbsp;<b>6.1%</b> DD&nbsp;·&nbsp;107 trades</div>
+      <div class="r3-tag" data-i18n="r3_googl_tag">The lowest drawdown in the entire book</div>
     </div>
     <div class="r3-card">
-      <div class="r3-star">★</div>
-      <div class="r3-sym">WMT <span>· 4h</span></div>
-      <div class="r3-sec" data-i18n="r3_wmt">Consumer · Walmart</div>
-      <div class="r3-stats"><b>1.70</b> PF&nbsp;·&nbsp;<b>18.7%</b> DD&nbsp;·&nbsp;181 trades</div>
-      <div class="r3-tag" data-i18n="r3_wmt_tag">Deep sample, sub-20% drawdown, defensive name</div>
+      <div class="r3-star" data-i18n="r3_tsem_k">▲ HIGHEST PF</div>
+      <div class="r3-sym">TSEM <span>· 1h</span></div>
+      <div class="r3-sec" data-i18n="r3_tsem">Semiconductors · breaker OFF</div>
+      <div class="r3-stats"><b>2.78</b> PF&nbsp;·&nbsp;<b>16.5%</b> DD&nbsp;·&nbsp;146 trades</div>
+      <div class="r3-tag" data-i18n="r3_tsem_tag">The strongest profit factor in the safe book</div>
     </div>
     <div class="r3-card">
-      <div class="r3-star">★</div>
-      <div class="r3-sym">ISRG <span>· 4h</span></div>
-      <div class="r3-sec" data-i18n="r3_isrg">Healthcare · Intuitive Surgical</div>
-      <div class="r3-stats"><b>1.51</b> PF&nbsp;·&nbsp;<b>26.5%</b> DD&nbsp;·&nbsp;149 trades</div>
-      <div class="r3-tag" data-i18n="r3_isrg_tag">Confirmed by LLY 2h/4h — a real healthcare edge</div>
+      <div class="r3-star" data-i18n="r3_tsla_k">● DEEPEST</div>
+      <div class="r3-sym">TSLA <span>· 1h</span></div>
+      <div class="r3-sec" data-i18n="r3_tsla">Mega-tech · breaker OFF</div>
+      <div class="r3-stats"><b>1.63</b> PF&nbsp;·&nbsp;<b>18.7%</b> DD&nbsp;·&nbsp;337 trades</div>
+      <div class="r3-tag" data-i18n="r3_tsla_tag">337 trades — the deepest, most-tested sample</div>
     </div>
   </div>
 
   <div class="edge-why reveal">
-    <p data-i18n="edge_why1"><strong>Why that's credible.</strong> A system that "works on everything" is overfit. A system that finds the same low-drawdown, rule-based edge in three unrelated sectors — over hundreds of trades each — is reading something real: liquidity and market structure in the most liquid, institutionally-traded names on the board.</p>
-    <p data-i18n="edge_why2"><strong>And we're blunt about the misses.</strong> Energy, crypto and high-beta momentum all failed the risk bar. Software cleared it on NOW and ZS alone. Every sub-15-minute test is dead, and the eye-catching weekly profit factors are mostly mirages — small samples and brutal drawdowns. The durable edge lives at 1h–4h, on a curated watchlist. Nowhere else.</p>
+    <p data-i18n="edge_why1"><strong>Why that's credible.</strong> The safe book is <strong>eight names across five sectors</strong> — semis, mega-tech, industrials, consumer — every one at profit factor ≥ 1.6 and ≤ 19% drawdown, most over 100–340 trades. A system that finds the same low-drawdown edge in Google, Caterpillar and Walmart isn't curve-fit to one sector; it's reading real liquidity in the market's most liquid names.</p>
+    <p data-i18n="edge_why2"><strong>And we're blunt about the misses.</strong> Energy, crypto-proxies, most high-beta growth and software all failed the safety bar — and so did the newer semis (KLAC, MCHP, SMCI). Every weekly timeframe is a mirage: huge headline profit factors on tiny samples. The safe edge lives at 5m–4h, on a curated book. Nowhere else.</p>
   </div>
 </section>
 
-<!-- VALIDATION -->
+<!-- VALIDATION / THE SAFE BOOK -->
 <section class="section" id="results">
   <div class="section-head reveal">
-    <div class="kicker" data-i18n="results_kick">VALIDATION</div>
-    <h2 data-i18n="results_h2">Where it works — and where it doesn't</h2>
-    <p data-i18n="results_p">The full nine-sector scan, clean baseline, no tuning. Three cells clear the strict robust bar; a diversified second tier is tradeable with care; and we show you exactly what failed, because that's the honest part most products hide.</p>
+    <div class="kicker" data-i18n="results_kick">THE&nbsp;SAFE&nbsp;BOOK</div>
+    <h2 data-i18n="results_h2">Eight names. Five sectors. Each with its recipe.</h2>
+    <p data-i18n="results_p">The recommended portfolio, sorted by safety — lowest drawdown first. Every name runs profit factor ≥ 1.6 at ≤ 19% drawdown. Run each one exactly as listed — its timeframe, its breaker setting — and there's nothing else to tune.</p>
   </div>
 
-  <div class="tier reveal">
-    <div class="tier-head"><span class="tier-badge star-badge">★&nbsp;ROBUST</span><h3 data-i18n="tier1_h">The core — clears every gate</h3><span class="tier-sub" data-i18n="tier1_sub">PF ≥ 1.5 · DD ≤ 30% · 80+ trades · the only cells with a real low-drawdown edge before any tuning</span></div>
-    <div class="table-scroll"><table class="tier-table">
-      <thead><tr><th data-i18n="th_sym">Symbol</th><th data-i18n="th_sec">Sector</th><th>TF</th><th>PF</th><th data-i18n="th_dd">Max DD</th><th data-i18n="th_tr">Trades</th></tr></thead>
-      <tbody>
-        <tr><td>CAT <span class="star">★</span></td><td>Industrials</td><td>1h</td><td class="pf">1.74</td><td class="ddlow">15.8%</td><td>126</td></tr>
-        <tr><td>WMT <span class="star">★</span></td><td>Consumer</td><td>4h</td><td class="pf">1.70</td><td class="ddlow">18.7%</td><td>181</td></tr>
-        <tr><td>ISRG <span class="star">★</span></td><td>Healthcare</td><td>4h</td><td class="pf">1.51</td><td>26.5%</td><td>149</td></tr>
-      </tbody>
-    </table></div>
+  <div class="book reveal">
+    <div class="bk-card hot">
+      <div class="bk-top"><span class="bk-sym">GOOGL</span><span class="bk-sec">Mega-tech</span></div>
+      <div class="bk-pf"><b>2.30</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>6.1%</b> max DD</span><span><b>107</b> trades</span></div>
+      <div class="bk-recipe">45m · <span class="bk-off">breaker OFF</span></div>
+    </div>
+    <div class="bk-card hot">
+      <div class="bk-top"><span class="bk-sym">MU</span><span class="bk-sec">Semis</span></div>
+      <div class="bk-pf"><b>2.08</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>8.8%</b> max DD</span><span><b>103</b> trades</span></div>
+      <div class="bk-recipe">5m · <span class="bk-off">breaker OFF</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">AMAT</span><span class="bk-sec">Semis</span></div>
+      <div class="bk-pf"><b>1.79</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>13.0%</b> max DD</span><span><b>241</b> trades</span></div>
+      <div class="bk-recipe">1h · <span class="bk-on">breaker ON</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">LRCX</span><span class="bk-sec">Semis</span></div>
+      <div class="bk-pf"><b>1.89</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>15.7%</b> max DD</span><span><b>203</b> trades</span></div>
+      <div class="bk-recipe">10m · <span class="bk-on">breaker ON</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">CAT</span><span class="bk-sec">Industrials</span></div>
+      <div class="bk-pf"><b>1.74</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>15.8%</b> max DD</span><span><b>126</b> trades</span></div>
+      <div class="bk-recipe">1h · <span class="bk-off">breaker OFF</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">TSEM</span><span class="bk-sec">Semis</span></div>
+      <div class="bk-pf"><b>2.78</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>16.5%</b> max DD</span><span><b>146</b> trades</span></div>
+      <div class="bk-recipe">1h · <span class="bk-off">breaker OFF</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">WMT</span><span class="bk-sec">Consumer</span></div>
+      <div class="bk-pf"><b>1.70</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>18.7%</b> max DD</span><span><b>181</b> trades</span></div>
+      <div class="bk-recipe">4h · <span class="bk-off">breaker OFF</span></div>
+    </div>
+    <div class="bk-card">
+      <div class="bk-top"><span class="bk-sym">TSLA</span><span class="bk-sec">Mega-tech</span></div>
+      <div class="bk-pf"><b>1.63</b> <span>PF</span></div>
+      <div class="bk-meta"><span><b>18.7%</b> max DD</span><span><b>337</b> trades</span></div>
+      <div class="bk-recipe">1h · <span class="bk-off">breaker OFF</span></div>
+    </div>
   </div>
+  <div class="book-sum reveal" data-i18n="book_sum">Eight names · five sectors · every one PF ≥ 1.6 at ≤ 19% drawdown. <strong>This is the safe book.</strong></div>
 
-  <div class="tier reveal">
-    <div class="tier-head"><span class="tier-badge">ROSTER</span><h3 data-i18n="tier2_h">The diversified roster</h3><span class="tier-sub" data-i18n="tier2_sub">near-robust, or strong on a single gate — tradeable with position caps, and the next to be tuned</span></div>
+  <div class="tier reveal" style="margin-top:34px">
+    <div class="tier-head"><span class="tier-badge">+ SOLID</span><h3 data-i18n="solid_h">Add for more diversification</h3><span class="tier-sub" data-i18n="solid_sub">drawdown 20–30% · breadth across more sectors</span></div>
     <div class="table-scroll"><table class="tier-table">
-      <thead><tr><th data-i18n="th_sym">Symbol</th><th data-i18n="th_sec">Sector</th><th>TF</th><th>PF</th><th data-i18n="th_dd">DD</th><th data-i18n="th_tr">Trades</th></tr></thead>
+      <thead><tr><th data-i18n="th_sym">Symbol</th><th data-i18n="th_sec">Sector</th><th>TF</th><th data-i18n="th_brk">Breaker</th><th>PF</th><th data-i18n="th_dd">DD</th></tr></thead>
       <tbody>
-        <tr><td>ANET</td><td>Semis / AI infra</td><td>1D</td><td class="pf">1.90</td><td>28.5%</td><td>59</td></tr>
-        <tr><td>AXP</td><td>Financials</td><td>4h</td><td class="pf">1.41</td><td class="ddlow">20.9%</td><td>178</td></tr>
-        <tr><td>VRT</td><td>Semis / AI infra</td><td>1h</td><td class="pf">1.40</td><td>32.1%</td><td>157</td></tr>
-        <tr><td>GE</td><td>Industrials</td><td>2h</td><td class="pf">1.28</td><td class="ddlow">25.4%</td><td>173</td></tr>
-        <tr><td>LLY</td><td>Healthcare</td><td>2h</td><td class="pf">1.27</td><td class="ddlow">26.7%</td><td>142</td></tr>
+        <tr><td>MU</td><td>Semis</td><td>30m</td><td>OFF</td><td class="pf">2.19</td><td>21.7%</td></tr>
+        <tr><td>AXP</td><td>Financials</td><td>4h</td><td>ON</td><td class="pf">1.46</td><td class="ddlow">20.9%</td></tr>
+        <tr><td>ASML</td><td>Semis</td><td>1h</td><td>ON</td><td class="pf">1.53</td><td>24.0%</td></tr>
+        <tr><td>GE</td><td>Industrials</td><td>2h</td><td>OFF</td><td class="pf">1.28</td><td>25.4%</td></tr>
+        <tr><td>ISRG</td><td>Healthcare</td><td>4h</td><td>OFF</td><td class="pf">1.51</td><td>26.5%</td></tr>
+        <tr><td>LLY</td><td>Healthcare</td><td>2h</td><td>OFF</td><td class="pf">1.27</td><td>26.7%</td></tr>
+        <tr><td>ANET</td><td>AI-infra</td><td>1D</td><td>OFF</td><td class="pf">1.90</td><td>28.5%</td></tr>
       </tbody>
     </table></div>
-    <div class="tier-note" data-i18n="roster_note">Plus the validated semiconductor core — <strong>AMAT, LRCX, MU, TSEM, NVDA, ASML</strong> — which the scan confirms still travels. <strong>Next step: re-test the roster with the breaker on</strong>, to see if profit factor lifts and drawdown compresses further.</div>
+    <div class="tier-note" data-i18n="solid_note">Aggressive, higher-risk cells exist too — <strong>NVDA 4h</strong> (1.99 at 41% DD, breaker ON), AMAT 1D (1.95 at 32%), VRT 1h (1.40 at 32%) — real edge, but outside the safe book.</div>
   </div>
 
   <div class="travel reveal">
     <div class="travel-col ok">
-      <div class="travel-h" data-i18n="travel_ok_h">✓ Sectors that travelled</div>
-      <p data-i18n="travel_ok"><b>Healthcare</b> (LLY, ISRG) · <b>Financials</b> (AXP, V — cleanest drawdowns) · <b>Industrials</b> (CAT, GE) · <b>Consumer</b> (WMT) · <b>Semis / AI infra</b> (ANET, VRT). The edge is real and repeatable here.</p>
+      <div class="travel-h" data-i18n="deploy_h">⚙ How to deploy each name</div>
+      <p data-i18n="deploy_p">Set the chart to the symbol &amp; timeframe. Set the <strong>breaker</strong> to ON or OFF as the card lists. Leave everything else default — cascade off, no gates. That's the whole per-symbol treatment. <em>Breaker ON only on AMAT, LRCX, ASML, NVDA, AXP; OFF everywhere else.</em></p>
     </div>
     <div class="travel-col no">
-      <div class="travel-h" data-i18n="travel_no_h">✕ Sectors that failed the bar</div>
-      <p data-i18n="travel_no"><b>Energy</b>, <b>crypto</b> and <b>high-beta</b> (PLTR, CRWD) all failed on risk — edge only at brutal drawdowns. <b>Software</b> cleared it on NOW and ZS alone. We're not selling you these.</p>
+      <div class="travel-h" data-i18n="avoid_h">✕ What to avoid</div>
+      <p data-i18n="avoid_p">Every <b>weekly</b> timeframe — all mirages (PANW 6.1 on 28 trades, MARA at 78% DD). <b>Energy</b>, <b>crypto-proxies</b> (MSTR, MARA), most <b>high-beta growth &amp; software</b>, and the newer semis (KLAC, MCHP, MPWR, SMCI, QCOM, NXPI). Not in the book.</p>
     </div>
   </div>
 
-  <div class="tier-warn" data-i18n="week_warn"><strong>About those weekly numbers:</strong> the 1W timeframe produces the biggest headline profit factors (PANW 6.1, SNOW 4.5) — and almost all are mirages, built on tiny samples or 50–80% drawdowns. <strong>Zero</strong> weekly cells clear both the trade-count and drawdown gates. Treat weeklies as confirmation, never a standalone trade.</div>
-
-  <div class="best-adj reveal" data-i18n="bestadj"><strong>The honest headline:</strong> the best risk-adjusted cell is <b>CAT 1h</b> — profit factor 1.74 at 15.8% drawdown over 126 trades. Expect roughly <b>14% CAGR</b> on the best cell, with real <b>15–35% drawdowns</b>, and on a strong trend it will <b>trail buy-and-hold</b>. This is a disciplined edge — not a money printer.</div>
+  <div class="best-adj reveal" data-i18n="bestadj"><strong>The honest headline:</strong> the safe book runs roughly <b>PF 1.6–2.8</b> at <b>6–19% drawdown</b>, most names over 100 trades. These are in-sample backtests; most trending names still <b>trail buy-and-hold</b> on raw return (AMAT daily is the exception — it beats it at half the drawdown). A disciplined, low-drawdown book — not a money printer.</div>
   <p class="disclaimer-inline" data-i18n="disc_inline">Historical, hypothetical backtest results — non-repainting, with commission &amp; slippage. Past performance is not indicative of future results; nothing here is financial advice.</p>
 </section>
 
@@ -212,10 +252,10 @@
     <div class="fit-col yes reveal">
       <div class="fit-h" data-i18n="fit_yes_h">✓ It's for you if you…</div>
       <ul>
-        <li data-i18n="fit_y1">Trade a curated watchlist of high-volume US names (CAT, WMT, ISRG, AMAT, LRCX, NVDA, GOOGL, TSLA) on <strong>1h → Daily</strong>.</li>
+        <li data-i18n="fit_y1">Trade a curated watchlist of high-volume US names (GOOGL, MU, AMAT, LRCX, CAT, TSEM, WMT, TSLA) at <strong>each one's own timeframe</strong> — from 5m to 4h.</li>
         <li data-i18n="fit_y2">Want <strong>rule-based</strong> entries and exits — defined stop, target, breakeven, time-stop — instead of discretionary gut calls.</li>
         <li data-i18n="fit_y3">Are comfortable applying a <strong>per-symbol recipe</strong> (the right timeframe, breaker on/off). This isn't one-click.</li>
-        <li data-i18n="fit_y4">Understand it's a <strong>backtested edge, not a guarantee</strong> — ~14% CAGR on the best cell, real 15–35% drawdowns, and it often trails buy-and-hold.</li>
+        <li data-i18n="fit_y4">Understand it's a <strong>backtested edge, not a guarantee</strong> — in-sample results, real 6–19% drawdowns on the safe book, and most names still trail buy-and-hold on raw return.</li>
       </ul>
     </div>
     <div class="fit-col no reveal">

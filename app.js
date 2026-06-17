@@ -71,9 +71,9 @@
   var ticker = document.getElementById('ticker');
   if (ticker) {
     var feed = [
-      ['CAT', 'PF 1.74', 'up'], ['WMT', 'PF 1.70', 'up'], ['ISRG', 'PF 1.51', 'up'],
-      ['ANET', 'PF 1.90', 'up'], ['AXP', 'PF 1.41', 'up'], ['AMAT', 'PF 1.79', 'up'],
-      ['NVDA', 'PF 1.99', 'up'], ['GE', 'PF 1.28', 'up'], ['RISK', '0.38', 'dn'], ['KEEPER', 'RANKING', 'up']
+      ['GOOGL', 'PF 2.30', 'up'], ['MU', 'PF 2.08', 'up'], ['TSEM', 'PF 2.78', 'up'],
+      ['LRCX', 'PF 1.89', 'up'], ['AMAT', 'PF 1.79', 'up'], ['CAT', 'PF 1.74', 'up'],
+      ['WMT', 'PF 1.70', 'up'], ['TSLA', 'PF 1.63', 'up'], ['RISK', '0.38', 'dn'], ['KEEPER', 'RANKING', 'up']
     ];
     var html = '';
     for (var rep = 0; rep < 2; rep++) {
@@ -93,10 +93,10 @@
 
     var sig = document.getElementById('t-signal'), asset = document.getElementById('t-asset'), pf = document.getElementById('t-pf');
     var setups = [
-      ['CAT · 1H', 'INDUSTRIALS', '1.74'],
-      ['WMT · 4H', 'CONSUMER', '1.70'],
-      ['ISRG · 4H', 'HEALTHCARE', '1.51'],
-      ['ANET · 1D', 'SEMIS / AI', '1.90']
+      ['GOOGL · 45M', 'MEGA-TECH · OFF', '2.30'],
+      ['MU · 5M', 'SEMIS · OFF', '2.08'],
+      ['TSEM · 1H', 'SEMIS · OFF', '2.78'],
+      ['AMAT · 1H', 'SEMIS · BRK ON', '1.79']
     ];
     var si = 0;
     if (sig && asset && pf) setInterval(function () {
