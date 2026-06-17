@@ -96,7 +96,7 @@
     step3: "<strong>האיתותים מגיעים אליכם כהתראות</strong> — בטלפון, במחשב, או מחוברים ישירות לבוט מסחר.",
     offer_name: "LIQUIDEX FRAMEWORK · גישה מלאה",
     offer_line: "אסטרטגיית LIQUIDEX · לוח המובילים Keeper · שער הסיכון Prophet · וכל סטאפ מאומת עם המתכון הפר-נכסי שלו (טווח-הזמן הנכון, Breaker פעיל/כבוי).",
-    offer_btn: "לבקשת גישה בוואטסאפ →",
+    offer_btn: "לבקשת גישה בוואטסאפ →", reveal_price: "לצפייה במחיר →", view_tv: "צפו ב-TradingView ↗",
     offer_bonus: '<strong style="color:#e8edf5">כלול עבור קריפטו:</strong> סורק Surge Guru ו-Crypto Keeper, עם נכסי הקריפטו המאומתים (ICP · WLD · ETH) — בונוס לסוחרי קריפטו.',
     pdf_link: "להורדת חוברת המוצר (PDF) ↗",
     bot1_h: "הרצה דרך בוט", bot1_p: "חברו את ההתראות של המערכת ישירות לבוט מסחר אוטומטי — ביצוע ללא ידיים.", bot1_btn: "שאלו בוואטסאפ",

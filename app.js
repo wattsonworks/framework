@@ -6,6 +6,16 @@
   /* year */
   var yr = document.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
 
+  /* price reveal — keep the price off the page until asked for */
+  var priceBtn = document.getElementById('price-reveal'), amt = document.getElementById('offer-amt');
+  if (priceBtn && amt) priceBtn.addEventListener('click', function () {
+    amt.hidden = false;
+    amt.classList.remove('is-hidden');
+    amt.classList.add('show');
+    priceBtn.setAttribute('aria-expanded', 'true');
+    priceBtn.hidden = true;
+  });
+
   /* nav toggle */
   var toggle = document.getElementById('nav-toggle'), links = document.getElementById('nav-links');
   if (toggle && links) {
