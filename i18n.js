@@ -123,13 +123,14 @@
     try { localStorage.setItem('ptf_lang', lang); } catch (e) {}
   }
 
+  /* English is the default. Hebrew only when explicitly chosen
+     (?lang=he in the URL, or a previous toggle saved to localStorage). */
   var saved = 'en';
   try {
     var urlLang = new URLSearchParams(location.search).get('lang');
-    saved = urlLang || localStorage.getItem('ptf_lang');
-    if (!saved) saved = (navigator.language || '').toLowerCase().indexOf('he') === 0 ? 'he' : 'en';
+    saved = urlLang || localStorage.getItem('ptf_lang') || 'en';
   } catch (e) {}
-  apply(saved);
+  apply(saved === 'he' ? 'he' : 'en');
 
   if (btn) btn.addEventListener('click', function () {
     apply(document.documentElement.lang === 'he' ? 'en' : 'he');
