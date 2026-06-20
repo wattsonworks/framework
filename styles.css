@@ -365,16 +365,16 @@ table.dbtable td{vertical-align:middle}
 .stpill.wf{color:var(--gold);border:1px solid rgba(198,168,107,.35)}
 .stpill.remicro{color:var(--neg);border:1px solid rgba(196,132,123,.45);background:rgba(196,132,123,.08)}
 .dbtable tr.row-remicro td.sym{color:var(--neg)}
-tr.db-detail>td{padding:0;border-bottom:1px solid var(--line2);background:var(--bg2)}
-.dbd-wrap{padding:18px 20px 20px}
+#dbtable tr.db-detail>td{padding:0;border-bottom:1px solid var(--line2);background:var(--bg2)}
+.dbd-wrap{padding:18px 20px 20px;position:sticky;left:0;width:min(calc(100vw - 2.5rem),1120px);box-sizing:border-box;white-space:normal}
 .dbd-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .dbd-sym{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.04em}
 .dbd-arch{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.04em}
 .dbd-date{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
-.dbd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.dbd-row{background:var(--bg);padding:11px 14px}
+.dbd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.dbd-row{background:var(--bg);padding:11px 14px;min-width:0}
 .dbd-k{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
-.dbd-v{font-family:var(--mono);font-size:11.5px;color:var(--ink2);line-height:1.5}
+.dbd-v{font-family:var(--mono);font-size:11.5px;color:var(--ink2);line-height:1.5;white-space:normal;overflow-wrap:anywhere}
 .dbd-note{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.6}
 .dbd-note .dbd-k{display:inline;margin-right:6px;color:var(--gold)}
 .dbd-flag{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--neg);letter-spacing:.04em}

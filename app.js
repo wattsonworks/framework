@@ -227,7 +227,14 @@
       '</tr>';
       return main + (open ? detailHTML(r) : '');
     }).join('');
+    sizeDetail();
   }
+  /* the detail card lives inside a horizontally-scrolling table; pin it to the visible frame width so it never spills out of bounds */
+  function sizeDetail() {
+    var sc = body.closest('.table-scroll'); if (!sc) return;
+    body.querySelectorAll('.db-detail .dbd-wrap').forEach(function (w) { w.style.width = sc.clientWidth + 'px'; });
+  }
+  window.addEventListener('resize', sizeDetail);
   function markHeaders() {
     document.querySelectorAll('#dbtable thead th[data-sort]').forEach(function (th) {
       th.classList.remove('sorted-asc', 'sorted-desc');
