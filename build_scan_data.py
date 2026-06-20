@@ -34,12 +34,30 @@ with open(SRC, newline='', encoding='utf-8-sig') as fh:
             'conf': conf,
         })
 
-# Deep micro-tune overlay — instruments rescued by the full behavioural tune (verified live on TV).
-# Everything NOT in here is greedy-pass-only (default params) and has not been deep-tuned yet.
-DEEP = {
-    'PEP': {'pf': 1.595, 'dd': 6.47},
-    'TLT': {'pf': 1.232, 'dd': 17.71},
-}
+# Deep micro-tune overlay — the FULL behavioural book (verified live on TV), read from DEEP_4H_LOG.csv.
+# Equities overlay onto the greedy scan; crypto + forex are separate asset-class books (below).
+DEEP_SRC = r'C:\Users\sunnf\Desktop\LIQUIDEX\DEEP_4H_LOG.csv'
+CRYPTO_SYMS = {'BTC', 'ETH', 'ETH-CB', 'SOL'}
+CRYPTO_FEED = {'BTC': 'Bitstamp', 'ETH': 'Bitstamp', 'ETH-CB': 'Coinbase', 'SOL': 'Binance'}
+DEEP = {}
+crypto = []
+with open(DEEP_SRC, newline='', encoding='utf-8-sig') as fh:
+    for d in csv.DictReader(fh):
+        sym = (d.get('Symbol') or '').strip()
+        if not sym: continue
+        dpf = fl(d['DeepPF']); ddd = fl(d['MaxDD_pct'])
+        if sym in CRYPTO_SYMS:
+            crypto.append({'sym': sym.replace('-CB', ''), 'feed': CRYPTO_FEED.get(sym, ''),
+                           'pf': round(dpf, 3) if dpf else None, 'dd': round(ddd, 2) if ddd is not None else None,
+                           'win': fl(d['Win_pct']), 'trades': int(fl(d['Trades']) or 0),
+                           'dir': 'Long+Short' if d['Shorts'].strip() == 'on' else 'Long-only',
+                           'family': d['Family'].strip()})
+        elif dpf is not None and ddd is not None:
+            DEEP[sym] = {'pf': dpf, 'dd': ddd}
+crypto.sort(key=lambda r: -(r['pf'] or 0))
+# Forex baseline — EURUSD, the strategy's namesake (user-reported summary export, both directions).
+forex = {'sym': 'EURUSD', 'pf': 1.40, 'dd': 16.74, 'net': 72.65, 'dir': 'Long+Short',
+         'note': "the namesake market and its weakest profitable book — trailed buy-and-hold"}
 for r in rows:
     d = DEEP.get(r['sym'])
     r['tuned'] = bool(d)
@@ -105,9 +123,19 @@ tlt = {
     'partialBank': 60, 'partialNear': 0.66,  # the hero levers
 }
 
+stats['assetClass'] = {
+    'equity': {'n': n, 'meanPF': round(mean_final, 2), 'meanDD': round(sum(r['dd'] for r in rows) / n, 1)},
+    'crypto': {'n': len(crypto),
+               'meanPF': round(sum(c['pf'] for c in crypto) / len(crypto), 2) if crypto else 0,
+               'meanDD': round(sum(c['dd'] for c in crypto) / len(crypto), 1) if crypto else 0,
+               'cleanestDD': min((c['dd'] for c in crypto), default=0),
+               'cleanestSym': min(crypto, key=lambda c: c['dd'])['sym'] if crypto else ''},
+    'forex': {'n': 1, 'pf': forex['pf'], 'dd': forex['dd'], 'net': forex['net']},
+}
+
 with open(OUT, 'w', encoding='utf-8') as fh:
-    fh.write('/* LIQUIDEX FRAMEWORK — 4H cross-section scan data (50 instruments, greedy-optimised). Auto-generated. */\n')
-    fh.write('window.SCAN = ' + json.dumps({'rows':rows,'stats':stats,'pep':pep,'tlt':tlt}, ensure_ascii=False, indent=0) + ';\n')
+    fh.write('/* LIQUIDEX FRAMEWORK — cross-asset-class scan data: 50 equities (greedy + full deep overlay), 4 crypto cells, EURUSD forex baseline. Auto-generated. */\n')
+    fh.write('window.SCAN = ' + json.dumps({'rows': rows, 'stats': stats, 'pep': pep, 'tlt': tlt, 'crypto': crypto, 'forex': forex}, ensure_ascii=False, indent=0) + ';\n')
 
 print('=== SUMMARY ===')
 print(f"n={n} profitable={len(prof)} losers={len(los)} {stats['loserSyms']}")

@@ -5,8 +5,18 @@ import csv, re
 CSV  = r'C:\Users\sunnf\Desktop\LIQUIDEX\GREEDY_4H_LOG.csv'
 DECK = r'C:\Users\sunnf\Desktop\SURGEGURU-FRAMEWORK\deck.html'
 CLS  = {'SEMIS':'Semis','ETF':'ETF','PRIORITY':'Single-name'}
-# deep micro-tune result per rescued name: (profit factor, max drawdown %)
-DEEP = {'PEP':('1.595','6.47'),'TLT':('1.232','17.71')}
+# deep micro-tune result per name: (profit factor, max drawdown %) — full book from DEEP_4H_LOG.csv
+DEEP = {}
+def _f(x):
+    try: return float(x)
+    except: return None
+with open(r'C:\Users\sunnf\Desktop\LIQUIDEX\DEEP_4H_LOG.csv', newline='', encoding='utf-8-sig') as _fh:
+    for _r in csv.DictReader(_fh):
+        _s = (_r.get('Symbol') or '').strip()
+        if not _s or _s in ('BTC', 'ETH', 'ETH-CB', 'SOL'): continue
+        _pf = _f(_r['DeepPF']); _dd = _f(_r['MaxDD_pct'])
+        if _pf is not None and _dd is not None:
+            DEEP[_s] = (f'{_pf:.3f}', f'{_dd:.2f}')
 
 def fl(x):
     try: return float(x)

@@ -263,3 +263,41 @@
   markHeaders();
   render();
 })();
+
+/* ============ Collab popover — partnership signal ============ */
+(function () {
+  'use strict';
+  var btn = document.getElementById('collab-btn'), pop = document.getElementById('collab-pop');
+  if (!btn || !pop) return;
+  function setOpen(o) { pop.hidden = !o; btn.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+  btn.addEventListener('click', function (e) { e.stopPropagation(); setOpen(pop.hidden); });
+  document.addEventListener('click', function (e) {
+    if (!pop.hidden && !pop.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !pop.hidden) { setOpen(false); btn.focus(); }
+  });
+  var cta = document.getElementById('collab-cta');
+  if (cta) cta.addEventListener('click', function () { setOpen(false); });
+})();
+
+/* ============ Stash menu — the full instrument universe ============ */
+(function () {
+  'use strict';
+  var btn = document.getElementById('stash-btn'), pop = document.getElementById('stash-pop'), bodyEl = document.getElementById('stash-body');
+  if (!btn || !pop) return;
+  var U = window.UNIVERSE;
+  if (U && bodyEl) {
+    var tuned = {}; (U.tunedSet || []).forEach(function (s) { tuned[s] = 1; });
+    bodyEl.innerHTML = U.sectors.map(function (sec) {
+      var syms = sec.syms.map(function (s) { return '<span class="' + (tuned[s] ? 't' : '') + '">' + s + '</span>'; }).join('');
+      return '<div class="stash-sector"><div class="stash-srow"><span class="stash-slabel">' + sec.label +
+        '</span><span class="stash-scount">' + sec.syms.length + '</span></div><div class="stash-syms">' + syms + '</div></div>';
+    }).join('');
+  }
+  function setOpen(o) { pop.hidden = !o; btn.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+  btn.addEventListener('click', function (e) { e.stopPropagation(); setOpen(pop.hidden); });
+  document.addEventListener('click', function (e) { if (!pop.hidden && !pop.contains(e.target) && !btn.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) { setOpen(false); btn.focus(); } });
+  var cta = document.getElementById('stash-cta'); if (cta) cta.addEventListener('click', function () { setOpen(false); });
+})();
