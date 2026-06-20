@@ -170,3 +170,96 @@
   markHeaders();
   render();
 })();
+
+/* ============ Deep-tuned book — render / sort / filter / expand ============ */
+(function () {
+  'use strict';
+  var BOOK = window.DEEP_BOOK;
+  var body = document.getElementById('dbbody');
+  if (!BOOK || !body) return;
+  var rows = BOOK.slice();
+  var state = { filter: 'all', sortKey: 'pf', sortDir: -1, open: {} };
+
+  function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+  function pfClass(r) { if (r.pf >= 3) return 'pf-star'; if (r.pf >= 2) return 'pf-strong'; if (r.pf > 1.5) return 'pf-ok'; return 'pf-weak'; }
+  function ddClass(r) { return r.dd <= 12 ? 'ddlow' : (r.dd >= 30 ? 'ddhi' : ''); }
+  function statusPill(r) {
+    if (r.status === 're-microtune') return '<span class="stpill remicro">re-microtune</span>';
+    if (r.status === 'walk-forward') return '<span class="stpill wf">walk-forward</span>';
+    return '<span class="stpill ready">ready</span>';
+  }
+  function matches(r) {
+    var f = state.filter;
+    if (f === 'all') return true;
+    if (f === 'ready' || f === 'walk-forward' || f === 're-microtune') return r.status === f;
+    return r.sector === f;
+  }
+  function detailHTML(r) {
+    return '<tr class="db-detail"><td colspan="9"><div class="dbd-wrap">' +
+      '<div class="dbd-head"><span class="dbd-sym">' + esc(r.sym) + '</span><span class="dbd-arch">' + esc(r.arch) + '</span><span class="dbd-date">deep-tuned ' + esc(r.date) + '</span></div>' +
+      '<div class="dbd-grid">' +
+        '<div class="dbd-row"><span class="dbd-k">Execution</span><span class="dbd-v">' + esc(r.exec) + '</span></div>' +
+        '<div class="dbd-row"><span class="dbd-k">Stops &amp; targets</span><span class="dbd-v">' + esc(r.stops) + '</span></div>' +
+        '<div class="dbd-row"><span class="dbd-k">Signals</span><span class="dbd-v">' + esc(r.signals) + '</span></div>' +
+        '<div class="dbd-row"><span class="dbd-k">Gates</span><span class="dbd-v">' + esc(r.gates) + '</span></div>' +
+      '</div>' +
+      '<div class="dbd-note"><span class="dbd-k">Re-tune note</span> ' + esc(r.note) + '</div>' +
+      (r.remicro ? '<div class="dbd-flag">PF ≤ 1.5 — flagged to be re-microtuned.</div>' : '') +
+      '</div></td></tr>';
+  }
+  function render() {
+    var list = rows.filter(matches);
+    var k = state.sortKey, dir = state.sortDir;
+    list.sort(function (a, b) { var av = a[k], bv = b[k]; if (typeof av === 'string') return av < bv ? -dir : av > bv ? dir : 0; return (av - bv) * dir; });
+    if (!list.length) { body.innerHTML = '<tr><td colspan="9" class="xempty">No symbols in this view.</td></tr>'; return; }
+    body.innerHTML = list.map(function (r) {
+      var open = !!state.open[r.sym];
+      var main = '<tr class="db-main' + (open ? ' open' : '') + (r.remicro ? ' row-remicro' : '') + '" data-sym="' + esc(r.sym) + '">' +
+        '<td class="sym">' + esc(r.sym) + (r.warn ? ' <span class="warnflag" title="walk-forward mandatory">⚠</span>' : '') + '</td>' +
+        '<td class="sec">' + esc(r.sector) + '</td>' +
+        '<td class="r pf ' + pfClass(r) + '">' + r.pf.toFixed(3) + '</td>' +
+        '<td class="r dd ' + ddClass(r) + '">' + r.dd.toFixed(1) + '%</td>' +
+        '<td class="r win">' + r.win.toFixed(0) + '%</td>' +
+        '<td class="r n">' + r.n + '</td>' +
+        '<td class="arch">' + esc(r.arch) + '</td>' +
+        '<td>' + statusPill(r) + '</td>' +
+        '<td class="cfg"><span class="dbchev">' + (open ? '▾' : '▸') + '</span></td>' +
+      '</tr>';
+      return main + (open ? detailHTML(r) : '');
+    }).join('');
+  }
+  function markHeaders() {
+    document.querySelectorAll('#dbtable thead th[data-sort]').forEach(function (th) {
+      th.classList.remove('sorted-asc', 'sorted-desc');
+      if (th.getAttribute('data-sort') === state.sortKey) th.classList.add(state.sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+    });
+  }
+  document.querySelectorAll('#dbtable thead th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.getAttribute('data-sort');
+      if (state.sortKey === key) { state.sortDir *= -1; }
+      else { state.sortKey = key; state.sortDir = (key === 'sym' || key === 'sector' || key === 'arch' || key === 'status') ? 1 : -1; }
+      markHeaders(); render();
+    });
+  });
+  var chips = document.querySelectorAll('#dbfilters .xchip');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('on'); });
+      chip.classList.add('on');
+      state.filter = chip.getAttribute('data-filter');
+      render();
+    });
+  });
+  /* row click → toggle the nuances dropdown */
+  body.addEventListener('click', function (e) {
+    var tr = e.target.closest('tr.db-main');
+    if (!tr) return;
+    var sym = tr.getAttribute('data-sym');
+    state.open[sym] = !state.open[sym];
+    render();
+  });
+
+  markHeaders();
+  render();
+})();

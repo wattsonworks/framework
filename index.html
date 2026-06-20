@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260620e" />
+<link rel="stylesheet" href="styles.css?v=20260620f" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -39,11 +39,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="hero_eyebrow">Systematic liquidity research · a 50-instrument cross-section</div>
+    <div class="eyebrow" data-i18n="hero_eyebrow">Systematic liquidity research · the deep-tuned book</div>
     <h1 class="reveal in" data-i18n="hero_h1">Every desk leaves a footprint.<br><em>We read all of them.</em></h1>
     <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a systematic research operation built on one principle: institutional liquidity leaves the same structural footprint wherever it trades. To test it we ran one engine across <strong>fifty instruments at a single timeframe</strong> — and read each one down to the desk that moves it, under one disciplined protocol. The breadth is not a feature. It is the proof.</p>
     <div class="hero-cta">
-      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">See the cross-section</a>
+      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">See the deep-tuned book</a>
       <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Open a partnership line</a>
     </div>
 
@@ -54,10 +54,10 @@
     </div>
 
     <div class="metricstrip">
-      <div class="m"><div class="mv" data-count="1.87" data-decimals="2" data-suffix="×">1.87×</div><div class="ml" data-i18n="m1">Mean lift over the raw engine</div></div>
-      <div class="m"><div class="mv" data-count="47" data-suffix="/50">47/50</div><div class="ml" data-i18n="m2">Profitable once read</div></div>
-      <div class="m"><div class="mv" data-count="4.84" data-decimals="2">4.84</div><div class="ml" data-i18n="m3">Peak profit factor · SMH</div></div>
-      <div class="m"><div class="mv" data-count="6.9" data-decimals="1" data-suffix="%">6.9%</div><div class="ml" data-i18n="m4">Cleanest drawdown · GLD</div></div>
+      <div class="m"><div class="mv" data-count="36" data-suffix="/52">36/52</div><div class="ml" data-i18n="m1">Symbols deep-tuned</div></div>
+      <div class="m"><div class="mv" data-count="5.75" data-decimals="2">5.75</div><div class="ml" data-i18n="m2">Peak profit factor · DE</div></div>
+      <div class="m"><div class="mv" data-count="24" data-suffix="">24</div><div class="ml" data-i18n="m3">Clear profit factor &gt; 1.5</div></div>
+      <div class="m"><div class="mv" data-count="12" data-suffix="">12</div><div class="ml" data-i18n="m4">Flagged to re-microtune</div></div>
     </div>
   </div>
 </section>
@@ -104,41 +104,39 @@
 <section class="section" id="evidence">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the cross-section</div></div>
-      <h2 data-i18n="ev_h2">Fifty instruments. One timeframe. <em>Each read to its desk.</em></h2>
-      <p class="lead" data-i18n="ev_lead">The full 4-hour cross-section — every instrument we profiled, shown in full, winners and the three that didn't clear. <strong>Base</strong> is the raw engine; <strong>Final</strong> is after the protocol; <strong>Lift</strong> is the ratio. <strong>Confluence</strong> is the exact set of behavioural reads each name needed. Nothing is hidden.</p>
+      <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the deep-tuned book</div></div>
+      <h2 data-i18n="ev_h2">The deep-tuned book — <em>36 of 52 symbols</em></h2>
+      <p class="lead" data-i18n="ev_lead">Every symbol read down to its own institutional behaviour and tuned to its own recipe. <strong>Click any row</strong> to open its full configuration — execution, stops, signals, gates — and the reasoning behind it. Sorted by profit factor; figures are the deep-tuned, in-sample results.</p>
+      <p class="db-stamp" data-i18n="ev_stamp">Deep-tuned as of <strong>3:33 pm · 20 Jun 2026</strong>. 16 symbols still in the queue. Names at <strong>PF ≤ 1.5</strong> are flagged <em>to be re-microtuned</em>.</p>
     </div>
 
-    <div class="xfilters reveal" id="xfilters" role="tablist" aria-label="Filter the cross-section">
-      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 50</button>
-      <button class="xchip" data-filter="ETF" data-i18n="flt_etf">ETFs · 19</button>
-      <button class="xchip" data-filter="SEMIS" data-i18n="flt_semis">Semis · 20</button>
-      <button class="xchip" data-filter="PRIORITY" data-i18n="flt_single">Single-names · 11</button>
-      <button class="xchip" data-filter="fade" data-i18n="flt_fade">Fade · 34</button>
-      <button class="xchip" data-filter="continuation" data-i18n="flt_cont">Continuation · 16</button>
-      <button class="xchip" data-filter="safe" data-i18n="flt_safe">Safe book · 10</button>
-      <button class="xchip" data-filter="tuned" data-i18n="flt_tuned">Deep-tuned · 2</button>
+    <div class="xfilters reveal" id="dbfilters" role="tablist" aria-label="Filter the deep-tuned book">
+      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 36</button>
+      <button class="xchip" data-filter="ready" data-i18n="flt_ready">Ready · 4</button>
+      <button class="xchip" data-filter="walk-forward" data-i18n="flt_wf">Walk-forward · 20</button>
+      <button class="xchip" data-filter="re-microtune" data-i18n="flt_remicro">Re-microtune · 12</button>
+      <button class="xchip" data-filter="ETF" data-i18n="flt_etf">ETFs · 11</button>
+      <button class="xchip" data-filter="Semis" data-i18n="flt_semis">Semis · 18</button>
+      <button class="xchip" data-filter="Single-name" data-i18n="flt_single">Single-names · 7</button>
     </div>
 
     <div class="tablewrap reveal">
-      <div class="table-scroll"><table class="data xtable" id="xtable">
+      <div class="table-scroll"><table class="data dbtable" id="dbtable">
         <thead><tr>
           <th data-sort="sym" data-i18n="th_sym">Symbol</th>
-          <th data-sort="sectorLabel" data-i18n="th_class">Class</th>
-          <th data-sort="family" data-i18n="th_fam">Family</th>
-          <th class="r" data-sort="base" data-i18n="th_base">Base</th>
-          <th class="r" data-sort="pf" data-sort-default data-i18n="th_pf">Final PF</th>
-          <th class="r" data-sort="lift" data-i18n="th_lift">Lift</th>
+          <th data-sort="sector" data-i18n="th_class">Class</th>
+          <th class="r" data-sort="pf" data-sort-default data-i18n="th_pf">PF</th>
           <th class="r" data-sort="dd" data-i18n="th_dd">Max DD</th>
           <th class="r" data-sort="win" data-i18n="th_win">Win</th>
-          <th class="r" data-sort="trades" data-i18n="th_tr">Trades</th>
-          <th data-sort="tuned" data-i18n="th_tune">Micro-tuned</th>
-          <th data-i18n="th_conf">Confluence</th>
+          <th class="r" data-sort="n" data-i18n="th_tr">N</th>
+          <th data-sort="arch" data-i18n="th_arch">Archetype</th>
+          <th data-sort="status" data-i18n="th_status">Status</th>
+          <th data-i18n="th_cfg">Config</th>
         </tr></thead>
-        <tbody id="xbody"><!-- rendered from scan-data.js --></tbody>
+        <tbody id="dbbody"><!-- rendered from deep-params.js --></tbody>
       </table></div>
     </div>
-    <p class="table-cap" id="xcap" data-i18n="ev_cap"><strong>47 of 50 profitable once read — and 29 of them flipped from a losing baseline into profit.</strong> Mean profit factor rose 0.94 → 1.76, a 1.87× lift, with the read paying most where the flow is most forced. This table is the <strong>greedy pass at default parameters</strong> — the controlled baseline. The <strong>Micro-tuned</strong> column marks the two names since taken through the full deep tune, showing their <strong>post-tune profit factor and drawdown</strong> (e.g. PEP <span class="mono">✓ 1.595 · 6.47%</span>); the other 48 are <span class="mono">greedy</span>-only, their deep tune still pending. Of the three that failed the greedy pass, two — the staple <strong>PEP</strong> and the macro vehicle <strong>TLT</strong> — were not dead but misread, and the next section opens both; only <strong>XLF</strong> has not yet been attempted. All figures in-sample, net of commission and slippage.</p>
+    <p class="table-cap" id="dbcap" data-i18n="ev_cap"><strong>36 of 52 symbols deep-tuned</strong> — 24 clear a profit factor above 1.5; 12 sit at or below it and are flagged <em>to be re-microtuned</em>. The strongest cells — DE 5.75, GLD 4.53, V 4.44 — are long-only fades read through a secular-bull window, so their high win rates are regime artefacts and almost every cell carries a <strong>walk-forward-mandatory</strong> flag. Open any row for its exact execution, stops, signals and gates. All figures in-sample, net of commission and slippage.</p>
   </div>
 </section>
 
@@ -185,8 +183,8 @@
       <div class="case-prose">
         <p data-i18n="cs_t_p1">TLT is long-duration US Treasuries — a macro vehicle, not a tape that liquidity desks push to clean technical walls. Its price is dragged around by rate expectations and central-bank language; the full move to the opposing wall rarely completes, because a data print or a policy line interrupts it first.</p>
         <p data-i18n="cs_t_p2">So the greedy pass left it for dead — <strong>0.809</strong>, a loser. And everything you add to it is fragile: tighten the stop and the chop knocks you out; widen the target and the move dies before it arrives. The edge sits on a knife's edge.</p>
-        <p data-i18n="cs_t_p3">What rescued it was not another signal — it was <strong>profit-taking discipline</strong>. Bank <strong>60% of the position two-thirds of the way to the wall</strong>, and let a small runner chase the rest. You stop demanding a clean completion the macro will not give, and take what it offers — with a wide sweep stop to survive the chop and a both-sided cascade-fade behind it. The dead name becomes a real, if fragile, edge: <strong>PF 1.232 at 17.71% drawdown across 215 trades, +15.73%.</strong></p>
-        <div class="case-flag" data-i18n="cs_t_flag"><strong>PEP's lesson, in reverse.</strong> PEP needed patience; TLT needs to not be greedy — and the whole result balances on two Partial-TP numbers. It wears its fragility honestly: a 1.232 at 17.71% DD is a thin edge that, more than any cell on this page, has to clear walk-forward before it is anything at all.</div>
+        <p data-i18n="cs_t_p3">What rescued it was not another signal — it was <strong>profit-taking discipline</strong>. Bank <strong>60% of the position two-thirds of the way to the wall</strong>, and let a small runner chase the rest. You stop demanding a clean completion the macro will not give, and take what it offers — with a wide sweep stop to survive the chop and a both-sided cascade-fade behind it. The dead name becomes a real, if fragile, edge: <strong>PF 1.272 at 17.66% drawdown across 205 trades, +18.05%</strong> — a wide buffer-30 sweep stop lifting it past the earlier 1.232.</p>
+        <div class="case-flag" data-i18n="cs_t_flag"><strong>PEP's lesson, in reverse.</strong> PEP needed patience; TLT needs to not be greedy — and the whole result balances on two Partial-TP numbers. It wears its fragility honestly: a 1.272 at 17.66% DD is a thin edge that, more than any cell on this page, has to clear walk-forward before it is anything at all.</div>
       </div>
 
       <aside class="case-panel">
@@ -196,15 +194,15 @@
           <div class="cp-arrow">↓</div>
           <div class="cp-step"><span class="cp-lab" data-i18n="cs_t_s2">Default greedy pass</span><span class="cp-val neg">0.809</span></div>
           <div class="cp-arrow">↓</div>
-          <div class="cp-step big"><span class="cp-lab" data-i18n="cs_t_s3">Behavioural micro-tune</span><span class="cp-val pos">1.232</span></div>
+          <div class="cp-step big"><span class="cp-lab" data-i18n="cs_t_s3">Behavioural micro-tune</span><span class="cp-val pos">1.272</span></div>
         </div>
         <div class="cp-grid">
           <div class="cp-cell hero"><div class="cp-k">60%</div><div class="cp-d" data-i18n="cs_t_m1">Banked at near target</div></div>
           <div class="cp-cell hero"><div class="cp-k">0.66</div><div class="cp-d" data-i18n="cs_t_m2">Fraction to the wall</div></div>
-          <div class="cp-cell"><div class="cp-k">17.71%</div><div class="cp-d" data-i18n="cs_t_m3">Max drawdown</div></div>
-          <div class="cp-cell"><div class="cp-k">215</div><div class="cp-d" data-i18n="cs_t_m4">Trades</div></div>
+          <div class="cp-cell"><div class="cp-k">17.66%</div><div class="cp-d" data-i18n="cs_t_m3">Max drawdown</div></div>
+          <div class="cp-cell"><div class="cp-k">205</div><div class="cp-d" data-i18n="cs_t_m4">Trades</div></div>
         </div>
-        <div class="cp-foot" data-i18n="cs_t_panel_f">Long + short · cascade-fade only · wide sweep stop · wall-target — the edge lives in the <strong>Partial-TP</strong>: bank 60% at 0.66 to the wall. <strong>+15.73%</strong> net · 47.44% win.</div>
+        <div class="cp-foot" data-i18n="cs_t_panel_f">Long + short · cascade-fade · wall-target · Partial-TP banks 60% at 0.66 to the wall — and a <strong>wide sweep stop (buffer 30)</strong> lifts it past the earlier 1.232. <strong>+18.05%</strong> net · 48.78% win.</div>
       </aside>
     </div>
   </div>
@@ -231,23 +229,23 @@
       <div class="cov">
         <div class="cov-n">01</div>
         <h3 data-i18n="cov1_h">Index & sector ETFs</h3>
-        <div class="names">SMH · XLK · XLV · QQQ · GLD · SPY · VOO</div>
-        <div class="cov-meta"><span data-i18n="cov_prof">17 / 19 profitable</span> · <span data-i18n="cov_mean">mean PF 1.95</span></div>
-        <div class="cov-stat"><b>4.84</b><span data-i18n="cov_best">best PF · SMH</span></div>
+        <div class="names">GLD · XLV · XLK · QQQ · DIA · SCHD · SPY</div>
+        <div class="cov-meta"><span data-i18n="cov_prof">8 / 11 ready</span> · <span data-i18n="cov_mean">mean PF 2.25</span></div>
+        <div class="cov-stat"><b>4.53</b><span data-i18n="cov_best">best PF · GLD</span></div>
       </div>
       <div class="cov">
         <div class="cov-n">02</div>
         <h3 data-i18n="cov2_h">Semiconductors</h3>
-        <div class="names">AMD · LRCX · TSEM · TSM · NVDA · ADI</div>
-        <div class="cov-meta"><span data-i18n="cov_prof2">20 / 20 profitable</span> · <span data-i18n="cov_mean2">mean PF 1.76</span></div>
-        <div class="cov-stat"><b>3.35</b><span data-i18n="cov_best2">best PF · AMD</span></div>
+        <div class="names">LRCX · ASML · INTC · KLAC · NXPI · ADI</div>
+        <div class="cov-meta"><span data-i18n="cov_prof2">9 / 18 ready</span> · <span data-i18n="cov_mean2">mean PF 1.63</span></div>
+        <div class="cov-stat"><b>3.84</b><span data-i18n="cov_best2">best PF · LRCX</span></div>
       </div>
       <div class="cov">
         <div class="cov-n">03</div>
         <h3 data-i18n="cov3_h">Single-name leaders</h3>
-        <div class="names">XOM · JPM · MA · COST · ETN · V</div>
-        <div class="cov-meta"><span data-i18n="cov_prof3">10 / 11 profitable</span> · <span data-i18n="cov_mean3">mean PF 1.43</span></div>
-        <div class="cov-stat"><b>2.28</b><span data-i18n="cov_best3">best PF · XOM</span></div>
+        <div class="names">DE · V · COST · MA · KO · ETN</div>
+        <div class="cov-meta"><span data-i18n="cov_prof3">7 / 7 ready</span> · <span data-i18n="cov_mean3">mean PF 3.19</span></div>
+        <div class="cov-stat"><b>5.75</b><span data-i18n="cov_best3">best PF · DE</span></div>
       </div>
     </div>
   </div>
@@ -260,13 +258,13 @@
       <div class="mtext">
         <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="mac_kick">Cross-instrument invariance</div></div>
         <div class="big" data-i18n="mac_big">Every instrument resolves to one of two structural temperaments — and the split is <em>consistent.</em></div>
-        <p data-i18n="mac_p">Read blind, the cross-section sorts itself. <strong>34 of 50 names are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move (mean PF 1.79). <strong>16 are continuation</strong> — momentum and high-beta names, where the edge is riding the break (mean PF 1.69). <strong>44 of 50 run long-only</strong>, the fingerprint of a passive complex accumulating the book as one coordinated actor. An edge fitted to a chart dies on the next chart. An edge that sorts an entire universe into the same two desks is a property of the market.</p>
+        <p data-i18n="mac_p">Read blind, the book sorts itself. <strong>30 of the 36 deep-tuned names are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — and <strong>6 are continuation</strong> names, where it rides the break. The overwhelming majority run <strong>long-only</strong>, the fingerprint of a passive complex accumulating the book through a secular-bull window — which is precisely why almost every cell carries a walk-forward-mandatory flag. An edge fitted to a chart dies on the next chart; an edge that sorts a universe into the same two temperaments is a property of the market — pending out-of-sample confirmation.</p>
       </div>
       <div class="macro-grid">
-        <div class="macro-card"><div class="mc-sym">GLD</div><div class="mc-desc" data-i18n="mac_gld">Gold · fade</div><div class="mc-row"><span class="mc-pf">2.46</span><span class="mc-dd">6.9% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">XLV</div><div class="mc-desc" data-i18n="mac_xlv">Healthcare · continuation</div><div class="mc-row"><span class="mc-pf">2.45</span><span class="mc-dd">7.1% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">QQQ</div><div class="mc-desc" data-i18n="mac_qqq">Nasdaq 100 · fade</div><div class="mc-row"><span class="mc-pf">2.28</span><span class="mc-dd">9.7% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">SPY</div><div class="mc-desc" data-i18n="mac_spy">S&amp;P 500 · fade</div><div class="mc-row"><span class="mc-pf">2.02</span><span class="mc-dd">9.9% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">DE</div><div class="mc-desc" data-i18n="mac_gld">Deere · fade-long</div><div class="mc-row"><span class="mc-pf">5.75</span><span class="mc-dd">23.6% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">GLD</div><div class="mc-desc" data-i18n="mac_xlv">Gold · fade + iceberg</div><div class="mc-row"><span class="mc-pf">4.53</span><span class="mc-dd">18.8% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">V</div><div class="mc-desc" data-i18n="mac_qqq">Visa · fade-long</div><div class="mc-row"><span class="mc-pf">4.44</span><span class="mc-dd">25.5% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">COST</div><div class="mc-desc" data-i18n="mac_spy">Costco · fade-long</div><div class="mc-row"><span class="mc-pf">3.85</span><span class="mc-dd">23.0% DD</span></div></div>
       </div>
     </div>
   </div>
@@ -477,9 +475,10 @@
   </div>
 </footer>
 
-<script src="scan-data.js?v=20260620e"></script>
-<script src="i18n.js?v=20260620e"></script>
-<script src="app.js?v=20260620e"></script>
+<script src="scan-data.js?v=20260620f"></script>
+<script src="deep-params.js?v=20260620f"></script>
+<script src="i18n.js?v=20260620f"></script>
+<script src="app.js?v=20260620f"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>
