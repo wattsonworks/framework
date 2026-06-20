@@ -8,7 +8,7 @@ def fl(x):
     try: return float(x)
     except: return None
 
-SECTOR_LABEL = {'SEMIS':'Semiconductors','ETF':'ETF','PRIORITY':'Single-name'}
+SECTOR_LABEL = {'SEMIS':'Semis','ETF':'ETF','PRIORITY':'Single-name'}
 TOG = [('Shorts','dir'),('Breaker','Breaker'),('CascStop','Cascade-stop'),
        ('WallTP_Room','Wall-TP'),('LQX','LQX gate'),('Velo','Risk-velocity'),
        ('Iceberg','Iceberg'),('BSL_SSL','BSL/SSL')]

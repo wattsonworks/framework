@@ -4,7 +4,7 @@ window.SCAN = {
 {
 "sym": "KLAC",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 1.145,
 "pf": 1.769,
@@ -26,7 +26,7 @@ window.SCAN = {
 {
 "sym": "NXPI",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.523,
 "pf": 1.035,
@@ -47,7 +47,7 @@ window.SCAN = {
 {
 "sym": "QCOM",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 0.858,
 "pf": 1.305,
@@ -71,7 +71,7 @@ window.SCAN = {
 {
 "sym": "TXN",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.88,
 "pf": 1.409,
@@ -92,7 +92,7 @@ window.SCAN = {
 {
 "sym": "MCHP",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 1.023,
 "pf": 1.453,
@@ -113,7 +113,7 @@ window.SCAN = {
 {
 "sym": "MPWR",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.606,
 "pf": 1.484,
@@ -135,7 +135,7 @@ window.SCAN = {
 {
 "sym": "ADI",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.692,
 "pf": 1.71,
@@ -156,7 +156,7 @@ window.SCAN = {
 {
 "sym": "ON",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.905,
 "pf": 1.368,
@@ -176,7 +176,7 @@ window.SCAN = {
 {
 "sym": "AVGO",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 0.846,
 "pf": 1.484,
@@ -198,7 +198,7 @@ window.SCAN = {
 {
 "sym": "NVDA",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 1.283,
 "pf": 1.822,
@@ -219,7 +219,7 @@ window.SCAN = {
 {
 "sym": "AMD",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 1.178,
 "pf": 3.354,
@@ -241,7 +241,7 @@ window.SCAN = {
 {
 "sym": "MRVL",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 1.011,
 "pf": 1.134,
@@ -260,7 +260,7 @@ window.SCAN = {
 {
 "sym": "ARM",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 1.546,
 "pf": 1.845,
@@ -279,7 +279,7 @@ window.SCAN = {
 {
 "sym": "LRCX",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.892,
 "pf": 3.053,
@@ -300,7 +300,7 @@ window.SCAN = {
 {
 "sym": "AMAT",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.775,
 "pf": 1.668,
@@ -320,7 +320,7 @@ window.SCAN = {
 {
 "sym": "ASML",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 1.191,
 "pf": 1.722,
@@ -340,7 +340,7 @@ window.SCAN = {
 {
 "sym": "TSM",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 1.317,
 "pf": 2.306,
@@ -364,7 +364,7 @@ window.SCAN = {
 {
 "sym": "INTC",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 0.839,
 "pf": 1.424,
@@ -383,7 +383,7 @@ window.SCAN = {
 {
 "sym": "TSEM",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "fade",
 "base": 1.042,
 "pf": 2.538,
@@ -403,7 +403,7 @@ window.SCAN = {
 {
 "sym": "MU",
 "sector": "SEMIS",
-"sectorLabel": "Semiconductors",
+"sectorLabel": "Semis",
 "family": "continuation",
 "base": 0.692,
 "pf": 1.385,

@@ -120,8 +120,8 @@
     if (!list.length) { body.innerHTML = '<tr><td colspan="11" class="xempty">No instruments in this view.</td></tr>'; return; }
     body.innerHTML = list.map(function (r) {
       var tune = r.tuned
-        ? '<span class="tunepill deep" title="Deep behavioural micro-tune, verified live">deep ✓ ' + r.deepPF + '</span>'
-        : '<span class="tunepill greedy" title="Greedy pass at default params — deep micro-tune pending">greedy</span>';
+        ? '<span class="tunepill deep" title="Micro-tuned (deep), verified live — PF ' + r.deepPF + '">✓ ' + r.deepPF + '</span>'
+        : '<span class="tunepill greedy" title="Not micro-tuned yet — greedy pass at default params">✗</span>';
       return '<tr class="' + (r.pf < 1 ? 'row-loss' : '') + (r.tuned ? ' row-tuned' : '') + '">' +
         '<td class="sym">' + esc(r.sym) + '</td>' +
         '<td class="sec">' + esc(r.sectorLabel) + '</td>' +
