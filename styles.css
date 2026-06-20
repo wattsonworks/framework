@@ -329,6 +329,19 @@ tr.row-loss td.sym{color:var(--neg)}
 .cp-k{font-family:var(--mono);font-size:19px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 .cp-d{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
 .cp-foot{margin-top:18px;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.7;letter-spacing:.02em}
+.cp-foot strong{color:var(--gold2)}
+.cp-cell.hero{background:var(--gold-soft)}
+.cp-cell.hero .cp-k{color:var(--gold)}
+.case-sub{font-family:var(--serif);font-size:clamp(21px,2.5vw,29px);font-weight:600;color:var(--ink);margin:0 0 26px;line-height:1.15}
+.case-sub em{font-style:italic;color:var(--gold)}
+.case-sub.t2{margin-top:clamp(48px,7vw,88px);padding-top:clamp(36px,5vw,56px);border-top:1px solid var(--line2)}
+
+/* ---------- TUNING column ---------- */
+.xtable td.tunecell{white-space:nowrap}
+.tunepill{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap}
+.tunepill.deep{color:var(--gold);background:var(--gold-soft);border:1px solid rgba(198,168,107,.4)}
+.tunepill.greedy{color:var(--dim);border:1px solid var(--line)}
+tr.row-tuned td.sym{color:var(--gold)}
 
 /* ---------- RTL / HEBREW ---------- */
 body.rtl{direction:rtl;font-family:"Heebo",var(--sans)}
@@ -342,7 +355,7 @@ body.rtl .fitcol li{padding:0 24px 16px 0}
 body.rtl .fitcol li::before{left:auto;right:0}
 /* keep data / english islands LTR */
 body.rtl .brand,body.rtl .metricstrip,body.rtl table.data,body.rtl .table-scroll,body.rtl .macro-card,body.rtl .anom,body.rtl .cov .names,body.rtl .cov-stat,body.rtl .asof,body.rtl .mono,body.rtl .markets,body.rtl .mk{direction:ltr}
-body.rtl .ag-item,body.rtl .frames,body.rtl .pstep,body.rtl .case-prose,body.rtl .case-flag{text-align:right}
+body.rtl .ag-item,body.rtl .frames,body.rtl .pstep,body.rtl .case-prose,body.rtl .case-flag,body.rtl .case-sub{text-align:right}
 body.rtl .cp-foot,body.rtl .cp-d,body.rtl .cp-lab{direction:rtl}
 body.rtl .pull-wide{padding-right:22px;border-right:2px solid var(--gold)}
 body.rtl .frame{flex-direction:row-reverse}

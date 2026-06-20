@@ -18,7 +18,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "NXPI",
@@ -36,7 +39,10 @@ window.SCAN = {
 "LQX gate",
 "Risk-velocity",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "QCOM",
@@ -57,7 +63,10 @@ window.SCAN = {
 "LQX gate",
 "Risk-velocity",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "TXN",
@@ -75,7 +84,10 @@ window.SCAN = {
 "Cascade-stop",
 "LQX gate",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "MCHP",
@@ -93,7 +105,10 @@ window.SCAN = {
 "Breaker",
 "Risk-velocity",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "MPWR",
@@ -112,7 +127,10 @@ window.SCAN = {
 "Wall-TP",
 "Risk-velocity",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ADI",
@@ -130,7 +148,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ON",
@@ -147,7 +168,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "AVGO",
@@ -166,7 +190,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "NVDA",
@@ -184,7 +211,10 @@ window.SCAN = {
 "Breaker",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "AMD",
@@ -203,7 +233,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "MRVL",
@@ -219,7 +252,10 @@ window.SCAN = {
 "conf": [
 "Long+Short",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ARM",
@@ -235,7 +271,10 @@ window.SCAN = {
 "conf": [
 "Long+Short",
 "Wall-TP"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "LRCX",
@@ -253,7 +292,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "AMAT",
@@ -270,7 +312,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Wall-TP"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ASML",
@@ -287,7 +332,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "TSM",
@@ -308,7 +356,10 @@ window.SCAN = {
 "LQX gate",
 "Risk-velocity",
 "Iceberg"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "INTC",
@@ -324,7 +375,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Cascade-stop"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "TSEM",
@@ -341,7 +395,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "MU",
@@ -359,7 +416,10 @@ window.SCAN = {
 "Breaker",
 "Cascade-stop",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "DIA",
@@ -377,7 +437,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "IWM",
@@ -396,7 +459,10 @@ window.SCAN = {
 "Cascade-stop",
 "LQX gate",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "SMH",
@@ -413,7 +479,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Wall-TP"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLF",
@@ -429,7 +498,10 @@ window.SCAN = {
 "conf": [
 "Long+Short",
 "Breaker"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLK",
@@ -447,7 +519,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Iceberg"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLI",
@@ -466,7 +541,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Iceberg"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLE",
@@ -482,7 +560,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLV",
@@ -501,7 +582,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLP",
@@ -520,7 +604,10 @@ window.SCAN = {
 "LQX gate",
 "Risk-velocity",
 "Iceberg"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XLY",
@@ -538,7 +625,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "VGT",
@@ -554,7 +644,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Cascade-stop"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "VOO",
@@ -572,7 +665,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "SCHD",
@@ -590,7 +686,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "IGV",
@@ -610,7 +709,10 @@ window.SCAN = {
 "LQX gate",
 "Risk-velocity",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "SOXX",
@@ -627,7 +729,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "SPY",
@@ -644,7 +749,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "QQQ",
@@ -661,7 +769,10 @@ window.SCAN = {
 "Long-only",
 "Wall-TP",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "GLD",
@@ -678,7 +789,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "TLT",
@@ -694,7 +808,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Cascade-stop"
-]
+],
+"tuned": true,
+"deepPF": 1.232,
+"deepDD": 17.71
 },
 {
 "sym": "JPM",
@@ -712,7 +829,10 @@ window.SCAN = {
 "Cascade-stop",
 "Wall-TP",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "KO",
@@ -728,7 +848,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "PEP",
@@ -744,7 +867,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Iceberg"
-]
+],
+"tuned": true,
+"deepPF": 1.595,
+"deepDD": 6.47
 },
 {
 "sym": "COST",
@@ -760,7 +886,10 @@ window.SCAN = {
 "conf": [
 "Long-only",
 "Cascade-stop"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "DE",
@@ -777,7 +906,10 @@ window.SCAN = {
 "Long-only",
 "Wall-TP",
 "BSL/SSL"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ETN",
@@ -794,7 +926,10 @@ window.SCAN = {
 "Long-only",
 "Wall-TP",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "ORCL",
@@ -811,7 +946,10 @@ window.SCAN = {
 "Long-only",
 "Breaker",
 "Cascade-stop"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "PANW",
@@ -829,7 +967,10 @@ window.SCAN = {
 "Breaker",
 "Wall-TP",
 "LQX gate"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "V",
@@ -847,7 +988,10 @@ window.SCAN = {
 "Cascade-stop",
 "LQX gate",
 "Iceberg"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "MA",
@@ -865,7 +1009,10 @@ window.SCAN = {
 "Wall-TP",
 "LQX gate",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 },
 {
 "sym": "XOM",
@@ -882,7 +1029,10 @@ window.SCAN = {
 "Long-only",
 "Cascade-stop",
 "Risk-velocity"
-]
+],
+"tuned": false,
+"deepPF": null,
+"deepDD": null
 }
 ],
 "stats": {
@@ -959,7 +1109,13 @@ window.SCAN = {
 "Iceberg": 6,
 "BSL/SSL": 11
 },
-"longonly": 44
+"longonly": 44,
+"tunedSyms": [
+"TLT",
+"PEP"
+],
+"tunedCount": 2,
+"pendingCount": 48
 },
 "pep": {
 "base": 0.749,
@@ -971,5 +1127,17 @@ window.SCAN = {
 "trades": 107,
 "toggles": 11,
 "params": 6
+},
+"tlt": {
+"base": 0.653,
+"greedy": 0.809,
+"tuned": 1.232,
+"dd": 17.71,
+"win": 47.44,
+"wins": 102,
+"trades": 215,
+"pnl": 15.73,
+"partialBank": 60,
+"partialNear": 0.66
 }
 };

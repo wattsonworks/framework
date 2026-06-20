@@ -34,6 +34,18 @@ with open(SRC, newline='', encoding='utf-8-sig') as fh:
             'conf': conf,
         })
 
+# Deep micro-tune overlay — instruments rescued by the full behavioural tune (verified live on TV).
+# Everything NOT in here is greedy-pass-only (default params) and has not been deep-tuned yet.
+DEEP = {
+    'PEP': {'pf': 1.595, 'dd': 6.47},
+    'TLT': {'pf': 1.232, 'dd': 17.71},
+}
+for r in rows:
+    d = DEEP.get(r['sym'])
+    r['tuned'] = bool(d)
+    r['deepPF'] = d['pf'] if d else None
+    r['deepDD'] = d['dd'] if d else None
+
 n = len(rows)
 prof = [r for r in rows if r['pf']>=1.0]
 los = [r for r in rows if r['pf']<1.0]
@@ -71,9 +83,12 @@ stats = {
     'cleanestSym': min(safe, key=lambda r:r['dd'])['sym'],
     'safeCount': len(safe), 'safeSyms':[r['sym'] for r in safe],
     'fam': fam, 'sect': sect, 'tfreq': tfreq, 'longonly': longonly,
+    'tunedSyms': [r['sym'] for r in rows if r['tuned']],
+    'tunedCount': sum(1 for r in rows if r['tuned']),
+    'pendingCount': sum(1 for r in rows if not r['tuned']),
 }
 
-# PEP micro-tuning case (the deep-tuned reproduction, verified live)
+# PEP micro-tuning case — the patient staple (deep-tuned reproduction, verified live)
 pep = {
     'base': 0.749,         # clean engine, default
     'greedy': 0.849,       # Stage-1 toggle-only greedy — a loser
@@ -81,10 +96,18 @@ pep = {
     'dd': 6.47, 'win': 48.6, 'wins': 52, 'trades': 107,
     'toggles': 11, 'params': 6,
 }
+# TLT micro-tuning case — the fragile macro vehicle; the edge lives in the Partial-TP values
+tlt = {
+    'base': 0.653,         # clean engine, default
+    'greedy': 0.809,       # Stage-1 greedy — still dead
+    'tuned': 1.232,        # deep behavioural micro-tune (verified live on TV)
+    'dd': 17.71, 'win': 47.44, 'wins': 102, 'trades': 215, 'pnl': 15.73,
+    'partialBank': 60, 'partialNear': 0.66,  # the hero levers
+}
 
 with open(OUT, 'w', encoding='utf-8') as fh:
     fh.write('/* LIQUIDEX FRAMEWORK — 4H cross-section scan data (50 instruments, greedy-optimised). Auto-generated. */\n')
-    fh.write('window.SCAN = ' + json.dumps({'rows':rows,'stats':stats,'pep':pep}, ensure_ascii=False, indent=0) + ';\n')
+    fh.write('window.SCAN = ' + json.dumps({'rows':rows,'stats':stats,'pep':pep,'tlt':tlt}, ensure_ascii=False, indent=0) + ';\n')
 
 print('=== SUMMARY ===')
 print(f"n={n} profitable={len(prof)} losers={len(los)} {stats['loserSyms']}")
@@ -95,4 +118,5 @@ print(f"safe book ({len(safe)}): {[r['sym'] for r in safe]}")
 print('families:', fam)
 print('sectors:', sect)
 print('toggle freq:', tfreq, 'long-only:', longonly)
+print('deep-tuned:', stats['tunedSyms'], '| pending micro-tune:', stats['pendingCount'])
 print('WROTE', OUT)

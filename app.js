@@ -104,6 +104,7 @@
     var f = state.filter;
     if (f === 'all') return true;
     if (f === 'safe') return isSafe(r);
+    if (f === 'tuned') return r.tuned;
     if (f === 'fade' || f === 'continuation') return r.family === f;
     return r.sector === f;
   }
@@ -116,9 +117,12 @@
       if (typeof av === 'string') return av < bv ? -dir : av > bv ? dir : 0;
       return (av - bv) * dir;
     });
-    if (!list.length) { body.innerHTML = '<tr><td colspan="10" class="xempty">No instruments in this view.</td></tr>'; return; }
+    if (!list.length) { body.innerHTML = '<tr><td colspan="11" class="xempty">No instruments in this view.</td></tr>'; return; }
     body.innerHTML = list.map(function (r) {
-      return '<tr class="' + (r.pf < 1 ? 'row-loss' : '') + '">' +
+      var tune = r.tuned
+        ? '<span class="tunepill deep" title="Deep behavioural micro-tune, verified live">deep ✓ ' + r.deepPF + '</span>'
+        : '<span class="tunepill greedy" title="Greedy pass at default params — deep micro-tune pending">greedy</span>';
+      return '<tr class="' + (r.pf < 1 ? 'row-loss' : '') + (r.tuned ? ' row-tuned' : '') + '">' +
         '<td class="sym">' + esc(r.sym) + '</td>' +
         '<td class="sec">' + esc(r.sectorLabel) + '</td>' +
         '<td><span class="fampill ' + r.family + '">' + esc(r.family) + '</span></td>' +
@@ -128,6 +132,7 @@
         '<td class="r dd ' + ddClass(r) + '">' + r.dd.toFixed(1) + '%</td>' +
         '<td class="r win">' + r.win.toFixed(0) + '%</td>' +
         '<td class="r tr">' + r.trades + '</td>' +
+        '<td class="tunecell">' + tune + '</td>' +
         '<td class="confcell">' + confHTML(r.conf) + '</td>' +
       '</tr>';
     }).join('');
