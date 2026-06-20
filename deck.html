@@ -18,15 +18,11 @@
   html,body{ background:var(--paper); color:var(--body); font-family:var(--serif); -webkit-font-smoothing:antialiased; }
   .page{ width:210mm; height:297mm; padding:18mm 22mm 17mm; position:relative; page-break-after:always; background:var(--paper); overflow:hidden; }
   .page:last-child{ page-break-after:auto; }
-
-  /* running header / footer */
   .rh{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:0.75pt solid var(--rule2);
        padding-bottom:2.4mm; margin-bottom:7mm; font-family:var(--mono); font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
   .rh .b{ color:var(--ink); font-weight:600; }
   .pnum{ position:absolute; bottom:11mm; right:22mm; font-family:var(--mono); font-size:8pt; color:var(--faint); }
   .pfoot{ position:absolute; bottom:11mm; left:22mm; font-family:var(--mono); font-size:7pt; color:var(--faint); letter-spacing:.05em; }
-
-  /* type */
   .secnum{ font-family:var(--mono); font-size:8.5pt; color:var(--accent); letter-spacing:.16em; text-transform:uppercase; }
   h2{ font-weight:600; font-size:19pt; color:var(--ink); line-height:1.15; margin:2mm 0 5mm; letter-spacing:-.005em; }
   h3{ font-weight:600; font-size:11.5pt; color:var(--ink); margin:6mm 0 2mm; }
@@ -39,26 +35,24 @@
   .rule{ height:0.75pt; background:var(--rule); margin:5mm 0; border:0; }
   sup{ font-size:.66em; vertical-align:super; color:var(--accent); }
 
-  /* COVER */
   .cover{ padding-top:18mm; }
   .cover .head{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:0.75pt solid var(--rule2); padding-bottom:3mm; }
   .cover .head .nm{ font-family:var(--serif); font-weight:700; font-size:15pt; color:var(--ink); letter-spacing:.01em; }
   .cover .head .nm span{ font-family:var(--mono); font-size:8pt; font-weight:500; letter-spacing:.22em; color:var(--accent); text-transform:uppercase; vertical-align:middle; margin-left:3mm; }
   .cover .head .meta{ font-family:var(--mono); font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
-  .cover .titleblock{ margin-top:38mm; }
+  .cover .titleblock{ margin-top:36mm; }
   .cover .secnum{ display:block; margin-bottom:5mm; }
   .cover h1{ font-weight:700; font-size:30pt; line-height:1.12; color:var(--ink); letter-spacing:-.01em; max-width:150mm; }
   .cover .sub{ font-size:13pt; font-style:italic; color:var(--muted); margin-top:5mm; max-width:150mm; line-height:1.45; }
-  .abstract{ margin-top:13mm; border-top:0.75pt solid var(--rule2); border-bottom:0.75pt solid var(--rule2); padding:6mm 0; }
+  .abstract{ margin-top:12mm; border-top:0.75pt solid var(--rule2); border-bottom:0.75pt solid var(--rule2); padding:6mm 0; }
   .abstract .lab{ font-family:var(--mono); font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin-bottom:3mm; }
-  .abstract p{ font-size:10.5pt; line-height:1.62; color:var(--body); }
-  .keyfig{ display:flex; margin-top:11mm; border:0.75pt solid var(--rule2); }
-  .keyfig .kf{ flex:1; padding:6mm 5mm; border-right:0.75pt solid var(--rule); }
+  .abstract p{ font-size:10.5pt; line-height:1.6; color:var(--body); }
+  .keyfig{ display:flex; margin-top:10mm; border:0.75pt solid var(--rule2); }
+  .keyfig .kf{ flex:1; padding:5.5mm 5mm; border-right:0.75pt solid var(--rule); }
   .keyfig .kf:last-child{ border-right:0; }
   .keyfig .kf b{ display:block; font-family:var(--mono); font-size:20pt; font-weight:600; color:var(--ink); line-height:1; font-variant-numeric:tabular-nums; }
   .keyfig .kf span{ display:block; margin-top:3mm; font-size:8pt; color:var(--muted); line-height:1.35; }
 
-  /* numbered protocol list */
   ol.proto{ list-style:none; counter-reset:p; margin:5mm 0 0; }
   ol.proto li{ counter-increment:p; position:relative; padding:4mm 0 4mm 14mm; border-top:0.75pt solid var(--rule); }
   ol.proto li:last-child{ border-bottom:0.75pt solid var(--rule); }
@@ -67,7 +61,6 @@
   ol.proto p{ font-size:9.7pt; color:var(--muted); line-height:1.5; margin:0; }
   ol.proto .mono{ font-family:var(--mono); font-size:9pt; color:var(--ink); }
 
-  /* tables */
   table{ width:100%; border-collapse:collapse; margin:3mm 0 2mm; }
   caption{ caption-side:top; text-align:left; font-family:var(--mono); font-size:8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:2.5mm; }
   th{ text-align:left; font-family:var(--mono); font-size:7.3pt; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:2mm 2.5mm; border-bottom:1pt solid var(--rule2); white-space:nowrap; }
@@ -80,18 +73,18 @@
   .tcap{ font-size:8.5pt; color:var(--muted); line-height:1.5; margin-top:2.5mm; }
   .tcap strong{ color:var(--ink); }
 
-  /* dense cross-section table */
-  table.dense th{ padding:1.5mm 2mm; font-size:7pt; }
-  table.dense td{ padding:1.05mm 2mm; font-size:8pt; }
-  table.dense td.mt{ font-family:var(--mono); font-size:7.6pt; color:var(--muted); }
-  table.dense td.mt.y{ color:var(--accent); font-weight:600; }
-  table.dense tr.loss td.sym{ color:var(--muted); }
+  table.dense th{ padding:1.3mm 2mm; font-size:6.6pt; }
+  table.dense td{ padding:0.78mm 2mm; font-size:7.4pt; }
+  table.dense td.arch{ font-family:var(--mono); font-size:6.1pt; color:var(--muted); white-space:nowrap; }
+  table.dense td.st-ready,table.dense td.st-wf,table.dense td.st-remicro{ font-family:var(--mono); font-size:7pt; letter-spacing:.02em; }
+  .st-ready{ color:#4a7a5f; font-weight:600; }
+  .st-wf{ color:var(--accent); }
+  .st-remicro{ color:#a8443a; font-weight:600; }
+  table.dense tr.loss td.sym{ color:#a8443a; }
 
-  /* summary breakdown */
   .grid2{ display:flex; gap:8mm; }
   .grid2 > div{ flex:1; }
 
-  /* case worked example */
   .case{ border-top:0.75pt solid var(--rule2); padding-top:5mm; margin-top:6mm; }
   .case:first-of-type{ border-top:0; padding-top:0; margin-top:0; }
   .case h3{ margin-top:0; }
@@ -101,12 +94,11 @@
   .caserow .prose p{ font-size:9.8pt; margin-bottom:2.6mm; }
   .caserow .data{ flex:1; }
   table.mini{ margin:0; }
-  table.mini td, table.mini th{ font-size:8.3pt; padding:1.5mm 2mm; }
+  table.mini td, table.mini th{ font-size:8.3pt; padding:1.4mm 2mm; }
   table.mini .big{ font-family:var(--mono); font-weight:700; font-size:11pt; color:var(--ink); }
   .confnote{ font-size:8.2pt; color:var(--muted); line-height:1.5; margin-top:2.5mm; }
   .confnote strong{ color:var(--ink); }
 
-  /* system list */
   .syslist{ margin-top:3mm; }
   .sysitem{ display:flex; gap:5mm; padding:3.5mm 0; border-top:0.75pt solid var(--rule); }
   .sysitem:last-of-type{ border-bottom:0.75pt solid var(--rule); }
@@ -127,21 +119,21 @@
 <section class="page cover">
   <div class="head">
     <div class="nm">LIQUIDEX <span>Framework</span></div>
-    <div class="meta">Research Brief · June 2026</div>
+    <div class="meta">Research Brief · 20 Jun 2026</div>
   </div>
   <div class="titleblock">
     <span class="secnum">Systematic liquidity research</span>
     <h1>A systematic liquidity-research operation</h1>
-    <div class="sub">Cross-instrument evidence from a fifty-instrument, four-hour cross-section.</div>
+    <div class="sub">The deep-tuned book — a per-symbol record across a fifty-two-symbol universe.</div>
     <div class="abstract">
       <div class="lab">Abstract</div>
-      <p>LIQUIDEX is a systematic research operation built on a single principle: institutional liquidity leaves the same structural footprint wherever it trades. To test that principle, one rule-based engine was run across fifty liquid instruments at a single four-hour timeframe, and each instrument was read down to the institutional behaviour that dominates its order flow, under one disciplined per-instrument optimisation protocol. After that read, mean profit factor rose from 0.94 to 1.76 — a 1.87× lift — and 47 of the 50 instruments were profitable, 29 of them crossing from a losing baseline into profit. All figures herein are in-sample and net of commission and slippage; their out-of-sample validation is the subject of Section 5. The breadth of the result is not a feature of the product. It is the evidence for the thesis.</p>
+      <p>LIQUIDEX is a systematic research operation built on a single principle: institutional liquidity leaves the same structural footprint wherever it trades. Working from that principle, each symbol in a fifty-two-symbol universe is read down to the institutional behaviour that dominates its order flow and tuned to its own per-symbol recipe through a disciplined optimisation protocol. <strong>Thirty-six are complete</strong> as of this brief: twenty-four clear a profit factor above 1.5, and twelve sit at or below it and are flagged for re-tuning. The strongest cells are long-only fades read through a secular-bull window, so almost every result carries a walk-forward-mandatory caveat. All figures herein are in-sample and net of commission and slippage; their out-of-sample validation is the subject of Section 5.</p>
     </div>
     <div class="keyfig">
-      <div class="kf"><b>1.87×</b><span>Mean lift over the raw engine</span></div>
-      <div class="kf"><b>47 / 50</b><span>Instruments profitable once read</span></div>
-      <div class="kf"><b>4.84</b><span>Peak profit factor (SMH)</span></div>
-      <div class="kf"><b>6.9%</b><span>Cleanest maximum drawdown (GLD)</span></div>
+      <div class="kf"><b>36 / 52</b><span>Symbols deep-tuned</span></div>
+      <div class="kf"><b>5.75</b><span>Peak profit factor (DE)</span></div>
+      <div class="kf"><b>24</b><span>Clear profit factor &gt; 1.5</span></div>
+      <div class="kf"><b>12</b><span>Flagged to re-microtune</span></div>
     </div>
   </div>
   <div class="pfoot">For research evaluation only · Historical, in-sample results · Not financial advice</div>
@@ -157,7 +149,7 @@
   <p>The engine identifies the signature, attributes it to the institutional behaviour producing it, and resolves that read into a single rule-based position: entry, a structural stop, a target at the opposing wall, a breakeven and a time-stop. It does not merely detect an anomaly; it profiles the actor behind it — what they are doing, where they are going, and whether they are masking it.</p>
   <div class="quote">An edge that lives in one market is a curve-fit. An edge that recurs across many is a discovery.</div>
   <p>The claim under test is narrow and falsifiable. If the edge were specific to one instrument, it would be an artefact of that instrument's history — an overfit. If instead the same behavioural reads recover an edge across many unrelated instruments, the engine is measuring a structural property of institutional markets rather than the idiosyncrasy of a single chart.</p>
-  <p>That distinction is the entire subject of this document. The sections that follow set out, in order: the protocol used to make the test (Section 2); the results across the full fifty-instrument cross-section (Section 3); two worked examples of the per-instrument read, including the behavioural reasoning behind each (Section 4); and the validation work that separates these in-sample results from a track record (Section 5).</p>
+  <p>The sections that follow set out, in order: the protocol used to tune each symbol (Section 2); the deep-tuned book across the universe (Section 3); two worked examples of the per-symbol read, with the behavioural reasoning behind each (Section 4); and the validation work that separates these in-sample results from a track record (Section 5).</p>
   <div class="pfoot">wattsonworks.github.io/framework</div>
   <div class="pnum">2</div>
 </section>
@@ -166,11 +158,11 @@
 <section class="page">
   <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§2 · The protocol</span></div>
   <span class="secnum">Section 2</span>
-  <h2>The research protocol</h2>
-  <p>Breadth is meaningless without method. Every instrument in the cross-section was taken through the same six-step protocol. The discipline is deliberately conservative: a behavioural read is admitted only when it improves the risk-adjusted result at its tuned setting, and discarded the moment it does not.</p>
+  <h2>The per-symbol protocol</h2>
+  <p>Breadth is meaningless without method. Every symbol is taken through the same protocol. The discipline is deliberately conservative: a behavioural read is admitted only when it improves the risk-adjusted result at its tuned setting, and discarded the moment it does not.</p>
   <ol class="proto">
     <li><h4>Baseline</h4><p>The engine is reduced to its core — every optional read disabled, default parameters throughout. Raw profit factor, drawdown and trade count are recorded as the benchmark to beat.</p></li>
-    <li><h4>Greedy forward-selection</h4><p>Behavioural reads — cascade-stop, opposing-wall target, the directional-risk gate, risk-velocity confirmation, iceberg absorption, liquidity-sweep exhaustion — are added one at a time. A read is retained only if it improves the risk-adjusted result, and reverted otherwise.</p></li>
+    <li><h4>Greedy forward-selection</h4><p>Behavioural reads — cascade-stop, opposing-wall target, the directional-risk gate, risk-velocity confirmation, iceberg absorption, liquidity-sweep exhaustion — are added one at a time, retained only if they improve the risk-adjusted result, and reverted otherwise.</p></li>
     <li><h4>Coupled parameter tuning</h4><p>Each retained read is judged at its tuned setting, not its default: its sensitivity is swept in both directions, and a read that cannot pay at any setting is removed rather than left at a default that flatters it.</p></li>
     <li><h4>Two-pass refinement</h4><p>The surviving configuration is walked a second time, each secondary parameter nudged and immediately reverted if the equity curve degrades. The accepted recipe is the one no further change improves.</p></li>
     <li><h4>Risk-adjusted scoring</h4><p>Every decision is taken on <span class="mono">S = PF / (1 + MaxDD)</span>, never on profit factor alone, subject to a hard floor of thirty trades. A high profit factor on a small sample does not qualify.</p></li>
@@ -181,121 +173,81 @@
   <div class="pnum">3</div>
 </section>
 
-<!-- PAGE 4 — RESULTS TABLE (1-32) -->
+<!-- PAGE 4 — THE DEEP-TUNED BOOK -->
 <section class="page">
-  <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§3 · Results</span></div>
+  <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§3 · The deep-tuned book</span></div>
   <span class="secnum">Section 3</span>
-  <h2>Results: the cross-section</h2>
-  <p style="margin-bottom:2mm">The full four-hour cross-section, ranked by final profit factor. <strong>Base</strong> is the raw engine; <strong>Final</strong> is after the protocol of Section 2; <strong>Lift</strong> is their ratio. Two names since taken through the full deep micro-tune (Section 4) are marked in the final column; the remainder are greedy-pass results at default parameters. Three names<sup>†</sup> did not clear the greedy bar.</p>
+  <h2>The deep-tuned book</h2>
+  <p style="margin-bottom:2mm">Each symbol tuned to its own recipe, ranked by profit factor. Thirty-six of fifty-two complete as of <strong>3:33 pm, 20 June 2026</strong>. <strong>PF ≤ 1.5</strong> is flagged <em>re-microtune</em>; <sup>&#9888;</sup> marks walk-forward-mandatory. Full per-symbol configurations are published at wattsonworks.github.io/framework.</p>
   <table class="dense">
-    <caption>Table 1 — Per-instrument results, 4-hour cross-section (1–32 of 50)</caption>
+    <caption>Table 1 — The deep-tuned book (36 of 52 symbols)</caption>
     <thead><tr>
-      <th class="r">#</th><th>Symbol</th><th>Class</th><th>Family</th>
-      <th class="r">Base</th><th class="r">Final&nbsp;PF</th><th class="r">Lift</th><th class="r">Max&nbsp;DD</th><th class="r">Trades</th><th>Micro-tuned</th>
+      <th class="r">#</th><th>Symbol</th><th>Class</th><th class="r">PF</th><th class="r">Max&nbsp;DD</th><th class="r">Win</th><th class="r">N</th><th>Archetype</th><th>Status</th>
     </tr></thead>
     <tbody>
-    <!--SCAN_ROWS_A_START-->
-    <tr><td class="r num">1</td><td class="sym">SMH</td><td>ETF</td><td>Fade</td><td class="r num">1.253</td><td class="r fpf">4.843</td><td class="r num">3.87&times;</td><td class="r num">21.3%</td><td class="r num">55</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">2</td><td class="sym">AMD</td><td>Semis</td><td>Continuation</td><td class="r num">1.178</td><td class="r fpf">3.354</td><td class="r num">2.85&times;</td><td class="r num">35.6%</td><td class="r num">74</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">3</td><td class="sym">LRCX</td><td>Semis</td><td>Fade</td><td class="r num">0.892</td><td class="r fpf">3.053</td><td class="r num">3.42&times;</td><td class="r num">28.3%</td><td class="r num">61</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">4</td><td class="sym">XLK</td><td>ETF</td><td>Fade</td><td class="r num">1.595</td><td class="r fpf">2.539</td><td class="r num">1.59&times;</td><td class="r num">14.7%</td><td class="r num">109</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">5</td><td class="sym">TSEM</td><td>Semis</td><td>Fade</td><td class="r num">1.042</td><td class="r fpf">2.538</td><td class="r num">2.44&times;</td><td class="r num">24.0%</td><td class="r num">36</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">6</td><td class="sym">SOXX</td><td>ETF</td><td>Fade</td><td class="r num">1.191</td><td class="r fpf">2.493</td><td class="r num">2.09&times;</td><td class="r num">21.3%</td><td class="r num">84</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">7</td><td class="sym">GLD</td><td>ETF</td><td>Fade</td><td class="r num">0.832</td><td class="r fpf">2.457</td><td class="r num">2.95&times;</td><td class="r num">6.9%</td><td class="r num">43</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">8</td><td class="sym">XLV</td><td>ETF</td><td>Continuation</td><td class="r num">1.098</td><td class="r fpf">2.450</td><td class="r num">2.23&times;</td><td class="r num">7.1%</td><td class="r num">67</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">9</td><td class="sym">TSM</td><td>Semis</td><td>Continuation</td><td class="r num">1.317</td><td class="r fpf">2.306</td><td class="r num">1.75&times;</td><td class="r num">29.1%</td><td class="r num">92</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">10</td><td class="sym">XOM</td><td>Single-name</td><td>Fade</td><td class="r num">1.061</td><td class="r fpf">2.284</td><td class="r num">2.15&times;</td><td class="r num">15.1%</td><td class="r num">51</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">11</td><td class="sym">QQQ</td><td>ETF</td><td>Fade</td><td class="r num">0.936</td><td class="r fpf">2.277</td><td class="r num">2.43&times;</td><td class="r num">9.7%</td><td class="r num">51</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">12</td><td class="sym">IGV</td><td>ETF</td><td>Continuation</td><td class="r num">0.762</td><td class="r fpf">2.166</td><td class="r num">2.84&times;</td><td class="r num">16.1%</td><td class="r num">104</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">13</td><td class="sym">SPY</td><td>ETF</td><td>Fade</td><td class="r num">0.810</td><td class="r fpf">2.022</td><td class="r num">2.50&times;</td><td class="r num">9.9%</td><td class="r num">91</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">14</td><td class="sym">DIA</td><td>ETF</td><td>Fade</td><td class="r num">0.919</td><td class="r fpf">1.902</td><td class="r num">2.07&times;</td><td class="r num">12.1%</td><td class="r num">44</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">15</td><td class="sym">VOO</td><td>ETF</td><td>Fade</td><td class="r num">0.963</td><td class="r fpf">1.874</td><td class="r num">1.95&times;</td><td class="r num">7.0%</td><td class="r num">31</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">16</td><td class="sym">ARM</td><td>Semis</td><td>Fade</td><td class="r num">1.546</td><td class="r fpf">1.845</td><td class="r num">1.19&times;</td><td class="r num">20.5%</td><td class="r num">62</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">17</td><td class="sym">NVDA</td><td>Semis</td><td>Continuation</td><td class="r num">1.283</td><td class="r fpf">1.822</td><td class="r num">1.42&times;</td><td class="r num">18.0%</td><td class="r num">77</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">18</td><td class="sym">KLAC</td><td>Semis</td><td>Continuation</td><td class="r num">1.145</td><td class="r fpf">1.769</td><td class="r num">1.54&times;</td><td class="r num">22.4%</td><td class="r num">121</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">19</td><td class="sym">VGT</td><td>ETF</td><td>Fade</td><td class="r num">0.813</td><td class="r fpf">1.767</td><td class="r num">2.17&times;</td><td class="r num">21.1%</td><td class="r num">75</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">20</td><td class="sym">SCHD</td><td>ETF</td><td>Fade</td><td class="r num">0.858</td><td class="r fpf">1.748</td><td class="r num">2.04&times;</td><td class="r num">11.9%</td><td class="r num">37</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">21</td><td class="sym">ASML</td><td>Semis</td><td>Fade</td><td class="r num">1.191</td><td class="r fpf">1.722</td><td class="r num">1.45&times;</td><td class="r num">24.6%</td><td class="r num">53</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">22</td><td class="sym">ADI</td><td>Semis</td><td>Fade</td><td class="r num">0.692</td><td class="r fpf">1.710</td><td class="r num">2.47&times;</td><td class="r num">18.9%</td><td class="r num">47</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">23</td><td class="sym">JPM</td><td>Single-name</td><td>Fade</td><td class="r num">1.053</td><td class="r fpf">1.709</td><td class="r num">1.62&times;</td><td class="r num">29.9%</td><td class="r num">61</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">24</td><td class="sym">AMAT</td><td>Semis</td><td>Fade</td><td class="r num">0.775</td><td class="r fpf">1.668</td><td class="r num">2.15&times;</td><td class="r num">38.3%</td><td class="r num">67</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">25</td><td class="sym">XLI</td><td>ETF</td><td>Continuation</td><td class="r num">0.999</td><td class="r fpf">1.645</td><td class="r num">1.65&times;</td><td class="r num">13.7%</td><td class="r num">127</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">26</td><td class="sym">MA</td><td>Single-name</td><td>Fade</td><td class="r num">1.101</td><td class="r fpf">1.641</td><td class="r num">1.49&times;</td><td class="r num">9.2%</td><td class="r num">42</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">27</td><td class="sym">MPWR</td><td>Semis</td><td>Fade</td><td class="r num">0.606</td><td class="r fpf">1.484</td><td class="r num">2.45&times;</td><td class="r num">24.9%</td><td class="r num">43</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">28</td><td class="sym">AVGO</td><td>Semis</td><td>Continuation</td><td class="r num">0.846</td><td class="r fpf">1.484</td><td class="r num">1.75&times;</td><td class="r num">36.6%</td><td class="r num">77</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">29</td><td class="sym">ETN</td><td>Single-name</td><td>Fade</td><td class="r num">0.873</td><td class="r fpf">1.471</td><td class="r num">1.68&times;</td><td class="r num">17.3%</td><td class="r num">81</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">30</td><td class="sym">XLE</td><td>ETF</td><td>Fade</td><td class="r num">1.167</td><td class="r fpf">1.466</td><td class="r num">1.26&times;</td><td class="r num">18.8%</td><td class="r num">63</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">31</td><td class="sym">MCHP</td><td>Semis</td><td>Continuation</td><td class="r num">1.023</td><td class="r fpf">1.453</td><td class="r num">1.42&times;</td><td class="r num">26.6%</td><td class="r num">167</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">32</td><td class="sym">INTC</td><td>Semis</td><td>Fade</td><td class="r num">0.839</td><td class="r fpf">1.424</td><td class="r num">1.70&times;</td><td class="r num">37.5%</td><td class="r num">93</td><td class="mt">&mdash;</td></tr>
-    <!--SCAN_ROWS_A_END-->
+    <!--DECK_DEEP_START-->
+    <tr><td class="r num">1</td><td class="sym">DE<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">5.748</td><td class="r num">23.6%</td><td class="r num">87%</td><td class="r num">76</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">2</td><td class="sym">GLD<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">4.533</td><td class="r num">18.8%</td><td class="r num">83%</td><td class="r num">64</td><td class="arch">fade-long-ice</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">3</td><td class="sym">V<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">4.443</td><td class="r num">25.4%</td><td class="r num">81%</td><td class="r num">80</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">4</td><td class="sym">COST<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">3.851</td><td class="r num">23.0%</td><td class="r num">78%</td><td class="r num">64</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">5</td><td class="sym">LRCX<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">3.837</td><td class="r num">26.9%</td><td class="r num">83%</td><td class="r num">30</td><td class="arch">fade-long-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">6</td><td class="sym">XLV<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">3.798</td><td class="r num">10.5%</td><td class="r num">87%</td><td class="r num">46</td><td class="arch">gated-continuation-fade</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">7</td><td class="sym">XLK<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">3.184</td><td class="r num">11.7%</td><td class="r num">46%</td><td class="r num">39</td><td class="arch">fade-long-ice</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">8</td><td class="sym">MA<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">2.383</td><td class="r num">8.9%</td><td class="r num">36%</td><td class="r num">33</td><td class="arch">fade-long-wall-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">9</td><td class="sym">QQQ<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.317</td><td class="r num">8.7%</td><td class="r num">47%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">10</td><td class="sym">ETN<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">2.305</td><td class="r num">35.2%</td><td class="r num">77%</td><td class="r num">60</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">11</td><td class="sym">DIA<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.074</td><td class="r num">10.9%</td><td class="r num">42%</td><td class="r num">31</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">12</td><td class="sym">ASML</td><td>Semis</td><td class="r fpf">2.054</td><td class="r num">16.4%</td><td class="r num">57%</td><td class="r num">37</td><td class="arch">fade-both-cascstop-velo</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">13</td><td class="sym">INTC<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">2.053</td><td class="r num">46.6%</td><td class="r num">67%</td><td class="r num">49</td><td class="arch">fade-long-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">14</td><td class="sym">SCHD<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.047</td><td class="r num">6.7%</td><td class="r num">46%</td><td class="r num">35</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">15</td><td class="sym">KO</td><td>Single-name</td><td class="r fpf">1.979</td><td class="r num">19.8%</td><td class="r num">54%</td><td class="r num">201</td><td class="arch">fade-clean</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">16</td><td class="sym">NXPI</td><td>Semis</td><td class="r fpf">1.971</td><td class="r num">20.7%</td><td class="r num">66%</td><td class="r num">61</td><td class="arch">fade-gated</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">17</td><td class="sym">VOO<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.849</td><td class="r num">12.2%</td><td class="r num">60%</td><td class="r num">30</td><td class="arch">fade-clean-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">18</td><td class="sym">ADI<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.836</td><td class="r num">12.7%</td><td class="r num">42%</td><td class="r num">31</td><td class="arch">fade-long-wall-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">19</td><td class="sym">KLAC<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.823</td><td class="r num">16.5%</td><td class="r num">41%</td><td class="r num">51</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">20</td><td class="sym">MPWR<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.788</td><td class="r num">27.2%</td><td class="r num">55%</td><td class="r num">31</td><td class="arch">fade-long-cascstop-velo-bsl</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">21</td><td class="sym">PEP</td><td>Single-name</td><td class="r fpf">1.595</td><td class="r num">6.5%</td><td class="r num">49%</td><td class="r num">107</td><td class="arch">fade-both</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">22</td><td class="sym">TSEM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.582</td><td class="r num">19.2%</td><td class="r num">44%</td><td class="r num">39</td><td class="arch">continuation-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">23</td><td class="sym">SPY<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.521</td><td class="r num">8.5%</td><td class="r num">38%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">24</td><td class="sym">AMD<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.515</td><td class="r num">21.3%</td><td class="r num">44%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr class="loss"><td class="r num">25</td><td class="sym">TXN<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.455</td><td class="r num">27.9%</td><td class="r num">56%</td><td class="r num">34</td><td class="arch">fade-long-cascstop-velo-bsl</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">26</td><td class="sym">TSM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.428</td><td class="r num">25.2%</td><td class="r num">40%</td><td class="r num">30</td><td class="arch">fade-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">27</td><td class="sym">ARM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.366</td><td class="r num">31.6%</td><td class="r num">33%</td><td class="r num">114</td><td class="arch">continuation-long-breaker</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">28</td><td class="sym">XLI<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.298</td><td class="r num">12.5%</td><td class="r num">40%</td><td class="r num">50</td><td class="arch">continuation-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">29</td><td class="sym">TLT</td><td>ETF</td><td class="r fpf">1.272</td><td class="r num">17.7%</td><td class="r num">49%</td><td class="r num">205</td><td class="arch">fade-clean</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">30</td><td class="sym">MU<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.239</td><td class="r num">13.9%</td><td class="r num">61%</td><td class="r num">31</td><td class="arch">fade-long-velo-nowall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">31</td><td class="sym">NVDA<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.185</td><td class="r num">34.0%</td><td class="r num">33%</td><td class="r num">222</td><td class="arch">continuation-long-breaker-gated</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">32</td><td class="sym">MRVL</td><td>Semis</td><td class="r fpf">1.134</td><td class="r num">43.6%</td><td class="r num">35%</td><td class="r num">212</td><td class="arch">fade</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">33</td><td class="sym">QCOM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.076</td><td class="r num">21.9%</td><td class="r num">24%</td><td class="r num">38</td><td class="arch">fade-long-wall-gated</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">34</td><td class="sym">MCHP<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.048</td><td class="r num">37.2%</td><td class="r num">27%</td><td class="r num">84</td><td class="arch">continuation-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">35</td><td class="sym">AMAT</td><td>Semis</td><td class="r fpf">0.944</td><td class="r num">41.2%</td><td class="r num">32%</td><td class="r num">41</td><td class="arch">fade-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">36</td><td class="sym">XLF</td><td>ETF</td><td class="r fpf">0.895</td><td class="r num">36.3%</td><td class="r num">38%</td><td class="r num">152</td><td class="arch">fade</td><td class="st-remicro">re-microtune</td></tr>
+    <!--DECK_DEEP_END-->
     </tbody>
   </table>
+  <div class="tcap">Sixteen of the fifty-two symbols are not yet tuned. The high win rates on the strongest cells are regime artefacts of a secular-bull window — almost every result is walk-forward-mandatory. All figures in-sample, net of commission and slippage.</div>
   <div class="pfoot">wattsonworks.github.io/framework</div>
   <div class="pnum">4</div>
 </section>
 
-<!-- PAGE 5 — RESULTS TABLE (33-50) + INTERPRETATION -->
+<!-- PAGE 5 — INTERPRETATION -->
 <section class="page">
-  <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§3 · Results</span></div>
+  <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§3 · The deep-tuned book</span></div>
   <span class="secnum">Section 3 (continued)</span>
-  <h2>Results, continued</h2>
-  <table class="dense">
-    <caption>Table 1 (continued) — Per-instrument results (33–50 of 50)</caption>
-    <thead><tr>
-      <th class="r">#</th><th>Symbol</th><th>Class</th><th>Family</th>
-      <th class="r">Base</th><th class="r">Final&nbsp;PF</th><th class="r">Lift</th><th class="r">Max&nbsp;DD</th><th class="r">Trades</th><th>Micro-tuned</th>
-    </tr></thead>
+  <h2>What the book shows</h2>
+  <p>Read blind, the book sorts itself into two structural temperaments. <strong>30 of the 36 are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — and <strong>6 are continuation</strong> names, where it rides the break. The overwhelming majority run <strong>long-only</strong>, the signature of a passive complex accumulating through a rising market. That same fact is the principal caveat: a long-only edge measured through a secular bull is exactly what an out-of-sample window must test.</p>
+  <table class="mini" style="margin-top:4mm">
+    <caption>By instrument class</caption>
+    <thead><tr><th>Class</th><th class="r">Symbols</th><th class="r">Ready</th><th class="r">Mean PF</th><th class="r">Best</th></tr></thead>
     <tbody>
-    <!--SCAN_ROWS_B_START-->
-    <tr><td class="r num">33</td><td class="sym">TXN</td><td>Semis</td><td>Fade</td><td class="r num">0.880</td><td class="r fpf">1.409</td><td class="r num">1.60&times;</td><td class="r num">27.0%</td><td class="r num">94</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">34</td><td class="sym">COST</td><td>Single-name</td><td>Fade</td><td class="r num">0.797</td><td class="r fpf">1.389</td><td class="r num">1.74&times;</td><td class="r num">16.7%</td><td class="r num">91</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">35</td><td class="sym">MU</td><td>Semis</td><td>Continuation</td><td class="r num">0.692</td><td class="r fpf">1.385</td><td class="r num">2.00&times;</td><td class="r num">24.9%</td><td class="r num">108</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">36</td><td class="sym">DE</td><td>Single-name</td><td>Fade</td><td class="r num">1.040</td><td class="r fpf">1.374</td><td class="r num">1.32&times;</td><td class="r num">25.5%</td><td class="r num">92</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">37</td><td class="sym">ON</td><td>Semis</td><td>Fade</td><td class="r num">0.905</td><td class="r fpf">1.368</td><td class="r num">1.51&times;</td><td class="r num">49.4%</td><td class="r num">92</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">38</td><td class="sym">V</td><td>Single-name</td><td>Fade</td><td class="r num">0.858</td><td class="r fpf">1.363</td><td class="r num">1.59&times;</td><td class="r num">18.2%</td><td class="r num">107</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">39</td><td class="sym">IWM</td><td>ETF</td><td>Continuation</td><td class="r num">0.693</td><td class="r fpf">1.319</td><td class="r num">1.90&times;</td><td class="r num">22.2%</td><td class="r num">87</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">40</td><td class="sym">QCOM</td><td>Semis</td><td>Continuation</td><td class="r num">0.858</td><td class="r fpf">1.305</td><td class="r num">1.52&times;</td><td class="r num">37.9%</td><td class="r num">116</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">41</td><td class="sym">PANW</td><td>Single-name</td><td>Continuation</td><td class="r num">0.493</td><td class="r fpf">1.250</td><td class="r num">2.54&times;</td><td class="r num">37.5%</td><td class="r num">155</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">42</td><td class="sym">ORCL</td><td>Single-name</td><td>Continuation</td><td class="r num">0.886</td><td class="r fpf">1.220</td><td class="r num">1.38&times;</td><td class="r num">43.0%</td><td class="r num">128</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">43</td><td class="sym">XLP</td><td>ETF</td><td>Continuation</td><td class="r num">0.731</td><td class="r fpf">1.186</td><td class="r num">1.62&times;</td><td class="r num">8.5%</td><td class="r num">118</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">44</td><td class="sym">KO</td><td>Single-name</td><td>Fade</td><td class="r num">0.956</td><td class="r fpf">1.170</td><td class="r num">1.22&times;</td><td class="r num">12.2%</td><td class="r num">57</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">45</td><td class="sym">XLY</td><td>ETF</td><td>Fade</td><td class="r num">0.790</td><td class="r fpf">1.156</td><td class="r num">1.46&times;</td><td class="r num">20.3%</td><td class="r num">78</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">46</td><td class="sym">MRVL</td><td>Semis</td><td>Fade</td><td class="r num">1.011</td><td class="r fpf">1.134</td><td class="r num">1.12&times;</td><td class="r num">43.6%</td><td class="r num">212</td><td class="mt">&mdash;</td></tr>
-    <tr><td class="r num">47</td><td class="sym">NXPI</td><td>Semis</td><td>Fade</td><td class="r num">0.523</td><td class="r fpf">1.035</td><td class="r num">1.98&times;</td><td class="r num">30.4%</td><td class="r num">57</td><td class="mt">&mdash;</td></tr>
-    <tr class="loss"><td class="r num">48</td><td class="sym">XLF<sup>&dagger;</sup></td><td>ETF</td><td>Continuation</td><td class="r num">0.923</td><td class="r fpf">0.979</td><td class="r num">1.06&times;</td><td class="r num">34.1%</td><td class="r num">313</td><td class="mt">&mdash;</td></tr>
-    <tr class="loss"><td class="r num">49</td><td class="sym">PEP<sup>&dagger;</sup></td><td>Single-name</td><td>Fade</td><td class="r num">0.749</td><td class="r fpf">0.849</td><td class="r num">1.13&times;</td><td class="r num">28.7%</td><td class="r num">165</td><td class="mt y">&#10003; 1.595 &middot; 6.47%</td></tr>
-    <tr class="loss"><td class="r num">50</td><td class="sym">TLT<sup>&dagger;</sup></td><td>ETF</td><td>Fade</td><td class="r num">0.653</td><td class="r fpf">0.809</td><td class="r num">1.24&times;</td><td class="r num">26.4%</td><td class="r num">93</td><td class="mt y">&#10003; 1.232 &middot; 17.71%</td></tr>
-    <!--SCAN_ROWS_B_END-->
+      <tr><td>Index &amp; sector ETFs</td><td class="r num">11</td><td class="r num">8</td><td class="r num">2.25</td><td class="r num">4.53 · GLD</td></tr>
+      <tr><td>Semiconductors</td><td class="r num">18</td><td class="r num">9</td><td class="r num">1.63</td><td class="r num">3.84 · LRCX</td></tr>
+      <tr><td>Single-name leaders</td><td class="r num">7</td><td class="r num">7</td><td class="r num">3.19</td><td class="r num">5.75 · DE</td></tr>
     </tbody>
   </table>
-  <div class="tcap"><sup>†</sup> XLF, TLT and PEP did not reach a profit factor of 1.0 under the greedy pass; PEP and TLT were subsequently rescued by deep tuning (Section 4), XLF not yet attempted. <strong>Micro-tuned</strong>: ✓ = full deep tune verified live, showing the post-tune profit factor and drawdown; — = greedy pass only. Greedy figures are in-sample, net of commission and slippage.</div>
   <div class="rule"></div>
-  <h3 style="margin-top:1mm">What the cross-section shows</h3>
-  <p>Read blind, the cross-section sorts itself into two structural temperaments. The engine resolves <strong>34 of 50 names as faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — and <strong>16 as continuation</strong> names, where the edge is riding the break. <strong>44 of 50 run long-only</strong>, the signature of a passive complex accumulating the book as one coordinated actor. None of this was imposed; it was recovered from price.</p>
-  <div class="grid2" style="margin-top:4mm">
-    <div>
-      <table class="mini">
-        <caption>By behavioural family</caption>
-        <thead><tr><th>Family</th><th class="r">Names</th><th class="r">Mean PF</th><th class="r">Mean DD</th></tr></thead>
-        <tbody>
-          <tr><td>Fade</td><td class="r num">34</td><td class="r num">1.79</td><td class="r num">21.8%</td></tr>
-          <tr><td>Continuation</td><td class="r num">16</td><td class="r num">1.69</td><td class="r num">25.8%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <table class="mini">
-        <caption>By instrument class</caption>
-        <thead><tr><th>Class</th><th class="r">Profit.</th><th class="r">Mean PF</th><th class="r">Best</th></tr></thead>
-        <tbody>
-          <tr><td>Index &amp; sector ETFs</td><td class="r num">17 / 19</td><td class="r num">1.95</td><td class="r num">4.84</td></tr>
-          <tr><td>Semiconductors</td><td class="r num">20 / 20</td><td class="r num">1.76</td><td class="r num">3.35</td></tr>
-          <tr><td>Single-name leaders</td><td class="r num">10 / 11</td><td class="r num">1.43</td><td class="r num">2.28</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <p style="margin-top:4mm">The read pays most where the flow is most forced: mean profit factor rose from <strong>0.94 to 1.76</strong>, and 29 names crossed from a losing baseline into profit. The cleanest cells are the diversified ETFs — gold, healthcare, the broad index complex — combining a profit factor near or above two with single-digit drawdowns; the semiconductors are spikier, contributing the highest individual readings at wider drawdown. Three names failed the greedy pass and are shown as such, not hidden.</p>
+  <h3>The queue, and what discipline holds back</h3>
+  <p>Twelve names sit at or below a profit factor of 1.5 and are <strong>held back for re-tuning</strong> rather than presented as finished. Two — AMAT and the financials proxy XLF — could not clear a profit factor of 1.0 at thirty trades and are deferred outright. No result is admitted on fewer than thirty trades, and no figure has been selected after the fact to flatter the whole. Sixteen of the fifty-two symbols remain untuned; the book is published as it stands, not as it will read when it is finished.</p>
   <div class="pfoot">wattsonworks.github.io/framework</div>
   <div class="pnum">5</div>
 </section>
@@ -304,30 +256,28 @@
 <section class="page">
   <div class="rh"><span class="b">LIQUIDEX Framework — Research Brief</span><span>§4 · Worked examples</span></div>
   <span class="secnum">Section 4</span>
-  <h2>Worked examples: the per-instrument read</h2>
-  <p style="margin-bottom:5mm">Two of the three names that failed the greedy pass were not dead — they were misread. Each is opened up below. Together they make the same point from opposite sides: the read is not a setting but an understanding of the actor's temperament, expressed as a configuration.</p>
+  <h2>Worked examples: the per-symbol read</h2>
+  <p style="margin-bottom:5mm">Two symbols from the book, opened all the way up. Together they make the same point from opposite sides: the read is not a setting but an understanding of the actor's temperament, expressed as a configuration.</p>
 
   <div class="case">
     <h3>PEP — <em>when the desk is patient</em></h3>
     <div class="caserow">
       <div class="prose">
-        <p>A liquidation cascade never comes for a consumer staple. PepsiCo is not where leverage blows up; it is where patient, mandate-driven capital accumulates and defends. Its flow is quiet, two-sided and mean-reverting — and that is precisely why the default read failed it, listening for violence in a market that trades on patience.</p>
+        <p>A liquidation cascade never comes for a consumer staple. PepsiCo is not where leverage blows up; it is where patient, mandate-driven capital accumulates and defends. Its flow is quiet, two-sided and mean-reverting — and that is precisely why a default read fails it, listening for violence in a market that trades on patience.</p>
         <p>Reading the desk meant matching the algorithm to the psychology: both directions enabled, the reward-to-risk gate raised so only the cleanest reversals qualify, iceberg absorption set deliberately slow to wait for genuinely defended size, and the risk gate tightened on the short side. The coin-flip became a clean, low-drawdown edge.</p>
       </div>
       <div class="data">
         <table class="mini">
-          <caption>PEP · progression</caption>
+          <caption>PEP · result</caption>
           <tbody>
-            <tr><td>Raw engine</td><td class="r num">0.749</td></tr>
-            <tr><td>Greedy pass</td><td class="r num">0.849</td></tr>
-            <tr><td><strong>Deep micro-tune</strong></td><td class="r big">1.595</td></tr>
+            <tr><td><strong>Profit factor</strong></td><td class="r big">1.595</td></tr>
             <tr><td>Net return</td><td class="r num">+31.24%</td></tr>
             <tr><td>Max drawdown</td><td class="r num">6.47%</td></tr>
             <tr><td>Win rate</td><td class="r num">48.60%</td></tr>
             <tr><td>Trades</td><td class="r num">107</td></tr>
           </tbody>
         </table>
-        <div class="confnote"><strong>Configuration:</strong> 11 reads, 6 tuned parameters. Long + short, raised R:R gate, iceberg at 5 hits, high-volume sweep exhaustion, short-side risk gate tightened. Verified live.</div>
+        <div class="confnote"><strong>Configuration:</strong> long + short, raised R:R gate, iceberg at 5 hits, high-volume sweep exhaustion, short-side risk gate tightened. Verified live.</div>
       </div>
     </div>
   </div>
@@ -337,27 +287,25 @@
     <div class="caserow">
       <div class="prose">
         <p>TLT is long-duration Treasuries — a macro vehicle, not a tape that liquidity desks push to clean technical walls. Its price is dragged by rate expectations and central-bank language, and the full move to the opposing wall rarely completes, because a data print interrupts it first. Everything one adds to it is fragile: tighten the stop and the chop removes you; widen the target and the move dies before it arrives.</p>
-        <p>What rescued it was not another signal but profit-taking discipline. Banking <strong>60% of the position two-thirds of the way to the wall</strong> — and running a small remainder — stops demanding a completion the macro will not give. The whole result balances on those two Partial-TP values.</p>
+        <p>What rescued it was profit-taking discipline — banking 60% of the position two-thirds of the way to the wall — and a wide sweep stop. A buffer-30 stop lifts the result past the earlier 1.232; the whole edge balances on those two levers.</p>
       </div>
       <div class="data">
         <table class="mini">
-          <caption>TLT · progression</caption>
+          <caption>TLT · result</caption>
           <tbody>
-            <tr><td>Raw engine</td><td class="r num">0.653</td></tr>
-            <tr><td>Greedy pass</td><td class="r num">0.809</td></tr>
-            <tr><td><strong>Deep micro-tune</strong></td><td class="r big">1.232</td></tr>
-            <tr><td>Net return</td><td class="r num">+15.73%</td></tr>
-            <tr><td>Max drawdown</td><td class="r num">17.71%</td></tr>
-            <tr><td>Win rate</td><td class="r num">47.44%</td></tr>
-            <tr><td>Trades</td><td class="r num">215</td></tr>
+            <tr><td><strong>Profit factor</strong></td><td class="r big">1.272</td></tr>
+            <tr><td>Net return</td><td class="r num">+18.05%</td></tr>
+            <tr><td>Max drawdown</td><td class="r num">17.66%</td></tr>
+            <tr><td>Win rate</td><td class="r num">48.78%</td></tr>
+            <tr><td>Trades</td><td class="r num">205</td></tr>
           </tbody>
         </table>
-        <div class="confnote"><strong>The lever:</strong> Partial-TP — bank 60% at 0.66 of the distance to the wall, run a sliver. Long + short, cascade-fade only, wide sweep stop, wall-target. Verified live.</div>
+        <div class="confnote"><strong>The levers:</strong> a wide sweep stop (buffer 30) over the earlier 1.232, plus Partial-TP banking 60% at 0.66 to the wall. Long + short, cascade-fade, wall-target. Verified live. <strong>Flagged to re-microtune</strong> (PF ≤ 1.5).</div>
       </div>
     </div>
   </div>
 
-  <p style="margin-top:6mm;font-size:9.7pt;color:var(--muted)"><strong style="color:var(--ink)">A recipe this specific is where overfitting hides.</strong> Both cells carry the out-of-sample flag of Section 5: an in-sample rescue is the entry condition for validation, never a deployment claim.</p>
+  <p style="margin-top:6mm;font-size:9.7pt;color:var(--muted)"><strong style="color:var(--ink)">A recipe this specific is where overfitting hides.</strong> Both cells carry the out-of-sample flag of Section 5: an in-sample result is the entry condition for validation, never a deployment claim.</p>
   <div class="pfoot">wattsonworks.github.io/framework</div>
   <div class="pnum">6</div>
 </section>
@@ -381,7 +329,7 @@
     </tbody>
   </table>
   <div class="rule"></div>
-  <p>Two of the three names that failed the greedy pass were rescued only by deep, instrument-specific tuning. Such recipes carry the greatest overfitting risk, and are explicitly withheld from any deployment claim until they clear the out-of-sample gate. The honest summary of the present state is this: the evidence is strong enough to justify that work, and not yet a substitute for it.</p>
+  <p>The strongest cells in the book are long-only fades through a secular-bull window; their high win rates are the clearest sign that out-of-sample work is owed, not optional. The honest summary of the present state is this: the evidence is strong enough to justify that work, and not yet a substitute for it. Twelve of the thirty-six are explicitly held back for re-tuning; sixteen of the fifty-two are not yet begun.</p>
   <div class="pfoot">wattsonworks.github.io/framework</div>
   <div class="pnum">7</div>
 </section>
@@ -400,7 +348,7 @@
   <div class="access">
     <div class="lab">Access &amp; partnership</div>
     <p>Operators receive invite-only access on TradingView: send a TradingView username, access is granted, and the signals arrive as alerts on phone, desktop or a connected trading bot. Access and pricing are available on request.</p>
-    <p>The defensible asset is the method — a protocol for reading the institutional desks behind the order flow that reproduces across a fifty-instrument cross-section, equities and macro alike. It is open to licensing, a strategic research partnership, or full acquisition.</p>
+    <p>The defensible asset is the method — a protocol for reading the institutional desks behind the order flow that reproduces across the universe, equities and macro alike. It is open to licensing, a strategic research partnership, or full acquisition.</p>
     <div class="contact">WhatsApp +972 50 678 7586 &nbsp;<span>·</span>&nbsp; wattsonworks.github.io/framework</div>
   </div>
   <div class="disc">For research and educational purposes only. All performance figures in this document are historical, hypothetical, in-sample backtest results (non-repainting, computed with commission and slippage), are not audited, and are not indicative of future results. Trading involves substantial risk of loss. Nothing in this document is financial advice or an offer of securities. © 2026 LIQUIDEX Framework · wattsonworks.</div>
