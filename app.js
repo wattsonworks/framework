@@ -72,3 +72,96 @@
     if (bar) bar.style.borderBottomColor = window.scrollY > 8 ? 'rgba(236,233,225,.18)' : '';
   }, { passive: true });
 })();
+
+/* ============ Cross-section table — render / sort / filter ============ */
+(function () {
+  'use strict';
+  var SCAN = window.SCAN;
+  var body = document.getElementById('xbody');
+  if (!SCAN || !body) return;
+  var rows = SCAN.rows.slice();
+  var isSafe = function (r) { return r.dd <= 15 && r.pf >= 1.3; };
+
+  var state = { filter: 'all', sortKey: 'pf', sortDir: -1 };
+
+  function pfClass(r) {
+    if (r.pf >= 2 && r.dd < 15) return 'pf-star';
+    if (r.pf >= 1.5) return 'pf-strong';
+    if (r.pf >= 1) return 'pf-ok';
+    return 'pf-neg';
+  }
+  function ddClass(r) { return r.dd <= 12 ? 'ddlow' : (r.dd >= 30 ? 'ddhi' : ''); }
+  function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+
+  function confHTML(conf) {
+    return conf.map(function (c, i) {
+      var cls = i === 0 ? 'cbadge dir' : 'cbadge';
+      return '<span class="' + cls + '">' + esc(c) + '</span>';
+    }).join('');
+  }
+
+  function matches(r) {
+    var f = state.filter;
+    if (f === 'all') return true;
+    if (f === 'safe') return isSafe(r);
+    if (f === 'fade' || f === 'continuation') return r.family === f;
+    return r.sector === f;
+  }
+
+  function render() {
+    var list = rows.filter(matches);
+    var k = state.sortKey, dir = state.sortDir;
+    list.sort(function (a, b) {
+      var av = a[k], bv = b[k];
+      if (typeof av === 'string') return av < bv ? -dir : av > bv ? dir : 0;
+      return (av - bv) * dir;
+    });
+    if (!list.length) { body.innerHTML = '<tr><td colspan="10" class="xempty">No instruments in this view.</td></tr>'; return; }
+    body.innerHTML = list.map(function (r) {
+      return '<tr class="' + (r.pf < 1 ? 'row-loss' : '') + '">' +
+        '<td class="sym">' + esc(r.sym) + '</td>' +
+        '<td class="sec">' + esc(r.sectorLabel) + '</td>' +
+        '<td><span class="fampill ' + r.family + '">' + esc(r.family) + '</span></td>' +
+        '<td class="r base">' + r.base.toFixed(3) + '</td>' +
+        '<td class="r pf ' + pfClass(r) + '">' + r.pf.toFixed(3) + '</td>' +
+        '<td class="r lift">' + (r.lift != null ? r.lift.toFixed(2) + '×' : '—') + '</td>' +
+        '<td class="r dd ' + ddClass(r) + '">' + r.dd.toFixed(1) + '%</td>' +
+        '<td class="r win">' + r.win.toFixed(0) + '%</td>' +
+        '<td class="r tr">' + r.trades + '</td>' +
+        '<td class="confcell">' + confHTML(r.conf) + '</td>' +
+      '</tr>';
+    }).join('');
+  }
+
+  function markHeaders() {
+    document.querySelectorAll('#xtable thead th[data-sort]').forEach(function (th) {
+      th.classList.remove('sorted-asc', 'sorted-desc');
+      if (th.getAttribute('data-sort') === state.sortKey)
+        th.classList.add(state.sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+    });
+  }
+
+  /* sortable headers */
+  document.querySelectorAll('#xtable thead th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.getAttribute('data-sort');
+      if (state.sortKey === key) { state.sortDir *= -1; }
+      else { state.sortKey = key; state.sortDir = (key === 'sym' || key === 'sectorLabel' || key === 'family') ? 1 : -1; }
+      markHeaders(); render();
+    });
+  });
+
+  /* filter chips */
+  var chips = document.querySelectorAll('#xfilters .xchip');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('on'); });
+      chip.classList.add('on');
+      state.filter = chip.getAttribute('data-filter');
+      render();
+    });
+  });
+
+  markHeaders();
+  render();
+})();

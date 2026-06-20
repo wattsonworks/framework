@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LIQUIDEX Framework — a multi-asset liquidity & market-structure engine</title>
-<meta name="description" content="One liquidity engine, validated across six asset classes — semiconductors, mega-cap tech, industrials, consumer, financials and macro ETFs. 1,444+ trades. A multi-asset quantitative framework, delivered invite-only on TradingView." />
+<title>LIQUIDEX Framework — a systematic liquidity-research operation</title>
+<meta name="description" content="One engine, fifty instruments, one timeframe — each read down to the institutional desk that moves it. A disciplined per-instrument research protocol, delivered invite-only on TradingView. Not a stock strategy. A research operation." />
 <meta name="theme-color" content="#0a0b0e" />
-<meta property="og:title" content="LIQUIDEX Framework — multi-asset liquidity & market-structure engine" />
-<meta property="og:description" content="One engine, six asset classes, 1,444+ trades. It detects repeating liquidity behaviour across markets — not a stock strategy, a framework." />
+<meta property="og:title" content="LIQUIDEX Framework — systematic liquidity research across a 50-instrument cross-section" />
+<meta property="og:description" content="One engine reads the desks behind the order flow. A controlled 50-instrument cross-section, each name read to its desk and tuned by protocol. Not a stock strategy — a research operation." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20260620" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -22,8 +22,9 @@
   <a class="brand" href="#top"><b>LIQUIDEX</b><span>Framework</span></a>
   <nav class="nav-links" id="nav-links">
     <a href="#thesis" data-i18n="nav_thesis">Mechanism</a>
-    <a href="#coverage" data-i18n="nav_coverage">Universe</a>
+    <a href="#protocol" data-i18n="nav_protocol">Protocol</a>
     <a href="#evidence" data-i18n="nav_evidence">Evidence</a>
+    <a href="#case" data-i18n="nav_case">Case</a>
     <a href="#access" class="nav-cta" data-i18n="nav_access">Partner</a>
   </nav>
   <div class="topbar-right">
@@ -38,30 +39,30 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="hero_eyebrow">Quantitative liquidity research · multi-asset</div>
-    <h1 class="reveal in" data-i18n="hero_h1">One mechanism.<br><em>Many markets.</em></h1>
-    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a research-driven framework built on a single idea: institutional liquidity leaves the same structural footprint wherever it trades. We built a mechanism that identifies that recurring behaviour — and it already holds across <strong>equities, ETFs, gold, bonds, FX and Japanese markets</strong>. The breadth is the result. The mechanism is the point.</p>
+    <div class="eyebrow" data-i18n="hero_eyebrow">Systematic liquidity research · a 50-instrument cross-section</div>
+    <h1 class="reveal in" data-i18n="hero_h1">Every desk leaves a footprint.<br><em>We read all of them.</em></h1>
+    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a systematic research operation built on one principle: institutional liquidity leaves the same structural footprint wherever it trades. To test it we ran one engine across <strong>fifty instruments at a single timeframe</strong> — and read each one down to the desk that moves it, under one disciplined protocol. The breadth is not a feature. It is the proof.</p>
     <div class="hero-cta">
-      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">Read the research</a>
-      <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Partner with us</a>
+      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">See the cross-section</a>
+      <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Open a partnership line</a>
     </div>
 
     <div class="frames">
-      <div class="frame"><span class="dot"></span><span data-i18n="frame1">Research framework</span></div>
-      <div class="frame"><span class="dot"></span><span data-i18n="frame2">Quant research project</span></div>
+      <div class="frame"><span class="dot"></span><span data-i18n="frame1">Controlled cross-section</span></div>
+      <div class="frame"><span class="dot"></span><span data-i18n="frame2">Per-instrument protocol</span></div>
       <div class="frame"><span class="dot"></span><span data-i18n="frame3">Trading IP</span></div>
     </div>
 
     <div class="metricstrip">
-      <div class="m"><div class="mv" data-count="6" data-suffix="+">6+</div><div class="ml" data-i18n="m1">Asset classes</div></div>
-      <div class="m"><div class="mv" data-count="1444" data-suffix="+">1,444+</div><div class="ml" data-i18n="m2">Trades studied</div></div>
-      <div class="m"><div class="mv" data-count="2.78" data-decimals="2">2.78</div><div class="ml" data-i18n="m3">Top profit factor</div></div>
-      <div class="m"><div class="mv" data-count="6.1" data-decimals="1" data-suffix="%">6.1%</div><div class="ml" data-i18n="m4">Lowest drawdown</div></div>
+      <div class="m"><div class="mv" data-count="1.87" data-decimals="2" data-suffix="×">1.87×</div><div class="ml" data-i18n="m1">Mean lift over the raw engine</div></div>
+      <div class="m"><div class="mv" data-count="47" data-suffix="/50">47/50</div><div class="ml" data-i18n="m2">Profitable once read</div></div>
+      <div class="m"><div class="mv" data-count="4.84" data-decimals="2">4.84</div><div class="ml" data-i18n="m3">Peak profit factor · SMH</div></div>
+      <div class="m"><div class="mv" data-count="6.9" data-decimals="1" data-suffix="%">6.9%</div><div class="ml" data-i18n="m4">Cleanest drawdown · GLD</div></div>
     </div>
   </div>
 </section>
 
-<!-- THESIS -->
+<!-- 01 THESIS / MECHANISM -->
 <section class="section" id="thesis">
   <div class="wrap">
     <div class="shead-row"><span class="section-num">01</span><div class="eyebrow" style="margin:0" data-i18n="th_kick">The mechanism</div></div>
@@ -71,166 +72,182 @@
         <div class="pull" data-i18n="th_pull">"An edge that lives in one market is a curve-fit. An edge that recurs across many is a discovery."</div>
       </div>
       <div class="body">
-        <p data-i18n="th_p1">Institutional order flow leaves a structural footprint — resting liquidity, sweeps, the exhaustion of a cascade. Our claim is narrow and testable: that footprint is <strong>the same across instruments</strong>. The mechanism reads it, and resolves it into one rule-based trade — entry, structural stop, target, breakeven, time-stop.</p>
-        <p data-i18n="th_p2">If that is true, the edge should not care whether it is looking at a semiconductor, an ETF, gold, a long bond, a currency pair or a Japanese name. <strong>So far, it doesn't.</strong> The same logic has been studied across <strong>1,444+ trades and six-plus asset classes</strong>, each at its own timeframe.</p>
-        <p data-i18n="th_p3">That breadth is the finding. It is the difference between a single-market product and a <strong>research framework</strong> — and it is the profile a desk, a partner or an allocator is looking for: a repeatable, explainable signal that is not confined to one corner of the market.</p>
+        <p data-i18n="th_p1">Institutional order flow is not noise — it is the residue of decisions. Resting liquidity, manufactured sweeps, iceberg absorption, the exhaustion of a cascade. Each is a behavioural signature, and each repeats. The engine reads it and resolves it into one rule-based position — entry, structural stop, target, breakeven, time-stop.</p>
+        <p data-i18n="th_p2">And it does not merely detect the anomaly — it <strong>profiles the actor behind it</strong>: what they are doing, where they are going, and whether they are masking it. The configuration that profits on a chart is the fingerprint of who controls its flow. Read across a sector, those fingerprints resolve into a handful of repeating <strong>institutional desks</strong>.</p>
+        <p data-i18n="th_p3">That is the layer a desk, a partner or an allocator is looking for: not a signal that fires, but a read on the institution behind the tape — repeatable, explainable, and present wherever institutions trade. The rest of this page is the evidence, the method, and one tuning in full.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COVERAGE — 6 asset classes -->
+<!-- 02 THE PROTOCOL -->
+<section class="section" id="protocol">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead-row"><span class="section-num">02</span><div class="eyebrow" style="margin:0" data-i18n="pr_kick">The protocol</div></div>
+      <h2 data-i18n="pr_h2">How we read a desk — <em>one instrument at a time</em></h2>
+      <p class="lead" data-i18n="pr_lead">Breadth means nothing without method. Every instrument runs the same disciplined protocol: isolate the engine, add only what pays, tune only what survives, discard anything that needs a curve to look good. This is the exact process behind every row in the table below.</p>
+    </div>
+    <div class="protocol reveal">
+      <div class="pstep"><div class="ps-n">01</div><h4 data-i18n="pr1_h">Baseline</h4><p data-i18n="pr1_p">Strip the engine to its core — gates off, defaults on. Record the raw profit factor, drawdown and trade count. This is the coin-flip we have to beat.</p></div>
+      <div class="pstep"><div class="ps-n">02</div><h4 data-i18n="pr2_h">Greedy forward-selection</h4><p data-i18n="pr2_p">Add one behavioural read at a time — cascade-stop, wall-target, the risk gate, risk-velocity, iceberg absorption, sweep exhaustion. Keep a read only if it improves the risk-adjusted result; revert it the moment it doesn't.</p></div>
+      <div class="pstep"><div class="ps-n">03</div><h4 data-i18n="pr3_h">Coupled tuning</h4><p data-i18n="pr3_p">A read is judged at its <em>tuned</em> setting, not its default. Each kept read has its sensitivity swept up and down; if it can't pay at any setting, it is dropped — not parked at a default that flatters it.</p></div>
+      <div class="pstep"><div class="ps-n">04</div><h4 data-i18n="pr4_h">Two-pass refinement</h4><p data-i18n="pr4_p">Walk the surviving configuration a second time, nudging each secondary setting, reverting the instant the curve degrades. The final recipe is the one nothing further improves.</p></div>
+      <div class="pstep"><div class="ps-n">05</div><h4 data-i18n="pr5_h">Risk-adjusted scoring</h4><p data-i18n="pr5_p">Every decision is made on <span class="mono">S = PF ÷ (1 + drawdown)</span>, never profit factor alone, with a hard floor of 30 trades. A spectacular curve on twelve trades does not qualify.</p></div>
+      <div class="pstep"><div class="ps-n">06</div><h4 data-i18n="pr6_h">Walk-forward gate</h4><p data-i18n="pr6_p">A recipe this specific must clear out-of-sample before it is real. Every deep-tuned cell carries that flag. In-sample strength is the entry ticket, not the verdict.</p></div>
+    </div>
+    <div class="pull pull-wide reveal" data-i18n="pr_pull">"We don't search for the setting that makes a chart look good. We search for the read that survives being doubted."</div>
+  </div>
+</section>
+
+<!-- 03 EVIDENCE — the full cross-section -->
+<section class="section" id="evidence">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the cross-section</div></div>
+      <h2 data-i18n="ev_h2">Fifty instruments. One timeframe. <em>Each read to its desk.</em></h2>
+      <p class="lead" data-i18n="ev_lead">The full 4-hour cross-section — every instrument we profiled, shown in full, winners and the three that didn't clear. <strong>Base</strong> is the raw engine; <strong>Final</strong> is after the protocol; <strong>Lift</strong> is the ratio. <strong>Confluence</strong> is the exact set of behavioural reads each name needed. Nothing is hidden.</p>
+    </div>
+
+    <div class="xfilters reveal" id="xfilters" role="tablist" aria-label="Filter the cross-section">
+      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 50</button>
+      <button class="xchip" data-filter="ETF" data-i18n="flt_etf">ETFs · 19</button>
+      <button class="xchip" data-filter="SEMIS" data-i18n="flt_semis">Semis · 20</button>
+      <button class="xchip" data-filter="PRIORITY" data-i18n="flt_single">Single-names · 11</button>
+      <button class="xchip" data-filter="fade" data-i18n="flt_fade">Fade · 34</button>
+      <button class="xchip" data-filter="continuation" data-i18n="flt_cont">Continuation · 16</button>
+      <button class="xchip" data-filter="safe" data-i18n="flt_safe">Safe book · 10</button>
+    </div>
+
+    <div class="tablewrap reveal">
+      <div class="table-scroll"><table class="data xtable" id="xtable">
+        <thead><tr>
+          <th data-sort="sym" data-i18n="th_sym">Symbol</th>
+          <th data-sort="sectorLabel" data-i18n="th_class">Class</th>
+          <th data-sort="family" data-i18n="th_fam">Family</th>
+          <th class="r" data-sort="base" data-i18n="th_base">Base</th>
+          <th class="r" data-sort="pf" data-sort-default data-i18n="th_pf">Final PF</th>
+          <th class="r" data-sort="lift" data-i18n="th_lift">Lift</th>
+          <th class="r" data-sort="dd" data-i18n="th_dd">Max DD</th>
+          <th class="r" data-sort="win" data-i18n="th_win">Win</th>
+          <th class="r" data-sort="trades" data-i18n="th_tr">Trades</th>
+          <th data-i18n="th_conf">Confluence</th>
+        </tr></thead>
+        <tbody id="xbody"><!-- rendered from scan-data.js --></tbody>
+      </table></div>
+    </div>
+    <p class="table-cap" id="xcap" data-i18n="ev_cap"><strong>47 of 50 profitable once read — and 29 of them flipped from a losing baseline into profit.</strong> Mean profit factor rose 0.94 → 1.76, a 1.87× lift, with the read paying most where the flow is most forced. Three names — XLF, TLT and the staple PEP — did not clear the bar at default depth. One of them is the subject of the next section. All figures in-sample, net of commission and slippage.</p>
+  </div>
+</section>
+
+<!-- 04 CASE STUDY — PEP -->
+<section class="section" id="case">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead-row"><span class="section-num">04</span><div class="eyebrow" style="margin:0" data-i18n="cs_kick">Anatomy of a tune · behaviour × algorithm</div></div>
+      <h2 data-i18n="cs_h2">PEP — <em>when the desk is patient</em></h2>
+      <p class="lead" data-i18n="cs_lead">One row from the table above, opened all the way up. PepsiCo is where the protocol earns its name — and where reading a market's temperament and tuning an algorithm to match it do together what neither does alone.</p>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-prose">
+        <p data-i18n="cs_p1">A liquidation cascade never comes for a soda company. PepsiCo is not where leverage blows up — it is where patient, mandate-driven capital accumulates and defends. Its flow is quiet, two-sided, mean-reverting: the temperament of a holder, not a gambler.</p>
+        <p data-i18n="cs_p2">That temperament is exactly why the default read failed it. At baseline PEP is a coin-flip — <strong>profit factor 0.749</strong>. The standard greedy pass barely moved it, to <strong>0.849</strong> — one of only three names in fifty that would not clear. The engine was listening for violence in a market that trades on patience.</p>
+        <p data-i18n="cs_p3">Reading the desk meant matching the algorithm to the psychology. <strong>Both directions enabled</strong> — a staple gets faded at its highs and bought at its lows. The reward-to-risk gate <strong>raised</strong>, so only the cleanest reversals qualify. Iceberg absorption set deliberately <strong>slow</strong> — five hits, not three — to ignore noise and wait for genuinely defended size. Sweep-exhaustion tuned to a <strong>high-volume</strong> threshold, acting only when a level is truly spent. The risk gate <strong>tightened on the short side</strong>, because a staple punishes shorts that fight the accumulation. Then a second pass — nudging each knob, reverting on every degrade.</p>
+        <p data-i18n="cs_p4">Eleven toggles, six tuned parameters, a revert at every step the curve worsened — and the coin-flip became a clean, low-drawdown edge. <strong>Reproduced live, not asserted.</strong> The point is not the number. It is that the number required reading a market's temperament and tuning a machine to match it: behavioural judgement and algorithmic discipline, each covering what the other cannot see.</p>
+        <div class="case-flag" data-i18n="cs_flag"><strong>The honest caveat.</strong> A recipe this deep is also where overfitting hides. PEP carries the walk-forward flag like every deep-tuned cell — in-sample proof is the entry ticket, not the verdict.</div>
+      </div>
+
+      <aside class="case-panel">
+        <div class="cp-title" data-i18n="cs_panel_t">PEP · the progression</div>
+        <div class="cp-steps">
+          <div class="cp-step"><span class="cp-lab" data-i18n="cs_s1">Raw engine</span><span class="cp-val neg">0.749</span></div>
+          <div class="cp-arrow">↓</div>
+          <div class="cp-step"><span class="cp-lab" data-i18n="cs_s2">Default greedy pass</span><span class="cp-val neg">0.849</span></div>
+          <div class="cp-arrow">↓</div>
+          <div class="cp-step big"><span class="cp-lab" data-i18n="cs_s3">Behavioural micro-tune</span><span class="cp-val pos">1.595</span></div>
+        </div>
+        <div class="cp-grid">
+          <div class="cp-cell"><div class="cp-k">6.5%</div><div class="cp-d" data-i18n="cs_m1">Max drawdown</div></div>
+          <div class="cp-cell"><div class="cp-k">107</div><div class="cp-d" data-i18n="cs_m2">Trades</div></div>
+          <div class="cp-cell"><div class="cp-k">48.6%</div><div class="cp-d" data-i18n="cs_m3">Win rate</div></div>
+          <div class="cp-cell"><div class="cp-k">11 · 6</div><div class="cp-d" data-i18n="cs_m4">Toggles · params</div></div>
+        </div>
+        <div class="cp-foot" data-i18n="cs_panel_f">Long + short · raised R:R gate · iceberg @ 5 hits · high-volume sweep exhaustion · short-side risk gate tightened.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 05 COVERAGE — the universe -->
 <section class="section" id="coverage">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">02</span><div class="eyebrow" style="margin:0" data-i18n="cov_kick">The universe</div></div>
-      <h2 data-i18n="cov_h2">The universe keeps <em>widening</em></h2>
-      <p class="lead" data-i18n="cov_lead">The mechanism already runs across these markets. Each carries at least one validated, tradeable edge — most over 100 trades, at sane drawdown. FX and Japan are the newest frontiers, under active validation.</p>
+      <div class="shead-row"><span class="section-num">05</span><div class="eyebrow" style="margin:0" data-i18n="cov_kick">The universe</div></div>
+      <h2 data-i18n="cov_h2">One logic. <em>No asset-class boundary.</em></h2>
+      <p class="lead" data-i18n="cov_lead">The same protocol runs across the semiconductor complex, index and sector ETFs, and single-name sector leaders. Each instrument carries its own validated, tradeable edge — and its own behavioural profile.</p>
     </div>
     <div class="markets reveal">
-      <span class="mk" data-i18n="mk_eq">Equities</span>
-      <span class="mk" data-i18n="mk_etf">ETFs</span>
-      <span class="mk" data-i18n="mk_gold">Gold</span>
-      <span class="mk" data-i18n="mk_bonds">Bonds · TLT</span>
-      <span class="mk frontier" data-i18n="mk_fx">FX · EUR/USD</span>
-      <span class="mk frontier" data-i18n="mk_jp">Japan · Nikkei</span>
-      <span class="mk more" data-i18n="mk_more">+ more sectors</span>
+      <span class="mk" data-i18n="mk_etf">Index & sector ETFs</span>
+      <span class="mk" data-i18n="mk_semis">Semiconductors</span>
+      <span class="mk" data-i18n="mk_gold">Gold · GLD</span>
+      <span class="mk" data-i18n="mk_bonds">Rates · TLT</span>
+      <span class="mk" data-i18n="mk_energy">Energy · XOM</span>
+      <span class="mk" data-i18n="mk_fin">Financials · JPM</span>
+      <span class="mk" data-i18n="mk_staples">Staples · KO · PEP</span>
     </div>
     <div class="coverage reveal">
       <div class="cov">
         <div class="cov-n">01</div>
-        <h3 data-i18n="cov1_h">Semiconductors</h3>
-        <div class="names">TSEM · MU · LRCX · AMAT · ASML</div>
-        <div class="cov-stat"><b>2.78</b><span data-i18n="cov_best">best PF</span></div>
+        <h3 data-i18n="cov1_h">Index & sector ETFs</h3>
+        <div class="names">SMH · XLK · XLV · QQQ · GLD · SPY · VOO</div>
+        <div class="cov-meta"><span data-i18n="cov_prof">17 / 19 profitable</span> · <span data-i18n="cov_mean">mean PF 1.95</span></div>
+        <div class="cov-stat"><b>4.84</b><span data-i18n="cov_best">best PF · SMH</span></div>
       </div>
       <div class="cov">
         <div class="cov-n">02</div>
-        <h3 data-i18n="cov2_h">Mega-cap tech</h3>
-        <div class="names">GOOGL · TSLA</div>
-        <div class="cov-stat"><b>2.30</b><span data-i18n="cov_best">best PF</span></div>
+        <h3 data-i18n="cov2_h">Semiconductors</h3>
+        <div class="names">AMD · LRCX · TSEM · TSM · NVDA · ADI</div>
+        <div class="cov-meta"><span data-i18n="cov_prof2">20 / 20 profitable</span> · <span data-i18n="cov_mean2">mean PF 1.76</span></div>
+        <div class="cov-stat"><b>3.35</b><span data-i18n="cov_best2">best PF · AMD</span></div>
       </div>
       <div class="cov">
         <div class="cov-n">03</div>
-        <h3 data-i18n="cov3_h">Industrials</h3>
-        <div class="names">CAT · GE</div>
-        <div class="cov-stat"><b>1.74</b><span data-i18n="cov_best">best PF</span></div>
-      </div>
-      <div class="cov">
-        <div class="cov-n">04</div>
-        <h3 data-i18n="cov4_h">Consumer</h3>
-        <div class="names">WMT</div>
-        <div class="cov-stat"><b>1.70</b><span data-i18n="cov_best">best PF</span></div>
-      </div>
-      <div class="cov">
-        <div class="cov-n">05</div>
-        <h3 data-i18n="cov5_h">Financials</h3>
-        <div class="names">AXP · BLK · BRK.B</div>
-        <div class="cov-stat"><b>1.46</b><span data-i18n="cov_best">best PF</span></div>
-      </div>
-      <div class="cov">
-        <div class="cov-n">06</div>
-        <h3 data-i18n="cov6_h">Macro ETFs</h3>
-        <div class="names">GLD · QQQ · TLT · SPY</div>
-        <div class="cov-stat"><b>1.91</b><span data-i18n="cov_best">best PF</span></div>
+        <h3 data-i18n="cov3_h">Single-name leaders</h3>
+        <div class="names">XOM · JPM · MA · COST · ETN · V</div>
+        <div class="cov-meta"><span data-i18n="cov_prof3">10 / 11 profitable</span> · <span data-i18n="cov_mean3">mean PF 1.43</span></div>
+        <div class="cov-stat"><b>2.28</b><span data-i18n="cov_best3">best PF · XOM</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EVIDENCE — Safe Core -->
-<section class="section" id="evidence">
-  <div class="wrap">
-    <div class="shead">
-      <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the book</div></div>
-      <h2 data-i18n="ev_h2">The safe core — <em>ten names, four asset classes</em></h2>
-      <p class="lead" data-i18n="ev_lead">The recommended portfolio, sorted by safety. Each name runs at its own best timeframe and breaker setting. Profit factor, drawdown and trade count are in-sample backtests, clean baseline.</p>
-    </div>
-    <div class="tablewrap reveal">
-      <div class="table-scroll"><table class="data">
-        <thead><tr>
-          <th data-i18n="th_sym">Symbol</th><th data-i18n="th_sec">Class</th><th data-i18n="th_tf">TF</th><th data-i18n="th_brk">Breaker</th>
-          <th class="r">PF</th><th class="r" data-i18n="th_dd">Max DD</th><th class="r" data-i18n="th_tr">Trades</th>
-        </tr></thead>
-        <tbody>
-          <tr><td class="sym">GOOGL</td><td class="sec">Mega-cap tech</td><td class="tf">45m</td><td class="brk">OFF</td><td class="r pf">2.30</td><td class="r num ddlow">6.1%</td><td class="r num">107</td></tr>
-          <tr><td class="sym">MU</td><td class="sec">Semiconductors</td><td class="tf">5m</td><td class="brk">OFF</td><td class="r pf">2.08</td><td class="r num ddlow">8.8%</td><td class="r num">103</td></tr>
-          <tr><td class="sym">QQQ</td><td class="sec">Macro ETF</td><td class="tf">long-only</td><td class="brk">OFF</td><td class="r pf">1.77</td><td class="r num ddlow">12.9%</td><td class="r num">166</td></tr>
-          <tr><td class="sym">AMAT</td><td class="sec">Semiconductors</td><td class="tf">1H</td><td class="brk on">ON</td><td class="r pf">1.79</td><td class="r num ddlow">13.0%</td><td class="r num">241</td></tr>
-          <tr><td class="sym">GLD</td><td class="sec">Macro ETF</td><td class="tf">4H</td><td class="brk">OFF</td><td class="r pf">1.91</td><td class="r num ddlow">13.0%</td><td class="r num">119</td></tr>
-          <tr><td class="sym">LRCX</td><td class="sec">Semiconductors</td><td class="tf">10m</td><td class="brk on">ON</td><td class="r pf">1.89</td><td class="r num">15.7%</td><td class="r num">203</td></tr>
-          <tr><td class="sym">CAT</td><td class="sec">Industrials</td><td class="tf">1H</td><td class="brk">OFF</td><td class="r pf">1.74</td><td class="r num">15.8%</td><td class="r num">126</td></tr>
-          <tr><td class="sym">TSEM</td><td class="sec">Semiconductors</td><td class="tf">1H</td><td class="brk">OFF</td><td class="r pf">2.78</td><td class="r num">16.5%</td><td class="r num">146</td></tr>
-          <tr><td class="sym">WMT</td><td class="sec">Consumer</td><td class="tf">4H</td><td class="brk">OFF</td><td class="r pf">1.70</td><td class="r num">18.7%</td><td class="r num">181</td></tr>
-          <tr><td class="sym">TSLA</td><td class="sec">Mega-cap tech</td><td class="tf">1H</td><td class="brk">OFF</td><td class="r pf">1.63</td><td class="r num">18.7%</td><td class="r num">337</td></tr>
-        </tbody>
-      </table></div>
-    </div>
-    <p class="table-cap" data-i18n="ev_cap"><strong>Ten names, four asset classes, every one PF ≥ 1.6 at ≤ 19% drawdown</strong> — most over 100 trades. Breaker ON only on AMAT and LRCX; OFF elsewhere. To deploy: set the symbol and timeframe, set the breaker as listed, leave everything else default.</p>
-  </div>
-</section>
-
-<!-- MACRO callout -->
+<!-- 06 MACRO — invariance / families -->
 <section class="section" id="macro">
   <div class="wrap">
     <div class="macro reveal">
       <div class="mtext">
-        <div class="shead-row"><span class="section-num">04</span><div class="eyebrow" style="margin:0" data-i18n="mac_kick">Macro proof</div></div>
-        <div class="big" data-i18n="mac_big">It works on <em>gold, the Nasdaq and long bonds</em>. That is the line a stock strategy can't cross.</div>
-        <p data-i18n="mac_p">An equity system that also reads GLD, QQQ and TLT is reading something structural — the same liquidity behaviour, across completely different instruments. This is the single most important finding in the book: it turns a strategy into a multi-asset framework.</p>
+        <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="mac_kick">Cross-instrument invariance</div></div>
+        <div class="big" data-i18n="mac_big">Every instrument resolves to one of two structural temperaments — and the split is <em>consistent.</em></div>
+        <p data-i18n="mac_p">Read blind, the cross-section sorts itself. <strong>34 of 50 names are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move (mean PF 1.79). <strong>16 are continuation</strong> — momentum and high-beta names, where the edge is riding the break (mean PF 1.69). <strong>44 of 50 run long-only</strong>, the fingerprint of a passive complex accumulating the book as one coordinated actor. An edge fitted to a chart dies on the next chart. An edge that sorts an entire universe into the same two desks is a property of the market.</p>
       </div>
       <div class="macro-grid">
-        <div class="macro-card"><div class="mc-sym">GLD</div><div class="mc-desc" data-i18n="mac_gld">Gold · 4H</div><div class="mc-row"><span class="mc-pf">1.91</span><span class="mc-dd">13.0% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">QQQ</div><div class="mc-desc" data-i18n="mac_qqq">Nasdaq 100 · long-only</div><div class="mc-row"><span class="mc-pf">1.77</span><span class="mc-dd">12.9% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">TLT</div><div class="mc-desc" data-i18n="mac_tlt">20Y+ Treasuries</div><div class="mc-row"><span class="mc-pf">1.42</span><span class="mc-dd">17.0% DD</span></div></div>
-        <div class="macro-card"><div class="mc-sym">SPY</div><div class="mc-desc" data-i18n="mac_spy">S&amp;P 500</div><div class="mc-row"><span class="mc-pf">1.27</span><span class="mc-dd">13.3% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">GLD</div><div class="mc-desc" data-i18n="mac_gld">Gold · fade</div><div class="mc-row"><span class="mc-pf">2.46</span><span class="mc-dd">6.9% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">XLV</div><div class="mc-desc" data-i18n="mac_xlv">Healthcare · continuation</div><div class="mc-row"><span class="mc-pf">2.45</span><span class="mc-dd">7.1% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">QQQ</div><div class="mc-desc" data-i18n="mac_qqq">Nasdaq 100 · fade</div><div class="mc-row"><span class="mc-pf">2.28</span><span class="mc-dd">9.7% DD</span></div></div>
+        <div class="macro-card"><div class="mc-sym">SPY</div><div class="mc-desc" data-i18n="mac_spy">S&amp;P 500 · fade</div><div class="mc-row"><span class="mc-pf">2.02</span><span class="mc-dd">9.9% DD</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECOND TIER + ANOMALIES -->
-<section class="section" id="more">
-  <div class="wrap">
-    <div class="shead">
-      <div class="shead-row"><span class="section-num">05</span><div class="eyebrow" style="margin:0" data-i18n="sec_kick">Second tier &amp; anomalies</div></div>
-      <h2 data-i18n="sec_h2">Diversifiers — and the honest footnotes</h2>
-      <p class="lead" data-i18n="sec_lead">A solid second tier extends the framework into financials and healthcare at 20–30% drawdown. The eye-catching weekly outliers are shown for what they are: anomalies, not proof.</p>
-    </div>
-    <div class="tablewrap reveal">
-      <div class="table-scroll"><table class="data">
-        <thead><tr><th data-i18n="th_sym">Symbol</th><th data-i18n="th_sec">Class</th><th data-i18n="th_tf">TF</th><th class="r">PF</th><th class="r" data-i18n="th_dd">Max DD</th></tr></thead>
-        <tbody>
-          <tr><td class="sym">ASML</td><td class="sec">Semiconductors</td><td class="tf">1H</td><td class="r pf">1.53</td><td class="r num">24.0%</td></tr>
-          <tr><td class="sym">ISRG</td><td class="sec">Healthcare</td><td class="tf">4H</td><td class="r pf">1.51</td><td class="r num">26.5%</td></tr>
-          <tr><td class="sym">AXP</td><td class="sec">Financials</td><td class="tf">4H</td><td class="r pf">1.46</td><td class="r num">20.9%</td></tr>
-          <tr><td class="sym">TLT</td><td class="sec">Macro ETF</td><td class="tf">—</td><td class="r pf">1.42</td><td class="r num ddlow">17.0%</td></tr>
-          <tr><td class="sym">BLK</td><td class="sec">Financials</td><td class="tf">3H</td><td class="r pf">1.42</td><td class="r num ddlow">18.0%</td></tr>
-          <tr><td class="sym">CHTR</td><td class="sec">Comms</td><td class="tf">1H</td><td class="r pf">1.37</td><td class="r num ddlow">13.4%</td></tr>
-          <tr><td class="sym">GE</td><td class="sec">Industrials</td><td class="tf">2H</td><td class="r pf">1.28</td><td class="r num">25.0%</td></tr>
-        </tbody>
-      </table></div>
-    </div>
-    <p class="table-cap" data-i18n="sec_cap"><strong>Financials are now travelling with the engine</strong> — BLK lifted from 1.33 to 1.42 under LIQUIDEX, with AXP and BRK.B confirming the class. A genuine new sector, not a one-off.</p>
-
-    <div style="margin-top:clamp(40px,6vw,72px)">
-      <div class="eyebrow" data-i18n="anom_kick">Anomalies · worth further validation</div>
-      <div class="anoms reveal">
-        <div class="anom"><div class="a-sym">DELL</div><div class="a-pf">10.34</div><div class="a-meta">1W · 23 trades</div></div>
-        <div class="anom"><div class="a-sym">PANW</div><div class="a-pf">6.08</div><div class="a-meta">1W · 28 trades</div></div>
-        <div class="anom"><div class="a-sym">SNOW</div><div class="a-pf">4.46</div><div class="a-meta">1W · 14 trades</div></div>
-      </div>
-      <p class="anom-note" data-i18n="anom_note">These weekly profit factors are spectacular and the samples are tiny. We present them as anomalies worth further validation — never as proof. Every standalone weekly is excluded from the book.</p>
-    </div>
-  </div>
-</section>
-
-<!-- RESEARCH AGENDA -->
+<!-- 07 RESEARCH AGENDA / RIGOR -->
 <section class="section" id="rigor">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="rig_kick">Research agenda</div></div>
-      <h2 data-i18n="rig_h2">From a strong backtest to a <em>track record</em></h2>
-      <p class="lead" data-i18n="rig_lead">We are explicit that today's evidence is in-sample. This is the agenda that turns it into an institutional-grade result — the work a serious desk, partner or allocator expects. We would rather show the roadmap than overclaim the result.</p>
+      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="rig_kick">The standard</div></div>
+      <h2 data-i18n="rig_h2">From a strong cross-section to a <em>live record</em></h2>
+      <p class="lead" data-i18n="rig_lead">The bar a serious desk, fund or allocator holds — and the one we hold ourselves to. The cross-section is the discovery; these are the tests that turn a discovery into a track record. We run the same protocol on our own research.</p>
     </div>
     <div class="agenda reveal">
       <div class="ag-item">
@@ -243,7 +260,7 @@
       </div>
       <div class="ag-item">
         <div class="ag-top"><h4 data-i18n="rig3_h">Out-of-sample</h4><span class="rb plan" data-i18n="rig_next">Next</span></div>
-        <p data-i18n="rig3_p">Today's results are in-sample. A held-out window the engine has never seen is the immediate next test — the single most important one.</p>
+        <p data-i18n="rig3_p">Today's results are in-sample. A held-out window the engine has never seen is the immediate next test — the single most important one, and the gate every deep-tuned cell waits behind.</p>
       </div>
       <div class="ag-item">
         <div class="ag-top"><h4 data-i18n="rig4_h">Walk-forward</h4><span class="rb plan" data-i18n="rig_planned">Planned</span></div>
@@ -261,11 +278,11 @@
   </div>
 </section>
 
-<!-- THE SYSTEM -->
+<!-- 08 THE SYSTEM -->
 <section class="section" id="system">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
+      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
       <h2 data-i18n="sys_h2">One engine. Two instruments.</h2>
       <p class="lead" data-i18n="sys_lead">LIQUIDEX decides the trade. Keeper ranks the universe live; Prophet sizes the risk and breaks it in the danger zone. All three are invite-only on TradingView.</p>
     </div>
@@ -295,11 +312,11 @@
   </div>
 </section>
 
-<!-- WHO IT'S FOR -->
+<!-- 09 WHO IT'S FOR -->
 <section class="section" id="fit">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
+      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
       <h2 data-i18n="fit_h2">Built for a particular kind of operator</h2>
       <p class="lead" data-i18n="fit_p">A tech-comfortable swing / position trader — or a desk — that wants a rules engine on a focused, liquid, multi-asset book, and reads the caveats. If that's not you, we'd rather say so up front.</p>
     </div>
@@ -307,10 +324,10 @@
       <div class="fitcol yes reveal">
         <div class="fit-h" data-i18n="fit_yes_h">It's for you if you…</div>
         <ul>
-          <li data-i18n="fit_y1">Trade a curated, liquid book across equities and ETFs at <strong>each name's own timeframe</strong> — from 5m to 4h.</li>
+          <li data-i18n="fit_y1">Trade a curated, liquid book across equities and ETFs, each at <strong>its own per-symbol recipe</strong>.</li>
           <li data-i18n="fit_y2">Want <strong>rule-based</strong> entries and exits — defined stop, target, breakeven, time-stop — not discretionary calls.</li>
-          <li data-i18n="fit_y3">Are comfortable applying a <strong>per-symbol recipe</strong> (timeframe, breaker on/off). This isn't one-click.</li>
-          <li data-i18n="fit_y4">Understand it's a <strong>backtested edge, not a guarantee</strong> — in-sample results, real 6–19% drawdowns, often trailing buy-and-hold on raw return.</li>
+          <li data-i18n="fit_y3">Are comfortable applying a <strong>per-symbol configuration</strong> (the confluence shown in the table). This isn't one-click.</li>
+          <li data-i18n="fit_y4">Read it as a <strong>systematic, backtested edge</strong> with real, disclosed drawdowns — and judge it on risk-adjusted terms, the way a desk does.</li>
         </ul>
       </div>
       <div class="fitcol no reveal">
@@ -319,18 +336,18 @@
           <li data-i18n="fit_n1">Are a <strong>beginner</strong> — the per-symbol config and caveats will cost you more than they give.</li>
           <li data-i18n="fit_n2">Are a <strong>scalper</strong> — every sub-15-minute test in the data is dead.</li>
           <li data-i18n="fit_n3">Expect to <strong>"get rich,"</strong> or want passive auto-money.</li>
-          <li data-i18n="fit_n4">Would trade the <strong>weekly anomalies</strong> as if they were the strategy — they are not.</li>
+          <li data-i18n="fit_n4">Would trade an <strong>in-sample recipe as proven</strong> before it has cleared walk-forward — it hasn't yet.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TWO WAYS TO RUN -->
+<!-- 10 TWO WAYS TO RUN -->
 <section class="section" id="run">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
+      <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
       <h2 data-i18n="run_h2">Signals you place — or signals you route</h2>
     </div>
     <div class="runrow">
@@ -354,22 +371,22 @@
   </div>
 </section>
 
-<!-- HONEST POSITIONING -->
+<!-- 11 HONEST POSITIONING -->
 <section class="section" id="honest">
   <div class="wrap">
     <div class="honest reveal">
       <div class="h-h" data-i18n="honest_h">What this is — and what it isn't</div>
       <p data-i18n="honest_p1">LIQUIDEX is a <strong>disciplined, rule-based engine</strong> for a focused, liquid, multi-asset book — delivered invite-only on TradingView with alerts. The honest automation pitch is "signals you can auto-route to your broker via webhook," after you add your own position sizing and paper-test first.</p>
-      <p data-i18n="honest_p2">These are in-sample backtests. Most trending names still trail buy-and-hold on raw return. It is <strong>not</strong> a fund-grade, audited track record and it is <strong>not</strong> passive auto-money. What it is: a non-repainting framework whose edge has now been demonstrated across six asset classes and 1,444+ trades — and that breadth, honestly presented, is the whole pitch.</p>
+      <p data-i18n="honest_p2">It is a non-repainting, fully systematic engine whose edge has been shown to reproduce across a 50-instrument cross-section — the same institutional desks, read from price. The defensible asset is the <strong>method</strong>: a protocol for reading institutional liquidity that holds wherever institutions trade. Every performance figure here is historical, in-sample, and disclosed in full — strong enough to justify the out-of-sample work, not yet a substitute for it.</p>
     </div>
   </div>
 </section>
 
-<!-- ACCESS -->
+<!-- 12 ACCESS -->
 <section class="section" id="access">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access &amp; partnership</div></div>
+      <div class="shead-row"><span class="section-num">12</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access &amp; partnership</div></div>
       <h2 data-i18n="acc_h2">Two doors: <em>access</em>, or <em>partnership</em></h2>
       <p class="lead" data-i18n="acc_lead">Operators get invite-only access on TradingView. Desks, funds and partners get a direct line to evaluate the research, the IP and a licensing or acquisition path.</p>
     </div>
@@ -384,7 +401,7 @@
         <div class="offer-name" data-i18n="offer_name">LIQUIDEX Framework · full access</div>
         <button class="btn btn-ghost full price-reveal" id="price-reveal" aria-expanded="false" aria-controls="offer-amt" data-i18n="reveal_price">See the price</button>
         <div class="offer-amt" id="offer-amt" hidden>$249<span>/mo</span></div>
-        <div class="offer-line" data-i18n="offer_line">The LIQUIDEX strategy · the Keeper leaderboard · the Prophet risk gate · the full multi-asset book and every per-symbol recipe.</div>
+        <div class="offer-line" data-i18n="offer_line">The LIQUIDEX strategy · the Keeper leaderboard · the Prophet risk gate · the full cross-section and every per-symbol recipe.</div>
         <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20access%20to%20the%20LIQUIDEX%20Framework.%20My%20TradingView%20username%20is%3A" target="_blank" rel="noopener" class="btn btn-wa full" data-i18n="offer_btn">Request access on WhatsApp</a>
         <div class="offer-bonus" data-i18n="offer_bonus"><strong>Included for crypto:</strong> the Surge Guru scanner and Crypto Keeper, with the validated crypto names (ICP · WLD · ETH).</div>
         <a href="framework-deck.pdf" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link">Download the product brief (PDF) →</a>
@@ -393,11 +410,11 @@
   </div>
 </section>
 
-<!-- THE ASSET -->
+<!-- 13 THE ASSET -->
 <section class="section" id="asset">
   <div class="wrap">
-    <div class="shead-row"><span class="section-num">11</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
-    <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live multi-asset scanner, a risk framework and a ranking layer, built over thousands of hours and studied across <strong>six-plus asset classes and 1,444+ trades</strong>. The defensible asset is the <strong>mechanism</strong> — a way of reading institutional liquidity that has now repeated in equities, ETFs, gold, bonds, FX and Japan. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
+    <div class="shead-row"><span class="section-num">13</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
+    <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live cross-asset scanner, a risk layer and a ranking layer, and a proprietary method for reading institutional behaviour. The defensible asset is the <strong>method</strong> — a protocol for reading the desks behind the order flow that reproduces across a 50-instrument cross-section, equities and macro alike. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
   </div>
 </section>
 
@@ -409,7 +426,7 @@
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top"><b>LIQUIDEX</b><span>Framework</span></a>
-        <p class="foot-tag" data-i18n="foot_tag">A multi-asset liquidity &amp; market-structure framework. One engine, six asset classes, 1,444+ trades.</p>
+        <p class="foot-tag" data-i18n="foot_tag">A systematic liquidity-research operation. One engine, fifty instruments, a read on every desk.</p>
       </div>
       <div class="foot-col">
         <h5 data-i18n="foot_products">Products</h5>
@@ -419,7 +436,7 @@
       </div>
       <div class="foot-col">
         <h5 data-i18n="foot_nav">Sections</h5>
-        <a href="#thesis" data-i18n="nav_thesis">Thesis</a>
+        <a href="#protocol" data-i18n="nav_protocol">Protocol</a>
         <a href="#evidence" data-i18n="nav_evidence">Evidence</a>
         <a href="#access" data-i18n="nav_access">Access</a>
       </div>
@@ -429,8 +446,9 @@
   </div>
 </footer>
 
-<script src="i18n.js"></script>
-<script src="app.js"></script>
+<script src="scan-data.js?v=20260620"></script>
+<script src="i18n.js?v=20260620"></script>
+<script src="app.js?v=20260620"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>
