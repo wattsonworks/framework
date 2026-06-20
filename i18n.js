@@ -148,7 +148,7 @@
     offer_line: "אסטרטגיית LIQUIDEX · לוח המובילים Keeper · שער הסיכון Prophet · החתך המלא וכל מתכון פר-נכס.",
     offer_btn: "לבקשת גישה בוואטסאפ",
     offer_bonus: '<strong>כלול עבור קריפטו:</strong> סורק Surge Guru ו-Crypto Keeper, עם נכסי הקריפטו המאומתים (ICP · WLD · ETH).',
-    pdf_link: "להורדת חוברת המוצר (PDF) →",
+    pdf_link: "להורדת התזה (PDF) ←",
 
     asset_kick: "ה-IP",
     asset_note: 'מה שמוצע אינו אינדיקטור — אלא גוף מחקר והמנוע שהפיק אותו: מודל נזילות, מנוע מבנה-שוק, סורק חוצה-נכסים חי, שכבת סיכון ושכבת דירוג, ושיטה קניינית לקריאת התנהגות מוסדית. הנכס בר-ההגנה הוא ה<strong>שיטה</strong> — פרוטוקול לקריאת הדֶסקים שמאחורי זרימת הפקודות, שמשתחזר על פני יקום של 130+ מכשירים — מניות, נכסים דיגיטליים ומט״ח כאחד. <strong>פתוח לרישוי, שותפות מחקר אסטרטגית, או רכישה מלאה</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">לפתיחת שיחה</a>.',
