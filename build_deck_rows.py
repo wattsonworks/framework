@@ -5,7 +5,8 @@ import csv, re
 CSV  = r'C:\Users\sunnf\Desktop\LIQUIDEX\GREEDY_4H_LOG.csv'
 DECK = r'C:\Users\sunnf\Desktop\SURGEGURU-FRAMEWORK\deck.html'
 CLS  = {'SEMIS':'Semis','ETF':'ETF','PRIORITY':'Single-name'}
-DEEP = {'PEP':'1.595','TLT':'1.232'}
+# deep micro-tune result per rescued name: (profit factor, max drawdown %)
+DEEP = {'PEP':('1.595','6.47'),'TLT':('1.232','17.71')}
 
 def fl(x):
     try: return float(x)
@@ -26,7 +27,7 @@ for i,r in enumerate(rows,1):
     loss = r['final'] < 1.0
     dag = '<sup>&dagger;</sup>' if loss else ''
     deep = DEEP.get(r['sym'])
-    mt = ('&#10003; '+deep) if deep else '&mdash;'
+    mt = (f'&#10003; {deep[0]} &middot; {deep[1]}%') if deep else '&mdash;'
     mtc = ' y' if deep else ''
     lift = f"{r['lift']:.2f}&times;" if r['lift'] is not None else '&mdash;'
     out.append(

@@ -263,12 +263,12 @@
     <tr><td class="r num">46</td><td class="sym">MRVL</td><td>Semis</td><td>Fade</td><td class="r num">1.011</td><td class="r fpf">1.134</td><td class="r num">1.12&times;</td><td class="r num">43.6%</td><td class="r num">212</td><td class="mt">&mdash;</td></tr>
     <tr><td class="r num">47</td><td class="sym">NXPI</td><td>Semis</td><td>Fade</td><td class="r num">0.523</td><td class="r fpf">1.035</td><td class="r num">1.98&times;</td><td class="r num">30.4%</td><td class="r num">57</td><td class="mt">&mdash;</td></tr>
     <tr class="loss"><td class="r num">48</td><td class="sym">XLF<sup>&dagger;</sup></td><td>ETF</td><td>Continuation</td><td class="r num">0.923</td><td class="r fpf">0.979</td><td class="r num">1.06&times;</td><td class="r num">34.1%</td><td class="r num">313</td><td class="mt">&mdash;</td></tr>
-    <tr class="loss"><td class="r num">49</td><td class="sym">PEP<sup>&dagger;</sup></td><td>Single-name</td><td>Fade</td><td class="r num">0.749</td><td class="r fpf">0.849</td><td class="r num">1.13&times;</td><td class="r num">28.7%</td><td class="r num">165</td><td class="mt y">&#10003; 1.595</td></tr>
-    <tr class="loss"><td class="r num">50</td><td class="sym">TLT<sup>&dagger;</sup></td><td>ETF</td><td>Fade</td><td class="r num">0.653</td><td class="r fpf">0.809</td><td class="r num">1.24&times;</td><td class="r num">26.4%</td><td class="r num">93</td><td class="mt y">&#10003; 1.232</td></tr>
+    <tr class="loss"><td class="r num">49</td><td class="sym">PEP<sup>&dagger;</sup></td><td>Single-name</td><td>Fade</td><td class="r num">0.749</td><td class="r fpf">0.849</td><td class="r num">1.13&times;</td><td class="r num">28.7%</td><td class="r num">165</td><td class="mt y">&#10003; 1.595 &middot; 6.47%</td></tr>
+    <tr class="loss"><td class="r num">50</td><td class="sym">TLT<sup>&dagger;</sup></td><td>ETF</td><td>Fade</td><td class="r num">0.653</td><td class="r fpf">0.809</td><td class="r num">1.24&times;</td><td class="r num">26.4%</td><td class="r num">93</td><td class="mt y">&#10003; 1.232 &middot; 17.71%</td></tr>
     <!--SCAN_ROWS_B_END-->
     </tbody>
   </table>
-  <div class="tcap"><sup>†</sup> XLF, TLT and PEP did not reach a profit factor of 1.0 under the greedy pass; PEP and TLT were subsequently rescued by deep tuning (Section 4), XLF not yet attempted. <strong>Micro-tuned</strong>: ✓ = full deep tune verified live (deep PF shown); — = greedy pass only. All figures in-sample, net of commission and slippage.</div>
+  <div class="tcap"><sup>†</sup> XLF, TLT and PEP did not reach a profit factor of 1.0 under the greedy pass; PEP and TLT were subsequently rescued by deep tuning (Section 4), XLF not yet attempted. <strong>Micro-tuned</strong>: ✓ = full deep tune verified live, showing the post-tune profit factor and drawdown; — = greedy pass only. Greedy figures are in-sample, net of commission and slippage.</div>
   <div class="rule"></div>
   <h3 style="margin-top:1mm">What the cross-section shows</h3>
   <p>Read blind, the cross-section sorts itself into two structural temperaments. The engine resolves <strong>34 of 50 names as faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — and <strong>16 as continuation</strong> names, where the edge is riding the break. <strong>44 of 50 run long-only</strong>, the signature of a passive complex accumulating the book as one coordinated actor. None of this was imposed; it was recovered from price.</p>
@@ -321,7 +321,9 @@
             <tr><td>Raw engine</td><td class="r num">0.749</td></tr>
             <tr><td>Greedy pass</td><td class="r num">0.849</td></tr>
             <tr><td><strong>Deep micro-tune</strong></td><td class="r big">1.595</td></tr>
-            <tr><td>Max drawdown</td><td class="r num">6.5%</td></tr>
+            <tr><td>Net return</td><td class="r num">+31.24%</td></tr>
+            <tr><td>Max drawdown</td><td class="r num">6.47%</td></tr>
+            <tr><td>Win rate</td><td class="r num">48.60%</td></tr>
             <tr><td>Trades</td><td class="r num">107</td></tr>
           </tbody>
         </table>
@@ -344,7 +346,9 @@
             <tr><td>Raw engine</td><td class="r num">0.653</td></tr>
             <tr><td>Greedy pass</td><td class="r num">0.809</td></tr>
             <tr><td><strong>Deep micro-tune</strong></td><td class="r big">1.232</td></tr>
-            <tr><td>Max drawdown</td><td class="r num">17.7%</td></tr>
+            <tr><td>Net return</td><td class="r num">+15.73%</td></tr>
+            <tr><td>Max drawdown</td><td class="r num">17.71%</td></tr>
+            <tr><td>Win rate</td><td class="r num">47.44%</td></tr>
             <tr><td>Trades</td><td class="r num">215</td></tr>
           </tbody>
         </table>

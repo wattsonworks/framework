@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260620d" />
+<link rel="stylesheet" href="styles.css?v=20260620e" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -138,7 +138,7 @@
         <tbody id="xbody"><!-- rendered from scan-data.js --></tbody>
       </table></div>
     </div>
-    <p class="table-cap" id="xcap" data-i18n="ev_cap"><strong>47 of 50 profitable once read — and 29 of them flipped from a losing baseline into profit.</strong> Mean profit factor rose 0.94 → 1.76, a 1.87× lift, with the read paying most where the flow is most forced. This table is the <strong>greedy pass at default parameters</strong> — the controlled baseline. The <strong>Tuning</strong> column marks the two names since taken through the full deep micro-tune (<span class="mono">deep ✓</span>); the other 48 are <span class="mono">greedy</span>-only, their deep tune still pending. Of the three that failed the greedy pass, two — the staple <strong>PEP</strong> and the macro vehicle <strong>TLT</strong> — were not dead but misread, and the next section opens both; only <strong>XLF</strong> has not yet been attempted. All figures in-sample, net of commission and slippage.</p>
+    <p class="table-cap" id="xcap" data-i18n="ev_cap"><strong>47 of 50 profitable once read — and 29 of them flipped from a losing baseline into profit.</strong> Mean profit factor rose 0.94 → 1.76, a 1.87× lift, with the read paying most where the flow is most forced. This table is the <strong>greedy pass at default parameters</strong> — the controlled baseline. The <strong>Micro-tuned</strong> column marks the two names since taken through the full deep tune, showing their <strong>post-tune profit factor and drawdown</strong> (e.g. PEP <span class="mono">✓ 1.595 · 6.47%</span>); the other 48 are <span class="mono">greedy</span>-only, their deep tune still pending. Of the three that failed the greedy pass, two — the staple <strong>PEP</strong> and the macro vehicle <strong>TLT</strong> — were not dead but misread, and the next section opens both; only <strong>XLF</strong> has not yet been attempted. All figures in-sample, net of commission and slippage.</p>
   </div>
 </section>
 
@@ -171,12 +171,12 @@
           <div class="cp-step big"><span class="cp-lab" data-i18n="cs_s3">Behavioural micro-tune</span><span class="cp-val pos">1.595</span></div>
         </div>
         <div class="cp-grid">
-          <div class="cp-cell"><div class="cp-k">6.5%</div><div class="cp-d" data-i18n="cs_m1">Max drawdown</div></div>
+          <div class="cp-cell"><div class="cp-k">+31.24%</div><div class="cp-d" data-i18n="cs_m_ret">Net return</div></div>
+          <div class="cp-cell"><div class="cp-k">6.47%</div><div class="cp-d" data-i18n="cs_m1">Max drawdown</div></div>
+          <div class="cp-cell"><div class="cp-k">48.60%</div><div class="cp-d" data-i18n="cs_m3">Win rate</div></div>
           <div class="cp-cell"><div class="cp-k">107</div><div class="cp-d" data-i18n="cs_m2">Trades</div></div>
-          <div class="cp-cell"><div class="cp-k">48.6%</div><div class="cp-d" data-i18n="cs_m3">Win rate</div></div>
-          <div class="cp-cell"><div class="cp-k">11 · 6</div><div class="cp-d" data-i18n="cs_m4">Toggles · params</div></div>
         </div>
-        <div class="cp-foot" data-i18n="cs_panel_f">Long + short · raised R:R gate · iceberg @ 5 hits · high-volume sweep exhaustion · short-side risk gate tightened.</div>
+        <div class="cp-foot" data-i18n="cs_panel_f">11 reads · 6 tuned params · long + short · raised R:R gate · iceberg @ 5 hits · high-volume sweep exhaustion · short-side risk gate tightened.</div>
       </aside>
     </div>
 
@@ -185,8 +185,8 @@
       <div class="case-prose">
         <p data-i18n="cs_t_p1">TLT is long-duration US Treasuries — a macro vehicle, not a tape that liquidity desks push to clean technical walls. Its price is dragged around by rate expectations and central-bank language; the full move to the opposing wall rarely completes, because a data print or a policy line interrupts it first.</p>
         <p data-i18n="cs_t_p2">So the greedy pass left it for dead — <strong>0.809</strong>, a loser. And everything you add to it is fragile: tighten the stop and the chop knocks you out; widen the target and the move dies before it arrives. The edge sits on a knife's edge.</p>
-        <p data-i18n="cs_t_p3">What rescued it was not another signal — it was <strong>profit-taking discipline</strong>. Bank <strong>60% of the position two-thirds of the way to the wall</strong>, and let a small runner chase the rest. You stop demanding a clean completion the macro will not give, and take what it offers — with a wide sweep stop to survive the chop and a both-sided cascade-fade behind it. The dead name becomes a real, if fragile, edge: <strong>PF 1.232 at 17.7% drawdown across 215 trades, +15.7%.</strong></p>
-        <div class="case-flag" data-i18n="cs_t_flag"><strong>PEP's lesson, in reverse.</strong> PEP needed patience; TLT needs to not be greedy — and the whole result balances on two Partial-TP numbers. It wears its fragility honestly: a 1.23 at 17.7% DD is a thin edge that, more than any cell on this page, has to clear walk-forward before it is anything at all.</div>
+        <p data-i18n="cs_t_p3">What rescued it was not another signal — it was <strong>profit-taking discipline</strong>. Bank <strong>60% of the position two-thirds of the way to the wall</strong>, and let a small runner chase the rest. You stop demanding a clean completion the macro will not give, and take what it offers — with a wide sweep stop to survive the chop and a both-sided cascade-fade behind it. The dead name becomes a real, if fragile, edge: <strong>PF 1.232 at 17.71% drawdown across 215 trades, +15.73%.</strong></p>
+        <div class="case-flag" data-i18n="cs_t_flag"><strong>PEP's lesson, in reverse.</strong> PEP needed patience; TLT needs to not be greedy — and the whole result balances on two Partial-TP numbers. It wears its fragility honestly: a 1.232 at 17.71% DD is a thin edge that, more than any cell on this page, has to clear walk-forward before it is anything at all.</div>
       </div>
 
       <aside class="case-panel">
@@ -201,10 +201,10 @@
         <div class="cp-grid">
           <div class="cp-cell hero"><div class="cp-k">60%</div><div class="cp-d" data-i18n="cs_t_m1">Banked at near target</div></div>
           <div class="cp-cell hero"><div class="cp-k">0.66</div><div class="cp-d" data-i18n="cs_t_m2">Fraction to the wall</div></div>
-          <div class="cp-cell"><div class="cp-k">17.7%</div><div class="cp-d" data-i18n="cs_t_m3">Max drawdown</div></div>
+          <div class="cp-cell"><div class="cp-k">17.71%</div><div class="cp-d" data-i18n="cs_t_m3">Max drawdown</div></div>
           <div class="cp-cell"><div class="cp-k">215</div><div class="cp-d" data-i18n="cs_t_m4">Trades</div></div>
         </div>
-        <div class="cp-foot" data-i18n="cs_t_panel_f">Long + short · cascade-fade only · wide sweep stop · wall-target TP — but the edge lives in the <strong>Partial-TP</strong>: bank most early, run a sliver.</div>
+        <div class="cp-foot" data-i18n="cs_t_panel_f">Long + short · cascade-fade only · wide sweep stop · wall-target — the edge lives in the <strong>Partial-TP</strong>: bank 60% at 0.66 to the wall. <strong>+15.73%</strong> net · 47.44% win.</div>
       </aside>
     </div>
   </div>
@@ -477,9 +477,9 @@
   </div>
 </footer>
 
-<script src="scan-data.js?v=20260620d"></script>
-<script src="i18n.js?v=20260620d"></script>
-<script src="app.js?v=20260620d"></script>
+<script src="scan-data.js?v=20260620e"></script>
+<script src="i18n.js?v=20260620e"></script>
+<script src="app.js?v=20260620e"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>
