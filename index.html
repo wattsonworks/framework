@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260621b" />
+<link rel="stylesheet" href="styles.css?v=20260621c" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="stash-wrap">
-      <button class="stash-btn" id="stash-btn" aria-expanded="false" aria-controls="stash-pop"><span data-i18n="stash_btn">Universe</span><span class="stash-count">144</span></button>
+      <button class="stash-btn" id="stash-btn" aria-expanded="false" aria-controls="stash-pop"><span data-i18n="stash_btn">Universe</span><span class="stash-count">170</span></button>
       <!-- STASH popover — the full instrument universe under profile (the rest, beyond the published book) -->
       <div class="stash-pop" id="stash-pop" role="dialog" aria-modal="false" aria-labelledby="stash-h" hidden>
         <div class="stash-arrow" aria-hidden="true"></div>
@@ -86,9 +86,9 @@
 
     <div class="metricstrip">
       <div class="m"><div class="mv" data-count="130" data-suffix="+">130+</div><div class="ml" data-i18n="m1">Instruments under profile</div></div>
-      <div class="m"><div class="mv" data-count="3" data-suffix="">3</div><div class="ml" data-i18n="m2">Asset classes · equities · crypto · FX</div></div>
-      <div class="m"><div class="mv" data-count="5.75" data-decimals="2">5.75</div><div class="ml" data-i18n="m3">Peak profit factor · DE</div></div>
-      <div class="m"><div class="mv" data-count="10.3" data-decimals="1" data-suffix="%">10.3%</div><div class="ml" data-i18n="m4">Cleanest book · crypto</div></div>
+      <div class="m"><div class="mv" data-count="80" data-suffix="">80</div><div class="ml" data-i18n="m2">Deep-tuned cells · 3 asset classes</div></div>
+      <div class="m"><div class="mv" data-count="65" data-suffix="">65</div><div class="ml" data-i18n="m3">Edges · PF &ge; 1, N &ge; 30</div></div>
+      <div class="m"><div class="mv" data-count="5.75" data-decimals="2">5.75</div><div class="ml" data-i18n="m4">Peak profit factor · DE</div></div>
     </div>
   </div>
 </section>
@@ -136,17 +136,18 @@
   <div class="wrap">
     <div class="shead">
       <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the deep-tuned book</div></div>
-      <h2 data-i18n="ev_h2">The deep-tuned book — <em>54 of a 130+ universe</em></h2>
-      <p class="lead" data-i18n="ev_lead">A published cross-section of the wider universe: every instrument read down to its own institutional behaviour and tuned to its own recipe, now spanning <strong>equities and crypto</strong>. <strong>Click any row</strong> to open its full configuration — execution, stops, signals, gates — and the reasoning behind it. Sorted by profit factor; figures are the deep-tuned, in-sample results.</p>
-      <p class="db-stamp" data-i18n="ev_stamp"><strong>54 cells across three asset classes</strong> — 50 equities, 4 crypto majors, plus the EURUSD forex baseline. Crypto runs cleanest: <strong>10.3% mean drawdown</strong> against 21.6% in equities. Names at <strong>PF ≤ 1.5</strong> are flagged <em>to be re-microtuned</em>; the remaining instruments are under profile and available on request.</p>
+      <h2 data-i18n="ev_h2">The deep-tuned book — <em>80 of a 130+ universe</em></h2>
+      <p class="lead" data-i18n="ev_lead">A published cross-section of the wider universe: every instrument read down to its own institutional behaviour and tuned to its own recipe, now spanning <strong>equities, crypto and FX</strong>. <strong>Click any row</strong> to open its full configuration — execution, stops, signals, gates — and the reasoning behind it. Sorted by profit factor; figures are the deep-tuned, in-sample results.</p>
+      <p class="db-stamp" data-i18n="ev_stamp"><strong>80 deep-tuned cells across three asset classes</strong> — 50 equities, 27 crypto and 3 FX majors; <strong>65 are edges</strong> (profit factor ≥ 1 at ≥ 30 trades). The trustworthy tier is the <strong>symmetric, both-direction</strong> cells — they survive a regime flip. Names at <strong>PF ≤ 1.5</strong> are flagged <em>to be re-microtuned</em>; the remaining instruments are under profile and available on request.</p>
     </div>
 
     <div class="xfilters reveal" id="dbfilters" role="tablist" aria-label="Filter the deep-tuned book">
-      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 54</button>
-      <button class="xchip" data-filter="ready" data-i18n="flt_ready">Ready · 8</button>
-      <button class="xchip" data-filter="walk-forward" data-i18n="flt_wf">Walk-forward · 28</button>
+      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 80</button>
+      <button class="xchip" data-filter="ready" data-i18n="flt_ready">Ready · 28</button>
+      <button class="xchip" data-filter="walk-forward" data-i18n="flt_wf">Walk-forward · 34</button>
       <button class="xchip" data-filter="re-microtune" data-i18n="flt_remicro">Re-microtune · 18</button>
-      <button class="xchip" data-filter="Crypto" data-i18n="flt_crypto">Crypto · 4</button>
+      <button class="xchip" data-filter="Crypto" data-i18n="flt_crypto">Crypto · 27</button>
+      <button class="xchip" data-filter="Forex" data-i18n="flt_forex">FX · 3</button>
       <button class="xchip" data-filter="ETF" data-i18n="flt_etf">ETFs · 19</button>
       <button class="xchip" data-filter="Semis" data-i18n="flt_semis">Semis · 20</button>
       <button class="xchip" data-filter="Single-name" data-i18n="flt_single">Single-names · 11</button>
@@ -168,7 +169,7 @@
         <tbody id="dbbody"><!-- rendered from deep-params.js --></tbody>
       </table></div>
     </div>
-    <p class="table-cap" id="dbcap" data-i18n="ev_cap"><strong>54 cells across three asset classes</strong> — 50 equities, 4 crypto and the EURUSD forex baseline — 36 clear a profit factor above 1.5; 18 sit at or below it and are flagged <em>to be re-microtuned</em>. <strong>Crypto is the cleanest book</strong> (10.3% mean drawdown vs 21.6% in equities), and both-direction SOL is the most trusted cell. The strongest equity cells — DE 5.75, V 4.44 — are long-only fades read through a secular-bull window, so their high win rates are regime artefacts carrying a <strong>walk-forward-mandatory</strong> flag. Open any row for its exact execution, stops, signals and gates. All figures in-sample, net of commission and slippage.</p>
+    <p class="table-cap" id="dbcap" data-i18n="ev_cap"><strong>80 cells across three asset classes</strong> — 50 equities, 27 crypto, 3 FX majors — <strong>65 clear the edge bar</strong> (profit factor ≥ 1 at ≥ 30 trades). The <strong>13 symmetric both-direction cells</strong> are the trustworthy tier, because they survive a regime flip: in crypto SOL · AVAX · ADA · ARB · XRP · FIL · DOT, in FX <strong>GBPUSD 3.41</strong> &amp; USDJPY 3.03, in equities KO · NXPI · PEP · ASML · TLT. The high-PF long-only majority — DE 5.75, DOGE 4.76, V 4.44 — ride a secular-bull window, so their win rates are regime artefacts carrying a <strong>walk-forward-mandatory</strong> flag. Open any row for its exact execution, stops, signals and gates. All figures in-sample, net of commission and slippage.</p>
   </div>
 </section>
 
@@ -507,11 +508,11 @@
   </div>
 </footer>
 
-<script src="universe.js?v=20260621a"></script>
-<script src="scan-data.js?v=20260621a"></script>
-<script src="deep-params.js?v=20260621a"></script>
-<script src="i18n.js?v=20260621a"></script>
-<script src="app.js?v=20260621b"></script>
+<script src="universe.js?v=20260621c"></script>
+<script src="scan-data.js?v=20260621c"></script>
+<script src="deep-params.js?v=20260621c"></script>
+<script src="i18n.js?v=20260621c"></script>
+<script src="app.js?v=20260621c"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>

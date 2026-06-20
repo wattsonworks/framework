@@ -1,7 +1,7 @@
 /* LIQUIDEX FRAMEWORK — the instrument universe under profile (the "stash").
    The deep-tuned book is a published cross-section; this is the full breadth available on request. */
 window.UNIVERSE = {
-  total: 144, tuned: 53, classes: 3,
+  total: 170, tuned: 79, classes: 3,
   sectors: [
     { key: 'fin',     label: 'Financials',          syms: ['JPM','BAC','C','GS','MS','SCHW','PNC','USB','BK','COF','V','MA','SPGI','ICE','CME'] },
     { key: 'soft',    label: 'Software / SaaS',      syms: ['CRM','ORCL','NOW','PANW','FTNT','MDB','DDOG','HUBS','TEAM','SHOP','INTU','ADBE','APP','NET','ZS','SNOW'] },
@@ -15,12 +15,13 @@ window.UNIVERSE = {
     { key: 'semis',   label: 'Semiconductors',       syms: ['KLAC','NXPI','QCOM','TXN','MCHP','MPWR','ADI','ON','AVGO','NVDA','AMD','MRVL','ARM','LRCX','AMAT','ASML','TSM','INTC','TSEM','MU'] },
     { key: 'etf',     label: 'Index & Sector ETFs',  syms: ['DIA','IWM','SMH','XLF','XLK','XLI','XLE','XLV','XLP','XLY','VGT','VOO','SCHD','IGV','SOXX','SPY','QQQ','GLD','TLT'] },
     { key: 'commod',  label: 'Commodities',          syms: ['SLV','GDX','USO','DBA','CPER'] },
-    { key: 'crypto',  label: 'Digital assets',       syms: ['BTC','ETH','SOL'] },
-    { key: 'fx',      label: 'FX majors',            syms: ['EURUSD'] }
+    { key: 'crypto',  label: 'Digital assets',       syms: ['BTC','ETH','SOL','BNB','XRP','ADA','AVAX','LINK','DOGE','DOT','LTC','BCH','ATOM','NEAR','INJ','FIL','RENDER','FET','ARB','OP','APT','SUI','UNI','AAVE','TRX','ICP','POL'] },
+    { key: 'fx',      label: 'FX majors',            syms: ['EURUSD','GBPUSD','USDJPY'] }
   ],
-  // the 53 instruments with a published, deep-tuned recipe (the rest are profiled and available on request)
+  // instruments with a published, deep-tuned recipe (the rest are profiled and available on request)
   tunedSet: ['JPM','V','MA','ORCL','PANW','DE','ETN','COST','KO','PEP','XOM',
     'KLAC','NXPI','QCOM','TXN','MCHP','MPWR','ADI','ON','AVGO','NVDA','AMD','MRVL','ARM','LRCX','AMAT','ASML','TSM','INTC','TSEM','MU',
     'DIA','IWM','SMH','XLF','XLK','XLI','XLE','XLV','XLP','XLY','VGT','VOO','SCHD','IGV','SOXX','SPY','QQQ','GLD','TLT',
-    'BTC','ETH','SOL']
+    'BTC','ETH','SOL','BNB','XRP','ADA','AVAX','LINK','DOGE','DOT','LTC','BCH','ATOM','NEAR','INJ','FIL','RENDER','FET','ARB','OP','APT','SUI','UNI','AAVE','TRX','ICP',
+    'EURUSD','GBPUSD','USDJPY']
 };

@@ -1,4 +1,4 @@
-/* LIQUIDEX FRAMEWORK — cross-asset-class scan data: 50 equities (greedy + full deep overlay), 4 crypto cells, EURUSD forex baseline. Auto-generated. */
+/* LIQUIDEX FRAMEWORK — cross-asset-class scan data: 50 equities (greedy + full deep overlay), 27 crypto cells, 3 FX-major cells. Auto-generated. */
 window.SCAN = {
 "rows": [
 {
@@ -1171,17 +1171,18 @@ window.SCAN = {
 "meanDD": 23.1
 },
 "crypto": {
-"n": 4,
-"meanPF": 2.29,
-"meanDD": 10.3,
-"cleanestDD": 7.41,
-"cleanestSym": "ETH"
+"n": 27,
+"meanPF": 1.54,
+"meanDD": 22.6,
+"cleanestDD": 4.29,
+"cleanestSym": "DOGE"
 },
 "forex": {
-"n": 1,
-"pf": 1.4,
-"dd": 16.74,
-"net": 72.65
+"n": 3,
+"meanPF": 2.65,
+"meanDD": 7.4,
+"topPF": 3.409,
+"topSym": "GBPUSD"
 }
 }
 },
@@ -1210,52 +1211,306 @@ window.SCAN = {
 },
 "crypto": [
 {
+"sym": "DOGE",
+"pf": 4.759,
+"dd": 4.29,
+"win": 90.0,
+"trades": 40,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "AVAX",
+"pf": 2.643,
+"dd": 16.02,
+"win": 29.73,
+"trades": 37,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
 "sym": "ETH",
-"feed": "Bitstamp",
 "pf": 2.61,
 "dd": 7.41,
 "win": 87.5,
 "trades": 48,
 "dir": "Long-only",
-"family": "fade-bsl-cryptolong"
+"family": "fade-bsl-cryptolong",
+"feed": "Bitstamp"
 },
 {
 "sym": "SOL",
-"feed": "Binance",
 "pf": 2.373,
 "dd": 16.62,
 "win": 19.87,
 "trades": 156,
 "dir": "Long+Short",
-"family": "trend-both-dir"
+"family": "trend-both-dir",
+"feed": "Binance"
 },
 {
 "sym": "ETH",
-"feed": "Coinbase",
 "pf": 2.098,
 "dd": 7.44,
 "win": 86.15,
 "trades": 65,
 "dir": "Long-only",
-"family": "fade-crypto-ice-brk"
+"family": "fade-crypto-ice-brk",
+"feed": "Coinbase"
 },
 {
 "sym": "BTC",
-"feed": "Bitstamp",
 "pf": 2.082,
 "dd": 9.8,
 "win": 44.66,
 "trades": 103,
 "dir": "Long-only",
-"family": "fade-breaker-BE"
+"family": "fade-breaker-BE",
+"feed": "Bitstamp"
+},
+{
+"sym": "RENDER",
+"pf": 1.757,
+"dd": 14.38,
+"win": 85.71,
+"trades": 70,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "UNI",
+"pf": 1.703,
+"dd": 19.02,
+"win": 47.5,
+"trades": 40,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "ADA",
+"pf": 1.686,
+"dd": 13.5,
+"win": 20.0,
+"trades": 40,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "ARB",
+"pf": 1.677,
+"dd": 19.58,
+"win": 21.43,
+"trades": 56,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "XRP",
+"pf": 1.587,
+"dd": 19.0,
+"win": 13.79,
+"trades": 87,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "FIL",
+"pf": 1.572,
+"dd": 20.22,
+"win": 25.0,
+"trades": 40,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "INJ",
+"pf": 1.461,
+"dd": 12.05,
+"win": 84.62,
+"trades": 52,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "NEAR",
+"pf": 1.454,
+"dd": 8.42,
+"win": 80.0,
+"trades": 50,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "FET",
+"pf": 1.454,
+"dd": 28.66,
+"win": 18.92,
+"trades": 37,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "BCH",
+"pf": 1.375,
+"dd": 10.18,
+"win": 88.0,
+"trades": 50,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "DOT",
+"pf": 1.33,
+"dd": 25.79,
+"win": 20.0,
+"trades": 100,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "TRX",
+"pf": 1.032,
+"dd": 7.21,
+"win": 32.14,
+"trades": 28,
+"dir": "Long-only",
+"family": "crypto-nfloor-defer",
+"feed": "Binance"
+},
+{
+"sym": "ICP",
+"pf": 0.95,
+"dd": 38.48,
+"win": 16.92,
+"trades": 201,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "BNB",
+"pf": 0.86,
+"dd": 18.41,
+"win": 32.91,
+"trades": 79,
+"dir": "Long-only",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "AAVE",
+"pf": 0.818,
+"dd": 58.6,
+"win": 14.89,
+"trades": 376,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "OP",
+"pf": 0.795,
+"dd": 29.79,
+"win": 9.76,
+"trades": 82,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "SUI",
+"pf": 0.793,
+"dd": 41.86,
+"win": 14.1,
+"trades": 227,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "ATOM",
+"pf": 0.775,
+"dd": 36.16,
+"win": 15.32,
+"trades": 111,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "LTC",
+"pf": 0.735,
+"dd": 36.38,
+"win": 8.97,
+"trades": 78,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "APT",
+"pf": 0.712,
+"dd": 51.92,
+"win": 13.28,
+"trades": 241,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "LINK",
+"pf": 0.415,
+"dd": 38.5,
+"win": 14.52,
+"trades": 62,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
 }
 ],
-"forex": {
-"sym": "EURUSD",
-"pf": 1.4,
-"dd": 16.74,
-"net": 72.65,
+"forex": [
+{
+"sym": "GBPUSD",
+"pf": 3.409,
+"dd": 4.51,
+"win": 25.81,
+"trades": 31,
 "dir": "Long+Short",
-"note": "the namesake market and its weakest profitable book — trailed buy-and-hold"
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "USDJPY",
+"pf": 3.03,
+"dd": 9.7,
+"win": 19.35,
+"trades": 31,
+"dir": "Long+Short",
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "EURUSD",
+"pf": 1.514,
+"dd": 7.88,
+"win": 34.38,
+"trades": 32,
+"dir": "Long+Short",
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
 }
+]
 };

@@ -37,27 +37,32 @@ with open(SRC, newline='', encoding='utf-8-sig') as fh:
 # Deep micro-tune overlay — the FULL behavioural book (verified live on TV), read from DEEP_4H_LOG.csv.
 # Equities overlay onto the greedy scan; crypto + forex are separate asset-class books (below).
 DEEP_SRC = r'C:\Users\sunnf\Desktop\LIQUIDEX\DEEP_4H_LOG.csv'
-CRYPTO_SYMS = {'BTC', 'ETH', 'ETH-CB', 'SOL'}
-CRYPTO_FEED = {'BTC': 'Bitstamp', 'ETH': 'Bitstamp', 'ETH-CB': 'Coinbase', 'SOL': 'Binance'}
+CRYPTO_SYMS = set('BTC ETH ETH-CB SOL BNB XRP ADA AVAX LINK DOGE DOT LTC BCH ATOM NEAR INJ FIL RENDER FET ARB OP APT SUI UNI AAVE TRX ICP POL'.split())
+FOREX_SYMS = set('EURUSD GBPUSD USDJPY'.split())
+CRYPTO_FEED = {'BTC': 'Bitstamp', 'ETH': 'Bitstamp', 'ETH-CB': 'Coinbase'}  # rest default to Binance
 DEEP = {}
 crypto = []
+forex = []
 with open(DEEP_SRC, newline='', encoding='utf-8-sig') as fh:
     for d in csv.DictReader(fh):
         sym = (d.get('Symbol') or '').strip()
         if not sym: continue
         dpf = fl(d['DeepPF']); ddd = fl(d['MaxDD_pct'])
+        rec = {'sym': sym.replace('-CB', ''), 'pf': round(dpf, 3) if dpf else None,
+               'dd': round(ddd, 2) if ddd is not None else None, 'win': fl(d['Win_pct']),
+               'trades': int(fl(d['Trades']) or 0),
+               'dir': 'Long+Short' if d['Shorts'].strip() == 'on' else 'Long-only',
+               'family': d['Family'].strip()}
         if sym in CRYPTO_SYMS:
-            crypto.append({'sym': sym.replace('-CB', ''), 'feed': CRYPTO_FEED.get(sym, ''),
-                           'pf': round(dpf, 3) if dpf else None, 'dd': round(ddd, 2) if ddd is not None else None,
-                           'win': fl(d['Win_pct']), 'trades': int(fl(d['Trades']) or 0),
-                           'dir': 'Long+Short' if d['Shorts'].strip() == 'on' else 'Long-only',
-                           'family': d['Family'].strip()})
+            if dpf is None: continue   # skip no-data (POL)
+            rec['feed'] = CRYPTO_FEED.get(sym, 'Binance'); crypto.append(rec)
+        elif sym in FOREX_SYMS:
+            if dpf is None: continue
+            rec['feed'] = 'OANDA'; forex.append(rec)
         elif dpf is not None and ddd is not None:
             DEEP[sym] = {'pf': dpf, 'dd': ddd}
 crypto.sort(key=lambda r: -(r['pf'] or 0))
-# Forex baseline — EURUSD, the strategy's namesake (user-reported summary export, both directions).
-forex = {'sym': 'EURUSD', 'pf': 1.40, 'dd': 16.74, 'net': 72.65, 'dir': 'Long+Short',
-         'note': "the namesake market and its weakest profitable book — trailed buy-and-hold"}
+forex.sort(key=lambda r: -(r['pf'] or 0))
 for r in rows:
     d = DEEP.get(r['sym'])
     r['tuned'] = bool(d)
@@ -130,11 +135,15 @@ stats['assetClass'] = {
                'meanDD': round(sum(c['dd'] for c in crypto) / len(crypto), 1) if crypto else 0,
                'cleanestDD': min((c['dd'] for c in crypto), default=0),
                'cleanestSym': min(crypto, key=lambda c: c['dd'])['sym'] if crypto else ''},
-    'forex': {'n': 1, 'pf': forex['pf'], 'dd': forex['dd'], 'net': forex['net']},
+    'forex': {'n': len(forex),
+              'meanPF': round(sum(f['pf'] for f in forex) / len(forex), 2) if forex else 0,
+              'meanDD': round(sum(f['dd'] for f in forex) / len(forex), 1) if forex else 0,
+              'topPF': max((f['pf'] for f in forex), default=0),
+              'topSym': max(forex, key=lambda f: f['pf'])['sym'] if forex else ''},
 }
 
 with open(OUT, 'w', encoding='utf-8') as fh:
-    fh.write('/* LIQUIDEX FRAMEWORK — cross-asset-class scan data: 50 equities (greedy + full deep overlay), 4 crypto cells, EURUSD forex baseline. Auto-generated. */\n')
+    fh.write('/* LIQUIDEX FRAMEWORK — cross-asset-class scan data: 50 equities (greedy + full deep overlay), 27 crypto cells, 3 FX-major cells. Auto-generated. */\n')
     fh.write('window.SCAN = ' + json.dumps({'rows': rows, 'stats': stats, 'pep': pep, 'tlt': tlt, 'crypto': crypto, 'forex': forex}, ensure_ascii=False, indent=0) + ';\n')
 
 print('=== SUMMARY ===')
