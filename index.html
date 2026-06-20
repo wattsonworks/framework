@@ -15,15 +15,16 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<canvas id="liqfield" aria-hidden="true"></canvas>
 
 <!-- TOP BAR -->
 <header class="topbar">
   <a class="brand" href="#top"><b>LIQUIDEX</b><span>Framework</span></a>
   <nav class="nav-links" id="nav-links">
-    <a href="#thesis" data-i18n="nav_thesis">Thesis</a>
-    <a href="#coverage" data-i18n="nav_coverage">Coverage</a>
+    <a href="#thesis" data-i18n="nav_thesis">Mechanism</a>
+    <a href="#coverage" data-i18n="nav_coverage">Universe</a>
     <a href="#evidence" data-i18n="nav_evidence">Evidence</a>
-    <a href="#access" class="nav-cta" data-i18n="nav_access">Access</a>
+    <a href="#access" class="nav-cta" data-i18n="nav_access">Partner</a>
   </nav>
   <div class="topbar-right">
     <span class="asof" data-i18n="asof">As of June 2026</span>
@@ -37,17 +38,23 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="hero_eyebrow">Multi-asset quantitative framework</div>
-    <h1 class="reveal in" data-i18n="hero_h1">One liquidity engine.<br><em>Six asset classes.</em></h1>
-    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> reads institutional liquidity and market structure and resolves it into one rule-based trade. The same engine now posts a validated, low-drawdown edge across <strong>six different asset classes</strong> — semiconductors, mega-cap tech, industrials, consumer, financials and macro ETFs. That is not a stock strategy. It is a framework that detects repeating liquidity behaviour across markets.</p>
+    <div class="eyebrow" data-i18n="hero_eyebrow">Quantitative liquidity research · multi-asset</div>
+    <h1 class="reveal in" data-i18n="hero_h1">One mechanism.<br><em>Many markets.</em></h1>
+    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a research-driven framework built on a single idea: institutional liquidity leaves the same structural footprint wherever it trades. We built a mechanism that identifies that recurring behaviour — and it already holds across <strong>equities, ETFs, gold, bonds, FX and Japanese markets</strong>. The breadth is the result. The mechanism is the point.</p>
     <div class="hero-cta">
-      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">Read the evidence</a>
-      <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Request access</a>
+      <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">Read the research</a>
+      <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Partner with us</a>
+    </div>
+
+    <div class="frames">
+      <div class="frame"><span class="dot"></span><span data-i18n="frame1">Research framework</span></div>
+      <div class="frame"><span class="dot"></span><span data-i18n="frame2">Quant research project</span></div>
+      <div class="frame"><span class="dot"></span><span data-i18n="frame3">Trading IP</span></div>
     </div>
 
     <div class="metricstrip">
-      <div class="m"><div class="mv" data-count="6">6</div><div class="ml" data-i18n="m1">Asset classes</div></div>
-      <div class="m"><div class="mv" data-count="1444" data-suffix="+">1,444+</div><div class="ml" data-i18n="m2">Trades validated</div></div>
+      <div class="m"><div class="mv" data-count="6" data-suffix="+">6+</div><div class="ml" data-i18n="m1">Asset classes</div></div>
+      <div class="m"><div class="mv" data-count="1444" data-suffix="+">1,444+</div><div class="ml" data-i18n="m2">Trades studied</div></div>
       <div class="m"><div class="mv" data-count="2.78" data-decimals="2">2.78</div><div class="ml" data-i18n="m3">Top profit factor</div></div>
       <div class="m"><div class="mv" data-count="6.1" data-decimals="1" data-suffix="%">6.1%</div><div class="ml" data-i18n="m4">Lowest drawdown</div></div>
     </div>
@@ -57,16 +64,16 @@
 <!-- THESIS -->
 <section class="section" id="thesis">
   <div class="wrap">
-    <div class="shead-row"><span class="section-num">01</span><div class="eyebrow" style="margin:0" data-i18n="th_kick">The thesis</div></div>
+    <div class="shead-row"><span class="section-num">01</span><div class="eyebrow" style="margin:0" data-i18n="th_kick">The mechanism</div></div>
     <div class="thesis reveal">
       <div class="left">
-        <p class="big" data-i18n="th_big">A week ago, the story was three semiconductors. Today the same engine holds an edge in <em>six unrelated asset classes</em> — including gold, the Nasdaq and long bonds.</p>
-        <div class="pull" data-i18n="th_pull">"When it works on QQQ, GLD and TLT, it is no longer an equity strategy."</div>
+        <p class="big" data-i18n="th_big">There is a mechanism here that identifies a liquidity behaviour which <em>recurs across different assets.</em></p>
+        <div class="pull" data-i18n="th_pull">"An edge that lives in one market is a curve-fit. An edge that recurs across many is a discovery."</div>
       </div>
       <div class="body">
-        <p data-i18n="th_p1">An edge that lives in one sector is usually a curve-fit. An edge that repeats across <strong>semiconductors, mega-cap technology, industrials, consumer, financials and macro ETFs</strong> is something else: evidence that the engine is reading a real, transferable phenomenon — institutional liquidity and market structure — wherever it shows up.</p>
-        <p data-i18n="th_p2">That is the difference between a product and a <strong>framework</strong>. The same rule-based logic — entry, structural stop, target, breakeven, time-stop — has now been validated across <strong>1,444+ trades</strong> and six asset classes, each name run at its own timeframe and breaker setting.</p>
-        <p data-i18n="th_p3">It is exactly the profile a strategic partner or allocator looks for: a repeatable, explainable signal that is not confined to a single corner of the market.</p>
+        <p data-i18n="th_p1">Institutional order flow leaves a structural footprint — resting liquidity, sweeps, the exhaustion of a cascade. Our claim is narrow and testable: that footprint is <strong>the same across instruments</strong>. The mechanism reads it, and resolves it into one rule-based trade — entry, structural stop, target, breakeven, time-stop.</p>
+        <p data-i18n="th_p2">If that is true, the edge should not care whether it is looking at a semiconductor, an ETF, gold, a long bond, a currency pair or a Japanese name. <strong>So far, it doesn't.</strong> The same logic has been studied across <strong>1,444+ trades and six-plus asset classes</strong>, each at its own timeframe.</p>
+        <p data-i18n="th_p3">That breadth is the finding. It is the difference between a single-market product and a <strong>research framework</strong> — and it is the profile a desk, a partner or an allocator is looking for: a repeatable, explainable signal that is not confined to one corner of the market.</p>
       </div>
     </div>
   </div>
@@ -76,9 +83,18 @@
 <section class="section" id="coverage">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">02</span><div class="eyebrow" style="margin:0" data-i18n="cov_kick">Coverage</div></div>
-      <h2 data-i18n="cov_h2">The edge generalises across <em>six asset classes</em></h2>
-      <p class="lead" data-i18n="cov_lead">Each class below carries at least one validated, tradeable edge — most over 100+ trades, at sane drawdown. This breadth is the proof the engine isn't fit to one market.</p>
+      <div class="shead-row"><span class="section-num">02</span><div class="eyebrow" style="margin:0" data-i18n="cov_kick">The universe</div></div>
+      <h2 data-i18n="cov_h2">The universe keeps <em>widening</em></h2>
+      <p class="lead" data-i18n="cov_lead">The mechanism already runs across these markets. Each carries at least one validated, tradeable edge — most over 100 trades, at sane drawdown. FX and Japan are the newest frontiers, under active validation.</p>
+    </div>
+    <div class="markets reveal">
+      <span class="mk" data-i18n="mk_eq">Equities</span>
+      <span class="mk" data-i18n="mk_etf">ETFs</span>
+      <span class="mk" data-i18n="mk_gold">Gold</span>
+      <span class="mk" data-i18n="mk_bonds">Bonds · TLT</span>
+      <span class="mk frontier" data-i18n="mk_fx">FX · EUR/USD</span>
+      <span class="mk frontier" data-i18n="mk_jp">Japan · Nikkei</span>
+      <span class="mk more" data-i18n="mk_more">+ more sectors</span>
     </div>
     <div class="coverage reveal">
       <div class="cov">
@@ -208,11 +224,48 @@
   </div>
 </section>
 
+<!-- RESEARCH AGENDA -->
+<section class="section" id="rigor">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="rig_kick">Research agenda</div></div>
+      <h2 data-i18n="rig_h2">From a strong backtest to a <em>track record</em></h2>
+      <p class="lead" data-i18n="rig_lead">We are explicit that today's evidence is in-sample. This is the agenda that turns it into an institutional-grade result — the work a serious desk, partner or allocator expects. We would rather show the roadmap than overclaim the result.</p>
+    </div>
+    <div class="agenda reveal">
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig1_h">Slippage &amp; commission</h4><span class="rb done" data-i18n="rig_done">Modelled</span></div>
+        <p data-i18n="rig1_p">Every backtest is run net of commission and slippage. The figures shown are after costs, not before them.</p>
+      </div>
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig2_h">Capacity</h4><span class="rb done" data-i18n="rig_design">By design</span></div>
+        <p data-i18n="rig2_p">The book is built on liquid large-caps and major ETFs — names that absorb size. Capacity is structurally favourable; the precise ceiling is not yet formally measured.</p>
+      </div>
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig3_h">Out-of-sample</h4><span class="rb plan" data-i18n="rig_next">Next</span></div>
+        <p data-i18n="rig3_p">Today's results are in-sample. A held-out window the engine has never seen is the immediate next test — the single most important one.</p>
+      </div>
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig4_h">Walk-forward</h4><span class="rb plan" data-i18n="rig_planned">Planned</span></div>
+        <p data-i18n="rig4_p">Rolling re-optimisation and re-test, to show each per-symbol recipe is stable through time — not fitted to a single window.</p>
+      </div>
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig5_h">Monte Carlo</h4><span class="rb plan" data-i18n="rig_planned">Planned</span></div>
+        <p data-i18n="rig5_p">Trade-order and returns resampling, to bound the distribution of outcomes and quantify the risk of ruin under sizing.</p>
+      </div>
+      <div class="ag-item">
+        <div class="ag-top"><h4 data-i18n="rig6_h">Live results</h4><span class="rb bar" data-i18n="rig_bar">The bar</span></div>
+        <p data-i18n="rig6_p">A forward, time-stamped track record is the only proof that matters for a fund or licensing conversation. It is the standard we hold ourselves to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- THE SYSTEM -->
 <section class="section" id="system">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
+      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
       <h2 data-i18n="sys_h2">One engine. Two instruments.</h2>
       <p class="lead" data-i18n="sys_lead">LIQUIDEX decides the trade. Keeper ranks the universe live; Prophet sizes the risk and breaks it in the danger zone. All three are invite-only on TradingView.</p>
     </div>
@@ -246,7 +299,7 @@
 <section class="section" id="fit">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
+      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
       <h2 data-i18n="fit_h2">Built for a particular kind of operator</h2>
       <p class="lead" data-i18n="fit_p">A tech-comfortable swing / position trader — or a desk — that wants a rules engine on a focused, liquid, multi-asset book, and reads the caveats. If that's not you, we'd rather say so up front.</p>
     </div>
@@ -277,7 +330,7 @@
 <section class="section" id="run">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
+      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
       <h2 data-i18n="run_h2">Signals you place — or signals you route</h2>
     </div>
     <div class="runrow">
@@ -316,8 +369,9 @@
 <section class="section" id="access">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access</div></div>
-      <h2 data-i18n="acc_h2">From your username to live alerts</h2>
+      <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access &amp; partnership</div></div>
+      <h2 data-i18n="acc_h2">Two doors: <em>access</em>, or <em>partnership</em></h2>
+      <p class="lead" data-i18n="acc_lead">Operators get invite-only access on TradingView. Desks, funds and partners get a direct line to evaluate the research, the IP and a licensing or acquisition path.</p>
     </div>
     <div class="access-grid">
       <div class="steps reveal">
@@ -342,8 +396,8 @@
 <!-- THE ASSET -->
 <section class="section" id="asset">
   <div class="wrap">
-    <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">Beyond a subscription</div></div>
-    <div class="asset-note reveal" data-i18n="asset_note">LIQUIDEX is a complete trading system — a liquidity engine, a market-structure engine, a live multi-asset scanner, a risk-management framework and a ranking layer — built over thousands of development hours and validated across <strong>six asset classes and 1,444+ trades</strong>. The intellectual property is significant, and the demonstrated breadth across equities, ETFs and macro instruments is what separates it from a single-market indicator. <strong>It is available for licensing, strategic partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">let's talk</a>.</div>
+    <div class="shead-row"><span class="section-num">11</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
+    <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live multi-asset scanner, a risk framework and a ranking layer, built over thousands of hours and studied across <strong>six-plus asset classes and 1,444+ trades</strong>. The defensible asset is the <strong>mechanism</strong> — a way of reading institutional liquidity that has now repeated in equities, ETFs, gold, bonds, FX and Japan. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
   </div>
 </section>
 
@@ -377,5 +431,9 @@
 
 <script src="i18n.js"></script>
 <script src="app.js"></script>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module" src="liquidity-field.js"></script>
 </body>
 </html>
