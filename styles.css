@@ -478,3 +478,8 @@ html[dir="rtl"] .collab-arrow{right:auto;left:30px}
 html[dir="rtl"] .stash-pop{right:auto;left:-8px}
 html[dir="rtl"] .stash-arrow{right:auto;left:30px}
 @media (max-width:760px){.stash-pop{position:fixed;top:56px;right:10px;left:10px;width:auto;max-width:none}.stash-arrow{display:none}}
+
+/* hero slogan — the brand line directly under LIQUIDEX Framework */
+.hero-slogan{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(17px,2.3vw,22px);line-height:1.25;color:var(--gold);letter-spacing:.01em;margin:0 0 15px}
+.hero-slogan::before{content:"";display:inline-block;width:24px;height:1px;background:var(--gold);opacity:.55;vertical-align:middle;margin-right:12px}
+html[dir="rtl"] .hero-slogan::before{margin-right:0;margin-left:12px}
