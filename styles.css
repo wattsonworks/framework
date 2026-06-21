@@ -71,7 +71,11 @@ a{color:inherit;text-decoration:none}
 .shead-row{display:flex;align-items:baseline;gap:16px;margin-bottom:18px}
 
 /* ---------- HERO ---------- */
-.hero{padding:clamp(60px,10vw,110px) 0 clamp(50px,7vw,84px)}
+.hero{padding:clamp(60px,10vw,110px) 0 clamp(50px,7vw,84px);position:relative;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.4;filter:saturate(1.05) contrast(1.02);pointer-events:none}
+.hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,14,.58) 0%,rgba(10,11,14,.34) 38%,rgba(10,11,14,.82) 100%),radial-gradient(120% 95% at 50% -5%,transparent 42%,rgba(10,11,14,.55) 100%)}
+.hero>.wrap{position:relative;z-index:2}
+@media (prefers-reduced-motion:reduce){.hero-video{display:none}}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,7vw,84px);line-height:1.02;letter-spacing:-.018em;color:var(--ink)}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero .sub{margin-top:30px;max-width:600px;font-size:clamp(16px,1.8vw,19px);color:var(--muted);line-height:1.7}
