@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>LIQUIDEX Framework — תזה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  @page{ size:A4; margin:0; }
+  :root{
+    --paper:#fbfaf6; --ink:#1b1a17; --body:#34322c; --muted:#6a675f; --faint:#9a968c;
+    --rule:#dcd8cd; --rule2:#bbb6a8; --accent:#8a6f3c;
+    --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+  html,body{ background:var(--paper); color:var(--body); font-family:var(--serif); -webkit-font-smoothing:antialiased; }
+  .page{ width:210mm; height:297mm; padding:18mm 22mm 17mm; position:relative; page-break-after:always; background:var(--paper); overflow:hidden; }
+  .page:last-child{ page-break-after:auto; }
+  .rh{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:0.75pt solid var(--rule2);
+       padding-bottom:2.4mm; margin-bottom:7mm; font-family:var(--mono); font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
+  .rh .b{ color:var(--ink); font-weight:600; }
+  .pnum{ position:absolute; bottom:11mm; right:22mm; font-family:var(--mono); font-size:8pt; color:var(--faint); }
+  .pfoot{ position:absolute; bottom:11mm; left:22mm; font-family:var(--mono); font-size:7pt; color:var(--faint); letter-spacing:.05em; }
+  .secnum{ font-family:var(--mono); font-size:8.5pt; color:var(--accent); letter-spacing:.16em; text-transform:uppercase; }
+  h2{ font-weight:600; font-size:19pt; color:var(--ink); line-height:1.15; margin:2mm 0 5mm; letter-spacing:-.005em; }
+  h3{ font-weight:600; font-size:11.5pt; color:var(--ink); margin:6mm 0 2mm; }
+  p{ font-size:10.5pt; line-height:1.62; color:var(--body); margin-bottom:3.4mm; }
+  p:last-child{ margin-bottom:0; }
+  p.lead{ font-size:11.5pt; color:var(--ink); line-height:1.55; }
+  strong{ color:var(--ink); font-weight:600; }
+  em{ font-style:italic; }
+  .quote{ font-style:italic; color:var(--ink); border-left:1.5pt solid var(--accent); padding-left:5mm; margin:6mm 0; font-size:12.5pt; line-height:1.4; }
+  .rule{ height:0.75pt; background:var(--rule); margin:5mm 0; border:0; }
+  sup{ font-size:.66em; vertical-align:super; color:var(--accent); }
+
+  .cover{ padding-top:18mm; }
+  .cover .head{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:0.75pt solid var(--rule2); padding-bottom:3mm; }
+  .cover .head .nm{ font-family:var(--serif); font-weight:700; font-size:15pt; color:var(--ink); letter-spacing:.01em; }
+  .cover .head .nm span{ font-family:var(--mono); font-size:8pt; font-weight:500; letter-spacing:.22em; color:var(--accent); text-transform:uppercase; vertical-align:middle; margin-left:3mm; }
+  .cover .head .meta{ font-family:var(--mono); font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .cover .titleblock{ margin-top:36mm; }
+  .cover .secnum{ display:block; margin-bottom:5mm; }
+  .cover h1{ font-weight:700; font-size:30pt; line-height:1.12; color:var(--ink); letter-spacing:-.01em; max-width:150mm; }
+  .cover .sub{ font-size:13pt; font-style:italic; color:var(--muted); margin-top:5mm; max-width:150mm; line-height:1.45; }
+  .abstract{ margin-top:12mm; border-top:0.75pt solid var(--rule2); border-bottom:0.75pt solid var(--rule2); padding:6mm 0; }
+  .abstract .lab{ font-family:var(--mono); font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin-bottom:3mm; }
+  .abstract p{ font-size:10.5pt; line-height:1.6; color:var(--body); }
+  .keyfig{ display:flex; margin-top:10mm; border:0.75pt solid var(--rule2); }
+  .keyfig .kf{ flex:1; padding:5.5mm 5mm; border-right:0.75pt solid var(--rule); }
+  .keyfig .kf:last-child{ border-right:0; }
+  .keyfig .kf b{ display:block; font-family:var(--mono); font-size:20pt; font-weight:600; color:var(--ink); line-height:1; font-variant-numeric:tabular-nums; }
+  .keyfig .kf span{ display:block; margin-top:3mm; font-size:8pt; color:var(--muted); line-height:1.35; }
+
+  ol.proto{ list-style:none; counter-reset:p; margin:5mm 0 0; }
+  ol.proto li{ counter-increment:p; position:relative; padding:4mm 0 4mm 14mm; border-top:0.75pt solid var(--rule); }
+  ol.proto li:last-child{ border-bottom:0.75pt solid var(--rule); }
+  ol.proto li::before{ content:counter(p,decimal-leading-zero); position:absolute; left:0; top:4mm; font-family:var(--mono); font-size:11pt; font-weight:600; color:var(--accent); }
+  ol.proto h4{ font-weight:600; font-size:11pt; color:var(--ink); margin-bottom:1mm; }
+  ol.proto p{ font-size:9.7pt; color:var(--muted); line-height:1.5; margin:0; }
+  ol.proto .mono{ font-family:var(--mono); font-size:9pt; color:var(--ink); }
+
+  table{ width:100%; border-collapse:collapse; margin:3mm 0 2mm; }
+  caption{ caption-side:top; text-align:left; font-family:var(--mono); font-size:8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:2.5mm; }
+  th{ text-align:left; font-family:var(--mono); font-size:7.3pt; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:2mm 2.5mm; border-bottom:1pt solid var(--rule2); white-space:nowrap; }
+  td{ font-size:9pt; padding:1.7mm 2.5mm; border-bottom:0.75pt solid var(--rule); color:var(--body); vertical-align:baseline; }
+  tr:last-child td{ border-bottom:1pt solid var(--rule2); }
+  th.r, td.r{ text-align:right; }
+  td.sym{ font-weight:600; color:var(--ink); }
+  td.num{ font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  td.fpf{ font-family:var(--mono); font-weight:600; color:var(--ink); }
+  .tcap{ font-size:8.5pt; color:var(--muted); line-height:1.5; margin-top:2.5mm; }
+  .tcap strong{ color:var(--ink); }
+
+  table.dense th{ padding:0.9mm 2mm; font-size:6.6pt; line-height:1.1; }
+  table.dense td{ padding:0.45mm 2mm; font-size:7.4pt; line-height:1.14; }
+  table.dense td.arch{ font-family:var(--mono); font-size:6.1pt; color:var(--muted); white-space:nowrap; }
+  table.dense td.st-ready,table.dense td.st-wf,table.dense td.st-remicro{ font-family:var(--mono); font-size:7pt; letter-spacing:.02em; }
+  .st-ready{ color:#4a7a5f; font-weight:600; }
+  .st-wf{ color:var(--accent); }
+  .st-remicro{ color:#a8443a; font-weight:600; }
+  table.dense tr.loss td.sym{ color:#a8443a; }
+
+  .grid2{ display:flex; gap:8mm; }
+  .grid2 > div{ flex:1; }
+
+  .case{ border-top:0.75pt solid var(--rule2); padding-top:5mm; margin-top:6mm; }
+  .case:first-of-type{ border-top:0; padding-top:0; margin-top:0; }
+  .case h3{ margin-top:0; }
+  .case h3 em{ color:var(--accent); font-style:italic; font-weight:600; }
+  .caserow{ display:flex; gap:8mm; align-items:flex-start; }
+  .caserow .prose{ flex:1.55; }
+  .caserow .prose p{ font-size:9.8pt; margin-bottom:2.6mm; }
+  .caserow .data{ flex:1; }
+  table.mini{ margin:0; }
+  table.mini td, table.mini th{ font-size:8.3pt; padding:1.4mm 2mm; }
+  table.mini .big{ font-family:var(--mono); font-weight:700; font-size:11pt; color:var(--ink); }
+  .confnote{ font-size:8.2pt; color:var(--muted); line-height:1.5; margin-top:2.5mm; }
+  .confnote strong{ color:var(--ink); }
+
+  .syslist{ margin-top:3mm; }
+  .sysitem{ display:flex; gap:5mm; padding:3.5mm 0; border-top:0.75pt solid var(--rule); }
+  .sysitem:last-of-type{ border-bottom:0.75pt solid var(--rule); }
+  .sysitem .id{ font-family:var(--mono); font-size:9.5pt; font-weight:600; color:var(--ink); min-width:30mm; }
+  .sysitem .id span{ display:block; font-size:7.3pt; font-weight:400; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-top:.5mm; }
+  .sysitem p{ font-size:9.5pt; margin:0; }
+  .access{ margin-top:6mm; border:0.75pt solid var(--rule2); padding:5mm 6mm; }
+  .access .lab{ font-family:var(--mono); font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:2.5mm; }
+  .access p{ font-size:9.7pt; margin-bottom:2mm; }
+  .contact{ margin-top:5mm; font-family:var(--mono); font-size:9pt; color:var(--ink); letter-spacing:.02em; }
+  .contact span{ color:var(--muted); }
+  .disc{ position:absolute; bottom:14mm; left:22mm; right:22mm; font-size:7pt; color:var(--faint); line-height:1.55; border-top:0.75pt solid var(--rule); padding-top:3mm; }
+
+  .cite{ font-family:var(--mono); font-size:6.7pt; color:var(--accent); letter-spacing:.02em; white-space:nowrap; }
+  .mech{ border-top:0.75pt solid var(--rule); padding-top:2.2mm; margin-top:2.2mm; }
+  .mech h3{ margin-top:1mm; }
+  .mech .tag{ font-family:var(--mono); font-size:7.3pt; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  .efoot{ border:0.75pt solid var(--rule2); background:rgba(138,111,60,.05); padding:4mm 5mm; margin-top:5mm; font-size:8.4pt; line-height:1.55; color:var(--muted); }
+  .efoot strong{ color:var(--ink); }
+  .srcs{ columns:2; column-gap:8mm; margin-top:5mm; }
+  .srcs .s{ break-inside:avoid; font-size:7pt; line-height:1.45; color:var(--muted); margin-bottom:1.5mm; }
+  .srcs .s b{ color:var(--ink); font-family:var(--mono); font-size:6.8pt; font-weight:600; }
+
+  /* ===== RTL / Hebrew overrides (appended; do not delete rules above) ===== */
+  body{ direction:rtl; }
+  :root{
+    --serif:'Frank Ruhl Libre', 'Source Serif 4', Georgia, serif;
+    --mono:'Heebo', 'JetBrains Mono', ui-monospace, monospace;
+  }
+  body,p,h1,h2,h3,.lead{ text-align:right; }
+  .rh{ flex-direction:row-reverse; }
+  .cover .head{ flex-direction:row-reverse; }
+  .cover .head .nm span{ margin-left:0; margin-right:3mm; }
+  caption{ text-align:right; }
+  th,td{ text-align:right; }
+  th.r, td.r{ text-align:left; }
+  /* keep numeric / ticker columns reading LTR so PF/DD/N/% stay correct */
+  td.num,td.r,td.fpf,th.r,td.sym{ direction:ltr; text-align:left; }
+  table.mini td.r, table.mini td.big{ direction:ltr; text-align:left; }
+  table.dense td.arch{ direction:ltr; text-align:left; }
+  .quote{ border-left:0; border-right:1.5pt solid var(--accent); padding-left:0; padding-right:5mm; }
+  ol.proto li{ padding:4mm 14mm 4mm 0; }
+  ol.proto li::before{ left:auto; right:0; }
+  .pnum{ right:auto; left:22mm; }
+  .pfoot{ left:auto; right:22mm; text-align:right; }
+  .contact{ direction:ltr; text-align:left; }
+  .cite{ direction:ltr; }
+  ol.proto .mono, .sysitem .id, .access .lab, .abstract .lab, .secnum{ direction:ltr; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 — TITLE -->
+<section class="page cover">
+  <div class="head">
+    <div class="nm">LIQUIDEX <span>Framework</span></div>
+    <div class="meta">תזה · 21 ביוני 2026</div>
+  </div>
+  <div class="titleblock">
+    <span class="secnum">מחקר נזילות שיטתי</span>
+    <h1>פעילות מחקר נזילות שיטתית</h1>
+    <div class="sub">הספר המכוונן-עמוק — תיעוד פר-מכשיר, חתך מפורסם של יקום בן 130+ מכשירים.</div>
+    <div class="abstract">
+      <div class="lab">תקציר</div>
+      <p>LIQUIDEX היא פעילות מחקר שיטתית הנשענת על עיקרון יחיד: נזילות מוסדית מותירה את אותה טביעת אצבע מבנית בכל מקום שבו היא נסחרת. מתוך עיקרון זה, כל מכשיר ביקום בן 130+ מכשירים — מניות, סחורות, מדדים, נכסים דיגיטליים ומט״ח — נקרא עד לעומק ההתנהגות המוסדית ששולטת בזרימת הפקודות שלו, ומכוונן למתכון פר-מכשיר משלו תחת פרוטוקול אופטימיזציה ממושמע. <strong>מאה ושבעה תאים הושלמו</strong> נכון לתזה זו — על פני מניות, סחורות, מדדים, קריפטו ומט״ח — מתוכם תשעים ושישה חוצים את סף היתרון (פקטור רווח ≥ 1 ב-≥ 30 עסקאות). השכבה האמינה היא עשרים וארבעה התאים הסימטריים הדו-כיווניים השורדים החלפת רג׳ים; רוב התאים עתירי-פקטור-הרווח הם דעיכות long-only שנקראו דרך חלון שוק-שורי ארוך-טווח, ולכן הם נושאים את הדגל של Walk-forward-חובה. מקטע 5 פונה מהספר אל הסיבה לו — השחקנים המוסדיים החוצי-נכסים הממוקמים מבנית להפיק את אותה טביעת אצבע על פני מניות, סחורות, מדדים, קריפטו ומט״ח, מפורפלים כהשערות מבוססות-ראיות. כל הנתונים כאן הם in-sample ובניכוי עמלות והחלקה; אימותם out-of-sample הוא נושאו של מקטע 6.</p>
+    </div>
+    <div class="keyfig">
+      <div class="kf"><b>130+</b><span>מכשירים בפרופיל</span></div>
+      <div class="kf"><b>107</b><span>תאים מכווננים-עמוק · 5 מחלקות מכשירים</span></div>
+      <div class="kf"><b>96</b><span>יתרונות (PF &ge; 1, N &ge; 30)</span></div>
+      <div class="kf"><b>24</b><span>יתרונות דו-כיווניים סימטריים</span></div>
+    </div>
+  </div>
+  <div class="pfoot">למטרות הערכת מחקר בלבד · תוצאות היסטוריות, in-sample · אינו ייעוץ פיננסי</div>
+  <div class="pnum">1</div>
+</section>
+
+<!-- PAGE 2 — THE MECHANISM -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§1 · המנגנון</span></div>
+  <span class="secnum">מקטע 1</span>
+  <h2>המנגנון</h2>
+  <p class="lead">זרימת הפקודות המוסדית אינה רעש; היא המשקע של החלטות. מפל חיסול, טאטוא-סטופים מתוכנן, ספיגת Iceberg המגינה על רמה, מיצוי של מהלך חד-צדדי — כל אחד הוא חתימה התנהגותית, וכל אחד חוזר.</p>
+  <p>המנוע מזהה את החתימה, מייחס אותה להתנהגות המוסדית שמפיקה אותה, ומפענח את הקריאה הזו לפוזיציה יחידה מבוססת-כללים: כניסה, סטופ מבני, יעד בקיר הנגדי, נקודת איזון וסטופ-זמן. הוא אינו רק מזהה אנומליה; הוא מפרופל את הגורם שמאחוריה — מה הוא עושה, לאן הוא הולך, והאם הוא מסווה זאת.</p>
+  <div class="quote">יתרון שחי בשוק אחד הוא התאמת-יתר. יתרון שחוזר על פני שווקים רבים הוא תגלית.</div>
+  <p>הטענה הנבחנת צרה וניתנת-להפרכה. אילו היה היתרון ספציפי למכשיר אחד, הוא היה ארטיפקט של ההיסטוריה של אותו מכשיר — התאמת-יתר. אם לעומת זאת אותן קריאות התנהגותיות משחזרות יתרון על פני מכשירים רבים שאינם קשורים ביניהם, הרי שהמנוע מודד תכונה מבנית של שווקים מוסדיים ולא את הייחודיות של גרף בודד.</p>
+  <p>המקטעים שלהלן מציגים, לפי הסדר: הפרוטוקול לכיוונון כל סימבול (מקטע 2); הספר המכוונן-עמוק על פני היקום (מקטע 3); שתי דוגמאות מעובדות של הקריאה פר-סימבול, עם ההיגיון ההתנהגותי שמאחורי כל אחת (מקטע 4); השחקנים החוצי-נכסים שמאחורי הידית — מי מפיק את אותה טביעת אצבע על פני עולמות, ומדוע (מקטע 5); ועבודת האימות שמפרידה בין תוצאות ה-in-sample הללו לבין רקורד מסחר (מקטע 6).</p>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">2</div>
+</section>
+
+<!-- PAGE 3 — THE PROTOCOL -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§2 · הפרוטוקול</span></div>
+  <span class="secnum">מקטע 2</span>
+  <h2>הפרוטוקול פר-סימבול</h2>
+  <p>רוחב חסר משמעות בלי שיטה. כל סימבול עובר את אותו פרוטוקול. המשמעת שמרנית בכוונה: קריאה התנהגותית מתקבלת רק כשהיא משפרת את התוצאה מותאמת-הסיכון בהגדרה המכווננת שלה, ונפסלת ברגע שלא.</p>
+  <ol class="proto">
+    <li><h4>בסיס</h4><p>המנוע מצומצם לליבתו — כל קריאה אופציונלית כבויה, פרמטרי ברירת מחדל לאורך כל הדרך. פקטור הרווח הגולמי, הדרודאון ומספר העסקאות נרשמים כטלת-המטבע שצריך לנצח.</p></li>
+    <li><h4>בחירה קדמית חמדנית</h4><p>קריאות התנהגותיות — סטופ-מפל, יעד-קיר-נגדי, שער הסיכון הכיווני, אישור מהירות-סיכון, ספיגת Iceberg, מיצוי טאטוא-נזילות — מתווספות אחת בכל פעם, נשמרות רק אם הן משפרות את התוצאה מותאמת-הסיכון, ומבוטלות אחרת.</p></li>
+    <li><h4>כיוונון פרמטרים מצומד</h4><p>כל קריאה שנשמרה נשפטת בהגדרה המכווננת שלה, לא בברירת המחדל: הרגישות שלה נסרקת בשני הכיוונים, וקריאה שאינה משתלמת באף הגדרה מוסרת ולא נותרת על ברירת מחדל שמחמיאה לה.</p></li>
+    <li><h4>ליטוש בשני מעברים</h4><p>התצורה השורדת נסקרת בפעם השנייה, כל פרמטר משני מוזז ומבוטל מיד אם עקומת ההון מתדרדרת. המתכון המתקבל הוא זה ששום שינוי נוסף לא משפר.</p></li>
+    <li><h4>ניקוד מותאם-סיכון</h4><p>כל החלטה מתקבלת על <span class="mono">S = PF / (1 + MaxDD)</span>, לעולם לא על פקטור רווח לבדו, בכפוף לרצפה קשיחה של שלושים עסקאות. פקטור רווח גבוה על מדגם קטן אינו עומד בתנאי.</p></li>
+    <li><h4>שער Out-of-sample</h4><p>מתכון כה ספציפי חייב לעבור חלון שמור-בצד לפני שהוא מטופל כאמיתי. עוצמה in-sample היא תנאי הכניסה לאותה בדיקה, לא תחליף לה.</p></li>
+  </ol>
+  <div class="quote" style="font-size:11.5pt;margin-top:6mm">אנחנו לא מחפשים את ההגדרה שגורמת לגרף להיראות טוב. אנחנו מחפשים את הקריאה ששורדת ספק.</div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">3</div>
+</section>
+
+<!-- PAGE 4 — THE DEEP-TUNED BOOK (ranks 1-40) -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§3 · הספר המכוונן-עמוק</span></div>
+  <span class="secnum">מקטע 3</span>
+  <h2>הספר המכוונן-עמוק</h2>
+  <p style="margin-bottom:2mm">כל מכשיר מכוונן למתכון משלו, ממוין לפי פקטור רווח. <strong>107 תאים על פני חמש מחלקות מכשירים</strong> — מניות, סחורות, מדדים, קריפטו ומט״ח — מתוכם <strong>96 הם יתרונות</strong> (פקטור רווח &ge; 1 ב-&ge; 30 עסקאות). השכבה האמינה היא <strong>24 התאים הסימטריים הדו-כיווניים</strong> — הם שורדים החלפת רג׳ים. <strong>PF &le; 1.5</strong> מסומן <em>re-microtune</em> (לכיוונון מחדש); <sup>&#9888;</sup> מסמן Walk-forward-חובה. התצורות המלאות פר-מכשיר מפורסמות ב-wattsonworks.github.io/framework.</p>
+  <table class="dense">
+    <caption>טבלה 1 — הספר המכוונן-עמוק, דירוגים 1&ndash;38 מתוך 107 (מניות, סחורות, מדדים, קריפטו, מט״ח)</caption>
+    <thead><tr>
+      <th class="r">#</th><th>סימבול</th><th>מחלקה</th><th class="r">PF</th><th class="r">Max&nbsp;DD</th><th class="r">זכייה</th><th class="r">N</th><th>ארכיטיפ</th><th>סטטוס</th>
+    </tr></thead>
+    <tbody>
+    <!--DECK_DEEP_START-->
+    <tr><td class="r num">1</td><td class="sym">XCUUSD<sup>&#9888;</sup></td><td>Commodity</td><td class="r fpf">9.149</td><td class="r num">6.2%</td><td class="r num">84%</td><td class="r num">38</td><td class="arch">comdty-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">2</td><td class="sym">DE<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">5.748</td><td class="r num">23.6%</td><td class="r num">87%</td><td class="r num">76</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">3</td><td class="sym">AUDJPY</td><td>Forex</td><td class="r fpf">4.898</td><td class="r num">7.6%</td><td class="r num">61%</td><td class="r num">49</td><td class="arch">forex-confluence-both</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">4</td><td class="sym">DOGE<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">4.759</td><td class="r num">4.3%</td><td class="r num">90%</td><td class="r num">40</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">5</td><td class="sym">NZDUSD<sup>&#9888;</sup></td><td>Forex</td><td class="r fpf">4.657</td><td class="r num">6.0%</td><td class="r num">17%</td><td class="r num">52</td><td class="arch">forex-fade-short-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">6</td><td class="sym">GLD<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">4.533</td><td class="r num">18.8%</td><td class="r num">83%</td><td class="r num">64</td><td class="arch">fade-long-ice</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">7</td><td class="sym">V<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">4.443</td><td class="r num">25.4%</td><td class="r num">81%</td><td class="r num">80</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">8</td><td class="sym">XOM<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">4.386</td><td class="r num">20.6%</td><td class="r num">81%</td><td class="r num">42</td><td class="arch">fade-long-velo</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">9</td><td class="sym">XAGUSD<sup>&#9888;</sup></td><td>Commodity</td><td class="r fpf">3.939</td><td class="r num">18.9%</td><td class="r num">75%</td><td class="r num">32</td><td class="arch">comdty-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">10</td><td class="sym">COST<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">3.851</td><td class="r num">23.0%</td><td class="r num">78%</td><td class="r num">64</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">11</td><td class="sym">LRCX<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">3.837</td><td class="r num">26.9%</td><td class="r num">83%</td><td class="r num">30</td><td class="arch">fade-long-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">12</td><td class="sym">XLV<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">3.798</td><td class="r num">10.5%</td><td class="r num">87%</td><td class="r num">46</td><td class="arch">gated-continuation-fade</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">13</td><td class="sym">GBPUSD</td><td>Forex</td><td class="r fpf">3.409</td><td class="r num">4.5%</td><td class="r num">26%</td><td class="r num">31</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">14</td><td class="sym">USDCAD</td><td>Forex</td><td class="r fpf">3.264</td><td class="r num">3.7%</td><td class="r num">59%</td><td class="r num">74</td><td class="arch">forex-confluence-both</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">15</td><td class="sym">XLK<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">3.184</td><td class="r num">11.7%</td><td class="r num">46%</td><td class="r num">39</td><td class="arch">fade-long-ice</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">16</td><td class="sym">USDJPY</td><td>Forex</td><td class="r fpf">3.030</td><td class="r num">9.7%</td><td class="r num">19%</td><td class="r num">31</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">17</td><td class="sym">XLE<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.941</td><td class="r num">7.0%</td><td class="r num">70%</td><td class="r num">37</td><td class="arch">fade-long-clean-velo</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">18</td><td class="sym">WTICOUSD<sup>&#9888;</sup></td><td>Commodity</td><td class="r fpf">2.917</td><td class="r num">23.6%</td><td class="r num">67%</td><td class="r num">30</td><td class="arch">comdty-confluence-long-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">19</td><td class="sym">AUDUSD</td><td>Forex</td><td class="r fpf">2.796</td><td class="r num">7.1%</td><td class="r num">23%</td><td class="r num">47</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">20</td><td class="sym">AVAX</td><td>Crypto</td><td class="r fpf">2.643</td><td class="r num">16.0%</td><td class="r num">30%</td><td class="r num">37</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">21</td><td class="sym">ETH</td><td>Crypto</td><td class="r fpf">2.610</td><td class="r num">7.4%</td><td class="r num">88%</td><td class="r num">48</td><td class="arch">fade-bsl-cryptolong</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">22</td><td class="sym">SMH<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.547</td><td class="r num">12.9%</td><td class="r num">59%</td><td class="r num">104</td><td class="arch">fade-long-wall-velo</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">23</td><td class="sym">SOXX<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.493</td><td class="r num">21.3%</td><td class="r num">55%</td><td class="r num">84</td><td class="arch">fade-bsl</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">24</td><td class="sym">JPM</td><td>Single-name</td><td class="r fpf">2.452</td><td class="r num">18.4%</td><td class="r num">52%</td><td class="r num">44</td><td class="arch">equity-confluence-long</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">25</td><td class="sym">MA<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">2.383</td><td class="r num">8.9%</td><td class="r num">36%</td><td class="r num">33</td><td class="arch">fade-long-wall-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">26</td><td class="sym">SOL</td><td>Crypto</td><td class="r fpf">2.373</td><td class="r num">16.6%</td><td class="r num">20%</td><td class="r num">156</td><td class="arch">trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">27</td><td class="sym">XLF<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.367</td><td class="r num">38.0%</td><td class="r num">47%</td><td class="r num">34</td><td class="arch">equity-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">28</td><td class="sym">GBPJPY</td><td>Forex</td><td class="r fpf">2.352</td><td class="r num">8.5%</td><td class="r num">25%</td><td class="r num">80</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">29</td><td class="sym">QQQ<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.317</td><td class="r num">8.7%</td><td class="r num">47%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">30</td><td class="sym">ETN<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">2.305</td><td class="r num">35.2%</td><td class="r num">77%</td><td class="r num">60</td><td class="arch">fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">31</td><td class="sym">IGV<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.277</td><td class="r num">32.6%</td><td class="r num">89%</td><td class="r num">46</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">32</td><td class="sym">PEPE</td><td>Crypto</td><td class="r fpf">2.153</td><td class="r num">10.7%</td><td class="r num">44%</td><td class="r num">32</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">33</td><td class="sym">ETH-CB</td><td>Crypto</td><td class="r fpf">2.098</td><td class="r num">7.4%</td><td class="r num">86%</td><td class="r num">65</td><td class="arch">fade-crypto-ice-brk</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">34</td><td class="sym">BTC</td><td>Crypto</td><td class="r fpf">2.082</td><td class="r num">9.8%</td><td class="r num">45%</td><td class="r num">103</td><td class="arch">fade-breaker-BE</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">35</td><td class="sym">DIA<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.074</td><td class="r num">10.9%</td><td class="r num">42%</td><td class="r num">31</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">36</td><td class="sym">INTC<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">2.053</td><td class="r num">46.6%</td><td class="r num">67%</td><td class="r num">49</td><td class="arch">fade-long-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">37</td><td class="sym">SCHD<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">2.047</td><td class="r num">6.7%</td><td class="r num">46%</td><td class="r num">35</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">38</td><td class="sym">KO</td><td>Single-name</td><td class="r fpf">1.979</td><td class="r num">19.8%</td><td class="r num">54%</td><td class="r num">201</td><td class="arch">fade-clean</td><td class="st-ready">ready</td></tr>
+    <!--DECK_DEEP_END-->
+    </tbody>
+  </table>
+  <div class="tcap">ממוין לפי פקטור רווח &middot; הספר נמשך בעמוד הבא עם דירוגים 39&ndash;76.</div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">4</div>
+</section>
+
+<!-- PAGE 5 — THE DEEP-TUNED BOOK (ranks 41-80) -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§3 · הספר המכוונן-עמוק</span></div>
+  <span class="secnum">מקטע 3 (המשך)</span>
+  <h2>הספר המכוונן-עמוק &mdash; דירוגים 39&ndash;76</h2>
+  <table class="dense" style="margin-top:2mm">
+    <caption>טבלה 1 (המשך) — דירוגים 39&ndash;76 מתוך 107</caption>
+    <thead><tr>
+      <th class="r">#</th><th>סימבול</th><th>מחלקה</th><th class="r">PF</th><th class="r">Max&nbsp;DD</th><th class="r">זכייה</th><th class="r">N</th><th>ארכיטיפ</th><th>סטטוס</th>
+    </tr></thead>
+    <tbody>
+    <!--DECK_DEEP2_START-->
+    <tr><td class="r num">39</td><td class="sym">NXPI</td><td>Semis</td><td class="r fpf">1.971</td><td class="r num">20.7%</td><td class="r num">66%</td><td class="r num">61</td><td class="arch">fade-gated</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">40</td><td class="sym">PANW<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">1.957</td><td class="r num">23.0%</td><td class="r num">49%</td><td class="r num">86</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">41</td><td class="sym">ON<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.952</td><td class="r num">38.7%</td><td class="r num">63%</td><td class="r num">38</td><td class="arch">fade-long-cascstop-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">42</td><td class="sym">ICP<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.890</td><td class="r num">27.1%</td><td class="r num">38%</td><td class="r num">55</td><td class="arch">crypto-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">43</td><td class="sym">NATGASUSD</td><td>Commodity</td><td class="r fpf">1.882</td><td class="r num">10.0%</td><td class="r num">21%</td><td class="r num">56</td><td class="arch">comdty-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">44</td><td class="sym">VOO<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.849</td><td class="r num">12.2%</td><td class="r num">60%</td><td class="r num">30</td><td class="arch">fade-clean-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">45</td><td class="sym">ADI<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.836</td><td class="r num">12.7%</td><td class="r num">42%</td><td class="r num">31</td><td class="arch">fade-long-wall-gated</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">46</td><td class="sym">KLAC<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.823</td><td class="r num">16.5%</td><td class="r num">41%</td><td class="r num">51</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">47</td><td class="sym">XLY<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.798</td><td class="r num">22.0%</td><td class="r num">74%</td><td class="r num">34</td><td class="arch">fade-long-clean-cascstop</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">48</td><td class="sym">IWM</td><td>ETF</td><td class="r fpf">1.795</td><td class="r num">24.6%</td><td class="r num">40%</td><td class="r num">102</td><td class="arch">equity-confluence-long</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">49</td><td class="sym">MPWR<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.788</td><td class="r num">27.2%</td><td class="r num">55%</td><td class="r num">31</td><td class="arch">fade-long-cascstop-velo-bsl</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">50</td><td class="sym">RENDER<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.757</td><td class="r num">14.4%</td><td class="r num">86%</td><td class="r num">70</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">51</td><td class="sym">DE30EUR<sup>&#9888;</sup></td><td>Index</td><td class="r fpf">1.741</td><td class="r num">11.4%</td><td class="r num">68%</td><td class="r num">69</td><td class="arch">index-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">52</td><td class="sym">UNI<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.703</td><td class="r num">19.0%</td><td class="r num">48%</td><td class="r num">40</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">53</td><td class="sym">ADA</td><td>Crypto</td><td class="r fpf">1.686</td><td class="r num">13.5%</td><td class="r num">20%</td><td class="r num">40</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">54</td><td class="sym">ARB</td><td>Crypto</td><td class="r fpf">1.677</td><td class="r num">19.6%</td><td class="r num">21%</td><td class="r num">56</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">55</td><td class="sym">JUP</td><td>Crypto</td><td class="r fpf">1.670</td><td class="r num">25.8%</td><td class="r num">34%</td><td class="r num">44</td><td class="arch">crypto-fade-long</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">56</td><td class="sym">BNB</td><td>Crypto</td><td class="r fpf">1.605</td><td class="r num">19.7%</td><td class="r num">26%</td><td class="r num">74</td><td class="arch">crypto-confluence-both</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">57</td><td class="sym">PEP</td><td>Single-name</td><td class="r fpf">1.595</td><td class="r num">6.5%</td><td class="r num">49%</td><td class="r num">107</td><td class="arch">fade-both</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">58</td><td class="sym">XRP</td><td>Crypto</td><td class="r fpf">1.587</td><td class="r num">19.0%</td><td class="r num">14%</td><td class="r num">87</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">59</td><td class="sym">TSEM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.582</td><td class="r num">19.2%</td><td class="r num">44%</td><td class="r num">39</td><td class="arch">continuation-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">60</td><td class="sym">FIL</td><td>Crypto</td><td class="r fpf">1.572</td><td class="r num">20.2%</td><td class="r num">25%</td><td class="r num">40</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">61</td><td class="sym">AAVE<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.565</td><td class="r num">24.4%</td><td class="r num">23%</td><td class="r num">90</td><td class="arch">crypto-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">62</td><td class="sym">NAS100USD<sup>&#9888;</sup></td><td>Index</td><td class="r fpf">1.540</td><td class="r num">12.5%</td><td class="r num">58%</td><td class="r num">31</td><td class="arch">index-confluence-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">63</td><td class="sym">UK100GBP<sup>&#9888;</sup></td><td>Index</td><td class="r fpf">1.537</td><td class="r num">7.3%</td><td class="r num">61%</td><td class="r num">38</td><td class="arch">index-confluence-long-velo</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">64</td><td class="sym">SPY<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.521</td><td class="r num">8.5%</td><td class="r num">38%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">65</td><td class="sym">AMD<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.515</td><td class="r num">21.3%</td><td class="r num">44%</td><td class="r num">32</td><td class="arch">fade-long-wall</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">66</td><td class="sym">EURUSD</td><td>Forex</td><td class="r fpf">1.514</td><td class="r num">7.9%</td><td class="r num">34%</td><td class="r num">32</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">67</td><td class="sym">ENA</td><td>Crypto</td><td class="r fpf">1.500</td><td class="r num">15.7%</td><td class="r num">26%</td><td class="r num">47</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">68</td><td class="sym">SPX500USD<sup>&#9888;</sup></td><td>Index</td><td class="r fpf">1.468</td><td class="r num">11.4%</td><td class="r num">68%</td><td class="r num">34</td><td class="arch">index-confluence-long</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">69</td><td class="sym">INJ<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.461</td><td class="r num">12.1%</td><td class="r num">85%</td><td class="r num">52</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr class="loss"><td class="r num">70</td><td class="sym">TXN<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.455</td><td class="r num">27.9%</td><td class="r num">56%</td><td class="r num">34</td><td class="arch">fade-long-cascstop-velo-bsl</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">71</td><td class="sym">NEAR<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.454</td><td class="r num">8.4%</td><td class="r num">80%</td><td class="r num">50</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">72</td><td class="sym">FET</td><td>Crypto</td><td class="r fpf">1.454</td><td class="r num">28.7%</td><td class="r num">19%</td><td class="r num">37</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">73</td><td class="sym">MRVL<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.447</td><td class="r num">44.2%</td><td class="r num">38%</td><td class="r num">58</td><td class="arch">semi-confluence-long-gated</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">74</td><td class="sym">LTC</td><td>Crypto</td><td class="r fpf">1.433</td><td class="r num">25.8%</td><td class="r num">24%</td><td class="r num">70</td><td class="arch">crypto-confluence-both</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">75</td><td class="sym">TSM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.428</td><td class="r num">25.2%</td><td class="r num">40%</td><td class="r num">30</td><td class="arch">fade-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">76</td><td class="sym">XAUUSD<sup>&#9888;</sup></td><td>Commodity</td><td class="r fpf">1.391</td><td class="r num">9.3%</td><td class="r num">69%</td><td class="r num">35</td><td class="arch">comdty-confluence-long</td><td class="st-remicro">re-microtune</td></tr>
+    <!--DECK_DEEP2_END-->
+    </tbody>
+  </table>
+  <div class="tcap">ממוין לפי פקטור רווח &middot; הספר מסתיים בעמוד הבא עם דירוגים 77&ndash;107.</div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">5</div>
+</section>
+
+<!-- PAGE 6 — THE DEEP-TUNED BOOK (ranks 77-107) -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§3 · הספר המכוונן-עמוק</span></div>
+  <span class="secnum">מקטע 3 (המשך)</span>
+  <h2>הספר המכוונן-עמוק &mdash; דירוגים 77&ndash;107</h2>
+  <table class="dense" style="margin-top:2mm">
+    <caption>טבלה 1 (המשך) — דירוגים 77&ndash;107 מתוך 107</caption>
+    <thead><tr>
+      <th class="r">#</th><th>סימבול</th><th>מחלקה</th><th class="r">PF</th><th class="r">Max&nbsp;DD</th><th class="r">זכייה</th><th class="r">N</th><th>ארכיטיפ</th><th>סטטוס</th>
+    </tr></thead>
+    <tbody>
+    <!--DECK_DEEP3_START-->
+    <tr class="loss"><td class="r num">77</td><td class="sym">ASML</td><td>Semis</td><td class="r fpf">1.385</td><td class="r num">14.0%</td><td class="r num">52%</td><td class="r num">202</td><td class="arch">equity-robust-both</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">78</td><td class="sym">BCH<sup>&#9888;</sup></td><td>Crypto</td><td class="r fpf">1.375</td><td class="r num">10.2%</td><td class="r num">88%</td><td class="r num">50</td><td class="arch">crypto-fade-long</td><td class="st-wf">walk-forward</td></tr>
+    <tr class="loss"><td class="r num">79</td><td class="sym">VGT</td><td>ETF</td><td class="r fpf">1.368</td><td class="r num">24.0%</td><td class="r num">36%</td><td class="r num">56</td><td class="arch">equity-confluence-long</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">80</td><td class="sym">ARM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.366</td><td class="r num">31.6%</td><td class="r num">33%</td><td class="r num">114</td><td class="arch">continuation-long-breaker</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">81</td><td class="sym">DOT</td><td>Crypto</td><td class="r fpf">1.330</td><td class="r num">25.8%</td><td class="r num">20%</td><td class="r num">100</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">82</td><td class="sym">XLP<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.327</td><td class="r num">15.4%</td><td class="r num">62%</td><td class="r num">48</td><td class="arch">fade-long-clean-cascstop</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">83</td><td class="sym">AVGO<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.315</td><td class="r num">8.8%</td><td class="r num">63%</td><td class="r num">35</td><td class="arch">fade-long-clean</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">84</td><td class="sym">XLI<sup>&#9888;</sup></td><td>ETF</td><td class="r fpf">1.298</td><td class="r num">12.5%</td><td class="r num">40%</td><td class="r num">50</td><td class="arch">continuation-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">85</td><td class="sym">US30USD<sup>&#9888;</sup></td><td>Index</td><td class="r fpf">1.291</td><td class="r num">10.1%</td><td class="r num">70%</td><td class="r num">44</td><td class="arch">index-confluence-long</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">86</td><td class="sym">TLT</td><td>ETF</td><td class="r fpf">1.272</td><td class="r num">17.7%</td><td class="r num">49%</td><td class="r num">205</td><td class="arch">fade-clean</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">87</td><td class="sym">MU<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.239</td><td class="r num">13.9%</td><td class="r num">61%</td><td class="r num">31</td><td class="arch">fade-long-velo-nowall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">88</td><td class="sym">ORCL<sup>&#9888;</sup></td><td>Single-name</td><td class="r fpf">1.230</td><td class="r num">26.0%</td><td class="r num">50%</td><td class="r num">80</td><td class="arch">fade-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">89</td><td class="sym">EURJPY</td><td>Forex</td><td class="r fpf">1.187</td><td class="r num">11.2%</td><td class="r num">26%</td><td class="r num">53</td><td class="arch">forex-fade-both-cascstop</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">90</td><td class="sym">NVDA<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.185</td><td class="r num">34.0%</td><td class="r num">33%</td><td class="r num">222</td><td class="arch">continuation-long-breaker-gated</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">91</td><td class="sym">TIA</td><td>Crypto</td><td class="r fpf">1.160</td><td class="r num">39.4%</td><td class="r num">19%</td><td class="r num">113</td><td class="arch">crypto-trend-both-dir</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">92</td><td class="sym">QCOM<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.076</td><td class="r num">21.9%</td><td class="r num">24%</td><td class="r num">38</td><td class="arch">fade-long-wall-gated</td><td class="st-remicro">re-microtune</td></tr>
+    <tr class="loss"><td class="r num">93</td><td class="sym">MCHP<sup>&#9888;</sup></td><td>Semis</td><td class="r fpf">1.048</td><td class="r num">37.2%</td><td class="r num">27%</td><td class="r num">84</td><td class="arch">continuation-long-wall</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">94</td><td class="sym">TRX</td><td>Crypto</td><td class="r fpf">1.032</td><td class="r num">7.2%</td><td class="r num">32%</td><td class="r num">28</td><td class="arch">crypto-nfloor-defer</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">95</td><td class="sym">EURGBP<sup>&#9888;</sup></td><td>Forex</td><td class="r fpf">1.027</td><td class="r num">5.3%</td><td class="r num">59%</td><td class="r num">34</td><td class="arch">forex-fade-long-marginal</td><td class="st-wf">walk-forward</td></tr>
+    <tr><td class="r num">96</td><td class="sym">SEI</td><td>Crypto</td><td class="r fpf">1.003</td><td class="r num">47.4%</td><td class="r num">16%</td><td class="r num">319</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">97</td><td class="sym">AMAT</td><td>Semis</td><td class="r fpf">0.953</td><td class="r num">55.2%</td><td class="r num">40%</td><td class="r num">51</td><td class="arch">semi-confluence-nonedge</td><td class="st-remicro">re-microtune</td></tr>
+    <tr><td class="r num">98</td><td class="sym">LDO</td><td>Crypto</td><td class="r fpf">0.909</td><td class="r num">51.2%</td><td class="r num">14%</td><td class="r num">273</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">99</td><td class="sym">SUI</td><td>Crypto</td><td class="r fpf">0.881</td><td class="r num">32.8%</td><td class="r num">15%</td><td class="r num">254</td><td class="arch">crypto-confluence-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">100</td><td class="sym">ATOM</td><td>Crypto</td><td class="r fpf">0.853</td><td class="r num">49.0%</td><td class="r num">22%</td><td class="r num">130</td><td class="arch">crypto-confluence-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">101</td><td class="sym">RUNE</td><td>Crypto</td><td class="r fpf">0.850</td><td class="r num">29.6%</td><td class="r num">22%</td><td class="r num">69</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">102</td><td class="sym">WIF</td><td>Crypto</td><td class="r fpf">0.842</td><td class="r num">55.9%</td><td class="r num">30%</td><td class="r num">54</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">103</td><td class="sym">OP</td><td>Crypto</td><td class="r fpf">0.795</td><td class="r num">29.8%</td><td class="r num">10%</td><td class="r num">82</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">104</td><td class="sym">APT</td><td>Crypto</td><td class="r fpf">0.794</td><td class="r num">31.4%</td><td class="r num">17%</td><td class="r num">136</td><td class="arch">crypto-confluence-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">105</td><td class="sym">LINK</td><td>Crypto</td><td class="r fpf">0.687</td><td class="r num">56.1%</td><td class="r num">18%</td><td class="r num">128</td><td class="arch">crypto-confluence-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr><td class="r num">106</td><td class="sym">ONDO</td><td>Crypto</td><td class="r fpf">0.586</td><td class="r num">25.7%</td><td class="r num">31%</td><td class="r num">26</td><td class="arch">crypto-nonedge</td><td class="st-ready">ready</td></tr>
+    <tr class="loss"><td class="r num">107</td><td class="sym">USDCHF<sup>&#9888;</sup></td><td>Forex</td><td class="r fpf">78.399</td><td class="r num">2.2%</td><td class="r num">21%</td><td class="r num">52</td><td class="arch">forex-fade-short-cascstop</td><td class="st-remicro">degen · excl.</td></tr>
+    <!--DECK_DEEP3_END-->
+    </tbody>
+  </table>
+  <div class="tcap">הספר המכוונן-עמוק הוא חתך מפורסם; שאר המכשירים ביקום בן 130+ נמצאים בפרופיל. אחוזי הזכייה הגבוהים על התאים ה-long-only החזקים ביותר הם ארטיפקטים של רג׳ים בחלון שוק-שורי ארוך-טווח — כמעט כל תוצאת long-only היא Walk-forward-חובה; התאים הסימטריים הדו-כיווניים (על פני מט״ח, קריפטו, מניות וסחורות) הם השכבה האמינה. החריג המנוון USDCHF (PF 78) מוחרג כרעש. כל הנתונים in-sample, בניכוי עמלות והחלקה.</div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">6</div>
+</section>
+
+<!-- PAGE 6 — INTERPRETATION -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§3 · הספר המכוונן-עמוק</span></div>
+  <span class="secnum">מקטע 3 (המשך)</span>
+  <h2>מה הספר מראה</h2>
+  <p>בקריאה עיוורת, הספר ממיין את עצמו לשני מזגים מבניים. <strong>88 מתוך 107 הם דועכים</strong> — הגנתיים, מאקרו ומתחם המדדים הרחב, שם היתרון הוא היפוך מהלך ממוצה — ו-<strong>19 הם שמות המשך</strong>, שם הוא רוכב על הפריצה. <strong>83 רצים long-only</strong>, טביעת האצבע של מתחם פסיבי הצובר דרך שוק עולה; <strong>24 התאים הדו-כיווניים</strong>, שמוסיפים מנוע שורט, הם המיעוט עמיד-הרג׳ים. רוב ה-long-only הזה הוא ההסתייגות העיקרית: יתרון שנמדד דרך שוק-שורי ארוך-טווח הוא בדיוק מה שחלון out-of-sample חייב לבדוק.</p>
+  <table class="mini" style="margin-top:4mm">
+    <caption>לפי מחלקת מכשירים — 107 תאים מכווננים-עמוק</caption>
+    <thead><tr><th>מחלקה</th><th class="r">תאים</th><th class="r">יתרונות</th><th class="r">PF ממוצע</th><th class="r">מיטבי</th></tr></thead>
+    <tbody>
+      <tr><td>תעודות-סל מדדיות ומגזריות</td><td class="r num">19</td><td class="r num">19</td><td class="r num">2.25</td><td class="r num">4.53 · GLD</td></tr>
+      <tr><td>מוליכים למחצה</td><td class="r num">20</td><td class="r num">19</td><td class="r num">1.61</td><td class="r num">3.84 · LRCX</td></tr>
+      <tr><td>מניות מובילות בודדות</td><td class="r num">11</td><td class="r num">11</td><td class="r num">2.94</td><td class="r num">5.75 · DE</td></tr>
+      <tr><td>סחורות</td><td class="r num">5</td><td class="r num">5</td><td class="r num">3.86</td><td class="r num">9.15 · copper</td></tr>
+      <tr><td>מדדים גלובליים</td><td class="r num">5</td><td class="r num">5</td><td class="r num">1.52</td><td class="r num">1.74 · DAX</td></tr>
+      <tr><td>נכסים דיגיטליים</td><td class="r num">36</td><td class="r num">26</td><td class="r num">1.55</td><td class="r num">4.76 · DOGE</td></tr>
+      <tr><td>מט״ח ראשי</td><td class="r num">11</td><td class="r num">11</td><td class="r num">2.81</td><td class="r num">4.90 · AUDJPY</td></tr>
+    </tbody>
+  </table>
+  <div class="rule"></div>
+  <h3>התור, ומה שהמשמעת מעכבת</h3>
+  <p>תשעה-עשר שמות יושבים בפקטור רווח של 1.5 או מתחתיו, ו<strong>מעוכבים לכיוונון מחדש</strong> במקום להיות מוצגים כגמורים. עשרה שמות מתחת לפקטור רווח של 1.0 — המוליך-למחצה AMAT ותשעה מדממי-קריפטו שהושקו לאחרונה (LDO, SUI, ATOM, RUNE, WIF, OP, APT, LINK, ONDO) — נדחים לחלוטין, מודפסים כהפניה ולא כיתרונות. שום תוצאה אינה מתקבלת על פחות משלושים עסקאות, ושום נתון לא נבחר בדיעבד כדי להחמיא לכלל. הספר המכוונן-עמוק הוא חתך מפורסם; היקום הרחב בן 130+ נמצא בפרופיל, מפורסם כמות שהוא, לא כפי שייקרא כשיושלם.</p>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">7</div>
+</section>
+
+<!-- PAGE 6 — WORKED EXAMPLES -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§4 · דוגמאות מעובדות</span></div>
+  <span class="secnum">מקטע 4</span>
+  <h2>דוגמאות מעובדות: הקריאה פר-סימבול</h2>
+  <p style="margin-bottom:5mm">שני סימבולים מהספר, פתוחים עד הסוף. יחד הם עושים את אותה נקודה משני הצדדים ההפוכים: הקריאה אינה הגדרה אלא הבנה של מזג השחקן, מבוטאת כתצורה.</p>
+
+  <div class="case">
+    <h3>PEP — <em>כשהדֶסק סבלני</em></h3>
+    <div class="caserow">
+      <div class="prose">
+        <p>מפל חיסול לעולם לא מגיע לחברת משקאות. פפסיקו אינה המקום שבו מינוף מתפוצץ; היא המקום שבו הון סבלני, מונחה-מנדט, צובר ומגן. הזרימה שלה שקטה, דו-צדדית וחוזרת-לממוצע — ובדיוק לכן קריאת ברירת מחדל נכשלת בה, מאזינה לאלימות בשוק שנסחר על סבלנות.</p>
+        <p>לקרוא את הדֶסק פירושו להתאים את האלגוריתם לפסיכולוגיה: שני הכיוונים מופעלים, שער התגמול-לסיכון מועלה כך שרק ההיפוכים הנקיים ביותר נחשבים, ספיגת Iceberg מוגדרת איטית בכוונה כדי לחכות לגודל מוגן אמיתי, ושער הסיכון מהודק בצד השורט. הטלת-המטבע הפכה ליתרון נקי ובעל דרודאון נמוך.</p>
+      </div>
+      <div class="data">
+        <table class="mini">
+          <caption>PEP · תוצאה</caption>
+          <tbody>
+            <tr><td><strong>פקטור רווח</strong></td><td class="r big">1.595</td></tr>
+            <tr><td>תשואה נטו</td><td class="r num">+31.24%</td></tr>
+            <tr><td>דרודאון מקס׳</td><td class="r num">6.47%</td></tr>
+            <tr><td>אחוז זכייה</td><td class="r num">48.60%</td></tr>
+            <tr><td>עסקאות</td><td class="r num">107</td></tr>
+          </tbody>
+        </table>
+        <div class="confnote"><strong>תצורה:</strong> לונג + שורט, שער R:R מוגבה, Iceberg ב-5 נגיעות, מיצוי-טאטוא בנפח גבוה, שער סיכון מהודק בצד השורט. שוחזר חי.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <h3>TLT — <em>כשהמהלך לעולם לא מגיע לקיר</em></h3>
+    <div class="caserow">
+      <div class="prose">
+        <p>TLT הוא אג״ח ארה״ב לטווח ארוך — רכב מאקרו, לא טייפ שדֶסקים של נזילות דוחפים לקירות טכניים נקיים. המחיר שלו נגרר על-ידי ציפיות ריבית ושפה של בנקים מרכזיים, והמהלך המלא אל הקיר הנגדי רק לעיתים רחוקות מושלם, כי נתון קוטע אותו קודם. כל מה שמוסיפים לו שביר: מהדקים את הסטופ והתנודתיות מפילה אותך; מרחיבים את היעד והמהלך מת לפני שהוא מגיע.</p>
+        <p>מה שהציל אותו היה משמעת לקיחת רווח — מבנקים 60% מהפוזיציה שני-שלישים מהדרך אל הקיר — וסטופ-טאטוא רחב. סטופ buffer-30 מרים את התוצאה מעבר ל-1.232 הקודם; כל היתרון מתאזן על שני הכפתורים הללו.</p>
+      </div>
+      <div class="data">
+        <table class="mini">
+          <caption>TLT · תוצאה</caption>
+          <tbody>
+            <tr><td><strong>פקטור רווח</strong></td><td class="r big">1.272</td></tr>
+            <tr><td>תשואה נטו</td><td class="r num">+18.05%</td></tr>
+            <tr><td>דרודאון מקס׳</td><td class="r num">17.66%</td></tr>
+            <tr><td>אחוז זכייה</td><td class="r num">48.78%</td></tr>
+            <tr><td>עסקאות</td><td class="r num">205</td></tr>
+          </tbody>
+        </table>
+        <div class="confnote"><strong>הכפתורים:</strong> סטופ-טאטוא רחב (buffer 30) מעל ל-1.232 הקודם, ועוד Partial-TP שמבנק 60% ב-0.66 מהדרך לקיר. לונג + שורט, קאסקייד-פייד, יעד-קיר. שוחזר חי. <strong>מסומן לכיוונון מחדש</strong> (PF &le; 1.5).</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:6mm;font-size:9.7pt;color:var(--muted)"><strong style="color:var(--ink)">מתכון כה ספציפי הוא המקום שבו מסתתרת התאמת-יתר.</strong> שני התאים נושאים את דגל ה-out-of-sample של מקטע 5: תוצאת in-sample היא תנאי הכניסה לאימות, לעולם לא טענת הפעלה.</p>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">8</div>
+</section>
+
+<!-- THE ACTOR BEHIND THE LEVER (I) -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§5 · הגורם שמאחורי הידית</span></div>
+  <span class="secnum">מקטע 5</span>
+  <h2>הגורם שמאחורי הידית</h2>
+  <p class="lead">התזה של מסמך זה — קריאה התנהגותית אחת, מכשירים רבים — מעלה שאלה קשה יותר: מדוע אמורה <em>אותה</em> טביעת אצבע להופיע בו-זמנית במניה, בסחורה, במדד מניות, בחוזה קריפטו ובצמד מט״ח שאין ביניהם קשר יסודי?</p>
+  <p>הקריאה הנאיבית היא תיאום. הקריאה ברת-ההגנה היא <strong>צימוד מבני</strong>: אוכלוסייה קטנה וניתנת-לזיהוי של מאזנים, מנועי-סיכון ומודלי-מסחר משתרעת כיום על כל שלושת העולמות, כך שהחלטת-סיכון אחת מבטאת את עצמה מכנית כאותה זרימה כיוונית בכל אחד.</p>
+  <div class="quote" style="margin:2.5mm 0">ברמה שחשובה — מנוע הסיכון, מאגר הבטוחות, אות המגמה, ספר המלאי — אלה כבר אינם שלושה שווקים. הם אובייקט מתואם אחד עם שלושה סימבולים.</div>
+  <p>זוהי <strong>השערה מבוססת-ראיות, לא ייחוס:</strong> שום דבר להלן אינו טוען שחברה נקובה-בשם ביצעה עסקה ספציפית כלשהי — מלאי דילרים ופוזיציות תוך-יומיות אינם פומביים. כל שחקן ממוסגר כ<em>ממוקם מבנית להפיק</em> את טביעת האצבע, מבוסס על עובדה פומבית, והצימוד תלוי-רג׳ים — חד ביותר ברג׳ימים של risk-off וזינוקי-תנודתיות <span class="cite">[LSEG]</span>. ארבעה כוחות מתועדים מניעים אותו.</p>
+
+  <div class="mech">
+    <span class="tag">כוח 1 · מחזיקים משותפים</span>
+    <h3>סל מתואם אחד, מנוטרל-סיכון בבת אחת</h3>
+    <p>המקרה הנקי ביותר הוא "סל ה-risk-on" של עסקת הקארי של הין. ה-BIS מייחס את תנודתיות אוגוסט-2024 לפירוק של עסקאות מניות ומטבע ממונפות — כ-¥40 טריליון של קארי, שהוגבר בקריאות מרג׳ין, כאשר מניות ומט״ח נמכרים <em>יחד</em> <span class="cite">[BIS 90]</span>. הין מימן מניות AI, קריפטו ושווקים מתעוררים כאחד, כך שהחלטה אחת לחתוך את הקארי מכרה כל רגל. אותו מבנה חוזר בספרי רב-אסטרטגיות, שבהם מאות פודים חולקים תקציב-סיכון אחד וספר ממורג׳ן-צולב אחד — ריכוז ש-GSAM קושר ל"דה-לברג׳ינג מסונכרן בעת לחץ שוק" <span class="cite">[GSAM]</span> — ובאופן הכי מכני, ב-risk-parity, שיעד-התנודתיות שלו מבצע דה-לברג׳ינג לכל נכס ברגע שהתנודתיות חוצת-הנכסים עולה.</p>
+  </div>
+
+  <div class="mech">
+    <span class="tag">כוח 2 · עושי-שוק משותפים</span>
+    <h3>מנוע מלאי אחד, כל זירה</h3>
+    <p>אותה קומץ עושי-שוק אלקטרוניים מצטטים כיום את אותם מכשירי risk-on על פני מניות, אופציות, מט״ח וקריפטו מ<em>מנוע אחד</em> — כך שכשגבולות הסיכון של החברה נסגרים, הבִּיד מתרחב או נסוג בכל עולם בבת אחת. XTX חוזה 50,000+ מכשירים על פני כל מחלקת נכסים ממנוע יחיד <span class="cite">[XTX]</span>; Jane Street היא משתתף מורשה (AP) נקוב-בשם של תעודות-סל ביטקוין ספוט וגם עושה-שוק מוביל במניות ובתעודות-סל <span class="cite">[Blockworks]</span>; Citadel Securities הכריזה על דֶסק קריפטו ב-2025 <span class="cite">[CoinDesk]</span>. מצב הכשל המתועד: Wintermute עצרה ציטוטים על פני כ-60 זירות בקריסת אוקטובר-2025 כשההגנות שלה נשברו <span class="cite">[Decrypt]</span>.</p>
+  </div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">9</div>
+</section>
+
+<!-- THE ACTOR BEHIND THE LEVER (II) -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§5 · הגורם שמאחורי הידית</span></div>
+  <span class="secnum">מקטע 5 (המשך)</span>
+  <h2>מדוע טביעת אצבע אחת, ארבעה כוחות</h2>
+
+  <div class="mech">
+    <span class="tag">כוח 3 · מינוף ובטוחות</span>
+    <h3>קריאת מרג׳ין אחת מפילה ספר שלם</h3>
+    <p>כוח זה מספק את ה<em>כוח</em> הכיווני ואת ה<em>דדליין</em>. מהלך מחיר דוחף ספר ממונף מעבר לסף — גבול VaR, מרג׳ין תחזוקה בבורסה, איפוס תספורת ריפו — ומפעיל מכירה חסרת-רגישות-למחיר, מונעת-דדליין, שמפעילה את הסף הבא. העוגן המתועד הוא עסקת הבסיס Treasury cash-futures: ה-OFR רושם $2.5 טריליון של מימון ריפו של קרנות-גידור לעסקאות בסיס ועקומה ומזהיר שלחץ מאלץ קרנות "לבצע דה-לברג׳ינג על-ידי פירוק פוזיציות" <span class="cite">[OFR]</span>, המורצות כ-~50:1 <span class="cite">[Fortune]</span>. המקבילה בקריפטו היא מפל החיסול — פוזיציות פתוחות ומימון חד-צדדי בונים אשכולות שמתפקדים כנקודות-שבריריות <span class="cite">[Glassnode]</span>; הפירוק בן כ-$19 מיליארד באוקטובר-2025 הראה כיצד עושי-שוק נסוגים בצעד אחיד ברגע שהדה-לברג׳ינג האוטומטי שבר את ההגנות שלהם <span class="cite">[Decrypt]</span>. הטריגר הוא מספר, לא דעה — ולכן "לדעוך את הקפיטולציה" הוא יתרון, ולכן הבלבול בין זרימה מאולצת לבין תמחור-מחדש מיודע הוא המקום שבו הוא מפסיד כסף.</p>
+  </div>
+
+  <div class="mech">
+    <span class="tag">כוח 4 · צפיפות פקטור</span>
+    <h3>אותו אות בדיוק, נסחר בכל מקום</h3>
+    <p>זה מסביר את החלק המרשים ביותר של טביעת האצבע: התאים הסימטריים הדו-כיווניים של מגמה המופיעים יחד בקריפטו, מט״ח ומדדי מניות. האובייקט הוא מומנטום-סדרת-זמן <span class="cite">[Moskowitz-Ooi-Pedersen]</span> — אות יחיד מותאם-תנודתיות, לונג למנצחים ושורט למפסידים, המורץ על פני מאות חוזים עתידיים. AQR, Man AHL, Winton, Transtrend ו-Aspect מריצים אותו כולם בזמן אמת ונמדדים על אותו בנצ׳מרק SG Trend <span class="cite">[SG]</span>; מחקרה של Man AHL עצמה נוקב בקריפטו בין שווקיה <span class="cite">[Man]</span>. מאחר שהאות אגנוסטי-לכיוון, רמת-הדק אחת יורה פקודות לונג-<em>או</em>-שורט על פני שווקים באותו יום — וצד-המכירה מתעד את שתי הרגליים, ומדמה כ-$33 מיליארד של מכירת מניות CTA בפריצת ירידה וכ-$30 מיליארד של שורטים שכיסוים מניע את העליות <span class="cite">[Goldman]</span>. הסימטריה הדו-כיוונית היא ההמון, לא שם בודד.</p>
+  </div>
+
+  <p style="margin-top:5mm">ארבעת הכוחות <strong>נערמים</strong>. הצפיפות קובעת <em>היכן</em> מתאשכלים הסטופים ורמות החיסול — אותן נקודות טכניות על פני כל העולמות. המינוף מספק את הכוח חסר-רגישות-המחיר ואת הדדליין ברגע שהמחיר מגיע. עושי-השוק המשותפים מושכים את הבִּיד בו-זמנית, והופכים את המהלך לוואקום. הלונגים הצפופים ורוכבי-המגמה הם ה<em>דלק</em>; מהנדסי הנזילות והמוכרים המאולצים הם הזרימה שצורכת אותו — ולכן קריאה אחת עובדת על סטייפל, על מטבע, על מטבע-חוץ ועל חבית כאחד.</p>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">10</div>
+</section>
+
+<!-- THE ACTOR BEHIND THE LEVER (III): PROFILES -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§5 · הגורם שמאחורי הידית</span></div>
+  <span class="secnum">מקטע 5 (המשך)</span>
+  <h2>שלושה פרופילים מעובדים</h2>
+  <p style="margin-bottom:4mm">כל אחד נבחר לפי חוזק ראייתי, וכל אחד הוא <em>השערה מבוססת-ראיות</em>: מנדט פומבי שממקם את השחקן להפיק את טביעת האצבע, לעולם לא טענה שעשה זאת בנר נתון כלשהו.</p>
+
+  <div class="case">
+    <h3>Jane Street — <em>עושה-השוק של ארביטראז׳ סלים</em></h3>
+    <p>מחזיקה ב-&gt;10% ממסחר המניות בצפון-אמריקה ובנתח עושה-השוק המוביל בתעודות-סל, הריצה מחזור תעודות-סל של כ-$700 מיליארד בחודש, והיא משתתף מורשה (AP) נקוב-בשם של תעודות-סל ביטקוין ספוט <span class="cite">[Blockworks · GlobalTrading]</span>. <strong>ההיבט החוצה-נכסים:</strong> מנדט יצירה/פדיון תעודות-הסל הופך את הספר ללונג-ושורט מבנית בזוגות תעודה-מול-סל על פני מניות, אג״ח <em>וקריפטו</em> בו-זמנית, כך שאותה לוגיקת ספיגה-והגנה חוזרת בכל עולם. <strong>הסתייגות:</strong> ה-AP הפעיל ביום נתון אינו פומבי, וצו הביניים השנוי-במחלוקת של SEBI <span class="cite">[Business Standard · CNBC]</span> נשמר רק כ<em>צורה</em> המתועדת של הארכיטיפ — לא כממצא מניפולציה.</p>
+  </div>
+
+  <div class="case">
+    <h3>ExodusPoint — <em>ספר הבסיס הממונף בחשיפה-עצמית</em></h3>
+    <p>המקרה הנדיר המאושר על-ידי המחזיק: מכתב המשקיעים שלה עצמה גילה שעסקת הבסיס Treasury הרימה את ביצועי סוף-הרבעון, כאשר בסיס וריביות מעל חמישית מהקצאת הסיכון, ועם רגלי מט״ח, סחורות ואג״ח ממשלתי הנקובות במפורש <span class="cite">[Investing.com]</span>; היא יושבת בין הקרנות המריצות עסקה זו לכיוון ~50:1 <span class="cite">[Fortune]</span>. <strong>ההיבט החוצה-נכסים:</strong> מנוע סיכון גלובל-מאקרו אחד מחזיק בסיס Treasury, קארי מט״ח וחוזים עתידיים על מדדי מניות כקומפלקס מתואם יחיד, כך ששוק ריפו או תספורת שמאלץ את הפירוק מתפשט לרגליים האחרות תחת VaR אחד. <strong>הסתייגות:</strong> המכתב מאשר את הספר, לא מכירה מאולצת ספציפית כלשהי.</p>
+  </div>
+
+  <div class="case">
+    <h3>מחנה המגמה השיטתי — <em>התאים הסימטריים</em></h3>
+    <p>AQR — מקור תוצאת מומנטום-סדרת-הזמן וגם מפעיל פעיל — יחד עם Man AHL, Winton, Transtrend ו-Aspect, כולם נמדדים על אותו בנצ׳מרק SG Trend ואחדים חולקים שושלת AHL <span class="cite">[SG · AQR · Man]</span>. <strong>ההיבט החוצה-נכסים:</strong> פקטור מגמה בינוני-טווח אחד, משוכפל על פני כ-10 מהקרנות הגדולות, עם ברוקרים-ראשיים חופפים ואותן רמות-הדק ממודלות, יורה פקודות לונג-או-שורט מתואמות על פני מדדי מניות ומט״ח באותו יום — המחולל הישיר של התאים הדו-כיווניים. <strong>הסתייגות (נושאת-משקל):</strong> רגל הקריפטו דקה ביותר — SOL ספציפית היא גלישת ביטא של risk-on, לא פוזישנינג מגמה מתועד, ו-Transtrend סירבה פומבית לחוזי ביטקוין עתידיים <span class="cite">[Transtrend]</span>. הייחוס בר-ההגנה הוא להמון, לא לקרן בודדת.</p>
+  </div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">11</div>
+</section>
+
+<!-- THE ACTOR BEHIND THE LEVER (IV): ARGUMENT & SOURCES -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§5 · הגורם שמאחורי הידית</span></div>
+  <span class="secnum">מקטע 5 (המשך)</span>
+  <h2>הטיעון, וגבולותיו</h2>
+  <p>הטענה צרה בכוונה. אוכלוסייה מתועדת של מאזנים חוצי-נכסים, מנועי-סיכון, מלאי עושי-שוק ואותות מגמה <em>ממוקמת מבנית להפיק</em> את טביעת האצבע החוזרת, מבוססת על עובדה פומבית. זה אינו ייחוס ברמת-העסקה — דבר שאינו ניתן-להוכחה מנתונים פומביים, ואינו נטען.</p>
+
+  <div class="efoot"><strong>היכן הראיה חזקה, והיכן היא דקה.</strong> הראיה הישירה החזקה ביותר היא הספר הרב-רגלי בחשיפה-עצמית של ExodusPoint ומודלי ה-CTA הדו-כיווניים של Goldman/BofA — פומביים, מאושרי-מחזיק או מאושרי-דֶסק. החלשה ביותר, מסומנת במפורש, היא רגל הקריפטו הספציפית של SOL, שהיא גלישת ביטא של risk-on ולא פוזישנינג מאושר. ההסתייגות הקבועה היא תלות-הרג׳ים: המתאם החוצה-נכסים שמניע את טביעת האצבע המאוחדת חד ברג׳ימים של risk-off וזינוקי-תנודתיות, ויכול להתנתק באפיזודות רגועות או ייחודיות. הסיכום הכן הוא שהראיה מצדיקה את ההשערה ואינה סוגרת אותה.</div>
+
+  <h3>מקורות נבחרים</h3>
+  <div class="srcs">
+    <div class="s"><b>BIS 90</b> · תנודתיות שוק ופירוק הקארי של אוג-2024 — bis.org/publ/bisbull90.htm</div>
+    <div class="s"><b>GSAM</b> · קרנות גידור ברג׳ים שוק חדש (ריכוז; דה-לברג׳ינג מסונכרן) — am.gs.com</div>
+    <div class="s"><b>OFR</b> · Hedge Fund Monitor Q4-2024 ($2.5tn מימון ריפו של בסיס) — financialresearch.gov</div>
+    <div class="s"><b>Fortune</b> · קרנות גידור, עסקת הבסיס ומינוף ~50:1 — fortune.com</div>
+    <div class="s"><b>Investing.com</b> · ExodusPoint, סוף-רבעון הורם בעסקת הבסיס (מכתב) — investing.com</div>
+    <div class="s"><b>XTX</b> · 50,000+ מכשירים, מנוע ML אחד; ספק נזילות ספוט-מט״ח הגדול ביותר — xtxmarkets.com</div>
+    <div class="s"><b>Blockworks</b> · Jane Street כמשתתף מורשה של תעודות-סל ביטקוין ספוט — blockworks.com</div>
+    <div class="s"><b>CoinDesk</b> · Citadel Securities מתכננת עשיית-שוק בקריפטו (פבר 2025) — coindesk.com</div>
+    <div class="s"><b>Decrypt</b> · מדוע Wintermute ועושי-שוק אחרים נסוגו (שבר ADL אוק-2025) — decrypt.co</div>
+    <div class="s"><b>Glassnode</b> · מפות-חום של חיסולים ושבריריות אשכולות — research.glassnode.com</div>
+    <div class="s"><b>Moskowitz-Ooi-Pedersen</b> · Time-Series Momentum, JFE 2012 — aqr.com</div>
+    <div class="s"><b>Man · SG</b> · תמהיל שוקי מגמה כולל קריפטו; SG Trend Index — man.com · societegenerale.com</div>
+    <div class="s"><b>Goldman · BofA</b> · מודלי CTA דו-כיווניים מופעלי-רמה — Analytics Insight · Investing.com</div>
+    <div class="s"><b>LSEG</b> · מתאם BTC–נאסד״ק, תלוי-רג׳ים — דרך Yahoo Finance</div>
+  </div>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">12</div>
+</section>
+
+<!-- PAGE 11 — LIMITATIONS -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§6 · מגבלות ועבודה קדימה</span></div>
+  <span class="secnum">מקטע 6</span>
+  <h2>מגבלות ועבודה קדימה</h2>
+  <p>הנתונים במסמך זה הם in-sample. התוכנית שלהלן היא הסטנדרט שלפיו המחקר נמדד — העבודה שמפרידה בין בדיקת-עבר חזקה לבין רקורד מסחר. אותה משמעת מיושמת על המחקר עצמו.</p>
+  <table>
+    <caption>סטנדרט האימות</caption>
+    <thead><tr><th>בדיקה</th><th>סטטוס</th><th>הערה</th></tr></thead>
+    <tbody>
+      <tr><td class="sym">עמלות והחלקה</td><td>ממודל</td><td>מיושם על כל בדיקת-עבר; כל הנתונים הם בניכוי עלויות, לא ברוטו.</td></tr>
+      <tr><td class="sym">קיבולת</td><td>מבני</td><td>הספר בנוי על מניות גדולות נזילות ותעודות-סל מרכזיות שסופגות גודל; התקרה המדויקת טרם נמדדה רשמית.</td></tr>
+      <tr><td class="sym">Out-of-sample</td><td>ממתין — הבא בתור</td><td>חלון שמור-בצד שהמנוע מעולם לא ראה; העדיפות המיידית, והשער שכל מתכון מכוונן-עמוק ממתין מאחוריו.</td></tr>
+      <tr><td class="sym">Walk-forward</td><td>מתוכנן</td><td>אופטימיזציה ובדיקה-מחדש מתגלגלות, כדי להראות שכל מתכון פר-סימבול יציב לאורך זמן ולא הותאם לחלון יחיד.</td></tr>
+      <tr><td class="sym">Monte Carlo</td><td>מתוכנן</td><td>דגימה-מחדש של סדר העסקאות והתשואות, כדי לתחום את התפלגות התוצאות ואת סיכון ההרס תחת ניהול גודל.</td></tr>
+      <tr><td class="sym">רקורד חי</td><td>הרף</td><td>רקורד קדימה, חתום-בזמן — הראיה המכרעת היחידה לשיחת קרן או רישוי.</td></tr>
+    </tbody>
+  </table>
+  <div class="rule"></div>
+  <p>התאים החזקים ביותר בספר הם דעיכות long-only דרך חלון שוק-שורי ארוך-טווח; אחוזי הזכייה הגבוהים שלהם הם הסימן הברור ביותר שעבודת out-of-sample חבה, לא אופציונלית. הסיכום הכן של המצב הנוכחי הוא זה: הראיה חזקה מספיק כדי להצדיק את העבודה הזו, ועדיין אינה תחליף לה. תשעה-עשר מתוך 107 מעוכבים במפורש לכיוונון מחדש; שאר המכשירים ביקום בן 130+ נמצאים בפרופיל. 24 התאים הסימטריים הדו-כיווניים — על פני מט״ח (AUDJPY, USDCAD, GBPUSD), קריפטו (SOL, AVAX, ENA), מניות (KO, NXPI, PEP) וסחורות (NATGASUSD) — הם החריג שמחזק את הטיעון: הם שורדים החלפת רג׳ים ואינם תלויים בחלון השורי.</p>
+  <div class="pfoot">wattsonworks.github.io/framework</div>
+  <div class="pnum">13</div>
+</section>
+
+<!-- PAGE 12 — SYSTEM & ACCESS -->
+<section class="page">
+  <div class="rh"><span class="b">LIQUIDEX Framework — תזה</span><span>§7 · המערכת והגישה</span></div>
+  <span class="secnum">מקטע 7</span>
+  <h2>המערכת, והגישה</h2>
+  <p>המחקר מסופק כשלושה מכשירים, בהזמנה בלבד ב-TradingView. מנוע אחד מכריע את העסקה; שני מלווים הופכים את הדירוג ואת הסיכון שלו לקריאים.</p>
+  <div class="syslist">
+    <div class="sysitem"><div class="id">LIQUIDEX<span>המנוע</span></div><p>5,000+ שורות Pine v6. קורא מפלי חיסול, זרימת פקודות, Order Blocks, קירות Iceberg וטאטואי נזילות, ומפענח אותם לפוזיציה אחת — כניסה, סטופ מבני, ויעד בקיר הנגדי.</p></div>
+    <div class="sysitem"><div class="id">Keeper<span>דירוג חי</span></div><p>מריץ את המנוע על כל הספר ומדרג כל שם בזמן אמת לפי פקטור רווח, תנופה וסיכון — כך שהמפעיל רואה את המוביל שהמנוע מעדיף, לא ניחוש.</p></div>
+    <div class="sysitem"><div class="id">Prophet<span>שער סיכון</span></div><p>הופך את הסיכון הכיווני לגלוי — מדד מורכב, אזורי בטוח וסכנה, ופסק-דין חי על גודל הפוזיציה שמקטין את החשיפה כשהסיכון עולה ומוריד את המפעיל מהמסחר באזור הסכנה.</p></div>
+  </div>
+  <div class="access">
+    <div class="lab">גישה ושותפות</div>
+    <p>מפעילים מקבלים גישה בהזמנה בלבד ב-TradingView: שולחים שם משתמש ב-TradingView, הגישה ניתנת, והאיתותים מגיעים כהתראות בטלפון, במחשב או בבוט מסחר מחובר. גישה ותמחור זמינים לבקשה.</p>
+    <p>הנכס בר-ההגנה הוא השיטה — פרוטוקול לקריאת הדֶסקים המוסדיים שמאחורי זרימת הפקודות, שמשתחזר על פני היקום, מניות ומאקרו כאחד. הוא פתוח לרישוי, לשותפות מחקר אסטרטגית, או לרכישה מלאה.</p>
+    <div class="contact">WhatsApp +972 50 678 7586 &nbsp;<span>·</span>&nbsp; wattsonworks.github.io/framework</div>
+  </div>
+  <div class="disc">למטרות מחקר ולימוד בלבד. כל נתוני הביצועים במסמך זה הם תוצאות בדיקות-עבר היסטוריות, היפותטיות ו-in-sample (ללא ציור-מחדש, מחושבות עם עמלות והחלקה), אינן מבוקרות, ואינן מעידות על תוצאות עתידיות. מסחר כרוך בסיכון משמעותי להפסד. שום דבר במסמך זה אינו ייעוץ פיננסי או הצעת ניירות-ערך. © 2026 LIQUIDEX Framework · wattsonworks.</div>
+  <div class="pnum">14</div>
+</section>
+
+</body>
+</html>
