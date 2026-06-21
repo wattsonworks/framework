@@ -483,3 +483,9 @@ html[dir="rtl"] .stash-arrow{right:auto;left:30px}
 .hero-slogan{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(17px,2.3vw,22px);line-height:1.25;color:var(--gold);letter-spacing:.01em;margin:0 0 15px}
 .hero-slogan::before{content:"";display:inline-block;width:24px;height:1px;background:var(--gold);opacity:.55;vertical-align:middle;margin-right:12px}
 html[dir="rtl"] .hero-slogan::before{margin-right:0;margin-left:12px}
+
+/* brand logo lockup — small slogan under the LIQUIDEX Framework wordmark (topbar only) */
+.topbar .brand{flex-direction:column;align-items:flex-start;gap:3px}
+.brand-mark{display:flex;align-items:baseline;gap:9px}
+.brand .brand-slogan{font-family:var(--serif);font-style:italic;font-weight:400;font-size:11px;text-transform:none;letter-spacing:.02em;color:var(--muted);line-height:1}
+html[dir="rtl"] .topbar .brand{align-items:flex-end}
