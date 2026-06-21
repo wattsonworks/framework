@@ -308,3 +308,37 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) { setOpen(false); btn.focus(); } });
   var cta = document.getElementById('stash-cta'); if (cta) cta.addEventListener('click', function () { setOpen(false); });
 })();
+
+/* ===== Hero boomerang: ease playback to a near-stop before each reversal ===== */
+(function () {
+  var v = document.querySelector('.hero-video');
+  if (!v) return;
+  var W = 2.6;     // seconds on each side of a turnaround that the slow-down spans
+  var MIN = 0.16;  // slowest playback rate, reached at the exact turnaround
+  var raf = 0, running = false;
+  function rate() {
+    var D = v.duration;
+    if (!D || isNaN(D) || !isFinite(D)) return 1;
+    var t = v.currentTime;
+    // turnarounds: the loop seam (0 / D) and the forward->reverse seam (D/2)
+    var d = Math.min(t, Math.abs(t - D / 2), D - t);
+    if (d >= W) return 1;
+    var x = d / W, s = x * x * (3 - 2 * x); // smoothstep
+    return MIN + (1 - MIN) * s;
+  }
+  function tick() {
+    if (!running) return;
+    try { v.playbackRate = rate(); } catch (e) {}
+    raf = requestAnimationFrame(tick);
+  }
+  function start() { if (running) return; running = true; raf = requestAnimationFrame(tick); }
+  function stop() { running = false; if (raf) cancelAnimationFrame(raf); try { v.playbackRate = 1; } catch (e) {} }
+  v.addEventListener('play', start);
+  v.addEventListener('pause', stop);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting && !v.paused) start(); else stop(); });
+    }, { threshold: 0.04 }).observe(v);
+  }
+  if (!v.paused) start();
+})();
