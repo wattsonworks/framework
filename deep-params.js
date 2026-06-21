@@ -1,6 +1,28 @@
 /* LIQUIDEX FRAMEWORK — deep-tuned book across asset classes (equity / crypto / forex). Auto-generated. */
 window.DEEP_BOOK = [
 {
+"sym": "XCUUSD",
+"warn": true,
+"pf": 9.149,
+"dd": 6.25,
+"win": 84.21,
+"n": 38,
+"arch": "comdty-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Commodity",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 10, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:XCUUSD 4h copper STRONGEST comdty cell; LONG-ONLY fade+ice7+BSL2/2 wide buf10 = PF9.149/DD6.25/N38 84pct win; plateau buf8-10 identical (robust not spike); industrial-metal uptrend caught every dip; 84pct win + PF9 = clear BULL-REGIME ARTIFACT expect heavy OOS decay; walk-fwd MANDATORY; S=8.61",
+"degen": false
+},
+{
 "sym": "DE",
 "warn": true,
 "pf": 5.748,
@@ -19,7 +41,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 18, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only clean-fade buf18; 1.37->5.75 BUT 87pct win = BULL-REGIME ARTIFACT (DE only uptrended 20-26); buy-dip works in-sample only; expect heavy OOS decay; WALK-FWD MANDATORY before any trust"
+"note": "long-only clean-fade buf18; 1.37->5.75 BUT 87pct win = BULL-REGIME ARTIFACT (DE only uptrended 20-26); buy-dip works in-sample only; expect heavy OOS decay; WALK-FWD MANDATORY before any trust",
+"degen": false
+},
+{
+"sym": "AUDJPY",
+"warn": false,
+"pf": 4.898,
+"dd": 7.58,
+"win": 61.22,
+"n": 49,
+"arch": "forex-confluence-both",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 20, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "USER-CONFIG reproduced exact; my bare-fade gave 0.926 (GAVE UP TOO EARLY); REAL edge = ICEBERG7 + BSL2/2 + BREAKER3 confluence + REQUIRE-VELOCITY plunge0.95/win5 quality filter; both-dir 4.898/7.58DD/49tr/+26.58pct; 61pct win symmetric = trustworthy",
+"degen": false
 },
 {
 "sym": "DOGE",
@@ -40,7 +85,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:DOGEUSDT 4h; LONG-ONLY FADE archetype (ETH/BTC family not crash-alt); seed buf0.35 3.391/6.37DD/N41 -> buffer TIGHTEN 0.35->0.2 the lever (PF 3.39->4.76 DD 6.37->4.29) buf0.1 4.626 plateau 0.1-0.2 buf1 worse; velocity ON thins N18 hurts; MaxLong 0.2 N34 lower; 90pct win long-only = bull-regime artifact walk-fwd MANDATORY; strongest cell this run S=4.563"
+"note": "BINANCE:DOGEUSDT 4h; LONG-ONLY FADE archetype (ETH/BTC family not crash-alt); seed buf0.35 3.391/6.37DD/N41 -> buffer TIGHTEN 0.35->0.2 the lever (PF 3.39->4.76 DD 6.37->4.29) buf0.1 4.626 plateau 0.1-0.2 buf1 worse; velocity ON thins N18 hurts; MaxLong 0.2 N34 lower; 90pct win long-only = bull-regime artifact walk-fwd MANDATORY; strongest cell this run S=4.563",
+"degen": false
+},
+{
+"sym": "NZDUSD",
+"warn": true,
+"pf": 4.657,
+"dd": 6.01,
+"win": 17.31,
+"n": 52,
+"arch": "forex-fade-short-cascstop",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 18, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:NZDUSD 4h SHORT-ONLY cascade-fade (like USDCHF the short side is the edge); both-dir marginal high-DD (buf23 1.125/DD12.66/N37 buf30 1.846/N27<floor); SHORT-ONLY HALVES DD + lifts PF (buf15 1.712/N60 buf18 4.657/DD6.01/N52 buf23 2.862/N18<floor); buf18 plateau center high N=52; 17.31pct win symmetric-ish trend-rider short side; short-only structural walk-fwd MANDATORY; S=4.393",
+"degen": false
 },
 {
 "sym": "GLD",
@@ -61,7 +129,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 22, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg ON (abs 3) · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only + ICEBERG(3) + buf22; iceberg=the GLD key (S1 hinted); 2.46->4.53; buf8=0.70 (needs wide); ice5 over-filters; 83pct win long-only = bull-regime walk-fwd mandatory"
+"note": "long-only + ICEBERG(3) + buf22; iceberg=the GLD key (S1 hinted); 2.46->4.53; buf8=0.70 (needs wide); ice5 over-filters; 83pct win long-only = bull-regime walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "V",
@@ -82,7 +151,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 18, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only clean-fade buf18 (plateau 18-25); shorts off (Visa uptrend); 1.36->4.44; +120pct PnL; 81pct win on 80tr; HIGH-PF walk-fwd critical"
+"note": "long-only clean-fade buf18 (plateau 18-25); shorts off (Visa uptrend); 1.36->4.44; +120pct PnL; 81pct win on 80tr; HIGH-PF walk-fwd critical",
+"degen": false
 },
 {
 "sym": "XOM",
@@ -103,7 +173,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 12, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "long-only fade+velo wide buf12; energy wants wide buffer (buf3 2.04 -> buf8 3.66/16DD -> buf12 4.39/21DD); buf8=lower-DD alt; 81pct win regime-fit; 2.28->4.39 +85pct PnL"
+"note": "long-only fade+velo wide buf12; energy wants wide buffer (buf3 2.04 -> buf8 3.66/16DD -> buf12 4.39/21DD); buf8=lower-DD alt; 81pct win regime-fit; 2.28->4.39 +85pct PnL",
+"degen": false
+},
+{
+"sym": "XAGUSD",
+"warn": true,
+"pf": 3.939,
+"dd": 18.94,
+"win": 75.0,
+"n": 32,
+"arch": "comdty-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Commodity",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 10, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:XAGUSD 4h silver; LONG-ONLY fade+ice7+BSL2/2 (both-dir bled 0.96/N217 24pct win shorts whipsaw); WIDE buffer THE lever (gold-config buf7 1.24/DD17.7 -> buf10 3.939/DD18.9/N32 75pct win); plateau buf8-12 all S~3.3 (buf8 3.82/N33 buf12 3.94/N32); Breakeven flat; volatile DD~19pct one drawdown; 75pct win long-only bull-regime walk-fwd mandatory; S=3.312",
+"degen": false
 },
 {
 "sym": "COST",
@@ -124,7 +217,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 18, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "SHORTS OFF was the lever (secular uptrend; shorting rips bled to 0.75); long-only clean-fade buf18 (plateau 18-25); 1.39->3.85; +65pct; 78pct win; HIGH-PF on 64tr = walk-fwd critical"
+"note": "SHORTS OFF was the lever (secular uptrend; shorting rips bled to 0.75); long-only clean-fade buf18 (plateau 18-25); 1.39->3.85; +65pct; 78pct win; HIGH-PF on 64tr = walk-fwd critical",
+"degen": false
 },
 {
 "sym": "LRCX",
@@ -145,7 +239,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 5, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.5, maxShort 0.5, veto 0.85) · Velo OFF",
-"note": "CascStop binds buffer; sweep buf5 = sharp peak (3.84/30) buf3 1.57/DD33 buf8 3.69/N26<floor; tight gates cut N to 18 no DD help; 83pct win + DD27pct = bull-regime artifact; walk-fwd mandatory"
+"note": "CascStop binds buffer; sweep buf5 = sharp peak (3.84/30) buf3 1.57/DD33 buf8 3.69/N26<floor; tight gates cut N to 18 no DD help; 83pct win + DD27pct = bull-regime artifact; walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "XLV",
@@ -166,7 +261,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong def, maxShort def, veto def) · Velo ON (plunge def, window def, dots def)",
-"note": "buffer sweep 8 (plateau 8-11) on gated-continuation seed; clean-fade collapsed to N=10; buf18 N=16 too wide; seed-default 1.95/80 -> buf8 3.80/46; gates ON drive trade volume here (opposite of KO/TLT); 87pct win long-only = bull-regime walk-fwd mandatory"
+"note": "buffer sweep 8 (plateau 8-11) on gated-continuation seed; clean-fade collapsed to N=10; buf18 N=16 too wide; seed-default 1.95/80 -> buf8 3.80/46; gates ON drive trade volume here (opposite of KO/TLT); 87pct win long-only = bull-regime walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "GBPUSD",
@@ -187,7 +283,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 23, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "OANDA:GBPUSD 4h BOTH-DIR cascade-fade; STRONG; buffer the lever sharp zone (buf15 0.492/N100 buf20 0.448/N60 buf22 0.709/N43 buf23 2.67/N40 buf24 2.74/N22<floor buf25 2.066/N18); buf23 only N>=30 profit point; PARTIAL-TP OFF crumb lifted PF 2.67->3.41 same N31 DD4.51 (winners run); room0.4 over-filtered N2; 25.81pct win symmetric trend-rider; S=3.262"
+"note": "OANDA:GBPUSD 4h BOTH-DIR cascade-fade; STRONG; buffer the lever sharp zone (buf15 0.492/N100 buf20 0.448/N60 buf22 0.709/N43 buf23 2.67/N40 buf24 2.74/N22<floor buf25 2.066/N18); buf23 only N>=30 profit point; PARTIAL-TP OFF crumb lifted PF 2.67->3.41 same N31 DD4.51 (winners run); room0.4 over-filtered N2; 25.81pct win symmetric trend-rider; S=3.262",
+"degen": false
+},
+{
+"sym": "USDCAD",
+"warn": false,
+"pf": 3.264,
+"dd": 3.74,
+"win": 59.46,
+"n": 74,
+"arch": "forex-confluence-both",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 20, target-R 3) · Wall-TP ON (min-room 0.1) · Partial-TP ON",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 6)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "USER-CONFIG reproduced exact; confluence ICEBERG10+BSL2/2+BREAKER6 + REQUIRE-VELOCITY 0.95/win5 + PartialTP 10/0.35 + room0.1; both-dir 3.264/3.74DD/74tr/+10.30pct; beats agent re-run 3.18; 59pct win symmetric low-DD = trustworthy",
+"degen": false
 },
 {
 "sym": "XLK",
@@ -208,7 +327,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 6) · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong def, maxShort def, veto def) · Velo OFF",
-"note": "fade seed buffer NON-BINDING (CascStop off); CascStop+buf18 bloated DD to 31pct N=11; real lever = Min iceberg absorption sweep 6 (plateau climbs 5->7 but N=31 cliff at 7); 2.39/69 seed -> abs6 3.18/39; long-only tech-ETF uptrend = walk-fwd mandatory"
+"note": "fade seed buffer NON-BINDING (CascStop off); CascStop+buf18 bloated DD to 31pct N=11; real lever = Min iceberg absorption sweep 6 (plateau climbs 5->7 but N=31 cliff at 7); 2.39/69 seed -> abs6 3.18/39; long-only tech-ETF uptrend = walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "USDJPY",
@@ -229,7 +349,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 35, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "OANDA:USDJPY 4h BOTH-DIR cascade-fade; needs WIDER buffer than GBP (JPY trends harder); buf23 0.931/N40 buf30 15.8/N21<floor buf35 3.03/N31 buf38 1.383/N26<floor; buf35 best N>=30 (N at floor); partial-ON 2.13/N29<floor lower; 19.35pct win symmetric trend-rider; N at floor fragile; S=2.762"
+"note": "OANDA:USDJPY 4h BOTH-DIR cascade-fade; needs WIDER buffer than GBP (JPY trends harder); buf23 0.931/N40 buf30 15.8/N21<floor buf35 3.03/N31 buf38 1.383/N26<floor; buf35 best N>=30 (N at floor); partial-ON 2.13/N29<floor lower; 19.35pct win symmetric trend-rider; N at floor fragile; S=2.762",
+"degen": false
 },
 {
 "sym": "XLE",
@@ -250,7 +371,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "STRONG gem; clean fade + velo long-only = 2.941/DD7.0/N37 (S2.75); velo is CRITICAL (off crashes PF to 1.392); both-dir 2.264/DD8.8/N64 (more robust N but lower S); buf non-binding (CascStop off); energy ETF very low DD; 70pct win long-only walk-fwd mandatory"
+"note": "STRONG gem; clean fade + velo long-only = 2.941/DD7.0/N37 (S2.75); velo is CRITICAL (off crashes PF to 1.392); both-dir 2.264/DD8.8/N64 (more robust N but lower S); buf non-binding (CascStop off); energy ETF very low DD; 70pct win long-only walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "WTICOUSD",
+"warn": true,
+"pf": 2.917,
+"dd": 23.58,
+"win": 66.67,
+"n": 30,
+"arch": "comdty-confluence-long-gated",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Commodity",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 12, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate ON (maxLong 0.45, maxShort def, veto 0.75) · Velo OFF",
+"note": "OANDA:WTICOUSD 4h oil; both-dir fade bled 1.11/DD37.7/N257 24pct win (whipsaws); LONG-ONLY + WIDE buffer the lever (buf7 then buf12 2.251/DD23.7/N33 plateau 12-16 saturates); loose-LQX gate 0.45/0.75 lifts PF 2.25->2.92 without cutting N below floor (tight 0.3/0.6 N25 0.4/0.7 N29); gate does NOT cut DD (structural ~23.6pct); N=30 AT FLOOR fragile; 67pct win long-only bull-regime walk-fwd mandatory; S=2.361",
+"degen": false
+},
+{
+"sym": "AUDUSD",
+"warn": false,
+"pf": 2.796,
+"dd": 7.13,
+"win": 23.4,
+"n": 47,
+"arch": "forex-fade-both-cascstop",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 30, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:AUDUSD 4h BOTH-DIR cascade-fade; CLEAN plateau (best forex cell so far on robustness); buf23 2.153/N64 buf28 2.586/N51 buf30 2.796/N47 buf35 1.339/N43; buf30 plateau center high N=47 healthy margin; velocity-ON over-filtered N2; 23.40pct win symmetric trend-rider; S=2.610",
+"degen": false
 },
 {
 "sym": "AVAX",
@@ -271,7 +437,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.15, veto 0.7) · Velo OFF",
-"note": "BINANCE:AVAXUSDT 4h; long-only fade 0.874/9.44DD/N58 highwin sub-1; BOTH-DIR trend-rider edge; KEY lever = Max Short-Risk TIGHTEN 0.35->0.15 (PF 1.27->2.64 DD 24->16) like SOL tight-gate; 0.2 S2.21/N39 0.15 S2.28/N37 0.1 over-tightens N30; BrkVol6 (8 worse 5 higher-DD); iceberg flat; S=2.278 strong symmetric cell"
+"note": "BINANCE:AVAXUSDT 4h; long-only fade 0.874/9.44DD/N58 highwin sub-1; BOTH-DIR trend-rider edge; KEY lever = Max Short-Risk TIGHTEN 0.35->0.15 (PF 1.27->2.64 DD 24->16) like SOL tight-gate; 0.2 S2.21/N39 0.15 S2.28/N37 0.1 over-tightens N30; BrkVol6 (8 worse 5 higher-DD); iceberg flat; S=2.278 strong symmetric cell",
+"degen": false
 },
 {
 "sym": "ETH",
@@ -292,7 +459,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BITSTAMP:ETHUSD 4h USER-CONFIG; long-only cascade-fade + CascStop buf0.35 + BSL pool4/exh1.75 + LQX 0.25/1/1; REQUIRE-VELOCITY OFF (primary robust) = 2.61/7.41DD/48tr/+17.61pct. TOGGLE Require-velocity ON @ plunge0.95 -> 2.84/4.09DD/24tr full-range (or 3.665/3.20/20tr Mar24-Jun26) = higher PF lower DD but THIN N<30; samples-vs-quality knob; crypto bonus"
+"note": "BITSTAMP:ETHUSD 4h USER-CONFIG; long-only cascade-fade + CascStop buf0.35 + BSL pool4/exh1.75 + LQX 0.25/1/1; REQUIRE-VELOCITY OFF (primary robust) = 2.61/7.41DD/48tr/+17.61pct. TOGGLE Require-velocity ON @ plunge0.95 -> 2.84/4.09DD/24tr full-range (or 3.665/3.20/20tr Mar24-Jun26) = higher PF lower DD but THIN N<30; samples-vs-quality knob; crypto bonus",
+"degen": false
 },
 {
 "sym": "SMH",
@@ -313,7 +481,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "BATS feed (AMEX hangs); velo HALVED DD 27->13 (PF 2.82->2.55 but S better 2.26); long-only base+CascStop+WallTP+velo buf0.85; S1 4.84 was AMEX feed diff data"
+"note": "BATS feed (AMEX hangs); velo HALVED DD 27->13 (PF 2.82->2.55 but S better 2.26); long-only base+CascStop+WallTP+velo buf0.85; S1 4.84 was AMEX feed diff data",
+"degen": false
 },
 {
 "sym": "SOXX",
@@ -334,7 +503,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.5, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "S1 config STANDS (CascStop+BSL fade); deep explored long-only fade-wall+velo 1.89/25 & base+BSL 1.80/25 but none beat S1 2.49/21; semis ETF high-DD"
+"note": "S1 config STANDS (CascStop+BSL fade); deep explored long-only fade-wall+velo 1.89/25 & base+BSL 1.80/25 but none beat S1 2.49/21; semis ETF high-DD",
+"degen": false
+},
+{
+"sym": "JPM",
+"warn": false,
+"pf": 2.452,
+"dd": 18.45,
+"win": 52.27,
+"n": 44,
+"arch": "equity-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Single-name",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge to 2.45 key=long-only+buf5+breaker-vol3; clean low-DD 18pct bank; breaker3 peak (vol4 N30-floor vol2 floods PF down)",
+"degen": false
 },
 {
 "sym": "MA",
@@ -355,7 +547,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.4, maxShort 0.5, veto 0.85) · Velo OFF",
-"note": "V-sibling but clean cascade-fade too thin (buf8 N19/buf18 N5); wall-fade IS trade path; LQX gate helps here (unlike clean faders); MaxLong tighten 0.5->0.4 lifts 2.25->2.38 (0.3 over-tightens N27 DD15); long-only MA uptrend = walk-fwd mandatory"
+"note": "V-sibling but clean cascade-fade too thin (buf8 N19/buf18 N5); wall-fade IS trade path; LQX gate helps here (unlike clean faders); MaxLong tighten 0.5->0.4 lifts 2.25->2.38 (0.3 over-tightens N27 DD15); long-only MA uptrend = walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "SOL",
@@ -376,7 +569,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 4)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:SOLUSDT 4h USER-CONFIG; BOTH-DIRECTION trend-rider (19.87pct win + PF2.37 = small losses rare big winners); SHORTS ON the key - monetizes SOL crashes (long-only failed 0.5); Wall+Skip+Iceberg10+BSL4/1+Breaker4+tight-LQX 0.1/0.35/0.7; CascStop+Partial OFF; +294pct PnL 156tr; SYMMETRIC not bull-fit = trustworthy; crypto"
+"note": "BINANCE:SOLUSDT 4h USER-CONFIG; BOTH-DIRECTION trend-rider (19.87pct win + PF2.37 = small losses rare big winners); SHORTS ON the key - monetizes SOL crashes (long-only failed 0.5); Wall+Skip+Iceberg10+BSL4/1+Breaker4+tight-LQX 0.1/0.35/0.7; CascStop+Partial OFF; +294pct PnL 156tr; SYMMETRIC not bull-fit = trustworthy; crypto",
+"degen": false
+},
+{
+"sym": "XLF",
+"warn": true,
+"pf": 2.367,
+"dd": 37.95,
+"win": 47.06,
+"n": 34,
+"arch": "equity-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "ETF",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 25, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 5) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge 0.90->2.37 key=long-only+iceberg-hits-5+buffer-25; full stack (ice+bsl+breaker+velo) shorts bled DD structurally high 38pct financials",
+"degen": false
+},
+{
+"sym": "GBPJPY",
+"warn": false,
+"pf": 2.352,
+"dd": 8.47,
+"win": 25.0,
+"n": 80,
+"arch": "forex-fade-both-cascstop",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 17, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:GBPJPY 4h BOTH-DIR cascade-fade; STRONG robust cell; clean buffer plateau (buf15 2.067/N100 buf17 2.352/DD8.47/N80 buf18 2.468/N59 buf23 1.178/N39); buf17 plateau center high N=80 robust (buf18 higher-S 2.251 but N59 - picked robust center); partial-ON lowers PF 2.013; 25pct win symmetric volatile-cross trend-rider; S=2.169",
+"degen": false
 },
 {
 "sym": "QQQ",
@@ -397,7 +635,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.5) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "clean wall-fade buffer NON-BINDING (CascStop off); iceberg ON wrecked it (1.45/16pctDD); partial-TP cut winners (1.79); velo-off sturdier N45 but lower S; real lever = Min room to wall 0.5 (plateau 0.5-0.7) 2.20/34 -> 2.317/32; long-only QQQ uptrend = walk-fwd mandatory"
+"note": "clean wall-fade buffer NON-BINDING (CascStop off); iceberg ON wrecked it (1.45/16pctDD); partial-TP cut winners (1.79); velo-off sturdier N45 but lower S; real lever = Min room to wall 0.5 (plateau 0.5-0.7) 2.20/34 -> 2.317/32; long-only QQQ uptrend = walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "ETN",
@@ -418,7 +657,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 18, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only clean-fade buf18; 1.47->2.31 @ 35pct DD (caught 2020 crash dip); gate didnt cut DD; high-DD bull-regime; walk-fwd mandatory"
+"note": "long-only clean-fade buf18; 1.47->2.31 @ 35pct DD (caught 2020 crash dip); gate didnt cut DD; high-DD bull-regime; walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "IGV",
@@ -439,7 +679,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 8, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only fade + CascStop buf8 peak; buf3 cuts DD 19 but PF1.2 lower S; 89pct win DD32pct bull-regime; software ETF"
+"note": "long-only fade + CascStop buf8 peak; buf3 cuts DD 19 but PF1.2 lower S; 89pct win DD32pct bull-regime; software ETF",
+"degen": false
+},
+{
+"sym": "PEPE",
+"warn": false,
+"pf": 2.153,
+"dd": 10.67,
+"win": 43.75,
+"n": 32,
+"arch": "crypto-trend-both-dir",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 5)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
+"note": "BINANCE:PEPEUSDT 4h large-cap memecoin; long-only fade 0.58/DD38 (catches dumps); BOTH-DIR trend-rider edge (shorts monetize PEPE dumps); BrkVol THE lever (6=N24<floor 4=1.877/DD20.8/N50 5=2.153/DD10.7/N32 sharp DD-cut at vol5); exh non-binding; 44pct win symmetric trustworthy; strong cell S=1.946",
+"degen": false
 },
 {
 "sym": "ETH-CB",
@@ -460,7 +723,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 5, exh-vol 1.75, eliq OFF) · Breaker ON (vol 6)",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "COINBASE:ETHUSD 4h USER-CONFIG; long-only fade + CascStop buf0.35 + ICEBERG10 + BSL pool5/exh1.75 + BREAKER6 + LQX 0.25/1/1; 2.098/7.44DD/65tr/+22.22pct; MORE robust than ETH-bitstamp (65 vs 48tr same DD); iceberg+breaker widen sample; crypto"
+"note": "COINBASE:ETHUSD 4h USER-CONFIG; long-only fade + CascStop buf0.35 + ICEBERG10 + BSL pool5/exh1.75 + BREAKER6 + LQX 0.25/1/1; 2.098/7.44DD/65tr/+22.22pct; MORE robust than ETH-bitstamp (65 vs 48tr same DD); iceberg+breaker widen sample; crypto",
+"degen": false
 },
 {
 "sym": "BTC",
@@ -481,7 +745,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker ON (vol 4.5)",
 "gates": "LQX-gate ON (maxLong 0.9, maxShort 0.55, veto 0.75) · Velo OFF",
-"note": "BITSTAMP:BTCUSD 4h USER-CONFIG; long-only fade+wall+skip-no-room0.2+BREAKEVEN arm0.95+Breaker4.5+loose-LQX 0.9/0.55/0.75; partial 40/0.45; CascStop OFF; 44.66pct win+9.80DD = most robust cell in book (engine built for crypto microstructure); +59.91pct; CRYPTO bonus outside 50-equity set"
+"note": "BITSTAMP:BTCUSD 4h USER-CONFIG; long-only fade+wall+skip-no-room0.2+BREAKEVEN arm0.95+Breaker4.5+loose-LQX 0.9/0.55/0.75; partial 40/0.45; CascStop OFF; 44.66pct win+9.80DD = most robust cell in book (engine built for crypto microstructure); +59.91pct; CRYPTO bonus outside 50-equity set",
+"degen": false
 },
 {
 "sym": "DIA",
@@ -502,28 +767,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.5) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "velo seed N=28<floor; dropped velo -> N32 2.02; Min room to wall 0.5 lifts to 2.07/31 (limited room headroom before N floor); partial-TP hurt (1.82); buffer non-binding; long-only Dow uptrend + N=31 near floor = walk-fwd mandatory"
-},
-{
-"sym": "ASML",
-"warn": false,
-"pf": 2.054,
-"dd": 16.44,
-"win": 56.76,
-"n": 37,
-"arch": "fade-both-cascstop-velo",
-"remicro": false,
-"assetClass": "equity",
-"sector": "Semis",
-"family": "both-direction",
-"status": "ready",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP OFF",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "SYMMETRIC edge; long-only seed PF2.26 but N=19<floor; shorts-ON adds trades -> 2.054/DD16.4/N37 (S1.76); CascStop binds buffer but 0.85 is sharp peak (buf3/8 blow DD to 62pct); velo HELPS (off=1.49/N64); wall HURTS (1.42/DD28); clean both-dir = believable not pure bull-fit"
+"note": "velo seed N=28<floor; dropped velo -> N32 2.02; Min room to wall 0.5 lifts to 2.07/31 (limited room headroom before N floor); partial-TP hurt (1.82); buffer non-binding; long-only Dow uptrend + N=31 near floor = walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "INTC",
@@ -544,7 +789,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 3, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "structural DOWNTRENDER; long-only only viable (both-dir 0.89/DD44 short-only 0.45); CascStop binds; buf3 = max S (2.053/DD46.6/N49) buf0.85 lower DD36.6 but PF1.12; buf5 DD56 buf15 N10; tight gate cuts DD46->39 but PF2.05->1.56 (S worse); DD46pct = MRVL-tier low quality; walk-fwd mandatory"
+"note": "structural DOWNTRENDER; long-only only viable (both-dir 0.89/DD44 short-only 0.45); CascStop binds; buf3 = max S (2.053/DD46.6/N49) buf0.85 lower DD36.6 but PF1.12; buf5 DD56 buf15 N10; tight gate cuts DD46->39 but PF2.05->1.56 (S worse); DD46pct = MRVL-tier low quality; walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "SCHD",
@@ -565,7 +811,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "gated seed 3.41/3.85pctDD but N=21<floor; dropped LQX+velo -> clean wall-fade 2.05/35 DD6.73pct; room0.5 & iceberg both hurt; very low DD; long-only div-ETF uptrend = walk-fwd mandatory"
+"note": "gated seed 3.41/3.85pctDD but N=21<floor; dropped LQX+velo -> clean wall-fade 2.05/35 DD6.73pct; room0.5 & iceberg both hurt; very low DD; long-only div-ETF uptrend = walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "KO",
@@ -586,7 +833,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 18, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "clean-fade buffer 18 (plateau 18-25); gates HURT (1.98->1.48); 1.17->1.98; +78pct PnL; low-vol consumer staple = sweet spot"
+"note": "clean-fade buffer 18 (plateau 18-25); gates HURT (1.98->1.48); 1.17->1.98; +78pct PnL; low-vol consumer staple = sweet spot",
+"degen": false
 },
 {
 "sym": "NXPI",
@@ -607,7 +855,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 5, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.3, maxShort 0.3, veto 0.6) · Velo ON (plunge 0.25, window 5, dots 1)",
-"note": "gate-tighten 0.4->0.3/veto0.6 DOUBLED PF 1.03->1.97 & halved DD 33->21; buffer 5 (semi vol); +99pct PnL; LQX thresholds = 3rd big lever"
+"note": "gate-tighten 0.4->0.3/veto0.6 DOUBLED PF 1.03->1.97 & halved DD 33->21; buffer 5 (semi vol); +99pct PnL; LQX thresholds = 3rd big lever",
+"degen": false
 },
 {
 "sym": "PANW",
@@ -628,7 +877,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 1, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only fade-wall buf1; 1.25->1.96 @ 23pct; buf3 2.18 but DD37 same S picked lower-DD; healthy 49pct win; cyber software"
+"note": "long-only fade-wall buf1; 1.25->1.96 @ 23pct; buf3 2.18 but DD37 same S picked lower-DD; healthy 49pct win; cyber software",
+"degen": false
 },
 {
 "sym": "ON",
@@ -649,7 +899,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 3, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.3, maxShort def, veto 0.6) · Velo OFF",
-"note": "high-vol semi; CascStop binds buf; gate-RESCUED (NXPI-style not TSM-style); buf0.85 1.158/DD26.5 buf3 1.898/DD45.6; tight LQX 0.3/0.6 on buf3 CUTS DD45.6->38.7 AND raises PF to 1.952 (S1.41); 0.25/0.5 over-tightens N29<floor; buf0.85+gate clean DD20.7 but PF1.28 lower S; max-S = buf3+gate; DD38.7 walk-fwd mandatory"
+"note": "high-vol semi; CascStop binds buf; gate-RESCUED (NXPI-style not TSM-style); buf0.85 1.158/DD26.5 buf3 1.898/DD45.6; tight LQX 0.3/0.6 on buf3 CUTS DD45.6->38.7 AND raises PF to 1.952 (S1.41); 0.25/0.5 over-tightens N29<floor; buf0.85+gate clean DD20.7 but PF1.28 lower S; max-S = buf3+gate; DD38.7 walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "ICP",
+"warn": true,
+"pf": 1.89,
+"dd": 27.06,
+"win": 38.18,
+"n": 55,
+"arch": "crypto-confluence-long",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.1, target-R 0.3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 2, exh-vol 3, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
+"note": "RE-RUN confluence-build flipped 0.95->1.89 key=long-only+iceberg10+exh3+buf0.1; AAVE-winning shape transferred (2021-launch alt sibling); buffer tighten 0.35->0.1 small crumb DD28->27; veto/exh4 non-binding; 38pct win long-only bull-regime walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "NATGASUSD",
+"warn": false,
+"pf": 1.882,
+"dd": 9.97,
+"win": 21.43,
+"n": 56,
+"arch": "comdty-trend-both-dir",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Commodity",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.5, veto 0.7) · Velo OFF",
+"note": "OANDA:NATGASUSD 4h chronic downtrender; LONG-ONLY fade DD48pct (catches gas crashes 1.27/N35 77pct win low-quality); BOTH-DIR TREND-RIDER the edge (SOL pattern shorts monetize crashes 21pct win); fade-off+continuation+breaker+ice10+BSL4/1+tight-LQX; BrkVol6 HALVED DD 15.75->10.59 (plateau 6-8); MaxShort LOOSEN 0.35->0.5 lifts PF 1.82->1.88 DD->9.97 N56 (shorts=profit source dont kill); 21pct win symmetric trustworthy; S=1.711",
+"degen": false
 },
 {
 "sym": "VOO",
@@ -670,7 +965,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "limited-history ETF (thin N); CascStop binds buffer but default 0.85 optimal (buf18 N=7 / buf5 velo-off DD22pct both worse); wall-fade N=24<floor; seed clean-fade CascStop+velo long-only = best 1.85/30 at exact N floor; borderline N; long-only walk-fwd mandatory"
+"note": "limited-history ETF (thin N); CascStop binds buffer but default 0.85 optimal (buf18 N=7 / buf5 velo-off DD22pct both worse); wall-fade N=24<floor; seed clean-fade CascStop+velo long-only = best 1.85/30 at exact N floor; borderline N; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "ADI",
@@ -691,7 +987,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong def, maxShort def, veto def) · Velo ON (plunge def, window def, dots def)",
-"note": "long-only gated fade-wall seed is best; shorts-on 1.53/N49 worse; gates-OFF clean wall 1.53/16pctDD worse (gates HELP here unlike TSM/AMD); room0.5 N29<floor; CascStop off so buffer non-binding; N=31 near floor; long-only walk-fwd mandatory"
+"note": "long-only gated fade-wall seed is best; shorts-on 1.53/N49 worse; gates-OFF clean wall 1.53/16pctDD worse (gates HELP here unlike TSM/AMD); room0.5 N29<floor; CascStop off so buffer non-binding; N=31 near floor; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "KLAC",
@@ -712,7 +1009,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "continuation seed breaker floods 270tr DD31pct; same semi pattern -> fade-wall gates-off best 1.82/DD16/N51; iceberg flat PF but +DD (1.83/DD20); room non-binding; healthy N; long-only walk-fwd mandatory"
+"note": "continuation seed breaker floods 270tr DD31pct; same semi pattern -> fade-wall gates-off best 1.82/DD16/N51; iceberg flat PF but +DD (1.83/DD20); room non-binding; healthy N; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "XLY",
@@ -733,7 +1031,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 5, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "discretionary ETF; clean fade alone PF0.678; same XLP fix = CascStop + buf sweep; buf5 = best plateau (1.798/DD22/N34 S1.47) buf3 1.695/DD23.7/N40 buf8 PF3.23/N25<floor; 73.5pct win near 75pct threshold; long-only walk-fwd mandatory"
+"note": "discretionary ETF; clean fade alone PF0.678; same XLP fix = CascStop + buf sweep; buf5 = best plateau (1.798/DD22/N34 S1.47) buf3 1.695/DD23.7/N40 buf8 PF3.23/N25<floor; 73.5pct win near 75pct threshold; long-only walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "IWM",
+"warn": false,
+"pf": 1.795,
+"dd": 24.61,
+"win": 40.2,
+"n": 102,
+"arch": "equity-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "ETF",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 3, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 2)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge 0.98->1.80 key=long-only+tight-buf3+breaker-vol2; low breaker thresh flooded N 29->102 with quality; DD healthy 24.6pct",
+"degen": false
 },
 {
 "sym": "MPWR",
@@ -754,7 +1075,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL ON (pool def, exh-vol def, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "wall+CascStop seed thins to N25<floor (PF2.84); KEY = drop wall -> plain fade + velo + BSL = N31 PF1.788/DD27.2 (S1.41); CascStop binds buf but 0.85 keeps floor (buf3 better 2.41/DD21 but N29<floor; buf2 N30/DD40); shorts blow DD52; N=31 near floor; long-only walk-fwd mandatory"
+"note": "wall+CascStop seed thins to N25<floor (PF2.84); KEY = drop wall -> plain fade + velo + BSL = N31 PF1.788/DD27.2 (S1.41); CascStop binds buf but 0.85 keeps floor (buf3 better 2.41/DD21 but N29<floor; buf2 N30/DD40); shorts blow DD52; N=31 near floor; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "RENDER",
@@ -775,7 +1097,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.6, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:RENDERUSDT 4h; LONG-ONLY FADE archetype but wants WIDE buffer (opposite of DOGE); seed buf0.35 1.437/16.11DD/N70 -> buffer WIDEN 0.5=1.717 0.6=1.757 0.75=1.959/DD16.7 (higher S) but cliff at 0.85 (DD30) so picked 0.6 mid-plateau for robustness; buf0.2 worse; 86pct win long-only bull-regime walk-fwd MANDATORY; S=1.536 (buf0.75 S1.68 if aggressive)"
+"note": "BINANCE:RENDERUSDT 4h; LONG-ONLY FADE archetype but wants WIDE buffer (opposite of DOGE); seed buf0.35 1.437/16.11DD/N70 -> buffer WIDEN 0.5=1.717 0.6=1.757 0.75=1.959/DD16.7 (higher S) but cliff at 0.85 (DD30) so picked 0.6 mid-plateau for robustness; buf0.2 worse; 86pct win long-only bull-regime walk-fwd MANDATORY; S=1.536 (buf0.75 S1.68 if aggressive)",
+"degen": false
+},
+{
+"sym": "DE30EUR",
+"warn": true,
+"pf": 1.741,
+"dd": 11.41,
+"win": 68.12,
+"n": 69,
+"arch": "index-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Index",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 7, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 1, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:DE30EUR 4h German DAX (DE40EUR HUNG the recompute - tester stuck updating-true 15s+ like MATIC; used DE30EUR fallback per nodata rule); LONG-ONLY fade+ice7+BSL exh1; buf7 peak 1.741/DD11.4/N69 robust-N (wide plateau 7-12 ~1.7 buf5 1.59); 68pct win long-only bull-regime walk-fwd mandatory; S=1.563",
+"degen": false
 },
 {
 "sym": "UNI",
@@ -796,7 +1141,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.65, target-R 0.3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.2, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:UNIUSDT 4h; LONG-ONLY FADE archetype clears PF1; 2020-launch alt with real history; seed buf0.35 1.323/20.49DD/N46 -> buffer WIDEN the lever (opposite of DOGE) buf0.5 1.47 buf0.75 1.646 buf0.65 peak 1.703/19.02DD; buf1 1.508 buf0.2 1.12; MaxLong tighten 0.25->0.2 small crumb (0.15 N-floor); exh2.5/room0.35/pool5 all worse; both-dir trend-rider not needed (fade clears); 47.5pct win healthy; S=1.431 walk-fwd MANDATORY"
+"note": "BINANCE:UNIUSDT 4h; LONG-ONLY FADE archetype clears PF1; 2020-launch alt with real history; seed buf0.35 1.323/20.49DD/N46 -> buffer WIDEN the lever (opposite of DOGE) buf0.5 1.47 buf0.75 1.646 buf0.65 peak 1.703/19.02DD; buf1 1.508 buf0.2 1.12; MaxLong tighten 0.25->0.2 small crumb (0.15 N-floor); exh2.5/room0.35/pool5 all worse; both-dir trend-rider not needed (fade clears); 47.5pct win healthy; S=1.431 walk-fwd MANDATORY",
+"degen": false
 },
 {
 "sym": "ADA",
@@ -817,7 +1163,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 8)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:ADAUSDT 4h; long-only fade 0.931/7.50DD/N58 highwin sub-1 (crash-prone alt); BOTH-DIR trend-rider = edge (SOL pattern 20pct win); seed BrkVol4 1.432/22.93DD/N57 -> BrkVol sweep the lever 6=1.688/14.08 8=1.686/13.50 (plateau 6-8) 10 collapses 1.036; MaxShort 0.25 N<floor 0.5 worse; S=1.485 symmetric"
+"note": "BINANCE:ADAUSDT 4h; long-only fade 0.931/7.50DD/N58 highwin sub-1 (crash-prone alt); BOTH-DIR trend-rider = edge (SOL pattern 20pct win); seed BrkVol4 1.432/22.93DD/N57 -> BrkVol sweep the lever 6=1.688/14.08 8=1.686/13.50 (plateau 6-8) 10 collapses 1.036; MaxShort 0.25 N<floor 0.5 worse; S=1.485 symmetric",
+"degen": false
 },
 {
 "sym": "ARB",
@@ -838,7 +1185,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 3, eliq OFF) · Breaker ON (vol 8)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:ARBUSDT 4h; downtrender; long-only fade 0.788/19.32DD/N48 sub-1; BOTH-DIR trend-rider edge; seed BrkVol5/exh3 1.276/23.93DD/N63 -> BrkVol sweep the lever 6=1.298 7=1.424 8=1.677/19.58DD (plateau 8-10); MaxShort tighten 0.25 kills shorts (downtrender) loose 0.5 flat; S=1.402 symmetric"
+"note": "BINANCE:ARBUSDT 4h; downtrender; long-only fade 0.788/19.32DD/N48 sub-1; BOTH-DIR trend-rider edge; seed BrkVol5/exh3 1.276/23.93DD/N63 -> BrkVol sweep the lever 6=1.298 7=1.424 8=1.677/19.58DD (plateau 8-10); MaxShort tighten 0.25 kills shorts (downtrender) loose 0.5 flat; S=1.402 symmetric",
+"degen": false
+},
+{
+"sym": "JUP",
+"warn": false,
+"pf": 1.67,
+"dd": 25.79,
+"win": 34.09,
+"n": 44,
+"arch": "crypto-fade-long",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 0.3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
+"signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
+"note": "BINANCE:JUPUSDT 4h LONG-ONLY FADE archetype (trend-rider worse 0.86/DD44); buffer non-binding (0.35 vs 0.2 identical ~1.39); KEY = Exhaustion-vol LOOSEN 1.75->1 grew N 36->44 lifted PF 1.39->1.67; velocity over-thinned N14; MaxLong tighten 0.2 N30-floor 0.15 N18; kept 0.25 for N margin (44); DD~25.8pct structural; 34pct win; S=1.327 walk-fwd recommended",
+"degen": false
+},
+{
+"sym": "BNB",
+"warn": false,
+"pf": 1.605,
+"dd": 19.69,
+"win": 25.68,
+"n": 74,
+"arch": "crypto-confluence-both",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 6)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped 0.86->1.61 key=both-dir-trend-rider+breaker-vol6; full stack fade+ice7+bsl2/2+breaker+velo; breaker-vol sweep the lever 3=1.02 5=1.48 6=1.61 8=1.56; tight-LQX HURT exh2 best exh1-floods exh3-thins; 25pct win symmetric",
+"degen": false
 },
 {
 "sym": "PEP",
@@ -859,7 +1251,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg ON (abs 5) · BSL/SSL ON (pool 2, exh-vol 4, eliq OFF) · Breaker ON (vol 7.5)",
 "gates": "LQX-gate ON (maxLong 0.5, maxShort 0.15, veto 0.75) · Velo ON (plunge 0.5, window 12, dots 1)",
-"note": "user-config reproduced exactly"
+"note": "user-config reproduced exactly",
+"degen": false
 },
 {
 "sym": "XRP",
@@ -880,7 +1273,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:XRPUSDT 4h; long-only fade FAILED 0.677/11.87DD/N54 highwin (crash-prone alt); BOTH-DIR trend-rider clears PF1 (SOL pattern shorts monetize XRP crashes 13.79pct win); seed 1.201/23.59DD/N125 -> BrkVol sweep 4->6 the lever (PF 1.20->1.32->1.587 DD down to 19.00) BrkVol8 over-filters; MaxShort 0.25 hurt 0.5 flat; veto/room/iceberg/MaxLong all flat-or-worse; S=1.334 symmetric not bull-fit"
+"note": "BINANCE:XRPUSDT 4h; long-only fade FAILED 0.677/11.87DD/N54 highwin (crash-prone alt); BOTH-DIR trend-rider clears PF1 (SOL pattern shorts monetize XRP crashes 13.79pct win); seed 1.201/23.59DD/N125 -> BrkVol sweep 4->6 the lever (PF 1.20->1.32->1.587 DD down to 19.00) BrkVol8 over-filters; MaxShort 0.25 hurt 0.5 flat; veto/room/iceberg/MaxLong all flat-or-worse; S=1.334 symmetric not bull-fit",
+"degen": false
 },
 {
 "sym": "TSEM",
@@ -901,7 +1295,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "TRENDER like XLI; fade thin (long-only N19 PF0.65 / both-dir N28 PF0.90 both <floor); continuation+breaker floods N305 DD41pct; KEY = continuation-WALL (breaker off + Target-OB on) long-only = 1.582/DD19.2/N39; room0.5 worse; shorts-on 0.999/DD38; gates dont help; clean low-DD trender"
+"note": "TRENDER like XLI; fade thin (long-only N19 PF0.65 / both-dir N28 PF0.90 both <floor); continuation+breaker floods N305 DD41pct; KEY = continuation-WALL (breaker off + Target-OB on) long-only = 1.582/DD19.2/N39; room0.5 worse; shorts-on 0.999/DD38; gates dont help; clean low-DD trender",
+"degen": false
 },
 {
 "sym": "FIL",
@@ -922,7 +1317,74 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 3, eliq OFF) · Breaker ON (vol 5)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:FILUSDT 4h; downtrender; long-only fade 0.715/18.12DD/N54 sub-1; BOTH-DIR trend-rider edge; seed BrkVol4/exh2 1.337/23.11DD/N55 -> BrkVol5 1.527 (6 collapses) + Exhaustion 2->3 cuts DD 22->20.2 (exh4 lower); MaxShort 0.25 lower PF (shorts contribute); S=1.308 symmetric"
+"note": "BINANCE:FILUSDT 4h; downtrender; long-only fade 0.715/18.12DD/N54 sub-1; BOTH-DIR trend-rider edge; seed BrkVol4/exh2 1.337/23.11DD/N55 -> BrkVol5 1.527 (6 collapses) + Exhaustion 2->3 cuts DD 22->20.2 (exh4 lower); MaxShort 0.25 lower PF (shorts contribute); S=1.308 symmetric",
+"degen": false
+},
+{
+"sym": "AAVE",
+"warn": true,
+"pf": 1.565,
+"dd": 24.4,
+"win": 23.33,
+"n": 90,
+"arch": "crypto-confluence-long",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 0.3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 2, exh-vol 3, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
+"note": "RE-RUN confluence-build flipped 0.82->1.57 key=long-only+iceberg-hits10+exhaustion-vol3; both-dir bled shorts dragged PF<1; long-only 1.17 -> ice10+exh3 crumb lifted to 1.565 DD24; tight-LQX helped; breaker6 thins below floor; DeFi blue-chip walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "NAS100USD",
+"warn": true,
+"pf": 1.54,
+"dd": 12.53,
+"win": 58.06,
+"n": 31,
+"arch": "index-confluence-long",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Index",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 6, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:NAS100USD 4h Nasdaq tech-heavy uptrender; LONG-ONLY fade+ice7+BSL2/2; wants slightly wider buf than SPX (buf5 1.349/N32 buf7 1.721/N29<floor buf6 1.540/DD12.5/N31 best N>=30); buf10 N28<floor; breaker FLOODS 106tr PF0.90 (continuation bleeds); 58pct win long-only bull-regime walk-fwd mandatory; S=1.369",
+"degen": false
+},
+{
+"sym": "UK100GBP",
+"warn": true,
+"pf": 1.537,
+"dd": 7.34,
+"win": 60.53,
+"n": 38,
+"arch": "index-confluence-long-velo",
+"remicro": false,
+"assetClass": "equity",
+"sector": "Index",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 1, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "OANDA:UK100GBP 4h FTSE weak range-bound uptrender; bare fade+ice+BSL sub-1 (buf7 0.946/N62 buf3 0.947/N91 buf15 0.822 buffer alone wont clear); REQUIRE-VELOCITY plunge0.95/win5 THE edge (flipped 0.95->1.76 halved DD 12.5->7.95); buf7+velo 1.763/N30-floor buf5+velo 1.537/DD7.3/N38 (better N margin picked); 60pct win long-only bull-regime walk-fwd mandatory; S=1.432",
+"degen": false
 },
 {
 "sym": "SPY",
@@ -943,7 +1405,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 1.0) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "WEAK fade name; BSL seed reproduced only 1.06/15pct (not S1 2.02); CascStop+buf25 killed trades (PF0); both-dir 1.35/52; long-only wall-fade + Min room to wall 1.0 (plateau 1.0; 1.5 drops N<30) = best 1.52/32; thin edge but clears PF1; long-only walk-fwd mandatory"
+"note": "WEAK fade name; BSL seed reproduced only 1.06/15pct (not S1 2.02); CascStop+buf25 killed trades (PF0); both-dir 1.35/52; long-only wall-fade + Min room to wall 1.0 (plateau 1.0; 1.5 drops N<30) = best 1.52/32; thin edge but clears PF1; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "AMD",
@@ -964,7 +1427,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "rich continuation seed = DD33pct (breaker 323tr); breaker-off + buf5 raise DD to 38pct; like TSM the fade-wall gates-off velo-off is best 1.52/DD21/N32; tight LQX gate hurts (1.39/DD28/N23); long-only highest-vol semi walk-fwd mandatory"
+"note": "rich continuation seed = DD33pct (breaker 323tr); breaker-off + buf5 raise DD to 38pct; like TSM the fade-wall gates-off velo-off is best 1.52/DD21/N32; tight LQX gate hurts (1.39/DD28/N23); long-only highest-vol semi walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "EURUSD",
@@ -985,7 +1449,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 30, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "OANDA:EURUSD 4h BOTH-DIR cascade-fade; matches owner 1.40 baseline (PF1.514 both-dir); BUFFER is the only lever - wide buf30 the peak (buf0.35 0.556 buf25 0.999/N51 buf30 1.514/N32 buf35 2.877/N29<floor buf32 0.839); SHARP peak not plateau N at floor fragile; continuation/breaker 0.636/N500 long-only 0.471 short-only 0.585 all bleed; partial-off lifts PF1.95 but N29; S=1.404 symmetric not bull-fit"
+"note": "OANDA:EURUSD 4h BOTH-DIR cascade-fade; matches owner 1.40 baseline (PF1.514 both-dir); BUFFER is the only lever - wide buf30 the peak (buf0.35 0.556 buf25 0.999/N51 buf30 1.514/N32 buf35 2.877/N29<floor buf32 0.839); SHARP peak not plateau N at floor fragile; continuation/breaker 0.636/N500 long-only 0.471 short-only 0.585 all bleed; partial-off lifts PF1.95 but N29; S=1.404 symmetric not bull-fit",
+"degen": false
+},
+{
+"sym": "ENA",
+"warn": false,
+"pf": 1.5,
+"dd": 15.7,
+"win": 25.53,
+"n": 47,
+"arch": "crypto-trend-both-dir",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 8)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.25, veto 0.7) · Velo OFF",
+"note": "BINANCE:ENAUSDT 4h 2024-launch downtrender; long-only fade 0.685/DD54; BOTH-DIR trend-rider edge; KEY = BrkVol8 + MaxShort TIGHTEN 0.35->0.25 cut DD 49.6->15.7 lifted PF 0.88->1.50; BrkVol10 worse 1.15 MaxShort0.2 N33 lower; 25.5pct win symmetric; S=1.296 recommended",
+"degen": false
+},
+{
+"sym": "SPX500USD",
+"warn": true,
+"pf": 1.468,
+"dd": 11.44,
+"win": 67.65,
+"n": 34,
+"arch": "index-confluence-long",
+"remicro": true,
+"assetClass": "equity",
+"sector": "Index",
+"family": "fade",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:SPX500USD 4h S&P secular uptrender; LONG-ONLY fade+ice7+BSL2/2; index wants TIGHTER buffer than metals (buf10 1.04/DD19 buf5 1.468/DD11.4/N34 sharp peak buf4 1.28 buf6 1.27 buf8 0.97); buf5 best S; 68pct win long-only bull-regime walk-fwd mandatory; S=1.317",
+"degen": false
 },
 {
 "sym": "INJ",
@@ -1006,7 +1515,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.1, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 2.5, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:INJUSDT 4h; LONG-ONLY FADE archetype; seed buf0.35 1.309/16.35DD/N66 -> buffer tighten 0.35->0.1 (PF up DD down) plateau 0.05-0.1; KEY 2nd lever = Exhaustion volume 1.75->2.5 cuts DD 15.47->12.05 (exh3.5 PF collapses); 85pct win long-only bull-regime walk-fwd MANDATORY; S=1.304"
+"note": "BINANCE:INJUSDT 4h; LONG-ONLY FADE archetype; seed buf0.35 1.309/16.35DD/N66 -> buffer tighten 0.35->0.1 (PF up DD down) plateau 0.05-0.1; KEY 2nd lever = Exhaustion volume 1.75->2.5 cuts DD 15.47->12.05 (exh3.5 PF collapses); 85pct win long-only bull-regime walk-fwd MANDATORY; S=1.304",
+"degen": false
 },
 {
 "sym": "TXN",
@@ -1027,7 +1537,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL ON (pool def, exh-vol def, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.5, maxShort def, veto 0.85) · Velo ON (plunge def, window def, dots def)",
-"note": "low-vol analog semi; CascStop binds buf but 0.85 = plateau (buf3 1.216/DD37 buf8 PF3/N17<floor); adding velo lifts seed 1.403->1.455 (S 1.104->1.137); BSL HELPS (off 1.295/DD32); tight LQX gate cuts N to 21<floor; LQX-default+velo+BSL = best 1.455/DD27.9/N34; long-only walk-fwd mandatory"
+"note": "low-vol analog semi; CascStop binds buf but 0.85 = plateau (buf3 1.216/DD37 buf8 PF3/N17<floor); adding velo lifts seed 1.403->1.455 (S 1.104->1.137); BSL HELPS (off 1.295/DD32); tight LQX gate cuts N to 21<floor; LQX-default+velo+BSL = best 1.455/DD27.9/N34; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "NEAR",
@@ -1048,7 +1559,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:NEARUSDT 4h; LONG-ONLY FADE archetype clears PF1; seed buf0.35 1.508/19.25DD/N50 -> buffer TIGHTEN 0.35->0.2 HALVES DD (19.25->8.42) the lever; buf0.5 higher PF1.526 but DD19.4 lower S; buf0.1 plateau; MaxLong 0.2 cuts N; 80pct win long-only = bull-regime walk-fwd MANDATORY; S=1.341"
+"note": "BINANCE:NEARUSDT 4h; LONG-ONLY FADE archetype clears PF1; seed buf0.35 1.508/19.25DD/N50 -> buffer TIGHTEN 0.35->0.2 HALVES DD (19.25->8.42) the lever; buf0.5 higher PF1.526 but DD19.4 lower S; buf0.1 plateau; MaxLong 0.2 cuts N; 80pct win long-only = bull-regime walk-fwd MANDATORY; S=1.341",
+"degen": false
 },
 {
 "sym": "FET",
@@ -1069,7 +1581,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 3, eliq OFF) · Breaker ON (vol 5)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.25, veto 0.7) · Velo OFF",
-"note": "BINANCE:FETUSDT 4h; long-only fade 0.78/17.93DD/N78 sub-1; BOTH-DIR trend-rider edge; seed BrkVol5/exh3/MaxShort0.35 1.056/25.41DD/N74 -> MaxShort tighten the lever 0.2=PF2.196/N24<floor 0.25=1.454/28.66DD/N37 best floor-clearing; BrkVol4 floods DD33; exh4 flat; marginal high-DD N near floor; S=1.130 walk-fwd recommended"
+"note": "BINANCE:FETUSDT 4h; long-only fade 0.78/17.93DD/N78 sub-1; BOTH-DIR trend-rider edge; seed BrkVol5/exh3/MaxShort0.35 1.056/25.41DD/N74 -> MaxShort tighten the lever 0.2=PF2.196/N24<floor 0.25=1.454/28.66DD/N37 best floor-clearing; BrkVol4 floods DD33; exh4 flat; marginal high-DD N near floor; S=1.130 walk-fwd recommended",
+"degen": false
+},
+{
+"sym": "MRVL",
+"warn": true,
+"pf": 1.447,
+"dd": 44.23,
+"win": 37.93,
+"n": 58,
+"arch": "semi-confluence-long-gated",
+"remicro": true,
+"assetClass": "equity",
+"sector": "Semis",
+"family": "fade",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate ON (maxLong 0.3, maxShort 0.3, veto 0.6) · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge to 1.45 key=long-only+tight-LQX-0.3/veto0.6+breaker3; gate HELPED (unlike AMAT) DD structurally high 44pct semi",
+"degen": false
+},
+{
+"sym": "LTC",
+"warn": false,
+"pf": 1.433,
+"dd": 25.77,
+"win": 24.29,
+"n": 70,
+"arch": "crypto-confluence-both",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 8) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 5) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 8)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge to 1.43 key=both-dir-trend-rider+breaker-vol8-strict+iceberg5+buf0.2; low-win 24pct alt trend-rider; SOL gate did NOT transfer",
+"degen": false
 },
 {
 "sym": "TSM",
@@ -1090,7 +1647,52 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "rich continuation seed = DD41pct (breaker floods 322tr); breaker-off continuation 1.43/DD30 N37; tight gates dont cut DD; buf3/8 blow DD to 41pct; fade-wall gates-off = best balance 1.43/DD25/N30; marginal semi N at floor; long-only walk-fwd mandatory"
+"note": "rich continuation seed = DD41pct (breaker floods 322tr); breaker-off continuation 1.43/DD30 N37; tight gates dont cut DD; buf3/8 blow DD to 41pct; fade-wall gates-off = best balance 1.43/DD25/N30; marginal semi N at floor; long-only walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "XAUUSD",
+"warn": true,
+"pf": 1.391,
+"dd": 9.26,
+"win": 68.57,
+"n": 35,
+"arch": "comdty-confluence-long",
+"remicro": true,
+"assetClass": "equity",
+"sector": "Commodity",
+"family": "fade",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 7, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:XAUUSD 4h gold uptrender; LONG-ONLY fade (both-dir 0.98/N97 22pct win); WIDE buffer the lever (buf0.35 1.06/N39 25pct win -> buf7 flips to 74pct win fade-quality but N27<floor); entry stack ICEBERG7+BSL2/2 grows N 27->35 cleared floor; breaker added N42 but lower S 1.24; REQUIRE-VELOCITY HURT badly (0.58/DD21 over-filtered opposite of AUDJPY); buf9 worse; 68pct win long-only bull-regime walk-fwd mandatory; S=1.273",
+"degen": false
+},
+{
+"sym": "ASML",
+"warn": false,
+"pf": 1.385,
+"dd": 13.99,
+"win": 51.98,
+"n": 202,
+"arch": "equity-robust-both",
+"remicro": true,
+"assetClass": "equity",
+"sector": "Semis",
+"family": "both-direction",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP ON",
+"signals": "Iceberg ON (abs 3) · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.39, veto 0.7) · Velo OFF",
+"note": "USER-CONFIG ROBUST variant; base-engine CascFade-off + Iceberg3 + tight-LQX 0.1/0.39/0.7 + SKIP-IF-CASCADE on + PartialTP 10/0.35; both-dir 1.385/13.99DD/202tr/+52pct; lower PF than scan-2.054 but 5.5x sample (37->202) + lower DD = FAR more trustworthy/deployable; thin-37tr 2.054 was a mirage",
+"degen": false
 },
 {
 "sym": "BCH",
@@ -1111,7 +1713,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 0.3) · Wall-TP OFF · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "BINANCE:BCHUSDT 4h; LONG-ONLY FADE archetype (clears PF1 unlike crash-alts); seed buf0.35 1.065/14.72DD/N50 -> buffer TIGHTEN 0.35->0.2 the lever (PF 1.065->1.375 DD 14.72->10.18) buf0.1 plateau; velocity ON thins N16; exh2.5 sub-1; 88pct win long-only = bull-regime walk-fwd MANDATORY; S=1.248"
+"note": "BINANCE:BCHUSDT 4h; LONG-ONLY FADE archetype (clears PF1 unlike crash-alts); seed buf0.35 1.065/14.72DD/N50 -> buffer TIGHTEN 0.35->0.2 the lever (PF 1.065->1.375 DD 14.72->10.18) buf0.1 plateau; velocity ON thins N16; exh2.5 sub-1; 88pct win long-only = bull-regime walk-fwd MANDATORY; S=1.248",
+"degen": false
+},
+{
+"sym": "VGT",
+"warn": false,
+"pf": 1.368,
+"dd": 23.97,
+"win": 35.71,
+"n": 56,
+"arch": "equity-confluence-long",
+"remicro": true,
+"assetClass": "equity",
+"sector": "ETF",
+"family": "fade",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 4)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN confluence-build flipped non-edge to 1.37 key=long-only+buf5+breaker-vol4; breaker-vol2 floods 202tr@24pct win lift vol to 4 for quality; DD healthy 24pct tech ETF",
+"degen": false
 },
 {
 "sym": "ARM",
@@ -1132,7 +1757,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker ON (vol def)",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "recent-IPO thin name; fade-wall best PF 1.61 but N=20<floor (plain-fade N18 PF0.98); only continuation+breaker clears N>=30; long-only 1.366/DD31.6/N114 beats both-dir 1.128/DD40; tight LQX gate HURTS (1.293 same DD); high-DD thin-history walk-fwd mandatory"
+"note": "recent-IPO thin name; fade-wall best PF 1.61 but N=20<floor (plain-fade N18 PF0.98); only continuation+breaker clears N>=30; long-only 1.366/DD31.6/N114 beats both-dir 1.128/DD40; tight LQX gate HURTS (1.293 same DD); high-DD thin-history walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "DOT",
@@ -1153,7 +1779,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 2, eliq OFF) · Breaker ON (vol 4)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "BINANCE:DOTUSDT 4h; chronic downtrender; long-only fade 0.539/23.41DD/N70 sub-1; both-dir trend-rider edge but MARGINAL; BrkVol4 needed (6 drops sub-1) MaxShort tighten KILLS shorts (DOT short=profit source); KEY DD-cut lever = Exhaustion volume 1->2 (PF 1.185->1.33 DD 29.6->25.8) exh2.5 worse; S=1.057 low-quality high-DD like INTC walk-fwd recommended"
+"note": "BINANCE:DOTUSDT 4h; chronic downtrender; long-only fade 0.539/23.41DD/N70 sub-1; both-dir trend-rider edge but MARGINAL; BrkVol4 needed (6 drops sub-1) MaxShort tighten KILLS shorts (DOT short=profit source); KEY DD-cut lever = Exhaustion volume 1->2 (PF 1.185->1.33 DD 29.6->25.8) exh2.5 worse; S=1.057 low-quality high-DD like INTC walk-fwd recommended",
+"degen": false
 },
 {
 "sym": "XLP",
@@ -1174,7 +1801,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 3, target-R 1) · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "defensive staples ETF; clean fade alone PF0.952 (just under); KEY = add CascStop + buf sweep; buf3 = plateau center (1.327/DD15.4/N48 S1.15); buf2 1.163/DD12 buf5 1.219/DD18.8 buf18 N=4; velo HURTS here (off needed); wall/gates/continuation all worse; long-only walk-fwd mandatory"
+"note": "defensive staples ETF; clean fade alone PF0.952 (just under); KEY = add CascStop + buf sweep; buf3 = plateau center (1.327/DD15.4/N48 S1.15); buf2 1.163/DD12 buf5 1.219/DD18.8 buf18 N=4; velo HURTS here (off needed); wall/gates/continuation all worse; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "AVGO",
@@ -1195,7 +1823,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "strong uptrender; continuation+breaker seed floods N324/DD56 PF<1; KEY = clean plain fade long-only; velo-ON higher PF 1.749/DD8.8 but N=28<floor; velo-OFF clears floor 1.315/DD8.84/N35; wall HURTS (1.229/DD20); shorts hurt (0.838); very low DD 8.8pct; long-only walk-fwd mandatory"
+"note": "strong uptrender; continuation+breaker seed floods N324/DD56 PF<1; KEY = clean plain fade long-only; velo-ON higher PF 1.749/DD8.8 but N=28<floor; velo-OFF clears floor 1.315/DD8.84/N35; wall HURTS (1.229/DD20); shorts hurt (0.838); very low DD 8.8pct; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "XLI",
@@ -1216,7 +1845,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "STUBBORN; fade regime FAILS (0.95/27); breaker bloats to 320tr PF1.0 DD24pct; LQX tight gate hurts (1.03/25); room0.6 worse; continuation-wall seed is best but thin 1.30/50; clears PF1 + N floor; long-only industrials uptrend = walk-fwd mandatory"
+"note": "STUBBORN; fade regime FAILS (0.95/27); breaker bloats to 320tr PF1.0 DD24pct; LQX tight gate hurts (1.03/25); room0.6 worse; continuation-wall seed is best but thin 1.30/50; clears PF1 + N floor; long-only industrials uptrend = walk-fwd mandatory",
+"degen": false
+},
+{
+"sym": "US30USD",
+"warn": true,
+"pf": 1.291,
+"dd": 10.13,
+"win": 70.45,
+"n": 44,
+"arch": "index-confluence-long",
+"remicro": true,
+"assetClass": "equity",
+"sector": "Index",
+"family": "fade",
+"status": "re-microtune",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 7, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 1, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:US30USD 4h Dow blue-chip uptrender; LONG-ONLY fade+ice7+BSL; fade STRUCTURALLY THIN (buf10 N29<floor highwin); KEY lever = Exhaustion-volume LOOSEN 2->1 grew N 29->43 (admits more BSL trades); then buf7 peak 1.291/DD10.1/N44 (buf5 1.13 buf18 0.94); 70pct win long-only bull-regime walk-fwd mandatory; S=1.172",
+"degen": false
 },
 {
 "sym": "TLT",
@@ -1237,7 +1889,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 30, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "CLEAN cascade-fade; buffer sweep 30 (plateau 30-35) beats user-22 1.232->1.272 same DD; +18.05pct PnL; commit-fix made numeric sweeps real"
+"note": "CLEAN cascade-fade; buffer sweep 30 (plateau 30-35) beats user-22 1.232->1.272 same DD; +18.05pct PnL; commit-fix made numeric sweeps real",
+"degen": false
 },
 {
 "sym": "MU",
@@ -1258,7 +1911,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "continuation+breaker seed floods N372 DD60pct; WALL HURTS MU (fade-wall 0.78/N28 / cont-wall 0.92/DD35); KEY = plain fade no-wall + velo long-only = clean 1.239/DD13.9/N31; velo essential (off=0.978); shorts hurt (0.90); CascStop off; N=31 near floor; long-only walk-fwd mandatory"
+"note": "continuation+breaker seed floods N372 DD60pct; WALL HURTS MU (fade-wall 0.78/N28 / cont-wall 0.92/DD35); KEY = plain fade no-wall + velo long-only = clean 1.239/DD13.9/N31; velo essential (off=0.978); shorts hurt (0.90); CascStop off; N=31 near floor; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "ORCL",
@@ -1279,7 +1933,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 1, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "long-only fade-wall; tighter buffer cuts DD (buf5 36 -> buf1 26); velo HURT (DD up); marginal software 1.23/26; clears PF1 + N80"
+"note": "long-only fade-wall; tighter buffer cuts DD (buf5 36 -> buf1 26); velo HURT (DD up); marginal software 1.23/26; clears PF1 + N80",
+"degen": false
+},
+{
+"sym": "EURJPY",
+"warn": false,
+"pf": 1.187,
+"dd": 11.22,
+"win": 26.42,
+"n": 53,
+"arch": "forex-fade-both-cascstop",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "both-direction",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 16, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:EURJPY 4h BOTH-DIR cascade-fade; JPY-cross marginal high-DD; needs MID buffer (buf30 0.771/N13<floor buf18 1.135/N47 buf16 1.187/DD11.22/N53 buf14 1.007/N64); buf16 local optimum highest PF lowest DD; long-only thins N10; iceberg HURT (1.086/DD13); structural DD~11pct eats S; 26.42pct win symmetric; S=1.067 marginal clears PF1+floor",
+"degen": false
 },
 {
 "sym": "NVDA",
@@ -1300,49 +1977,30 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP OFF · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker ON (vol def)",
 "gates": "LQX-gate ON (maxLong 0.3, maxShort def, veto 0.6) · Velo ON (plunge def, window def, dots def)",
-"note": "marginal; fade-wall N<30 always (gated 1.09/N19 / clean 0.87/N31<PF1); continuation floods N>200 at DD34pct; long-only+tight-gate(ML0.3/veto0.6) best S 1.185/DD34/N222; both-dir 1.085/DD38; gates barely cut DD (TSM/AMD pattern); high-vol high-DD walk-fwd mandatory"
+"note": "marginal; fade-wall N<30 always (gated 1.09/N19 / clean 0.87/N31<PF1); continuation floods N>200 at DD34pct; long-only+tight-gate(ML0.3/veto0.6) best S 1.185/DD34/N222; both-dir 1.085/DD38; gates barely cut DD (TSM/AMD pattern); high-vol high-DD walk-fwd mandatory",
+"degen": false
 },
 {
-"sym": "VGT",
+"sym": "TIA",
 "warn": false,
-"pf": 1.163,
-"dd": 10.24,
-"win": 68.0,
-"n": 25,
-"arch": "fade-long-clean-cascstop",
-"remicro": true,
-"assetClass": "equity",
-"sector": "ETF",
-"family": "fade",
-"status": "re-microtune",
+"pf": 1.16,
+"dd": 39.4,
+"win": 19.47,
+"n": 113,
+"arch": "crypto-trend-both-dir",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "both-direction",
+"status": "ready",
 "date": "21 Jun 2026",
 "dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP OFF · Partial-TP OFF",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate OFF · Velo OFF",
-"note": "N-FLOOR BLOCKED defer; clean fade + CascStop buf0.85 = PF1.163/DD10.2 but N=25<floor; structurally only 25 good fade trades; iceberg/abs5 push to N30 but trades 26-30 are losers -> PF0.88; abs6 over-filters back to N25; wall/velo HURT; CascStop essential (off PF0.48); profitable but too thin like AMAT"
-},
-{
-"sym": "MRVL",
-"warn": false,
-"pf": 1.134,
-"dd": 43.59,
-"win": 35.38,
-"n": 212,
-"arch": "fade",
-"remicro": true,
-"assetClass": "equity",
-"sector": "Semis",
-"family": "fade",
-"status": "re-microtune",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room def) · Partial-TP ON",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate ON (maxLong 0.6, maxShort 0.6, veto 0.85) · Velo OFF",
-"note": "DEEP COULD NOT BEAT S1; extreme-vol semi; deep best only 0.9/61 (gate0.3); loose gate=83pct DD tight=low PF; S1 1.134 stands but 44pct DD=low quality; DEFER not clean edge"
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 10)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.25, veto 0.7) · Velo OFF",
+"note": "BINANCE:TIAUSDT 4h severe downtrender (2023-launch near top); long-only fade catastrophic 0.05/DD70; BOTH-DIR trend-rider clears PF1 marginally; KEY = MaxShort TIGHTEN 0.5->0.25 (PF 1.0->1.16 DD 45->39.4); BrkVol10 plateau (12 identical); exh2 no help; DD structurally ~39pct high-quality like DOT/INTC; 19pct win symmetric; S=0.832 marginal high-DD walk-fwd recommended",
+"degen": false
 },
 {
 "sym": "QCOM",
@@ -1363,7 +2021,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.4, maxShort def, veto 0.7) · Velo ON (plunge def, window def, dots def)",
-"note": "rich continuation+breaker seed floods N308/DD35; long-only fade-wall+velo best (plain-fade 1.063/DD23.5/N45 / fade-wall gates-off 1.122/DD26/N43); velo HELPS (off DD32); loose LQX gate 0.4/0.7 cuts DD26->22 PF~flat = best quality 1.076/DD22/N38; tight 0.3/0.6 over-trims (1.042); marginal edge; long-only walk-fwd mandatory"
+"note": "rich continuation+breaker seed floods N308/DD35; long-only fade-wall+velo best (plain-fade 1.063/DD23.5/N45 / fade-wall gates-off 1.122/DD26/N43); velo HELPS (off DD32); loose LQX gate 0.4/0.7 cuts DD26->22 PF~flat = best quality 1.076/DD22/N38; tight 0.3/0.6 over-trims (1.042); marginal edge; long-only walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "MCHP",
@@ -1384,7 +2043,8 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
 "gates": "LQX-gate OFF · Velo OFF",
-"note": "marginal; continuation+breaker seed floods N384/DD51 (both-dir) N304/DD50 (long); plain-fade clean 0.805/DD15 but PF<1; fade-wall 0.495; KEY = continuation-WALL long-only velo/BSL OFF = 1.048/DD37.2/N84 (velo+BSL pulled it to 0.958); tight gate on breaker barely cuts DD (48); weak edge DD37 walk-fwd mandatory"
+"note": "marginal; continuation+breaker seed floods N384/DD51 (both-dir) N304/DD50 (long); plain-fade clean 0.805/DD15 but PF<1; fade-wall 0.495; KEY = continuation-WALL long-only velo/BSL OFF = 1.048/DD37.2/N84 (velo+BSL pulled it to 0.958); tight gate on breaker barely cuts DD (48); weak edge DD37 walk-fwd mandatory",
+"degen": false
 },
 {
 "sym": "TRX",
@@ -1405,36 +2065,38 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 0.3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
 "signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
 "gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
-"note": "N-FLOOR BLOCKED defer 4h BINANCE:TRXUSDT; steady Tron uptrender VERY low DD 7.21pct; long-only fade gated buf0.2 PF1.032/N28 buf0.35 PF1.013/N28 both sub-floor; only ~28 quality trades structural; loosening gates (LQX-off 0.223/N64 ML0.4 0.821/N48 iceberg5 0.789/N52) ALL bring losers PF<1; profitable but too thin like VGT/AMAT; defer"
+"note": "N-FLOOR BLOCKED defer 4h BINANCE:TRXUSDT; steady Tron uptrender VERY low DD 7.21pct; long-only fade gated buf0.2 PF1.032/N28 buf0.35 PF1.013/N28 both sub-floor; only ~28 quality trades structural; loosening gates (LQX-off 0.223/N64 ML0.4 0.821/N48 iceberg5 0.789/N52) ALL bring losers PF<1; profitable but too thin like VGT/AMAT; defer",
+"degen": false
 },
 {
-"sym": "IWM",
-"warn": false,
-"pf": 0.977,
-"dd": 12.99,
-"win": 29.63,
-"n": 27,
-"arch": "fade-long-wall",
-"remicro": true,
-"assetClass": "equity",
-"sector": "ETF",
+"sym": "EURGBP",
+"warn": true,
+"pf": 1.027,
+"dd": 5.33,
+"win": 58.82,
+"n": 34,
+"arch": "forex-fade-long-marginal",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
 "family": "fade",
-"status": "re-microtune",
+"status": "walk-forward",
 "date": "21 Jun 2026",
 "dateRaw": "2026-06-21T12:00",
 "exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.5) · Partial-TP OFF",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate OFF · Velo ON (plunge def, window def, dots def)",
-"note": "NON-EDGE 4h; choppy small-cap ETF (Russell2000); ALL regimes PF<1: continuation+breaker 0.959/DD36/N253 / clean-fade 0.723/N40 / wall-fade+velo 0.977/DD13/N27 (best but PF<1 AND N<floor) / wall-fade velo-off 0.808/N38 / continuation-wall 0.748/DD34; no config clears PF1; defer like XLF"
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:EURGBP 4h tight-range cross; LONG-ONLY is the edge (both-dir buf23 PF24/N19 long-only buf18 1.412/N15 all N-floor-blocked at high PF); buffer the lever low-vol cross wants TIGHT (opposite of majors); buf10 1.623/N24 buf7 1.114/N29 buf5 1.027/N34 (only N>=30 point - trades 30-34 are losers dragging PF); short-only bleeds 0.403; MARGINAL barely clears PF1 at floor; 58.82pct win long-only walk-fwd MANDATORY; S=0.975",
+"degen": false
 },
 {
-"sym": "ICP",
+"sym": "SEI",
 "warn": false,
-"pf": 0.95,
-"dd": 38.48,
-"win": 16.92,
-"n": 201,
+"pf": 1.003,
+"dd": 47.37,
+"win": 15.67,
+"n": 319,
 "arch": "crypto-nonedge",
 "remicro": false,
 "assetClass": "crypto",
@@ -1445,18 +2107,19 @@ window.DEEP_BOOK = [
 "dateRaw": "2026-06-21T12:00",
 "exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 4)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:ICPUSDT; 2021-launch alt big decline bleeds both directions; long-only fade 0.773/47.64DD/N68 lowwin; both-dir trend-rider BrkVol6 0.950/38.48DD/N201 best (closest) BrkVol8 0.934/33.84DD BrkVol7/exh2 identical; tops out PF0.95 never clears 1.0; defer like LINK/AAVE; NB strong on equity-strategy but crypto-core misfit"
+"note": "NON-EDGE 4h BINANCE:SEIUSDT recent-launch bleeder (APT/SUI family); long-only fade catastrophic 0.45/DD50/N52 (catches knives); both-dir trend-rider tops at PF1.003 only with DD47pct (breaker floods 319tr); cleaner-DD configs all sub-1 (BrkVol8/MaxShort0.25 0.959/DD30.7 MaxShort0.2 0.99/DD39); never clears PF1 AND reasonable DD; defer like APT/SUI/ICP",
+"degen": false
 },
 {
 "sym": "AMAT",
 "warn": false,
-"pf": 0.944,
-"dd": 41.24,
-"win": 31.71,
-"n": 41,
-"arch": "fade-long-wall",
+"pf": 0.953,
+"dd": 55.25,
+"win": 40.0,
+"n": 51,
+"arch": "semi-confluence-nonedge",
 "remicro": true,
 "assetClass": "equity",
 "sector": "Semis",
@@ -1464,82 +2127,20 @@ window.DEEP_BOOK = [
 "status": "re-microtune",
 "date": "21 Jun 2026",
 "dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.3) · Partial-TP OFF",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate OFF · Velo OFF",
-"note": "NON-EDGE 4h; N>=30 configs ALL PF<1 (fade-wall CascStop buf0.85 0.878/DD44/N38 / plain fade-wall 0.944/DD41/N41); PF>1 configs ALL N<floor (CascStop buf5+wall 1.797/DD38/N20 / buf8 1.442/N19 / no-wall buf8 1.859/DD57/N22); continuation+breaker DD83pct N410; cannot clear PF1 AND N30 simultaneously; DD structurally 38-44pct; defer like MRVL"
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 5, target-R 3) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 3)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN full confluence stack still sub-1 (best 0.953 at N16 / 0.908 at N51); long-only+tight-buf5+breaker-off best but N<30 when PF>1; DD structurally 55-72pct volatile semi; genuine non-edge",
+"degen": false
 },
 {
-"sym": "XLF",
+"sym": "LDO",
 "warn": false,
-"pf": 0.895,
-"dd": 36.32,
-"win": 37.5,
-"n": 152,
-"arch": "fade",
-"remicro": true,
-"assetClass": "equity",
-"sector": "ETF",
-"family": "fade",
-"status": "re-microtune",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade ON (buffer 20, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate OFF · Velo OFF",
-"note": "NON-EDGE 4h; tried fade 0.895/36 continuation-breaker 0.576/74 filtered-fade 0.913/42 tight-buf3 0.668/57; DD structurally >=36pct; financials misfit; FLAG owner for any manual config"
-},
-{
-"sym": "JPM",
-"warn": false,
-"pf": 0.882,
-"dd": 47.26,
-"win": 47.73,
-"n": 132,
-"arch": "fade",
-"remicro": true,
-"assetClass": "equity",
-"sector": "Single-name",
-"family": "fade",
-"status": "re-microtune",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY OFF",
-"stops": "Stop-beyond-cascade ON (buffer 0.85, target-R 1) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
-"gates": "LQX-gate ON (maxLong 0.5, maxShort def, veto 0.85) · Velo OFF",
-"note": "NON-EDGE financials misfit like XLF; base 0.88/47 fade 0.82/30 tightgate 0.82/28 continuation 0.88/61DD; no regime clears PF1; S1 1.709 unreproducible"
-},
-{
-"sym": "BNB",
-"warn": false,
-"pf": 0.86,
-"dd": 18.41,
-"win": 32.91,
-"n": 79,
-"arch": "crypto-nonedge",
-"remicro": false,
-"assetClass": "crypto",
-"sector": "Crypto",
-"family": "fade",
-"status": "ready",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP ON",
-"signals": "Iceberg OFF · BSL/SSL OFF · Breaker ON (vol 4.5)",
-"gates": "LQX-gate ON (maxLong 0.9, maxShort 0.55, veto 0.75) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:BNBUSDT; low-beta large-cap; long-only fade gated 0.735/4.74DD/N36 (thin highwin) both-dir trend-rider 0.697/19.69DD/N76 BTC-breaker combo 0.86/18.41DD/N79; no archetype clears PF1; neither trends sharply nor fades cleanly; defer like equity nonedges; best-PF row logged"
-},
-{
-"sym": "AAVE",
-"warn": false,
-"pf": 0.818,
-"dd": 58.6,
-"win": 14.89,
-"n": 376,
+"pf": 0.909,
+"dd": 51.24,
+"win": 13.92,
+"n": 273,
 "arch": "crypto-nonedge",
 "remicro": false,
 "assetClass": "crypto",
@@ -1550,9 +2151,98 @@ window.DEEP_BOOK = [
 "dateRaw": "2026-06-21T12:00",
 "exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 10)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.5, veto 0.7) · Velo OFF",
+"note": "NON-EDGE 4h BINANCE:LDOUSDT 2021-launch DeFi deep 2022 drawdown bleeds both directions; long-only fade 0.531/DD54; both-dir trend-rider tops PF0.909/DD51 (BrkVol10/MaxShort0.5 best); MaxShort tighten 0.25 KILLS profitable-shorts 0.379; never clears PF1; defer like AAVE/LINK DeFi misfit",
+"degen": false
+},
+{
+"sym": "SUI",
+"warn": false,
+"pf": 0.881,
+"dd": 32.83,
+"win": 15.35,
+"n": 254,
+"arch": "crypto-confluence-nonedge",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 12)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:AAVEUSDT; DeFi blue-chip bleeds both directions (deep 2021 drawdown); long-only fade 0.555/47.18DD/N56 lowwin; both-dir trend-rider BrkVol6 0.818/58.60DD/N376 best BrkVol8 0.803 BrkVol5/exh2/MaxShort0.25 0.581; breaker floods 360-376tr no config clears PF1; defer like LINK/AAVE-equity misfit"
+"note": "RE-RUN full confluence stack still sub-1 best 0.881 both-dir trend-rider breaker12 tight-LQX; bare fade bled DD75; tight-LQX cut DD75->33; breaker sweep plateaus ~0.88; MaxShort0.2 kills shorts PF0.76; recent-2023 launch bleeds both directions; genuine non-edge",
+"degen": false
+},
+{
+"sym": "ATOM",
+"warn": false,
+"pf": 0.853,
+"dd": 49.03,
+"win": 22.31,
+"n": 130,
+"arch": "crypto-confluence-nonedge",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade ON (buffer 0.2, target-R 4) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 5) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 4)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN full confluence stack still sub-1 (best 0.853 continuation-both); fade-only 0.38 fades dont reverse (16pct win); tight-gate cuts DD but PF 0.73; genuine non-edge",
+"degen": false
+},
+{
+"sym": "RUNE",
+"warn": false,
+"pf": 0.85,
+"dd": 29.57,
+"win": 21.74,
+"n": 69,
+"arch": "crypto-nonedge",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
+"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 4)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
+"note": "NON-EDGE 4h BINANCE:RUNEUSDT severe downtrender (THORChain 2021 collapse); long-only fade catastrophic 0.054/DD66; both-dir trend-rider tops PF0.85 (BrkVol4 best BrkVol6 0.744 BrkVol8 0.619); MaxShort/exh levers no help; never clears PF1; defer like LINK/ATOM/OP downtrender family",
+"degen": false
+},
+{
+"sym": "WIF",
+"warn": false,
+"pf": 0.842,
+"dd": 55.9,
+"win": 29.63,
+"n": 54,
+"arch": "crypto-nonedge",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 0.3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
+"signals": "Iceberg OFF · BSL/SSL ON (pool 4, exh-vol 1.75, eliq OFF) · Breaker OFF",
+"gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
+"note": "NON-EDGE 4h BINANCE:WIFUSDT extreme memecoin volatility bleeds both directions; long-only fade 0.84/DD56/N54 (catches knives); both-dir trend-rider WORSE 0.66/DD70/N237; tight-gate/BrkVol kills the crash-shorts 0.21; buf0.1 fade no better 0.84; no archetype clears PF1; defer like SEI/LINK extreme-vol misfit",
+"degen": false
 },
 {
 "sym": "OP",
@@ -1573,79 +2263,17 @@ window.DEEP_BOOK = [
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
 "signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 3, eliq OFF) · Breaker ON (vol 8)",
 "gates": "LQX-gate ON (maxLong 0.1, maxShort 0.5, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:OPUSDT; severe downtrender bleeds both directions; long-only fade 0.354/40.63DD/N50 terrible; both-dir trend-rider BrkVol8 0.728/35.26DD MaxShort0.5 0.795/29.79DD/N82 best BrkVol12 0.767/32.28DD; no config clears PF1; defer like LINK/LTC/ATOM; 2022-launch L2 chronic decline"
-},
-{
-"sym": "SUI",
-"warn": false,
-"pf": 0.793,
-"dd": 41.86,
-"win": 14.1,
-"n": 227,
-"arch": "crypto-nonedge",
-"remicro": false,
-"assetClass": "crypto",
-"sector": "Crypto",
-"family": "fade",
-"status": "ready",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 8)",
-"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:SUIUSDT; recent-2023-launch alt bleeds both directions; long-only fade 0.713/32.31DD/N36 lowwin; both-dir trend-rider BrkVol6 0.739 BrkVol8 0.793/41.86DD/N227 best BrkVol10/exh2 identical (plateau); no config clears PF1; defer like APT/LINK/LTC"
-},
-{
-"sym": "ATOM",
-"warn": false,
-"pf": 0.775,
-"dd": 36.16,
-"win": 15.32,
-"n": 111,
-"arch": "crypto-nonedge",
-"remicro": false,
-"assetClass": "crypto",
-"sector": "Crypto",
-"family": "fade",
-"status": "ready",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 2, eliq OFF) · Breaker ON (vol 4)",
-"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:ATOMUSDT; chronic downtrender bleeds both directions; long-only fade 0.503/23.27DD/N70 sub-1; both-dir trend-rider BrkVol4/exh2 0.775/36.16DD/N111 best; MaxShort tighten 0.2 kills shorts 0.488/N34; exh3 no help; no config clears PF1; defer like LINK/LTC"
-},
-{
-"sym": "LTC",
-"warn": false,
-"pf": 0.735,
-"dd": 36.38,
-"win": 8.97,
-"n": 78,
-"arch": "crypto-nonedge",
-"remicro": false,
-"assetClass": "crypto",
-"sector": "Crypto",
-"family": "fade",
-"status": "ready",
-"date": "21 Jun 2026",
-"dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 2, eliq OFF) · Breaker ON (vol 8)",
-"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:LTCUSDT; chronic bleeder both directions; long-only fade 0.699/19.81DD/N76 highwin sub-1; both-dir trend-rider BrkVol6 0.602/51.90DD BrkVol4exh2 0.711/46.24DD BrkVol8/MaxShort0.2 0.92/N20<floor BrkVol8/0.35 0.735/36.38DD/N78; PF>1 only below N floor like AMAT/VGT; no config clears PF1 AND N30; defer"
+"note": "NON-EDGE 4h BINANCE:OPUSDT; severe downtrender bleeds both directions; long-only fade 0.354/40.63DD/N50 terrible; both-dir trend-rider BrkVol8 0.728/35.26DD MaxShort0.5 0.795/29.79DD/N82 best BrkVol12 0.767/32.28DD; no config clears PF1; defer like LINK/LTC/ATOM; 2022-launch L2 chronic decline",
+"degen": false
 },
 {
 "sym": "APT",
 "warn": false,
-"pf": 0.712,
-"dd": 51.92,
-"win": 13.28,
-"n": 241,
-"arch": "crypto-nonedge",
+"pf": 0.794,
+"dd": 31.38,
+"win": 16.91,
+"n": 136,
+"arch": "crypto-confluence-nonedge",
 "remicro": false,
 "assetClass": "crypto",
 "sector": "Crypto",
@@ -1653,19 +2281,42 @@ window.DEEP_BOOK = [
 "status": "ready",
 "date": "21 Jun 2026",
 "dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY OFF",
+"exec": "Take Longs ON · Take Shorts ON · Require Min R:R ON · Cascade-Fade ONLY OFF",
 "stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
-"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.35, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:APTUSDT; recent-launch alt bleeds both directions; long-only fade 0.483/62.37DD/N56 lowwin; both-dir trend-rider BrkVol6 0.712/51.92DD/N241 best BrkVol8/exh2 0.595 MaxShort0.25 0.682/38.19DD/N120; no config clears PF1; defer like LINK/LTC/ATOM/OP"
+"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 8)",
+"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.25, veto 0.7) · Velo OFF",
+"note": "RE-RUN full confluence stack still sub-1 best 0.794 both-dir MaxShort0.25 breaker8; fade-long bled DD51 breaker6 worse 0.54; trend-rider floods 323tr DD63; recent-launch alt bleeds both directions; genuine non-edge",
+"degen": false
 },
 {
 "sym": "LINK",
 "warn": false,
-"pf": 0.415,
-"dd": 38.5,
-"win": 14.52,
-"n": 62,
+"pf": 0.687,
+"dd": 56.15,
+"win": 17.97,
+"n": 128,
+"arch": "crypto-confluence-nonedge",
+"remicro": false,
+"assetClass": "crypto",
+"sector": "Crypto",
+"family": "fade",
+"status": "ready",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R ON · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 4) · Wall-TP ON (min-room 0.3) · Partial-TP ON",
+"signals": "Iceberg ON (abs 7) · BSL/SSL ON (pool 2, exh-vol 2, eliq OFF) · Breaker ON (vol 4)",
+"gates": "LQX-gate OFF · Velo ON (plunge 0.95, window 5, dots 1)",
+"note": "RE-RUN full confluence stack still sub-1 (best 0.687); win stuck ~18pct across both-dir/long-only/continuation/buf0.35-2/tight-gate; fade reversals dont fire clean on LINK 4h; genuine non-edge",
+"degen": false
+},
+{
+"sym": "ONDO",
+"warn": false,
+"pf": 0.586,
+"dd": 25.71,
+"win": 30.77,
+"n": 26,
 "arch": "crypto-nonedge",
 "remicro": false,
 "assetClass": "crypto",
@@ -1674,12 +2325,35 @@ window.DEEP_BOOK = [
 "status": "ready",
 "date": "21 Jun 2026",
 "dateRaw": "2026-06-21T12:00",
-"exec": "Take Longs ON · Take Shorts ON · Require Min R:R OFF · Cascade-Fade ONLY ON",
-"stops": "Stop-beyond-cascade OFF · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
-"signals": "Iceberg ON (abs 10) · BSL/SSL ON (pool 4, exh-vol 1, eliq OFF) · Breaker ON (vol 6)",
-"gates": "LQX-gate ON (maxLong 0.1, maxShort 0.2, veto 0.7) · Velo OFF",
-"note": "NON-EDGE 4h BINANCE:LINKUSDT; ALL regimes PF<1; long-only fade 0.306/25.85DD/N42; both-dir trend-rider 0.415/38.50DD/N62; breaker-off floods 0.601/46.62DD/N131; BTC-style breaker combo 0.471/59.49DD; long-only CascStop+tightgate 0.673/N19; LINK bleeds both directions structurally; defer like XLF/AMAT crypto-equivalent"
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 0.35, target-R 0.3) · Wall-TP ON (min-room 0.2) · Partial-TP ON",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate ON (maxLong 0.25, maxShort 1, veto 1) · Velo OFF",
+"note": "NON-EDGE 4h BINANCE:ONDOUSDT 2024-launch RWA token bleeds both directions; long-only fade 0.586/DD25.7/N26 best PF; both-dir trend-rider WORSE (BrkVol6 0.525/DD43 BrkVol8/MaxShort0.25 0.439 kills profitable-shorts MaxShort0.5 0.568); no archetype clears PF1; defer like SEI/ONDO recent-launch family",
+"degen": false
+},
+{
+"sym": "USDCHF",
+"warn": true,
+"pf": 78.399,
+"dd": 2.22,
+"win": 21.15,
+"n": 52,
+"arch": "forex-fade-short-cascstop",
+"remicro": false,
+"assetClass": "forex",
+"sector": "Forex",
+"family": "fade",
+"status": "walk-forward",
+"date": "21 Jun 2026",
+"dateRaw": "2026-06-21T12:00",
+"exec": "Take Longs ON · Take Shorts OFF · Require Min R:R OFF · Cascade-Fade ONLY ON",
+"stops": "Stop-beyond-cascade ON (buffer 16, target-R 3) · Wall-TP ON (min-room 0.2) · Partial-TP OFF",
+"signals": "Iceberg OFF · BSL/SSL OFF · Breaker OFF",
+"gates": "LQX-gate OFF · Velo OFF",
+"note": "OANDA:USDCHF 4h SHORT-ONLY cascade-fade (structural CHF strength = shorting USDCHF bounces is the edge); both-dir fade bleeds (buf23 0.909/N48) long side is the bleed; SHORT-ONLY huge edge (buf12 1.905/N101 buf16 78.4/N52 buf18 67/N41 buf23 48/N23<floor); buf16 best N>=30 high-PF; EXTREME PF outlier-driven (few monster CHF-rally shorts tiny DD 2.22) FRAGILE; robust alt buf12 PF1.9/N101 or partial-ON 72/DD1.65/N57; short-only structural walk-fwd MANDATORY; S=76.7",
+"degen": true
 }
 ];
-window.DEEP_STATS = {"count": 80, "universe": 50, "equityCount": 50, "cryptoCount": 27, "forexCount": 3, "edges": 65, "bothDirEdges": 13, "ready": 28, "walkfwd": 34, "remicro": 18, "above15": 47, "topPF": 5.748, "topSym": "DE", "cleanestDD": 4.29, "cleanestSym": "DOGE", "cryptoMeanDD": 22.6, "equityMeanDD": 21.6, "date": "21 Jun 2026", "dateRaw": "2026-06-21T12:00", "byClass": {"equity": {"n": 50, "meanPF": 2.07, "meanDD": 21.6, "topPF": 5.748, "topSym": "DE", "cleanestDD": 6.47, "cleanestSym": "PEP", "edges": 45}, "crypto": {"n": 27, "meanPF": 1.54, "meanDD": 22.6, "topPF": 4.759, "topSym": "DOGE", "cleanestDD": 4.29, "cleanestSym": "DOGE", "edges": 17}, "forex": {"n": 3, "meanPF": 2.65, "meanDD": 7.4, "topPF": 3.409, "topSym": "GBPUSD", "cleanestDD": 4.51, "cleanestSym": "GBPUSD", "edges": 3}}, "sect": {"ETF": {"n": 19, "meanPF": 2.12, "best": 4.533, "bestSym": "GLD", "ready": 13}, "Semis": {"n": 20, "meanPF": 1.63, "best": 3.837, "bestSym": "LRCX", "ready": 10}, "Single-name": {"n": 11, "meanPF": 2.8, "best": 5.748, "bestSym": "DE", "ready": 9}, "Crypto": {"n": 27, "meanPF": 1.54, "best": 4.759, "bestSym": "DOGE", "ready": 27}, "Forex": {"n": 3, "meanPF": 2.65, "best": 3.409, "bestSym": "GBPUSD", "ready": 3}}};
+window.DEEP_STATS = {"count": 107, "universe": 50, "equityCount": 60, "cryptoCount": 36, "forexCount": 11, "edges": 96, "bothDirEdges": 24, "degenCount": 1, "ready": 42, "walkfwd": 46, "remicro": 19, "above15": 67, "topPF": 9.149, "topSym": "XCUUSD", "cleanestDD": 3.74, "cleanestSym": "USDCAD", "cryptoMeanDD": 23.8, "equityMeanDD": 20.2, "date": "21 Jun 2026", "dateRaw": "2026-06-21T12:00", "byClass": {"equity": {"n": 60, "meanPF": 2.24, "meanDD": 20.2, "topPF": 9.149, "topSym": "XCUUSD", "cleanestDD": 6.25, "cleanestSym": "XCUUSD", "edges": 59}, "crypto": {"n": 36, "meanPF": 1.55, "meanDD": 23.8, "topPF": 4.759, "topSym": "DOGE", "cleanestDD": 4.29, "cleanestSym": "DOGE", "edges": 26}, "forex": {"n": 11, "meanPF": 2.81, "meanDD": 6.7, "topPF": 4.898, "topSym": "AUDJPY", "cleanestDD": 2.22, "cleanestSym": "USDCHF", "edges": 11}}, "sect": {"ETF": {"n": 19, "meanPF": 2.25, "best": 4.533, "bestSym": "GLD", "edges": 19, "ready": 15}, "Semis": {"n": 20, "meanPF": 1.61, "best": 3.837, "bestSym": "LRCX", "edges": 19, "ready": 9}, "Single-name": {"n": 11, "meanPF": 2.94, "best": 5.748, "bestSym": "DE", "edges": 11, "ready": 10}, "Commodity": {"n": 5, "meanPF": 3.86, "best": 9.149, "bestSym": "XCUUSD", "edges": 5, "ready": 4}, "Index": {"n": 5, "meanPF": 1.52, "best": 1.741, "bestSym": "DE30EUR", "edges": 5, "ready": 3}, "Crypto": {"n": 36, "meanPF": 1.55, "best": 4.759, "bestSym": "DOGE", "edges": 26, "ready": 36}, "Forex": {"n": 11, "meanPF": 2.81, "best": 4.898, "bestSym": "AUDJPY", "edges": 11, "ready": 11}}};
 window.DEEP_FOREX = {"sym": "EURUSD", "pf": 1.4, "dd": 16.74, "net": 72.65, "note": "the namesake forex baseline (user-reported) trailed buy-and-hold; the tuned both-direction FX cells (GBPUSD 3.41, USDJPY 3.03) far exceed it."};

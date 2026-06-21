@@ -13,17 +13,21 @@ txt = open(SRC, encoding='utf-8').read()
 blocks = re.split(r'\n(?=## )', txt)
 HDR = re.compile(r'^## (\S+)(\s*⚠️)?\s*—\s*PF ([\d.]+) · DD ([\d.]+)% · Win ([\d.]+)% · N (\d+) · (.+?)\s*$', re.M)
 
-CRYPTO = set('BTC ETH ETH-CB SOL BNB XRP ADA AVAX LINK DOGE DOT LTC BCH ATOM NEAR INJ FIL RENDER FET ARB OP APT SUI UNI AAVE TRX ICP POL'.split())
-FOREX = set('EURUSD GBPUSD USDJPY'.split())
+CRYPTO = set('BTC ETH ETH-CB SOL BNB XRP ADA AVAX LINK DOGE DOT LTC BCH ATOM NEAR INJ FIL RENDER FET ARB OP APT SUI UNI AAVE TRX ICP POL PEPE ENA TIA SEI JUP LDO RUNE WIF ONDO MKR'.split())
+FOREX = set('EURUSD GBPUSD USDJPY USDCHF AUDJPY NZDUSD USDCAD AUDUSD GBPJPY EURJPY EURGBP'.split())
+COMMODITY = set('XCUUSD XAGUSD XAUUSD WTICOUSD NATGASUSD'.split())
+INDEX = set('DE30EUR NAS100USD UK100GBP SPX500USD US30USD'.split())
 SECTOR = {}
 for s in 'KLAC NXPI QCOM TXN MCHP MPWR ADI NVDA AMD MRVL ARM LRCX AMAT ASML TSM INTC TSEM MU ON AVGO'.split(): SECTOR[s] = 'Semis'
 for s in 'DIA IWM SMH XLF XLK XLI XLE XLV XLP XLY VGT VOO SCHD IGV SOXX SPY QQQ GLD TLT'.split(): SECTOR[s] = 'ETF'
 for s in 'JPM KO PEP COST DE ETN ORCL PANW V MA XOM'.split(): SECTOR[s] = 'Single-name'
+for s in COMMODITY: SECTOR[s] = 'Commodity'
+for s in INDEX: SECTOR[s] = 'Index'
 
 def asset_class(sym):
     if sym in CRYPTO: return 'crypto'
     if sym in FOREX: return 'forex'
-    return 'equity'
+    return 'equity'   # equities + commodities + indices (the "equity book"; sector distinguishes them)
 
 def fam_of(arch):
     a = arch.lower()
@@ -54,7 +58,7 @@ for b in blocks:
         'signals': bullet(b, 'Signals'), 'gates': bullet(b, 'Gates'), 'note': bullet(b, 'Re-tune note'),
     })
 
-rows.sort(key=lambda r: -r['pf'])
+rows.sort(key=lambda r: (r['pf'] > 10, -r['pf']))   # degen (PF>10 outliers) sink to the bottom of the ranked book
 def cls_rows(c): return [r for r in rows if r['assetClass'] == c]
 equity, crypto, forex = cls_rows('equity'), cls_rows('crypto'), cls_rows('forex')
 
@@ -64,24 +68,30 @@ forex_baseline = {'sym': 'EURUSD', 'pf': 1.40, 'dd': 16.74, 'net': 72.65,
 
 def class_stat(g):
     if not g: return {'n': 0}
-    return {'n': len(g), 'meanPF': round(sum(r['pf'] for r in g) / len(g), 2),
+    gd = [r for r in g if not r.get('degen')] or g          # exclude PF>10 outliers from PF aggregates
+    return {'n': len(g), 'meanPF': round(sum(r['pf'] for r in gd) / len(gd), 2),
             'meanDD': round(sum(r['dd'] for r in g) / len(g), 1),
-            'topPF': max(r['pf'] for r in g), 'topSym': max(g, key=lambda r: r['pf'])['sym'],
+            'topPF': max(r['pf'] for r in gd), 'topSym': max(gd, key=lambda r: r['pf'])['sym'],
             'cleanestDD': min(r['dd'] for r in g), 'cleanestSym': min(g, key=lambda r: r['dd'])['sym'],
             'edges': sum(1 for r in g if r['pf'] >= 1.0 and r['n'] >= 30)}
 
 EDGE = [r for r in rows if r['pf'] >= 1.0 and r['n'] >= 30]
 BOTH = [r for r in rows if r['family'] == 'both-direction' and r['pf'] >= 1.0 and r['n'] >= 30]
+# degen = a handful of outlier trades carry the whole PF (e.g. USDCHF ~78) — flag + exclude from headline stats
+for r in rows: r['degen'] = r['pf'] > 10
+NONDEGEN = [r for r in rows if not r['degen']]
+_top = max(NONDEGEN, key=lambda r: r['pf'])
+_clean = min(NONDEGEN, key=lambda r: r['dd'])
 stats = {
     'count': len(rows), 'universe': EQUITY_UNIVERSE,
     'equityCount': len(equity), 'cryptoCount': len(crypto), 'forexCount': len(forex),
-    'edges': len(EDGE), 'bothDirEdges': len(BOTH),
+    'edges': len(EDGE), 'bothDirEdges': len(BOTH), 'degenCount': sum(1 for r in rows if r['degen']),
     'ready': sum(1 for r in rows if r['status'] == 'ready'),
     'walkfwd': sum(1 for r in rows if r['status'] == 'walk-forward'),
     'remicro': sum(1 for r in rows if r['status'] == 're-microtune'),
     'above15': sum(1 for r in rows if r['pf'] > 1.5),
-    'topPF': rows[0]['pf'], 'topSym': rows[0]['sym'],
-    'cleanestDD': min(r['dd'] for r in rows), 'cleanestSym': min(rows, key=lambda r: r['dd'])['sym'],
+    'topPF': _top['pf'], 'topSym': _top['sym'],
+    'cleanestDD': _clean['dd'], 'cleanestSym': _clean['sym'],
     'cryptoMeanDD': round(sum(r['dd'] for r in crypto) / len(crypto), 1) if crypto else 0,
     'equityMeanDD': round(sum(r['dd'] for r in equity) / len(equity), 1) if equity else 0,
     'date': STAMP_DISPLAY, 'dateRaw': STAMP_RAW,
@@ -90,10 +100,13 @@ stats = {
 def sect_stat(name):
     g = [r for r in rows if r['sector'] == name]
     if not g: return {'n': 0}
-    best = max(g, key=lambda r: r['pf'])
-    return {'n': len(g), 'meanPF': round(sum(r['pf'] for r in g) / len(g), 2),
-            'best': best['pf'], 'bestSym': best['sym'], 'ready': sum(1 for r in g if not r['remicro'])}
-stats['sect'] = {s: sect_stat(s) for s in ('ETF', 'Semis', 'Single-name', 'Crypto', 'Forex')}
+    gd = [r for r in g if not r.get('degen')] or g
+    best = max(gd, key=lambda r: r['pf'])
+    return {'n': len(g), 'meanPF': round(sum(r['pf'] for r in gd) / len(gd), 2),
+            'best': best['pf'], 'bestSym': best['sym'],
+            'edges': sum(1 for r in g if r['pf'] >= 1.0 and r['n'] >= 30),
+            'ready': sum(1 for r in g if not r['remicro'])}
+stats['sect'] = {s: sect_stat(s) for s in ('ETF', 'Semis', 'Single-name', 'Commodity', 'Index', 'Crypto', 'Forex')}
 
 with open(OUT, 'w', encoding='utf-8') as fh:
     fh.write('/* LIQUIDEX FRAMEWORK — deep-tuned book across asset classes (equity / crypto / forex). Auto-generated. */\n')

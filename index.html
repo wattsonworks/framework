@@ -4,15 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>LIQUIDEX Framework — a systematic liquidity-research operation</title>
-<meta name="description" content="One engine across a 130+ instrument universe — equities, crypto and FX — each read down to the institutional desk that moves it. A disciplined per-instrument research protocol, delivered invite-only on TradingView. Not a stock strategy. A research operation." />
+<meta name="description" content="One engine across a 130+ instrument universe — equities, commodities, indices, crypto and FX — each read down to the institutional desk that moves it. A disciplined per-instrument research protocol, delivered invite-only on TradingView. Not a stock strategy. A research operation." />
 <meta name="theme-color" content="#0a0b0e" />
-<meta property="og:title" content="LIQUIDEX Framework — systematic liquidity research across a 130+ instrument cross-asset universe" />
-<meta property="og:description" content="One engine reads the desks behind the order flow across a 130+ instrument universe — equities, crypto and FX. Each name read to its desk and tuned by protocol. Not a stock strategy — a research operation." />
+<meta property="og:title" content="LIQUIDEX Framework — systematic liquidity research across a 130+ instrument cross-asset universe (equities, commodities, indices, crypto, FX)" />
+<meta property="og:description" content="One engine reads the desks behind the order flow across a 130+ instrument universe — equities, commodities, indices, crypto and FX. Each name read to its desk and tuned by protocol. Not a stock strategy — a research operation." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260621i" />
+<link rel="stylesheet" href="styles.css?v=20260621j" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -49,13 +49,13 @@
       </div>
     </div>
     <div class="stash-wrap">
-      <button class="stash-btn" id="stash-btn" aria-expanded="false" aria-controls="stash-pop"><span data-i18n="stash_btn">Universe</span><span class="stash-count">170</span></button>
+      <button class="stash-btn" id="stash-btn" aria-expanded="false" aria-controls="stash-pop"><span data-i18n="stash_btn">Universe</span><span class="stash-count">205</span></button>
       <!-- STASH popover — the full instrument universe under profile (the rest, beyond the published book) -->
       <div class="stash-pop" id="stash-pop" role="dialog" aria-modal="false" aria-labelledby="stash-h" hidden>
         <div class="stash-arrow" aria-hidden="true"></div>
         <div class="collab-eyebrow" data-i18n="stash_note">The instrument universe under profile</div>
         <h3 id="stash-h" data-i18n="stash_h">130+ instruments. One logic.</h3>
-        <p data-i18n="stash_p">The deep-tuned book is a published cross-section. The full universe — across fourteen sectors and three asset classes — is under profile and available on request. <strong class="gold">Gold</strong> marks an instrument with a published recipe; the rest are the stash.</p>
+        <p data-i18n="stash_p">The deep-tuned book is a published cross-section. The full universe — across sixteen sectors and five instrument classes — is under profile and available on request. <strong class="gold">Gold</strong> marks an instrument with a published recipe; the rest are the stash.</p>
         <div class="stash-body" id="stash-body"></div>
         <a href="#access" class="collab-cta" id="stash-cta" data-i18n="stash_cta">Request the full book →</a>
       </div>
@@ -71,13 +71,13 @@
 <!-- HERO -->
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-    <source src="media/hero.mp4?v=20260621i" type="video/mp4">
+    <source src="media/hero.mp4?v=20260621j" type="video/mp4">
   </video>
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow" data-i18n="hero_eyebrow">Systematic liquidity research · cross-asset</div>
     <h1 class="reveal in" data-i18n="hero_h1">Every desk leaves a footprint.<br><em>We read all of them.</em></h1>
-    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a systematic research operation built on one principle: institutional liquidity leaves the same structural footprint wherever it trades. We profile that behaviour across a <strong>130+ instrument universe — equities, digital assets and FX</strong> — and resolve each one to the desk that moves it, under one disciplined protocol. The breadth is not a feature. It is the proof.</p>
+    <p class="sub" data-i18n="hero_sub"><strong>LIQUIDEX</strong> is a systematic research operation built on one principle: institutional liquidity leaves the same structural footprint wherever it trades. We profile that behaviour across a <strong>130+ instrument universe — equities, commodities, indices, digital assets and FX</strong> — and resolve each one to the desk that moves it, under one disciplined protocol. The breadth is not a feature. It is the proof.</p>
     <div class="hero-cta">
       <a href="#evidence" class="btn btn-primary" data-i18n="hero_cta1">See the deep-tuned book</a>
       <a href="#access" class="btn btn-ghost" data-i18n="hero_cta2">Open a partnership line</a>
@@ -91,9 +91,9 @@
 
     <div class="metricstrip">
       <div class="m"><div class="mv" data-count="130" data-suffix="+">130+</div><div class="ml" data-i18n="m1">Instruments under profile</div></div>
-      <div class="m"><div class="mv" data-count="80" data-suffix="">80</div><div class="ml" data-i18n="m2">Deep-tuned cells · 3 asset classes</div></div>
-      <div class="m"><div class="mv" data-count="65" data-suffix="">65</div><div class="ml" data-i18n="m3">Edges · PF &ge; 1, N &ge; 30</div></div>
-      <div class="m"><div class="mv" data-count="5.75" data-decimals="2">5.75</div><div class="ml" data-i18n="m4">Peak profit factor · DE</div></div>
+      <div class="m"><div class="mv" data-count="107" data-suffix="">107</div><div class="ml" data-i18n="m2">Deep-tuned cells · 5 instrument classes</div></div>
+      <div class="m"><div class="mv" data-count="96" data-suffix="">96</div><div class="ml" data-i18n="m3">Edges · PF &ge; 1, N &ge; 30</div></div>
+      <div class="m"><div class="mv" data-count="24" data-suffix="">24</div><div class="ml" data-i18n="m4">Symmetric both-direction edges</div></div>
     </div>
   </div>
 </section>
@@ -141,18 +141,20 @@
   <div class="wrap">
     <div class="shead">
       <div class="shead-row"><span class="section-num">03</span><div class="eyebrow" style="margin:0" data-i18n="ev_kick">Evidence · the deep-tuned book</div></div>
-      <h2 data-i18n="ev_h2">The deep-tuned book — <em>80 of a 130+ universe</em></h2>
-      <p class="lead" data-i18n="ev_lead">A published cross-section of the wider universe: every instrument read down to its own institutional behaviour and tuned to its own recipe, now spanning <strong>equities, crypto and FX</strong>. <strong>Click any row</strong> to open its full configuration — execution, stops, signals, gates — and the reasoning behind it. Sorted by profit factor; figures are the deep-tuned, in-sample results.</p>
-      <p class="db-stamp" data-i18n="ev_stamp"><strong>80 deep-tuned cells across three asset classes</strong> — 50 equities, 27 crypto and 3 FX majors; <strong>65 are edges</strong> (profit factor ≥ 1 at ≥ 30 trades). The trustworthy tier is the <strong>symmetric, both-direction</strong> cells — they survive a regime flip. Names at <strong>PF ≤ 1.5</strong> are flagged <em>to be re-microtuned</em>; the remaining instruments are under profile and available on request.</p>
+      <h2 data-i18n="ev_h2">The deep-tuned book — <em>107 of a 130+ universe</em></h2>
+      <p class="lead" data-i18n="ev_lead">A published cross-section of the wider universe: every instrument read down to its own institutional behaviour and tuned to its own recipe, now spanning <strong>equities, commodities, indices, crypto and FX</strong>. <strong>Click any row</strong> to open its full configuration — execution, stops, signals, gates — and the reasoning behind it. Sorted by profit factor; figures are the deep-tuned, in-sample results.</p>
+      <p class="db-stamp" data-i18n="ev_stamp"><strong>107 deep-tuned cells across five instrument classes</strong> — equities, commodities, indices, crypto and FX; <strong>96 are edges</strong> (profit factor ≥ 1 at ≥ 30 trades). The trustworthy tier is the <strong>symmetric, both-direction</strong> cells — they survive a regime flip. Names at <strong>PF ≤ 1.5</strong> are flagged <em>to be re-microtuned</em>; the remaining instruments are under profile and available on request.</p>
     </div>
 
     <div class="xfilters reveal" id="dbfilters" role="tablist" aria-label="Filter the deep-tuned book">
-      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 80</button>
-      <button class="xchip" data-filter="ready" data-i18n="flt_ready">Ready · 28</button>
-      <button class="xchip" data-filter="walk-forward" data-i18n="flt_wf">Walk-forward · 34</button>
-      <button class="xchip" data-filter="re-microtune" data-i18n="flt_remicro">Re-microtune · 18</button>
-      <button class="xchip" data-filter="Crypto" data-i18n="flt_crypto">Crypto · 27</button>
-      <button class="xchip" data-filter="Forex" data-i18n="flt_forex">FX · 3</button>
+      <button class="xchip on" data-filter="all" data-i18n="flt_all">All · 107</button>
+      <button class="xchip" data-filter="ready" data-i18n="flt_ready">Ready · 42</button>
+      <button class="xchip" data-filter="walk-forward" data-i18n="flt_wf">Walk-forward · 46</button>
+      <button class="xchip" data-filter="re-microtune" data-i18n="flt_remicro">Re-microtune · 19</button>
+      <button class="xchip" data-filter="Crypto" data-i18n="flt_crypto">Crypto · 36</button>
+      <button class="xchip" data-filter="Forex" data-i18n="flt_forex">FX · 11</button>
+      <button class="xchip" data-filter="Commodity" data-i18n="flt_commod">Commodities · 5</button>
+      <button class="xchip" data-filter="Index" data-i18n="flt_index">Indices · 5</button>
       <button class="xchip" data-filter="ETF" data-i18n="flt_etf">ETFs · 19</button>
       <button class="xchip" data-filter="Semis" data-i18n="flt_semis">Semis · 20</button>
       <button class="xchip" data-filter="Single-name" data-i18n="flt_single">Single-names · 11</button>
@@ -174,7 +176,7 @@
         <tbody id="dbbody"><!-- rendered from deep-params.js --></tbody>
       </table></div>
     </div>
-    <p class="table-cap" id="dbcap" data-i18n="ev_cap"><strong>80 cells across three asset classes</strong> — 50 equities, 27 crypto, 3 FX majors — <strong>65 clear the edge bar</strong> (profit factor ≥ 1 at ≥ 30 trades). The <strong>13 symmetric both-direction cells</strong> are the trustworthy tier, because they survive a regime flip: in crypto SOL · AVAX · ADA · ARB · XRP · FIL · DOT, in FX <strong>GBPUSD 3.41</strong> &amp; USDJPY 3.03, in equities KO · NXPI · PEP · ASML · TLT. The high-PF long-only majority — DE 5.75, DOGE 4.76, V 4.44 — ride a secular-bull window, so their win rates are regime artefacts carrying a <strong>walk-forward-mandatory</strong> flag. Open any row for its exact execution, stops, signals and gates. All figures in-sample, net of commission and slippage.</p>
+    <p class="table-cap" id="dbcap" data-i18n="ev_cap"><strong>107 cells across five instrument classes</strong> — equities, commodities, indices, crypto and FX — <strong>96 clear the edge bar</strong> (profit factor ≥ 1 at ≥ 30 trades). The <strong>24 symmetric both-direction cells</strong> are the trustworthy tier, because they survive a regime flip — and they now span every world: in FX <strong>AUDJPY 4.90</strong> · USDCAD 3.26 · GBPUSD 3.41 · GBPJPY · AUDUSD · USDJPY, in crypto SOL · AVAX · ADA · ARB · XRP · BNB · ENA · PEPE, in equities KO · NXPI · PEP · ASML · TLT, in commodities NATGASUSD. The high-PF long-only majority — copper 9.15, DE 5.75, DOGE 4.76 — rides a secular-bull window, so those win rates are regime artefacts carrying a <strong>walk-forward-mandatory</strong> flag (USDCHF’s PF 78 is a degenerate outlier, excluded). Open any row for its exact execution, stops, signals and gates. All figures in-sample, net of commission and slippage.</p>
   </div>
 </section>
 
@@ -296,7 +298,7 @@
       <div class="mtext">
         <div class="shead-row"><span class="section-num">06</span><div class="eyebrow" style="margin:0" data-i18n="mac_kick">Cross-instrument invariance</div></div>
         <div class="big" data-i18n="mac_big">Every instrument resolves to one of two structural temperaments — and the split is <em>consistent.</em></div>
-        <p data-i18n="mac_p">Read blind, the book sorts itself. <strong>The large majority of the deep-tuned names are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — with a <strong>continuation minority</strong> that rides the break. Most run <strong>long-only</strong>, the fingerprint of a passive complex accumulating through a secular-bull window — which is why almost every equity cell carries a walk-forward-mandatory flag. The exception proves the rule: in crypto, <strong>SOL</strong> sorts into a <strong>both-direction</strong> trend-rider, monetising the downside its long-only cousins cannot. An edge fitted to a chart dies on the next chart; an edge that sorts a whole universe into the same temperaments is a property of the market — pending out-of-sample confirmation.</p>
+        <p data-i18n="mac_p">Read blind, the book sorts itself. <strong>The large majority of the deep-tuned names are faders</strong> — defensives, macro and the broad index complex, where the edge is reverting an exhausted move — with a <strong>continuation minority</strong> that rides the break. Most run <strong>long-only</strong>, the fingerprint of a passive complex accumulating through a secular-bull window — which is why almost every equity cell carries a walk-forward-mandatory flag. The exception proves the rule: <strong>SOL</strong> in crypto, <strong>AUDJPY</strong> in FX and <strong>NATGASUSD</strong> in commodities all sort into <strong>both-direction</strong> trend-riders, monetising the downside their long-only cousins cannot. An edge fitted to a chart dies on the next chart; an edge that sorts a whole universe into the same temperaments is a property of the market — pending out-of-sample confirmation.</p>
       </div>
       <div class="macro-grid">
         <div class="macro-card"><div class="mc-sym">DE</div><div class="mc-desc" data-i18n="mac_gld">Deere · fade-long</div><div class="mc-row"><span class="mc-pf">5.75</span><span class="mc-dd">23.6% DD</span></div></div>
@@ -314,14 +316,14 @@
     <div class="shead reveal">
       <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="act_kick">The actor behind the lever</div></div>
       <h2 data-i18n="act_h2">Why one footprint repeats across <em>unrelated worlds</em></h2>
-      <p class="lead" data-i18n="act_lead">The same structural footprint appears at once in an equity, a crypto perpetual and an FX pair that share no fundamental link. The defensible reading is not coordination but <strong>structural coupling</strong> — a small population of balance sheets, risk engines and trend models now spans all three worlds, so one risk decision prints the same flow in each. An evidenced hypothesis, not an attribution.</p>
+      <p class="lead" data-i18n="act_lead">The same structural footprint appears at once in an equity, a commodity, a stock index, a crypto perpetual and an FX pair that share no fundamental link. The defensible reading is not coordination but <strong>structural coupling</strong> — a small population of balance sheets, risk engines and trend models now spans all these worlds, so one risk decision prints the same flow in each. An evidenced hypothesis, not an attribution.</p>
     </div>
 
     <div class="forces reveal">
       <div class="force"><div class="fn">01</div><div><h4 data-i18n="act_f1h">Common holders</h4><p data-i18n="act_f1p">One correlated basket — the yen-carry risk-on trade, the multi-strategy pod book, risk-parity — de-risked on a single decision.<span class="src">BIS · GSAM</span></p></div></div>
       <div class="force"><div class="fn">02</div><div><h4 data-i18n="act_f2h">Shared market makers</h4><p data-i18n="act_f2p">The same electronic principals quote equities, FX and crypto from one inventory engine; when risk limits bind, the bid withdraws everywhere at once.<span class="src">XTX · Jane Street · Wintermute</span></p></div></div>
       <div class="force"><div class="fn">03</div><div><h4 data-i18n="act_f3h">Leverage &amp; collateral</h4><p data-i18n="act_f3p">A VaR limit, a margin call, a repo haircut — one number forces price-insensitive selling that cascades a whole cross-margined book.<span class="src">OFR · Glassnode</span></p></div></div>
-      <div class="force"><div class="fn">04</div><div><h4 data-i18n="act_f4h">Factor crowding</h4><p data-i18n="act_f4p">One time-series-momentum signal, run by ~10 of the largest trend funds, fires long-or-short across markets the same day — the source of the symmetric both-direction cells.<span class="src">AQR · Man · SG Trend</span></p></div></div>
+      <div class="force"><div class="fn">04</div><div><h4 data-i18n="act_f4h">Factor crowding</h4><p data-i18n="act_f4p">One time-series-momentum signal, run by ~10 of the largest trend funds, fires long-or-short across markets the same day — the source of the symmetric both-direction cells, now seen together in FX, commodities, equity indices and crypto.<span class="src">AQR · Man · SG Trend</span></p></div></div>
     </div>
 
     <div class="profiles reveal">
@@ -330,7 +332,7 @@
       <div class="prof"><h4 data-i18n="act_p3h">The trend cohort<span data-i18n="act_p3t">the symmetric cells</span></h4><p data-i18n="act_p3p">AQR, Man AHL, Winton, Transtrend, Aspect — one trend factor, overlapping prime brokers, the same trigger levels. The crowd, not any single name.</p></div>
     </div>
 
-    <p class="act-foot" data-i18n="act_foot">Strongest evidence: the ExodusPoint self-disclosed book and the Goldman/BofA both-direction CTA models. Weakest, explicitly flagged: the SOL-specific crypto leg, which is risk-on beta spillover. The full causal argument, three worked entity profiles and twenty-eight sources are in <strong>§5 of the thesis</strong>. <a href="liquidex-thesis.pdf?v=20260621i#page=7" target="_blank" rel="noopener" class="pdf-inline" data-i18n="act_link">Read the chapter (PDF) →</a></p>
+    <p class="act-foot" data-i18n="act_foot">Strongest evidence: the ExodusPoint self-disclosed book and the Goldman/BofA both-direction CTA models. Weakest, explicitly flagged: the SOL-specific crypto leg, which is risk-on beta spillover. The full causal argument, three worked entity profiles and twenty-eight sources are in <strong>§5 of the thesis</strong>. <a href="liquidex-thesis.pdf?v=20260621j#page=7" target="_blank" rel="noopener" class="pdf-inline" data-i18n="act_link">Read the chapter (PDF) →</a></p>
   </div>
 </section>
 
@@ -470,7 +472,7 @@
     <div class="honest reveal">
       <div class="h-h" data-i18n="honest_h">What this is — and what it isn't</div>
       <p data-i18n="honest_p1">LIQUIDEX is a <strong>disciplined, rule-based engine</strong> for a focused, liquid, multi-asset book — delivered invite-only on TradingView with alerts. The honest automation pitch is "signals you can auto-route to your broker via webhook," after you add your own position sizing and paper-test first.</p>
-      <p data-i18n="honest_p2">It is a non-repainting, fully systematic engine whose edge has been shown to reproduce across a 130+ instrument universe — equities, digital assets and FX — the same institutional desks, read from price. The defensible asset is the <strong>method</strong>: a protocol for reading institutional liquidity that holds wherever institutions trade. Every performance figure here is historical, in-sample, and disclosed in full — strong enough to justify the out-of-sample work, not yet a substitute for it.</p>
+      <p data-i18n="honest_p2">It is a non-repainting, fully systematic engine whose edge has been shown to reproduce across a 130+ instrument universe — equities, commodities, indices, digital assets and FX — the same institutional desks, read from price. The defensible asset is the <strong>method</strong>: a protocol for reading institutional liquidity that holds wherever institutions trade. Every performance figure here is historical, in-sample, and disclosed in full — strong enough to justify the out-of-sample work, not yet a substitute for it.</p>
     </div>
   </div>
 </section>
@@ -497,7 +499,7 @@
         <div class="offer-line" data-i18n="offer_line">The LIQUIDEX strategy · the Keeper leaderboard · the Prophet risk gate · the full cross-section and every per-symbol recipe.</div>
         <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20access%20to%20the%20LIQUIDEX%20Framework.%20My%20TradingView%20username%20is%3A" target="_blank" rel="noopener" class="btn btn-wa full" data-i18n="offer_btn">Request access on WhatsApp</a>
         <div class="offer-bonus" data-i18n="offer_bonus"><strong>Included for crypto:</strong> the Surge Guru scanner and Crypto Keeper, with the validated crypto names (ICP · WLD · ETH).</div>
-        <a href="liquidex-thesis.pdf?v=20260621i" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link" download="LIQUIDEX-Thesis.pdf">Download the thesis (PDF) →</a>
+        <a href="liquidex-thesis.pdf?v=20260621j" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link" download="LIQUIDEX-Thesis.pdf">Download the thesis (PDF) →</a>
       </div>
     </div>
   </div>
@@ -507,7 +509,7 @@
 <section class="section" id="asset">
   <div class="wrap">
     <div class="shead-row"><span class="section-num">14</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
-    <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live cross-asset scanner, a risk layer and a ranking layer, and a proprietary method for reading institutional behaviour. The defensible asset is the <strong>method</strong> — a protocol for reading the desks behind the order flow that reproduces across a 130+ instrument universe — equities, digital assets and FX alike. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
+    <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live cross-asset scanner, a risk layer and a ranking layer, and a proprietary method for reading institutional behaviour. The defensible asset is the <strong>method</strong> — a protocol for reading the desks behind the order flow that reproduces across a 130+ instrument universe — equities, commodities, indices, digital assets and FX alike. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
   </div>
 </section>
 
@@ -539,11 +541,11 @@
   </div>
 </footer>
 
-<script src="universe.js?v=20260621i"></script>
-<script src="scan-data.js?v=20260621i"></script>
-<script src="deep-params.js?v=20260621i"></script>
-<script src="i18n.js?v=20260621i"></script>
-<script src="app.js?v=20260621i"></script>
+<script src="universe.js?v=20260621j"></script>
+<script src="scan-data.js?v=20260621j"></script>
+<script src="deep-params.js?v=20260621j"></script>
+<script src="i18n.js?v=20260621j"></script>
+<script src="app.js?v=20260621j"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>

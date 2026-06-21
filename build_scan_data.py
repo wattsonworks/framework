@@ -37,8 +37,8 @@ with open(SRC, newline='', encoding='utf-8-sig') as fh:
 # Deep micro-tune overlay — the FULL behavioural book (verified live on TV), read from DEEP_4H_LOG.csv.
 # Equities overlay onto the greedy scan; crypto + forex are separate asset-class books (below).
 DEEP_SRC = r'C:\Users\sunnf\Desktop\LIQUIDEX\DEEP_4H_LOG.csv'
-CRYPTO_SYMS = set('BTC ETH ETH-CB SOL BNB XRP ADA AVAX LINK DOGE DOT LTC BCH ATOM NEAR INJ FIL RENDER FET ARB OP APT SUI UNI AAVE TRX ICP POL'.split())
-FOREX_SYMS = set('EURUSD GBPUSD USDJPY'.split())
+CRYPTO_SYMS = set('BTC ETH ETH-CB SOL BNB XRP ADA AVAX LINK DOGE DOT LTC BCH ATOM NEAR INJ FIL RENDER FET ARB OP APT SUI UNI AAVE TRX ICP POL PEPE ENA TIA SEI JUP LDO RUNE WIF ONDO MKR'.split())
+FOREX_SYMS = set('EURUSD GBPUSD USDJPY USDCHF AUDJPY NZDUSD USDCAD AUDUSD GBPJPY EURJPY EURGBP'.split())
 CRYPTO_FEED = {'BTC': 'Bitstamp', 'ETH': 'Bitstamp', 'ETH-CB': 'Coinbase'}  # rest default to Binance
 DEEP = {}
 crypto = []

@@ -254,8 +254,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 1.134,
-"deepDD": 43.59
+"deepPF": 1.447,
+"deepDD": 44.23
 },
 {
 "sym": "ARM",
@@ -314,8 +314,8 @@ window.SCAN = {
 "Wall-TP"
 ],
 "tuned": true,
-"deepPF": 0.944,
-"deepDD": 41.24
+"deepPF": 0.953,
+"deepDD": 55.25
 },
 {
 "sym": "ASML",
@@ -334,8 +334,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.054,
-"deepDD": 16.44
+"deepPF": 1.414,
+"deepDD": 13.33
 },
 {
 "sym": "TSM",
@@ -461,8 +461,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 0.977,
-"deepDD": 12.99
+"deepPF": 1.795,
+"deepDD": 24.61
 },
 {
 "sym": "SMH",
@@ -500,8 +500,8 @@ window.SCAN = {
 "Breaker"
 ],
 "tuned": true,
-"deepPF": 0.895,
-"deepDD": 36.32
+"deepPF": 2.367,
+"deepDD": 37.95
 },
 {
 "sym": "XLK",
@@ -646,8 +646,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 1.163,
-"deepDD": 10.24
+"deepPF": 1.368,
+"deepDD": 23.97
 },
 {
 "sym": "VOO",
@@ -831,8 +831,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 0.882,
-"deepDD": 47.26
+"deepPF": 2.452,
+"deepDD": 18.45
 },
 {
 "sym": "KO",
@@ -1171,18 +1171,18 @@ window.SCAN = {
 "meanDD": 23.1
 },
 "crypto": {
-"n": 27,
-"meanPF": 1.54,
-"meanDD": 22.6,
+"n": 53,
+"meanPF": 1.39,
+"meanDD": 27.2,
 "cleanestDD": 4.29,
 "cleanestSym": "DOGE"
 },
 "forex": {
-"n": 3,
-"meanPF": 2.65,
-"meanDD": 7.4,
-"topPF": 3.409,
-"topSym": "GBPUSD"
+"n": 13,
+"meanPF": 8.51,
+"meanDD": 6.4,
+"topPF": 78.399,
+"topSym": "USDCHF"
 }
 }
 },
@@ -1251,6 +1251,16 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "PEPE",
+"pf": 2.153,
+"dd": 10.67,
+"win": 43.75,
+"trades": 32,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
 "sym": "ETH",
 "pf": 2.098,
 "dd": 7.44,
@@ -1269,6 +1279,26 @@ window.SCAN = {
 "dir": "Long-only",
 "family": "fade-breaker-BE",
 "feed": "Bitstamp"
+},
+{
+"sym": "AVAX",
+"pf": 1.976,
+"dd": 20.84,
+"win": 37.7,
+"trades": 61,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "ICP",
+"pf": 1.89,
+"dd": 27.06,
+"win": 38.18,
+"trades": 55,
+"dir": "Long-only",
+"family": "crypto-confluence-long",
+"feed": "Binance"
 },
 {
 "sym": "RENDER",
@@ -1311,6 +1341,26 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "JUP",
+"pf": 1.67,
+"dd": 25.79,
+"win": 34.09,
+"trades": 44,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
+"sym": "BNB",
+"pf": 1.605,
+"dd": 19.69,
+"win": 25.68,
+"trades": 74,
+"dir": "Long+Short",
+"family": "crypto-confluence-both",
+"feed": "Binance"
+},
+{
 "sym": "XRP",
 "pf": 1.587,
 "dd": 19.0,
@@ -1328,6 +1378,46 @@ window.SCAN = {
 "trades": 40,
 "dir": "Long+Short",
 "family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "AAVE",
+"pf": 1.565,
+"dd": 24.4,
+"win": 23.33,
+"trades": 90,
+"dir": "Long-only",
+"family": "crypto-confluence-long",
+"feed": "Binance"
+},
+{
+"sym": "DOT",
+"pf": 1.503,
+"dd": 14.74,
+"win": 31.43,
+"trades": 105,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "ENA",
+"pf": 1.5,
+"dd": 15.7,
+"win": 25.53,
+"trades": 47,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "INJ",
+"pf": 1.48,
+"dd": 16.26,
+"win": 40.54,
+"trades": 37,
+"dir": "Long-only",
+"family": "crypto-fade-long",
 "feed": "Binance"
 },
 {
@@ -1361,6 +1451,26 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "LTC",
+"pf": 1.433,
+"dd": 25.77,
+"win": 24.29,
+"trades": 70,
+"dir": "Long+Short",
+"family": "crypto-confluence-both",
+"feed": "Binance"
+},
+{
+"sym": "FIL",
+"pf": 1.403,
+"dd": 28.12,
+"win": 28.81,
+"trades": 59,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
 "sym": "BCH",
 "pf": 1.375,
 "dd": 10.18,
@@ -1371,11 +1481,61 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "FET",
+"pf": 1.369,
+"dd": 27.05,
+"win": 32.65,
+"trades": 49,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
 "sym": "DOT",
 "pf": 1.33,
 "dd": 25.79,
 "win": 20.0,
 "trades": 100,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "ADA",
+"pf": 1.241,
+"dd": 19.07,
+"win": 28.36,
+"trades": 67,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "BCH",
+"pf": 1.187,
+"dd": 38.86,
+"win": 68.18,
+"trades": 22,
+"dir": "Long-only",
+"family": "crypto-datashift-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "TIA",
+"pf": 1.16,
+"dd": 39.4,
+"win": 19.47,
+"trades": 113,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "NEAR",
+"pf": 1.044,
+"dd": 37.44,
+"win": 19.69,
+"trades": 127,
 "dir": "Long+Short",
 "family": "crypto-trend-both-dir",
 "feed": "Binance"
@@ -1391,6 +1551,16 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "SEI",
+"pf": 1.003,
+"dd": 47.37,
+"win": 15.67,
+"trades": 319,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
 "sym": "ICP",
 "pf": 0.95,
 "dd": 38.48,
@@ -1401,11 +1571,61 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "LDO",
+"pf": 0.909,
+"dd": 51.24,
+"win": 13.92,
+"trades": 273,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "SUI",
+"pf": 0.881,
+"dd": 32.83,
+"win": 15.35,
+"trades": 254,
+"dir": "Long+Short",
+"family": "crypto-confluence-nonedge",
+"feed": "Binance"
+},
+{
 "sym": "BNB",
 "pf": 0.86,
 "dd": 18.41,
 "win": 32.91,
 "trades": 79,
+"dir": "Long-only",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "ATOM",
+"pf": 0.853,
+"dd": 49.03,
+"win": 22.31,
+"trades": 130,
+"dir": "Long+Short",
+"family": "crypto-confluence-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "RUNE",
+"pf": 0.85,
+"dd": 29.57,
+"win": 21.74,
+"trades": 69,
+"dir": "Long+Short",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "WIF",
+"pf": 0.842,
+"dd": 55.9,
+"win": 29.63,
+"trades": 54,
 "dir": "Long-only",
 "family": "crypto-nonedge",
 "feed": "Binance"
@@ -1428,6 +1648,16 @@ window.SCAN = {
 "trades": 82,
 "dir": "Long+Short",
 "family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "APT",
+"pf": 0.794,
+"dd": 31.38,
+"win": 16.91,
+"trades": 136,
+"dir": "Long+Short",
+"family": "crypto-confluence-nonedge",
 "feed": "Binance"
 },
 {
@@ -1471,6 +1701,36 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "OP",
+"pf": 0.698,
+"dd": 59.34,
+"win": 11.3,
+"trades": 292,
+"dir": "Long+Short",
+"family": "crypto-confluence-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "LINK",
+"pf": 0.687,
+"dd": 56.15,
+"win": 17.97,
+"trades": 128,
+"dir": "Long-only",
+"family": "crypto-confluence-nonedge",
+"feed": "Binance"
+},
+{
+"sym": "ONDO",
+"pf": 0.586,
+"dd": 25.71,
+"win": 30.77,
+"trades": 26,
+"dir": "Long-only",
+"family": "crypto-nonedge",
+"feed": "Binance"
+},
+{
 "sym": "LINK",
 "pf": 0.415,
 "dd": 38.5,
@@ -1483,6 +1743,36 @@ window.SCAN = {
 ],
 "forex": [
 {
+"sym": "USDCHF",
+"pf": 78.399,
+"dd": 2.22,
+"win": 21.15,
+"trades": 52,
+"dir": "Long-only",
+"family": "forex-fade-short-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "AUDJPY",
+"pf": 4.898,
+"dd": 7.58,
+"win": 61.22,
+"trades": 49,
+"dir": "Long+Short",
+"family": "forex-confluence-both",
+"feed": "OANDA"
+},
+{
+"sym": "NZDUSD",
+"pf": 4.657,
+"dd": 6.01,
+"win": 17.31,
+"trades": 52,
+"dir": "Long-only",
+"family": "forex-fade-short-cascstop",
+"feed": "OANDA"
+},
+{
 "sym": "GBPUSD",
 "pf": 3.409,
 "dd": 4.51,
@@ -1490,6 +1780,26 @@ window.SCAN = {
 "trades": 31,
 "dir": "Long+Short",
 "family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "USDCAD",
+"pf": 3.264,
+"dd": 3.74,
+"win": 59.46,
+"trades": 74,
+"dir": "Long+Short",
+"family": "forex-confluence-both",
+"feed": "OANDA"
+},
+{
+"sym": "USDCAD",
+"pf": 3.183,
+"dd": 4.12,
+"win": 33.87,
+"trades": 62,
+"dir": "Long+Short",
+"family": "forex-confluence-both",
 "feed": "OANDA"
 },
 {
@@ -1503,6 +1813,26 @@ window.SCAN = {
 "feed": "OANDA"
 },
 {
+"sym": "AUDUSD",
+"pf": 2.796,
+"dd": 7.13,
+"win": 23.4,
+"trades": 47,
+"dir": "Long+Short",
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "GBPJPY",
+"pf": 2.352,
+"dd": 8.47,
+"win": 25.0,
+"trades": 80,
+"dir": "Long+Short",
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
 "sym": "EURUSD",
 "pf": 1.514,
 "dd": 7.88,
@@ -1510,6 +1840,36 @@ window.SCAN = {
 "trades": 32,
 "dir": "Long+Short",
 "family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "EURJPY",
+"pf": 1.187,
+"dd": 11.22,
+"win": 26.42,
+"trades": 53,
+"dir": "Long+Short",
+"family": "forex-fade-both-cascstop",
+"feed": "OANDA"
+},
+{
+"sym": "EURGBP",
+"pf": 1.027,
+"dd": 5.33,
+"win": 58.82,
+"trades": 34,
+"dir": "Long-only",
+"family": "forex-fade-long-marginal",
+"feed": "OANDA"
+},
+{
+"sym": "USDCAD",
+"pf": 0.971,
+"dd": 5.82,
+"win": 68.57,
+"trades": 35,
+"dir": "Long-only",
+"family": "forex-nonedge",
 "feed": "OANDA"
 }
 ]
