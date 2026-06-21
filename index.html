@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260621e" />
+<link rel="stylesheet" href="styles.css?v=20260621f" />
 </head>
 <body>
 <canvas id="liqfield" aria-hidden="true"></canvas>
@@ -25,6 +25,7 @@
     <a href="#protocol" data-i18n="nav_protocol">Protocol</a>
     <a href="#evidence" data-i18n="nav_evidence">Evidence</a>
     <a href="#case" data-i18n="nav_case">Case</a>
+    <a href="#actor" data-i18n="nav_actor">Forces</a>
     <a href="#access" class="nav-cta" data-i18n="nav_access">Partner</a>
   </nav>
   <div class="topbar-right">
@@ -303,11 +304,37 @@
   </div>
 </section>
 
-<!-- 07 RESEARCH AGENDA / RIGOR -->
+<!-- 07 THE ACTOR BEHIND THE LEVER -->
+<section class="section" id="actor">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="act_kick">The actor behind the lever</div></div>
+      <h2 data-i18n="act_h2">Why one footprint repeats across <em>unrelated worlds</em></h2>
+      <p class="lead" data-i18n="act_lead">The same structural footprint appears at once in an equity, a crypto perpetual and an FX pair that share no fundamental link. The defensible reading is not coordination but <strong>structural coupling</strong> — a small population of balance sheets, risk engines and trend models now spans all three worlds, so one risk decision prints the same flow in each. An evidenced hypothesis, not an attribution.</p>
+    </div>
+
+    <div class="forces reveal">
+      <div class="force"><div class="fn">01</div><div><h4 data-i18n="act_f1h">Common holders</h4><p data-i18n="act_f1p">One correlated basket — the yen-carry risk-on trade, the multi-strategy pod book, risk-parity — de-risked on a single decision.<span class="src">BIS · GSAM</span></p></div></div>
+      <div class="force"><div class="fn">02</div><div><h4 data-i18n="act_f2h">Shared market makers</h4><p data-i18n="act_f2p">The same electronic principals quote equities, FX and crypto from one inventory engine; when risk limits bind, the bid withdraws everywhere at once.<span class="src">XTX · Jane Street · Wintermute</span></p></div></div>
+      <div class="force"><div class="fn">03</div><div><h4 data-i18n="act_f3h">Leverage &amp; collateral</h4><p data-i18n="act_f3p">A VaR limit, a margin call, a repo haircut — one number forces price-insensitive selling that cascades a whole cross-margined book.<span class="src">OFR · Glassnode</span></p></div></div>
+      <div class="force"><div class="fn">04</div><div><h4 data-i18n="act_f4h">Factor crowding</h4><p data-i18n="act_f4p">One time-series-momentum signal, run by ~10 of the largest trend funds, fires long-or-short across markets the same day — the source of the symmetric both-direction cells.<span class="src">AQR · Man · SG Trend</span></p></div></div>
+    </div>
+
+    <div class="profiles reveal">
+      <div class="prof"><h4>Jane Street<span data-i18n="act_p1t">basket-arbitrage market maker</span></h4><p data-i18n="act_p1p">A named spot-Bitcoin-ETF Authorized Participant and top equity/ETF maker — structurally long-and-short ETF-versus-basket pairs across equities, bonds and crypto at once.</p></div>
+      <div class="prof"><h4>ExodusPoint<span data-i18n="act_p2t">self-disclosed levered basis</span></h4><p data-i18n="act_p2p">Its own investor letter names FX, commodity and government-bond legs of a Treasury-basis book run toward ~50:1 — one VaR over a correlated macro complex.</p></div>
+      <div class="prof"><h4 data-i18n="act_p3h">The trend cohort<span data-i18n="act_p3t">the symmetric cells</span></h4><p data-i18n="act_p3p">AQR, Man AHL, Winton, Transtrend, Aspect — one trend factor, overlapping prime brokers, the same trigger levels. The crowd, not any single name.</p></div>
+    </div>
+
+    <p class="act-foot" data-i18n="act_foot">Strongest evidence: the ExodusPoint self-disclosed book and the Goldman/BofA both-direction CTA models. Weakest, explicitly flagged: the SOL-specific crypto leg, which is risk-on beta spillover. The full causal argument, three worked entity profiles and twenty-eight sources are in <strong>§5 of the thesis</strong>. <a href="liquidex-thesis.pdf?v=20260621f#page=7" target="_blank" rel="noopener" class="pdf-inline" data-i18n="act_link">Read the chapter (PDF) →</a></p>
+  </div>
+</section>
+
+<!-- 08 RESEARCH AGENDA / RIGOR -->
 <section class="section" id="rigor">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">07</span><div class="eyebrow" style="margin:0" data-i18n="rig_kick">The standard</div></div>
+      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="rig_kick">The standard</div></div>
       <h2 data-i18n="rig_h2">From a strong cross-section to a <em>live record</em></h2>
       <p class="lead" data-i18n="rig_lead">The bar a serious desk, fund or allocator holds — and the one we hold ourselves to. The cross-section is the discovery; these are the tests that turn a discovery into a track record. We run the same protocol on our own research.</p>
     </div>
@@ -340,11 +367,11 @@
   </div>
 </section>
 
-<!-- 08 THE SYSTEM -->
+<!-- 09 THE SYSTEM -->
 <section class="section" id="system">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">08</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
+      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="sys_kick">The system</div></div>
       <h2 data-i18n="sys_h2">One engine. Two instruments.</h2>
       <p class="lead" data-i18n="sys_lead">LIQUIDEX decides the trade. Keeper ranks the universe live; Prophet sizes the risk and breaks it in the danger zone. All three are invite-only on TradingView.</p>
     </div>
@@ -374,11 +401,11 @@
   </div>
 </section>
 
-<!-- 09 WHO IT'S FOR -->
+<!-- 10 WHO IT'S FOR -->
 <section class="section" id="fit">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">09</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
+      <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="fit_kick">Honest fit</div></div>
       <h2 data-i18n="fit_h2">Built for a particular kind of operator</h2>
       <p class="lead" data-i18n="fit_p">A tech-comfortable swing / position trader — or a desk — that wants a rules engine on a focused, liquid, multi-asset book, and reads the caveats. If that's not you, we'd rather say so up front.</p>
     </div>
@@ -405,11 +432,11 @@
   </div>
 </section>
 
-<!-- 10 TWO WAYS TO RUN -->
+<!-- 11 TWO WAYS TO RUN -->
 <section class="section" id="run">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">10</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
+      <div class="shead-row"><span class="section-num">11</span><div class="eyebrow" style="margin:0" data-i18n="run_kick">Two ways to run it</div></div>
       <h2 data-i18n="run_h2">Signals you place — or signals you route</h2>
     </div>
     <div class="runrow">
@@ -444,11 +471,11 @@
   </div>
 </section>
 
-<!-- 12 ACCESS -->
+<!-- 13 ACCESS -->
 <section class="section" id="access">
   <div class="wrap">
     <div class="shead">
-      <div class="shead-row"><span class="section-num">12</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access &amp; partnership</div></div>
+      <div class="shead-row"><span class="section-num">13</span><div class="eyebrow" style="margin:0" data-i18n="acc_kick">Access &amp; partnership</div></div>
       <h2 data-i18n="acc_h2">Two doors: <em>access</em>, or <em>partnership</em></h2>
       <p class="lead" data-i18n="acc_lead">Operators get invite-only access on TradingView. Desks, funds and partners get a direct line to evaluate the research, the IP and a licensing or acquisition path.</p>
     </div>
@@ -466,16 +493,16 @@
         <div class="offer-line" data-i18n="offer_line">The LIQUIDEX strategy · the Keeper leaderboard · the Prophet risk gate · the full cross-section and every per-symbol recipe.</div>
         <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20access%20to%20the%20LIQUIDEX%20Framework.%20My%20TradingView%20username%20is%3A" target="_blank" rel="noopener" class="btn btn-wa full" data-i18n="offer_btn">Request access on WhatsApp</a>
         <div class="offer-bonus" data-i18n="offer_bonus"><strong>Included for crypto:</strong> the Surge Guru scanner and Crypto Keeper, with the validated crypto names (ICP · WLD · ETH).</div>
-        <a href="liquidex-thesis.pdf?v=20260621e" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link" download="LIQUIDEX-Thesis.pdf">Download the thesis (PDF) →</a>
+        <a href="liquidex-thesis.pdf?v=20260621f" target="_blank" rel="noopener" class="pdf-link" data-i18n="pdf_link" download="LIQUIDEX-Thesis.pdf">Download the thesis (PDF) →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 13 THE ASSET -->
+<!-- 14 THE ASSET -->
 <section class="section" id="asset">
   <div class="wrap">
-    <div class="shead-row"><span class="section-num">13</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
+    <div class="shead-row"><span class="section-num">14</span><div class="eyebrow" style="margin:0" data-i18n="asset_kick">The IP</div></div>
     <div class="asset-note reveal" data-i18n="asset_note">What is on offer is not an indicator — it is a body of research and the engine that produced it: a liquidity model, a market-structure engine, a live cross-asset scanner, a risk layer and a ranking layer, and a proprietary method for reading institutional behaviour. The defensible asset is the <strong>method</strong> — a protocol for reading the desks behind the order flow that reproduces across a 130+ instrument universe — equities, digital assets and FX alike. <strong>It is open to licensing, a strategic research partnership, or full acquisition</strong> — <a href="https://wa.me/972506787586?text=Hi%21%20I%27d%20like%20to%20discuss%20licensing%20%2F%20partnership%20%2F%20acquisition%20of%20the%20LIQUIDEX%20Framework." target="_blank" rel="noopener">open a conversation</a>.</div>
   </div>
 </section>
@@ -508,11 +535,11 @@
   </div>
 </footer>
 
-<script src="universe.js?v=20260621e"></script>
-<script src="scan-data.js?v=20260621e"></script>
-<script src="deep-params.js?v=20260621e"></script>
-<script src="i18n.js?v=20260621e"></script>
-<script src="app.js?v=20260621e"></script>
+<script src="universe.js?v=20260621f"></script>
+<script src="scan-data.js?v=20260621f"></script>
+<script src="deep-params.js?v=20260621f"></script>
+<script src="i18n.js?v=20260621f"></script>
+<script src="app.js?v=20260621f"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>
