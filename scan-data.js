@@ -20,8 +20,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.823,
-"deepDD": 16.46
+"deepPF": 1.406,
+"deepDD": 27.61
 },
 {
 "sym": "NXPI",
@@ -41,8 +41,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.971,
-"deepDD": 20.72
+"deepPF": 2.218,
+"deepDD": 34.24
 },
 {
 "sym": "QCOM",
@@ -65,8 +65,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.076,
-"deepDD": 21.93
+"deepPF": 1.31,
+"deepDD": 26.28
 },
 {
 "sym": "TXN",
@@ -86,8 +86,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.455,
-"deepDD": 27.91
+"deepPF": 1.169,
+"deepDD": 19.12
 },
 {
 "sym": "MCHP",
@@ -107,8 +107,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.048,
-"deepDD": 37.23
+"deepPF": 1.282,
+"deepDD": 39.22
 },
 {
 "sym": "MPWR",
@@ -129,8 +129,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.788,
-"deepDD": 27.21
+"deepPF": 2.192,
+"deepDD": 21.74
 },
 {
 "sym": "ADI",
@@ -150,8 +150,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.836,
-"deepDD": 12.7
+"deepPF": 1.149,
+"deepDD": 20.89
 },
 {
 "sym": "ON",
@@ -170,8 +170,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 1.952,
-"deepDD": 38.7
+"deepPF": 1.42,
+"deepDD": 43.76
 },
 {
 "sym": "AVGO",
@@ -192,8 +192,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.315,
-"deepDD": 8.84
+"deepPF": 1.126,
+"deepDD": 24.66
 },
 {
 "sym": "NVDA",
@@ -213,8 +213,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.185,
-"deepDD": 34.04
+"deepPF": 1.517,
+"deepDD": 36.27
 },
 {
 "sym": "AMD",
@@ -235,8 +235,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.515,
-"deepDD": 21.31
+"deepPF": 1.867,
+"deepDD": 17.35
 },
 {
 "sym": "MRVL",
@@ -254,8 +254,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 1.447,
-"deepDD": 44.23
+"deepPF": 1.255,
+"deepDD": 36.1
 },
 {
 "sym": "ARM",
@@ -273,8 +273,8 @@ window.SCAN = {
 "Wall-TP"
 ],
 "tuned": true,
-"deepPF": 1.366,
-"deepDD": 31.6
+"deepPF": 1.728,
+"deepDD": 31.55
 },
 {
 "sym": "LRCX",
@@ -294,8 +294,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 3.837,
-"deepDD": 26.87
+"deepPF": 1.306,
+"deepDD": 41.09
 },
 {
 "sym": "AMAT",
@@ -314,8 +314,8 @@ window.SCAN = {
 "Wall-TP"
 ],
 "tuned": true,
-"deepPF": 0.953,
-"deepDD": 55.25
+"deepPF": 1.053,
+"deepDD": 45.37
 },
 {
 "sym": "ASML",
@@ -358,8 +358,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 1.428,
-"deepDD": 25.2
+"deepPF": 2.027,
+"deepDD": 24.02
 },
 {
 "sym": "INTC",
@@ -377,8 +377,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 2.053,
-"deepDD": 46.6
+"deepPF": 1.336,
+"deepDD": 37.94
 },
 {
 "sym": "TSEM",
@@ -397,8 +397,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.582,
-"deepDD": 19.19
+"deepPF": 0.995,
+"deepDD": 57.89
 },
 {
 "sym": "MU",
@@ -418,8 +418,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.239,
-"deepDD": 13.86
+"deepPF": 1.63,
+"deepDD": 32.96
 },
 {
 "sym": "DIA",
@@ -439,8 +439,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.074,
-"deepDD": 10.94
+"deepPF": 1.088,
+"deepDD": 13.1
 },
 {
 "sym": "IWM",
@@ -461,8 +461,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.795,
-"deepDD": 24.61
+"deepPF": 1.074,
+"deepDD": 15.76
 },
 {
 "sym": "SMH",
@@ -481,8 +481,8 @@ window.SCAN = {
 "Wall-TP"
 ],
 "tuned": true,
-"deepPF": 2.547,
-"deepDD": 12.9
+"deepPF": 1.283,
+"deepDD": 26.71
 },
 {
 "sym": "XLF",
@@ -500,8 +500,8 @@ window.SCAN = {
 "Breaker"
 ],
 "tuned": true,
-"deepPF": 2.367,
-"deepDD": 37.95
+"deepPF": 1.454,
+"deepDD": 14.12
 },
 {
 "sym": "XLK",
@@ -521,8 +521,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 3.184,
-"deepDD": 11.73
+"deepPF": 1.73,
+"deepDD": 11.51
 },
 {
 "sym": "XLI",
@@ -543,8 +543,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 1.298,
-"deepDD": 12.51
+"deepPF": 1.453,
+"deepDD": 21.92
 },
 {
 "sym": "XLE",
@@ -562,8 +562,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.941,
-"deepDD": 7.02
+"deepPF": 2.127,
+"deepDD": 13.85
 },
 {
 "sym": "XLV",
@@ -584,8 +584,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 3.798,
-"deepDD": 10.52
+"deepPF": 1.275,
+"deepDD": 10.81
 },
 {
 "sym": "XLP",
@@ -606,8 +606,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 1.327,
-"deepDD": 15.4
+"deepPF": 1.653,
+"deepDD": 8.58
 },
 {
 "sym": "XLY",
@@ -627,8 +627,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.798,
-"deepDD": 21.97
+"deepPF": 1.044,
+"deepDD": 16.13
 },
 {
 "sym": "VGT",
@@ -646,8 +646,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 1.368,
-"deepDD": 23.97
+"deepPF": 1.985,
+"deepDD": 19.6
 },
 {
 "sym": "VOO",
@@ -667,8 +667,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.849,
-"deepDD": 12.22
+"deepPF": 1.249,
+"deepDD": 13.39
 },
 {
 "sym": "SCHD",
@@ -688,8 +688,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.047,
-"deepDD": 6.73
+"deepPF": 1.768,
+"deepDD": 4.65
 },
 {
 "sym": "IGV",
@@ -711,8 +711,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 2.277,
-"deepDD": 32.59
+"deepPF": 1.124,
+"deepDD": 33.62
 },
 {
 "sym": "SOXX",
@@ -731,8 +731,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 2.493,
-"deepDD": 21.29
+"deepPF": 1.449,
+"deepDD": 19.82
 },
 {
 "sym": "SPY",
@@ -751,8 +751,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 1.521,
-"deepDD": 8.47
+"deepPF": 1.571,
+"deepDD": 16.6
 },
 {
 "sym": "QQQ",
@@ -771,8 +771,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.317,
-"deepDD": 8.69
+"deepPF": 1.195,
+"deepDD": 16.31
 },
 {
 "sym": "GLD",
@@ -791,8 +791,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 4.533,
-"deepDD": 18.83
+"deepPF": 0.983,
+"deepDD": 24.1
 },
 {
 "sym": "TLT",
@@ -810,8 +810,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 1.272,
-"deepDD": 17.66
+"deepPF": 0.87,
+"deepDD": 34.9
 },
 {
 "sym": "JPM",
@@ -831,8 +831,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 2.452,
-"deepDD": 18.45
+"deepPF": 1.589,
+"deepDD": 13.47
 },
 {
 "sym": "KO",
@@ -850,8 +850,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 1.979,
-"deepDD": 19.75
+"deepPF": 1.567,
+"deepDD": 15.97
 },
 {
 "sym": "PEP",
@@ -869,8 +869,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 1.595,
-"deepDD": 6.47
+"deepPF": 1.422,
+"deepDD": 12.21
 },
 {
 "sym": "COST",
@@ -888,8 +888,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 3.851,
-"deepDD": 22.96
+"deepPF": 3.446,
+"deepDD": 22.62
 },
 {
 "sym": "DE",
@@ -908,8 +908,8 @@ window.SCAN = {
 "BSL/SSL"
 ],
 "tuned": true,
-"deepPF": 5.748,
-"deepDD": 23.62
+"deepPF": 1.308,
+"deepDD": 23.78
 },
 {
 "sym": "ETN",
@@ -928,8 +928,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 2.305,
-"deepDD": 35.17
+"deepPF": 1.318,
+"deepDD": 15.45
 },
 {
 "sym": "ORCL",
@@ -948,8 +948,8 @@ window.SCAN = {
 "Cascade-stop"
 ],
 "tuned": true,
-"deepPF": 1.23,
-"deepDD": 26.01
+"deepPF": 1.529,
+"deepDD": 23.54
 },
 {
 "sym": "PANW",
@@ -969,8 +969,8 @@ window.SCAN = {
 "LQX gate"
 ],
 "tuned": true,
-"deepPF": 1.957,
-"deepDD": 22.99
+"deepPF": 2.124,
+"deepDD": 31.48
 },
 {
 "sym": "V",
@@ -990,8 +990,8 @@ window.SCAN = {
 "Iceberg"
 ],
 "tuned": true,
-"deepPF": 4.443,
-"deepDD": 25.45
+"deepPF": 1.527,
+"deepDD": 19.27
 },
 {
 "sym": "MA",
@@ -1011,8 +1011,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 2.383,
-"deepDD": 8.87
+"deepPF": 2.109,
+"deepDD": 9.43
 },
 {
 "sym": "XOM",
@@ -1031,8 +1031,8 @@ window.SCAN = {
 "Risk-velocity"
 ],
 "tuned": true,
-"deepPF": 4.386,
-"deepDD": 20.63
+"deepPF": 1.061,
+"deepDD": 25.52
 }
 ],
 "stats": {
@@ -1171,16 +1171,16 @@ window.SCAN = {
 "meanDD": 23.1
 },
 "crypto": {
-"n": 53,
+"n": 57,
 "meanPF": 1.39,
-"meanDD": 27.2,
+"meanDD": 27.4,
 "cleanestDD": 4.29,
 "cleanestSym": "DOGE"
 },
 "forex": {
-"n": 13,
-"meanPF": 8.51,
-"meanDD": 6.4,
+"n": 15,
+"meanPF": 7.98,
+"meanDD": 6.1,
 "topPF": 78.399,
 "topSym": "USDCHF"
 }
@@ -1279,6 +1279,16 @@ window.SCAN = {
 "dir": "Long-only",
 "family": "fade-breaker-BE",
 "feed": "Bitstamp"
+},
+{
+"sym": "PEPE",
+"pf": 2.001,
+"dd": 20.42,
+"win": 37.5,
+"trades": 64,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
 },
 {
 "sym": "AVAX",
@@ -1511,6 +1521,16 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "JUP",
+"pf": 1.213,
+"dd": 41.77,
+"win": 33.33,
+"trades": 54,
+"dir": "Long-only",
+"family": "crypto-fade-long",
+"feed": "Binance"
+},
+{
 "sym": "BCH",
 "pf": 1.187,
 "dd": 38.86,
@@ -1521,6 +1541,16 @@ window.SCAN = {
 "feed": "Binance"
 },
 {
+"sym": "ENA",
+"pf": 1.18,
+"dd": 31.34,
+"win": 25.42,
+"trades": 59,
+"dir": "Long+Short",
+"family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
 "sym": "TIA",
 "pf": 1.16,
 "dd": 39.4,
@@ -1528,6 +1558,16 @@ window.SCAN = {
 "trades": 113,
 "dir": "Long+Short",
 "family": "crypto-trend-both-dir",
+"feed": "Binance"
+},
+{
+"sym": "UNI",
+"pf": 1.093,
+"dd": 26.98,
+"win": 40.54,
+"trades": 74,
+"dir": "Long-only",
+"family": "crypto-fade-long",
 "feed": "Binance"
 },
 {
@@ -1753,6 +1793,16 @@ window.SCAN = {
 "feed": "OANDA"
 },
 {
+"sym": "EURUSD",
+"pf": 8.057,
+"dd": 2.28,
+"win": 27.63,
+"trades": 76,
+"dir": "Long+Short",
+"family": "forex-velo-both",
+"feed": "OANDA"
+},
+{
 "sym": "AUDJPY",
 "pf": 4.898,
 "dd": 7.58,
@@ -1870,6 +1920,16 @@ window.SCAN = {
 "trades": 35,
 "dir": "Long-only",
 "family": "forex-nonedge",
+"feed": "OANDA"
+},
+{
+"sym": "EURUSD",
+"pf": 0.954,
+"dd": 5.47,
+"win": 22.86,
+"trades": 35,
+"dir": "Long+Short",
+"family": "off",
 "feed": "OANDA"
 }
 ]

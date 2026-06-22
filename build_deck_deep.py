@@ -33,9 +33,14 @@ r1, r2, r3 = out[:S1], out[S1:S2], out[S2:]
 block1 = '<!--DECK_DEEP_START-->\n    ' + '\n    '.join(r1) + '\n    <!--DECK_DEEP_END-->'
 block2 = '<!--DECK_DEEP2_START-->\n    ' + '\n    '.join(r2) + '\n    <!--DECK_DEEP2_END-->'
 block3 = '<!--DECK_DEEP3_START-->\n    ' + '\n    '.join(r3) + '\n    <!--DECK_DEEP3_END-->'
-html = open(DECK, encoding='utf-8').read()
-html = re.sub(r'<!--DECK_DEEP_START-->.*?<!--DECK_DEEP_END-->', lambda m: block1, html, flags=re.S)
-html = re.sub(r'<!--DECK_DEEP2_START-->.*?<!--DECK_DEEP2_END-->', lambda m: block2, html, flags=re.S)
-html = re.sub(r'<!--DECK_DEEP3_START-->.*?<!--DECK_DEEP3_END-->', lambda m: block3, html, flags=re.S)
-open(DECK, 'w', encoding='utf-8').write(html)
+DECK_HE = r'C:\Users\sunnf\Desktop\SURGEGURU-FRAMEWORK\deck-he.html'
+import os
+for target in (DECK, DECK_HE):
+    if not os.path.exists(target): continue
+    html = open(target, encoding='utf-8').read()
+    html = re.sub(r'<!--DECK_DEEP_START-->.*?<!--DECK_DEEP_END-->', lambda m: block1, html, flags=re.S)
+    html = re.sub(r'<!--DECK_DEEP2_START-->.*?<!--DECK_DEEP2_END-->', lambda m: block2, html, flags=re.S)
+    html = re.sub(r'<!--DECK_DEEP3_START-->.*?<!--DECK_DEEP3_END-->', lambda m: block3, html, flags=re.S)
+    open(target, 'w', encoding='utf-8').write(html)
+    print('injected ->', os.path.basename(target))
 print(f'Injected {len(r1)} + {len(r2)} + {len(r3)} = {len(out)} rows. Top {book[0]["sym"]} {book[0]["pf"]}.')
